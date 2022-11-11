@@ -65,6 +65,9 @@ MonoBehaviour:
   _destTransform: {fileID: 0}
   _alphaTime: 1
   _moveTime: 1
+  _particles:
+  - {fileID: 0}
+  _backGround: {fileID: 0}
 --- !u!114 &1638843938
 MonoBehaviour:
   m_ObjectHideFlags: 0

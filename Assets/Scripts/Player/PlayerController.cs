@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using General.Components;
 using System.Diagnostics;
+using General.Components.Creatures;
 
 namespace Player
 {
@@ -17,8 +18,11 @@ namespace Player
         [SerializeField] private SpawnComponent _landingDustParticles;
         [SerializeField] private ParticleSystem _hitParticles;
         [SerializeField] private CoinCounter _coinCounter;
+        [SerializeField] private HealthComponent _health;
 
         const float BASE_FALLING_TIME = 500f;
+        const float DAMAGE_FALLING_TIME = 700f;
+        private float _currentFallingTime;
         private Collider2D[] _interactionResult = new Collider2D[1];
         private Rigidbody2D _rigidbody;
         private Vector2 _moveDirection;
@@ -30,7 +34,6 @@ namespace Player
         private Stopwatch _watch = new Stopwatch();
         private bool _isFallTimerStarted = false;
         private bool _doubleJumpWasUsed = false;
-
 
         private static readonly int IsRunning = Animator.StringToHash("is-Running");
         private static readonly int IsGround = Animator.StringToHash("is-Ground");
@@ -221,6 +224,7 @@ namespace Player
             {
                 _landingDustParticles.Spawn();
             }
+
             _isHardLanding = false;
         }
 
@@ -229,12 +233,12 @@ namespace Player
         {
             var yVelocity = _rigidbody.velocity.y;
 
-            if (yVelocity < 0 && !_isFallTimerStarted)
+            if (yVelocity < 0 && !_isFallTimerStarted && !_isGrounded)
             {
                 _watch.Start();
                 _isFallTimerStarted = true;
             }
-            else if (yVelocity >= 0 && _isFallTimerStarted)
+            else if (yVelocity >= -0.01f && _isFallTimerStarted)
             {
                 _watch.Stop();
                 FallingTimeChecker();
@@ -246,6 +250,8 @@ namespace Player
         public void FallingTimeChecker()
         {
             var timeSpan = _watch.ElapsedMilliseconds;
+            _currentFallingTime = timeSpan;
+
 
             if (timeSpan >= BASE_FALLING_TIME && !_doubleJumpWasUsed)
             {
@@ -254,6 +260,28 @@ namespace Player
 
             _watch.Reset();
             _doubleJumpWasUsed = false;
+        }
+
+
+        public void DamageAfterLongFalling()
+        {
+            if (_currentFallingTime >= DAMAGE_FALLING_TIME && _isGrounded)
+            {
+                _health.RenewHealth(-1);
+            }
+            _currentFallingTime = 0;
+        }
+
+
+        public void SetCurrentFallingTime(float value)
+        {
+            _currentFallingTime = value;
+        }
+
+
+        public void SpawnLandingDustResolver(bool value)
+        {
+            _isHardLanding = value;
         }
     }
 }

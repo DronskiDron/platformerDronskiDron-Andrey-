@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace General.Components
 {
-    public class StayCollisionComponent : MonoBehaviour
+    public class StayCollisionDamageComponent : MonoBehaviour
     {
         [SerializeField] private string _tag;
         [SerializeField] private EnterEvent _action;

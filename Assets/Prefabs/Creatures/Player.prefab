@@ -5090,6 +5090,7 @@ MonoBehaviour:
   _landingDustParticles: {fileID: 1462226896406336358}
   _hitParticles: {fileID: 1578835228}
   _coinCounter: {fileID: 4721150701775001651}
+  _health: {fileID: 6669306786479704690}
 --- !u!114 &4721150701775001658
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -20,7 +20,7 @@ namespace BackGround
         }
 
 
-        private void SetObjectStartPosition()
+        public void SetObjectStartPosition()
         {
             transform.position = new Vector3(_target.position.x, transform.position.y, transform.position.z);
         }

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using BackGround;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,12 +11,13 @@ namespace General.Components
         [SerializeField] private float _alphaTime = 1;
         [SerializeField] private float _moveTime = 1;
         [SerializeField] private ParticleSystem[] _particles;
+        [SerializeField] private BackGroundFollowScript _backGround;
 
 
         public void Teleport(GameObject target)
         {
-            _particles[0].gameObject.SetActive(false);
             StartCoroutine(AnimateTeleport(target));
+            _particles[0].gameObject.SetActive(false);
         }
 
 
@@ -55,6 +57,7 @@ namespace General.Components
                 moveTime += Time.deltaTime;
                 var progress = moveTime / _moveTime;
                 target.transform.position = Vector3.Lerp(target.transform.position, _destTransform.position, progress);
+                _backGround.SetObjectStartPosition();
 
                 yield return null;
             }
