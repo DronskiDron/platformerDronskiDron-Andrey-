@@ -2,6 +2,7 @@
 using General.Components;
 using System.Diagnostics;
 using General.Components.Creatures;
+using UnityEditor.Animations;
 
 namespace Player
 {
@@ -12,18 +13,31 @@ namespace Player
         [SerializeField] private float _jumpForce = 1;
         [SerializeField] private float _damageJumpForce = 10;
         [SerializeField] private float _interactionRadius = 5;
+        [SerializeField] private int _damage = 1;
         [SerializeField] private LayerMask _interactionLayer;
-        [SerializeField] private SpawnComponent _footStepParticles;
-        [SerializeField] private SpawnComponent _jumpDustParticles;
-        [SerializeField] private SpawnComponent _landingDustParticles;
-        [SerializeField] private ParticleSystem _hitParticles;
         [SerializeField] private CoinCounter _coinCounter;
         [SerializeField] private HealthComponent _health;
 
+        [SerializeField] private AnimatorController _armed;
+        [SerializeField] private AnimatorController _disarmed;
+
+        [SerializeField] private CheckCircleOverlap _attackRange;
+
+        [Space]
+        [Header("Particles")]
+        [SerializeField] private SpawnComponent _footStepParticles;
+        [SerializeField] private SpawnComponent _jumpDustParticles;
+        [SerializeField] private SpawnComponent _landingDustParticles;
+        [SerializeField] private SpawnComponent _swordAttackParticles;
+
+        [SerializeField] private ParticleSystem _hitParticles;
+
+
         const float BASE_FALLING_TIME = 500f;
-        const float DAMAGE_FALLING_TIME = 700f;
+        const float DAMAGE_FALLING_TIME = 900f;
         private float _currentFallingTime;
-        private Collider2D[] _interactionResult = new Collider2D[1];
+
+        private readonly Collider2D[] _interactionResult = new Collider2D[1];
         private Rigidbody2D _rigidbody;
         private Vector2 _moveDirection;
         private Animator _animator;
@@ -35,11 +49,14 @@ namespace Player
         private bool _isFallTimerStarted = false;
         private bool _doubleJumpWasUsed = false;
 
+        private bool _isArmed;
+
         private static readonly int IsRunning = Animator.StringToHash("is-Running");
         private static readonly int IsGround = Animator.StringToHash("is-Ground");
         private static readonly int VerticalVelocity = Animator.StringToHash("vertical-Velocity");
         private static readonly int Hit = Animator.StringToHash("hit");
         private static readonly int Heal = Animator.StringToHash("heal");
+        private static readonly int AttackKey = Animator.StringToHash("attack");
 
 
         private void Awake()
@@ -124,10 +141,11 @@ namespace Player
             if (_isGrounded)
             {
                 yVelocity += _jumpForce;
+                _jumpDustParticles.Spawn();
             }
             else if (_allowDoubleJump)
             {
-                SpawnJumpDust();
+                _jumpDustParticles.Spawn();
                 _isHardLanding = true;
                 _doubleJumpWasUsed = true;
                 yVelocity = _jumpForce;
@@ -209,15 +227,6 @@ namespace Player
         }
 
 
-        public void SpawnJumpDust()
-        {
-            if (_allowDoubleJump || _isGrounded)
-            {
-                _jumpDustParticles.Spawn();
-            }
-        }
-
-
         public void SpawnLandingDust()
         {
             if (_isHardLanding && _isGrounded)
@@ -226,6 +235,12 @@ namespace Player
             }
 
             _isHardLanding = false;
+        }
+
+
+        public void SpawnSwordAttackParticles()
+        {
+            _swordAttackParticles.Spawn();
         }
 
 
@@ -282,6 +297,36 @@ namespace Player
         public void SpawnLandingDustResolver(bool value)
         {
             _isHardLanding = value;
+        }
+
+
+        internal void Attack()
+        {
+            if (!_isArmed) return;
+
+            _animator.SetTrigger(AttackKey);
+        }
+
+
+        public void AttackAction()
+        {
+            SpawnSwordAttackParticles();
+            var gos = _attackRange.GetObjectsInRange();
+            foreach (var go in gos)
+            {
+                var hp = go.GetComponent<HealthComponent>();
+                if (hp != null && hp.gameObject.CompareTag("Enemy"))
+                {
+                    hp.RenewHealth(-_damage);
+                }
+            }
+        }
+
+
+        internal void ArmPlayer()
+        {
+            _isArmed = true;
+            _animator.runtimeAnimatorController = _armed;
         }
     }
 }

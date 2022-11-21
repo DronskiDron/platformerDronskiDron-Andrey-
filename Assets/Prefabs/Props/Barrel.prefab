@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 2105227130}
   - component: {fileID: 6029415746858555376}
   - component: {fileID: 2105227131}
-  - component: {fileID: 636299996}
+  - component: {fileID: 1026240452}
   m_Layer: 8
   m_Name: Barrel
   m_TagString: Untagged
@@ -194,7 +194,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _landingDustParticles: {fileID: 1796145319}
   _rigidbody: {fileID: 7990524837623267468}
-  _simplexAnimator: {fileID: 636299996}
 --- !u!114 &6029415746858555376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,15 +232,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2105227130}
-        m_MethodName: PlayBarrelAnimation
-        m_Mode: 0
+      - m_Target: {fileID: 1026240452}
+        m_MethodName: SetClip
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: hit
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2105227131
@@ -282,21 +281,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &636299996
+--- !u!114 &1026240452
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7990524837623267504}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00c16f8676ba3a446a4696af6bee4e4f, type: 3}
+  m_Script: {fileID: 11500000, guid: 82b0d1736f0d8d44fbe6975e6cc85144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _frameRate: 10
-  _simplexAnimator: {fileID: 636299996}
   _clips:
+  - _name: idle
+    _sprites:
+    - {fileID: 21300000, guid: 972cdaa23dd46404f97ac8d79c1dc4a0, type: 3}
+    _loop: 0
+    _allowNextClip: 0
+    _onComplete:
+      m_PersistentCalls:
+        m_Calls: []
   - _name: hit
     _sprites:
     - {fileID: 21300000, guid: fb9167165ad72bd4294d2f9ea56d5d24, type: 3}
@@ -307,4 +313,15 @@ MonoBehaviour:
     _allowNextClip: 0
     _onComplete:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 1026240452}
+          m_MethodName: SetClip
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: idle
+            m_BoolArgument: 0
+          m_CallState: 2

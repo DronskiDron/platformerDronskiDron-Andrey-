@@ -7,7 +7,7 @@ namespace General.Components
     [RequireComponent(typeof(SpriteRenderer))]
     public class SpriteAnimation : MonoBehaviour
     {
-        [SerializeField] [Range(1, 30)] private int _frameRate = 10;
+        [SerializeField][Range(1, 30)] private int _frameRate = 10;
         [SerializeField] private UnityEvent<string> _onComplete;
         [SerializeField] private AnimationClip[] _clips;
 
@@ -61,7 +61,7 @@ namespace General.Components
         private void StartAnimation()
         {
             _nextFrameTime = Time.time + _secPerFrame;
-            _isPlaying = true;
+            enabled = _isPlaying = true;
             _currentFrame = 0;
         }
 
@@ -91,9 +91,9 @@ namespace General.Components
                 }
                 else
                 {
+                    enabled = _isPlaying = clip.AllowNextClip;
                     clip.OnComplete?.Invoke();
                     _onComplete?.Invoke(clip.Name);
-                    enabled = _isPlaying = clip.AllowNextClip;
                     if (clip.AllowNextClip)
                     {
                         _currentFrame = 0;

@@ -34,6 +34,12 @@ namespace Player
         {
             _player.Interact();
         }
+
+
+        private void OnAttack(InputValue context)
+        {
+            _player.Attack();
+        }
     }
 }
 

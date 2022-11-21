@@ -8,7 +8,6 @@ namespace Props
     {
         [SerializeField] private SpawnComponent _landingDustParticles;
         [SerializeField] private Rigidbody2D _rigidbody;
-        [SerializeField] private SimplexSpriteAnimation _simplexAnimator;
 
         const float MAX_BARREL_Y_VELOCITY = 3.508889E-10f;
         private bool _isGrounded = false;
@@ -50,12 +49,6 @@ namespace Props
             {
                 player?.SpawnLandingDustResolver(false);
             }
-        }
-
-
-        public void PlayBarrelAnimation(GameObject target)
-        {
-            _simplexAnimator.StartAnimationNow();
         }
     }
 }

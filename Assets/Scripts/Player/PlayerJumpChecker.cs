@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using UnityEditor;
+using UnityEngine;
+using Utils;
 
 namespace Player
 {
@@ -48,11 +50,13 @@ namespace Player
         }
 
 
+#if UNITY_EDITOR
         private void OnDrawGizmos()
         {
-            Gizmos.color = GetIsGrounded() ? Color.green : Color.red;
-            Gizmos.DrawSphere(transform.position, _drawSphereRadius);
+            Handles.color = GetIsGrounded() ? HandlesUtils.TranspanentGreen : HandlesUtils.TranspanentRed;
+            Handles.DrawSolidDisc(transform.position, Vector3.forward, _drawSphereRadius);
         }
+#endif
     }
 }
 
