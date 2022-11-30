@@ -13,6 +13,8 @@ namespace Player
         private bool _isPressingJump;
         private bool _isTouchingLayer;
 
+         public LayerMask GroundLayer => _groundLayer;
+
 
         private void Awake()
         {

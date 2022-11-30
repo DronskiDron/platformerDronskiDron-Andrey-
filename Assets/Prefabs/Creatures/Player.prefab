@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1387890959}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.008, y: 0, z: 0}
+  m_LocalPosition: {x: 2.079, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4721150701775001660}
@@ -4971,7 +4971,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4219164256921480313}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.03, y: -0.379, z: 0}
+  m_LocalPosition: {x: -0.03, y: -0.316, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4721150701775001660}
@@ -5173,6 +5173,9 @@ MonoBehaviour:
   _speed: 5
   _jumpForce: 12
   _damageJumpForce: 10
+  _slamDownVelocity: 15
+  _slamDownDamageVelocity: 22
+  _slamDownDamage: 1
   _interactionRadius: 0.6
   _damage: 1
   _interactionLayer:
@@ -5185,7 +5188,7 @@ MonoBehaviour:
   _attackRange: {fileID: 1802801993}
   _footStepParticles: {fileID: 1585879532}
   _jumpDustParticles: {fileID: 4721150702822014572}
-  _landingDustParticles: {fileID: 1462226896406336358}
+  _slamDownDustParticles: {fileID: 1462226896406336358}
   _swordAttackParticles: {fileID: 1387890961}
   _hitParticles: {fileID: 1578835228}
 --- !u!114 &4721150701775001658
@@ -5288,7 +5291,7 @@ Rigidbody2D:
   m_Material: {fileID: 6200000, guid: 71735259ed0d7de4a82801cf5ae7d56d, type: 2}
   m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &4721150701775001651
 MonoBehaviour:
@@ -5443,7 +5446,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4801355957240188693}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.358, z: 0}
+  m_LocalPosition: {x: 0, y: -0.341, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4721150701775001660}

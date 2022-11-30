@@ -6,7 +6,7 @@ namespace Props
 {
     public class BarrelScript : MonoBehaviour
     {
-        [SerializeField] private SpawnComponent _landingDustParticles;
+       [SerializeField] private SpawnComponent _landingDustParticles;
         [SerializeField] private Rigidbody2D _rigidbody;
 
         const float MAX_BARREL_Y_VELOCITY = 3.508889E-10f;
@@ -35,7 +35,7 @@ namespace Props
 
             if (yVelocity > MAX_BARREL_Y_VELOCITY)
             {
-                player?.SetCurrentFallingTime(0);
+                player?.SetCurrentSlamDownDamageVelocity(100);
             }
         }
 
@@ -47,8 +47,16 @@ namespace Props
 
             if (yVelocity > MAX_BARREL_Y_VELOCITY)
             {
-                player?.SpawnLandingDustResolver(false);
+                player?.AllowSlamDownParticle(false);
             }
+        }
+
+
+        public void AfterContactWithBarrel(GameObject target)
+        {
+            var player = target.GetComponent<PlayerController>();
+            player?.AllowSlamDownParticle(true);
+            player?.SetCurrentSlamDownDamageVelocity(player.StartSlamDownDamageVelocity);
         }
     }
 }

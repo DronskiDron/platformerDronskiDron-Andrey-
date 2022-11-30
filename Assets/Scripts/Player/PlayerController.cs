@@ -3,6 +3,7 @@ using General.Components;
 using System.Diagnostics;
 using General.Components.Creatures;
 using UnityEditor.Animations;
+using Utils;
 
 namespace Player
 {
@@ -10,9 +11,12 @@ namespace Player
     {
         [SerializeField] private PlayerJumpChecker _playerJumpChecker;
         [SerializeField] private float _speed = 5f;
-        [SerializeField] private float _jumpForce = 1;
-        [SerializeField] private float _damageJumpForce = 10;
-        [SerializeField] private float _interactionRadius = 5;
+        [SerializeField] private float _jumpForce = 1f;
+        [SerializeField] private float _damageJumpForce = 10f;
+        [SerializeField] private float _slamDownVelocity = 15f;
+        [SerializeField] private float _slamDownDamageVelocity = 22f;
+        [SerializeField] private int _slamDownDamage = 1;
+        [SerializeField] private float _interactionRadius = 5f;
         [SerializeField] private int _damage = 1;
         [SerializeField] private LayerMask _interactionLayer;
         [SerializeField] private CoinCounter _coinCounter;
@@ -27,15 +31,10 @@ namespace Player
         [Header("Particles")]
         [SerializeField] private SpawnComponent _footStepParticles;
         [SerializeField] private SpawnComponent _jumpDustParticles;
-        [SerializeField] private SpawnComponent _landingDustParticles;
+        [SerializeField] private SpawnComponent _slamDownDustParticles;
         [SerializeField] private SpawnComponent _swordAttackParticles;
 
         [SerializeField] private ParticleSystem _hitParticles;
-
-
-        const float BASE_FALLING_TIME = 500f;
-        const float DAMAGE_FALLING_TIME = 900f;
-        private float _currentFallingTime;
 
         private readonly Collider2D[] _interactionResult = new Collider2D[1];
         private Rigidbody2D _rigidbody;
@@ -43,13 +42,13 @@ namespace Player
         private Animator _animator;
         private bool _isGrounded;
         private bool _allowDoubleJump;
+        private bool _wasDoubleJump = false;
         private bool _isJumping;
-        private bool _isHardLanding = false;
-        private Stopwatch _watch = new Stopwatch();
-        private bool _isFallTimerStarted = false;
-        private bool _doubleJumpWasUsed = false;
 
         private bool _isArmed;
+        private bool _isAllowSlamDownParticle = true;
+        private float _startSlamDownDamageVelocity;
+        public float StartSlamDownDamageVelocity => _startSlamDownDamageVelocity;
 
         private static readonly int IsRunning = Animator.StringToHash("is-Running");
         private static readonly int IsGround = Animator.StringToHash("is-Ground");
@@ -63,6 +62,12 @@ namespace Player
         {
             _rigidbody = GetComponent<Rigidbody2D>();
             _animator = GetComponent<Animator>();
+        }
+
+
+        private void Start()
+        {
+            _startSlamDownDamageVelocity = _slamDownDamageVelocity;
         }
 
 
@@ -103,7 +108,6 @@ namespace Player
             var xVelocity = _moveDirection.x * _speed;
             var yVelocity = CalculateVelocity();
             _rigidbody.velocity = new Vector2(xVelocity, yVelocity);
-            LongFalling();
         }
 
 
@@ -146,10 +150,9 @@ namespace Player
             else if (_allowDoubleJump)
             {
                 _jumpDustParticles.Spawn();
-                _isHardLanding = true;
-                _doubleJumpWasUsed = true;
                 yVelocity = _jumpForce;
                 _allowDoubleJump = false;
+                _wasDoubleJump = true;
             }
 
             return yVelocity;
@@ -227,76 +230,45 @@ namespace Player
         }
 
 
-        public void SpawnLandingDust()
-        {
-            if (_isHardLanding && _isGrounded)
-            {
-                _landingDustParticles.Spawn();
-            }
-
-            _isHardLanding = false;
-        }
-
-
         public void SpawnSwordAttackParticles()
         {
             _swordAttackParticles.Spawn();
         }
 
 
-        private void LongFalling()
+        private void OnCollisionEnter2D(Collision2D collision)
         {
-            var yVelocity = _rigidbody.velocity.y;
-
-            if (yVelocity < 0 && !_isFallTimerStarted && !_isGrounded)
+            if (collision.gameObject.IsInLayer(_playerJumpChecker.GroundLayer))
             {
-                _watch.Start();
-                _isFallTimerStarted = true;
-            }
-            else if (yVelocity >= -0.01f && _isFallTimerStarted)
-            {
-                _watch.Stop();
-                FallingTimeChecker();
-                _isFallTimerStarted = false;
+                var contact = collision.contacts[0];
+                if (contact.relativeVelocity.y >= _slamDownVelocity && _isAllowSlamDownParticle || _wasDoubleJump)
+                {
+                    _slamDownDustParticles.Spawn();
+                    if (contact.relativeVelocity.y >= _slamDownDamageVelocity)
+                    {
+                        SlamDownDamage();
+                    }
+                }
+                _wasDoubleJump = false;
             }
         }
 
 
-        public void FallingTimeChecker()
+        private void SlamDownDamage()
         {
-            var timeSpan = _watch.ElapsedMilliseconds;
-            _currentFallingTime = timeSpan;
-
-
-            if (timeSpan >= BASE_FALLING_TIME && !_doubleJumpWasUsed)
-            {
-                _isHardLanding = true;
-            }
-
-            _watch.Reset();
-            _doubleJumpWasUsed = false;
+            _health.RenewHealth(-_slamDownDamage);
         }
 
 
-        public void DamageAfterLongFalling()
+        public void SetCurrentSlamDownDamageVelocity(float value)
         {
-            if (_currentFallingTime >= DAMAGE_FALLING_TIME && _isGrounded)
-            {
-                _health.RenewHealth(-1);
-            }
-            _currentFallingTime = 0;
+            _slamDownDamageVelocity = value;
         }
 
 
-        public void SetCurrentFallingTime(float value)
+        public void AllowSlamDownParticle(bool value)
         {
-            _currentFallingTime = value;
-        }
-
-
-        public void SpawnLandingDustResolver(bool value)
-        {
-            _isHardLanding = value;
+            _isAllowSlamDownParticle = value;
         }
 
 
