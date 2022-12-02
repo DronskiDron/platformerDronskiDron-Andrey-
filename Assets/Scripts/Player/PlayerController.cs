@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using General.Components;
-using System.Diagnostics;
 using General.Components.Creatures;
 using UnityEditor.Animations;
 using Utils;
+using Player.Model;
 
 namespace Player
 {
@@ -45,7 +45,6 @@ namespace Player
         private bool _wasDoubleJump = false;
         private bool _isJumping;
 
-        private bool _isArmed;
         private bool _isAllowSlamDownParticle = true;
         private float _startSlamDownDamageVelocity;
         public float StartSlamDownDamageVelocity => _startSlamDownDamageVelocity;
@@ -57,6 +56,8 @@ namespace Player
         private static readonly int Heal = Animator.StringToHash("heal");
         private static readonly int AttackKey = Animator.StringToHash("attack");
 
+        private GameSession _session;
+
 
         private void Awake()
         {
@@ -67,6 +68,10 @@ namespace Player
 
         private void Start()
         {
+            _session = FindObjectOfType<GameSession>();
+            _health = GetComponent<HealthComponent>();
+            _session.Data.Hp = _health.Health;
+            UpdatePlayerWeapon();
             _startSlamDownDamageVelocity = _slamDownDamageVelocity;
         }
 
@@ -208,6 +213,12 @@ namespace Player
         }
 
 
+        public void OnHealthChanged(int currentHealth)
+        {
+            _session.Data.Hp = currentHealth;
+        }
+
+
         public void Interact()
         {
             var size = Physics2D.OverlapCircleNonAlloc(
@@ -274,7 +285,7 @@ namespace Player
 
         internal void Attack()
         {
-            if (!_isArmed) return;
+            if (!_session.Data.IsArmed) return;
 
             _animator.SetTrigger(AttackKey);
         }
@@ -297,8 +308,14 @@ namespace Player
 
         internal void ArmPlayer()
         {
-            _isArmed = true;
-            _animator.runtimeAnimatorController = _armed;
+            _session.Data.IsArmed = true;
+            UpdatePlayerWeapon();
+        }
+
+
+        private void UpdatePlayerWeapon()
+        {
+            _animator.runtimeAnimatorController = _session.Data.IsArmed ? _armed : _disarmed;
         }
     }
 }

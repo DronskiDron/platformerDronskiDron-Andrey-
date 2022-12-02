@@ -1,4 +1,4 @@
-﻿using Player;
+﻿using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -12,9 +12,12 @@ namespace General.Components.Creatures
         [SerializeField] private UnityEvent _onHeal;
         [SerializeField] private UnityEvent _onDamage;
         [SerializeField] private UnityEvent _onDie;
+        [SerializeField] private HealthChangeEvent _onChange;
 
         private int _startHealth;
         private bool _isImmortal = false;
+
+        public int Health => _health;
 
 
         private void Start()
@@ -31,6 +34,7 @@ namespace General.Components.Creatures
                 {
                     gotHelth = 0;
                 }
+
                 _health += gotHelth;
 
                 if (gotHelth > 0)
@@ -50,6 +54,7 @@ namespace General.Components.Creatures
                 {
                     Debug.Log($"У Вас осталось {_health} жизней");
                 }
+                 _onChange?.Invoke(_health);
             }
         }
 
@@ -71,6 +76,12 @@ namespace General.Components.Creatures
                 _isImmortal = false;
                 Debug.Log($"Я смертен(");
             }
+        }
+
+        [Serializable]
+        public class HealthChangeEvent : UnityEvent<int>
+        {
+
         }
     }
 }

@@ -1,18 +1,26 @@
-﻿using UnityEngine;
+﻿using Player.Model;
+using UnityEngine;
 
 namespace Player
 {
     public class CoinCounter : MonoBehaviour
     {
-        private float _money;
-        private float _moneyBalance;
+        private int _money;
+        private int _moneyBalance;
 
-        public float Money => _money;
+        public int Money => _money;
+        private GameSession _session;
 
 
-        public void GetMoney(float moneyFromObjects)
+        private void Start()
         {
-            _money += moneyFromObjects;
+            _session = FindObjectOfType<GameSession>();
+        }
+
+
+        public void GetMoney(int moneyFromObjects)
+        {
+            _session.Data.Coins= _money += moneyFromObjects;
 
             _moneyBalance = moneyFromObjects;
             MoneyConsoleWriter();

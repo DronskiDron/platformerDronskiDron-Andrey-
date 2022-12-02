@@ -1,4 +1,5 @@
 ﻿using System.Reflection;
+using Player.Model;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,6 +10,9 @@ namespace General.Components
     {
         public void Reload()
         {
+            var session = FindObjectOfType<GameSession>();
+            session.LoadLastSessionSave();
+
             var scene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(scene.name);
             ClearLog();

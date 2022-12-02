@@ -6,7 +6,7 @@ namespace General.Components
     public class MoneySendComponent : MonoBehaviour
     {
         [SerializeField] private CoinCounter _coincounter;
-        [SerializeField] private float _coinCost = 1f;
+        [SerializeField] private int _coinCost = 1;
 
 
         public void SendMoney()
