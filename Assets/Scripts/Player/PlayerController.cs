@@ -187,7 +187,7 @@ namespace Player
             _animator.SetTrigger(Hit);
             _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _damageJumpForce);
 
-            if (_coinCounter.Money > 0)
+            if (_session.Data.Coins > 0)
             {
                 SpawnCoins();
             }
@@ -196,7 +196,7 @@ namespace Player
 
         private void SpawnCoins()
         {
-            var numCoinsToDespose = Mathf.Min(_coinCounter.Money, 5);
+            var numCoinsToDespose = Mathf.Min(_session.Data.Coins, 5);
             _coinCounter.GetMoney(-numCoinsToDespose);
 
             var burst = _hitParticles.emission.GetBurst(0);

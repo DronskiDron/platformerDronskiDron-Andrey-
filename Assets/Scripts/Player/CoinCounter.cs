@@ -5,10 +5,8 @@ namespace Player
 {
     public class CoinCounter : MonoBehaviour
     {
-        private int _money;
         private int _moneyBalance;
 
-        public int Money => _money;
         private GameSession _session;
 
 
@@ -20,7 +18,7 @@ namespace Player
 
         public void GetMoney(int moneyFromObjects)
         {
-            _session.Data.Coins= _money += moneyFromObjects;
+            _session.Data.Coins += moneyFromObjects;
 
             _moneyBalance = moneyFromObjects;
             MoneyConsoleWriter();
@@ -31,11 +29,11 @@ namespace Player
         {
             if (_moneyBalance > 0)
             {
-                Debug.Log($"Поздравляю! У Вас {_money} монет!");
+                Debug.Log($"Поздравляю! У Вас {_session.Data.Coins} монет!");
             }
             else
             {
-                Debug.Log($"Упс! У Вас осталось {_money} монет!");
+                Debug.Log($"Упс! У Вас осталось {_session.Data.Coins} монет!");
             }
         }
     }

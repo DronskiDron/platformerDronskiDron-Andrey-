@@ -3,7 +3,6 @@ using Player.Model;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
 namespace General.Components
 {
     public class ReloadLevelComponent : MonoBehaviour

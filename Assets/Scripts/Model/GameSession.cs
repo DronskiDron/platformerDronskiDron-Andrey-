@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Player.Model
 {
@@ -20,6 +19,12 @@ namespace Player.Model
             {
                 DontDestroyOnLoad(this);
             }
+        }
+
+
+        private void Start()
+        {
+            SaveSession();
         }
 
 
