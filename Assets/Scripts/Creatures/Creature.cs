@@ -9,7 +9,6 @@ namespace Creatures
         [SerializeField] private float _speed = 5f;
         [SerializeField] protected float JumpForce = 1f;
         [SerializeField] private float _damageJumpForce = 10f;
-        [SerializeField] private int _damage = 1;
         [SerializeField] protected HealthComponent Health;
 
         [Header("Creature Checkers")]

@@ -14,7 +14,6 @@ namespace Creatures.Player
 
         [Header("Player Checkers")]
         [SerializeField] private CheckCircleOverlap _interactionCheck;
-        [SerializeField] private float _interactionRadius = 5f;
         [SerializeField] private CoinCounter _coinCounter;
 
         [Header("Weapon States")]
