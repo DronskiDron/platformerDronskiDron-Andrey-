@@ -6,14 +6,6 @@
             "id": "0f1fa342-5e5f-4242-bf45-3f1c19d6b22b",
             "actions": [
                 {
-                    "name": "SayingSomething",
-                    "type": "Button",
-                    "id": "05977bd2-6936-4d53-986f-714921b7c957",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
                     "name": "TotalMovement",
                     "type": "Value",
                     "id": "656bfa39-51ed-40ca-8479-40bd859044f6",
@@ -47,17 +39,6 @@
                 }
             ],
             "bindings": [
-                {
-                    "name": "",
-                    "id": "2ebafaf9-d29c-403e-bf00-b9bac0d70b0b",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "SayingSomething",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
                 {
                     "name": "WASD",
                     "id": "c266f1c9-f066-4d02-a158-023832199c1c",

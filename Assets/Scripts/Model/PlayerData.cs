@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Player.Model
+namespace Creatures.Model
 {
     [Serializable]
     public class PlayerData

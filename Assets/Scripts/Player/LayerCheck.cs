@@ -2,18 +2,19 @@
 using UnityEngine;
 using Utils;
 
-namespace Player
+namespace Creatures
 {
-    public class PlayerJumpChecker : MonoBehaviour
+    public class LayerCheck : MonoBehaviour
     {
-        [SerializeField] private LayerMask _groundLayer;
+        [SerializeField] private LayerMask _layer;
+        [SerializeField] private bool _isTouchingLayer;
         [SerializeField] private Collider2D _collider;
         [SerializeField] private float _drawSphereRadius = 0.3f;
 
         private bool _isPressingJump;
-        private bool _isTouchingLayer;
+        public bool IsTouchingLayer => _isTouchingLayer;
 
-         public LayerMask GroundLayer => _groundLayer;
+        public LayerMask GroundLayer => _layer;
 
 
         private void Awake()
@@ -42,13 +43,13 @@ namespace Player
 
         private void OnTriggerStay2D(Collider2D collision)
         {
-            _isTouchingLayer = _collider.IsTouchingLayers(_groundLayer);
+            _isTouchingLayer = _collider.IsTouchingLayers(_layer);
         }
 
 
         private void OnTriggerExit2D(Collider2D collision)
         {
-            _isTouchingLayer = _collider.IsTouchingLayers(_groundLayer);
+            _isTouchingLayer = _collider.IsTouchingLayers(_layer);
         }
 
 

@@ -1,6 +1,6 @@
 ﻿using General.Components;
-using Player;
 using UnityEngine;
+using Creatures.Player;
 
 namespace Props
 {

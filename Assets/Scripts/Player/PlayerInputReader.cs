@@ -1,12 +1,13 @@
+using Creatures.Player;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Player
+namespace Creatures
 {
     public class PlayerInputReader : MonoBehaviour
     {
         [SerializeField] private PlayerController _player;
-        [SerializeField] private PlayerJumpChecker _playerJumpChecker;
+        [SerializeField] private LayerCheck _playerJumpChecker;
 
 
         private void OnTotalMovement(InputValue context)
@@ -21,12 +22,6 @@ namespace Player
         {
             var jumpVector = context.Get<Vector2>();
             _playerJumpChecker.SetIsPressingJump(jumpVector);
-        }
-
-
-        private void OnSayingSomething(InputValue context)
-        {
-            _player.SaySomething();
         }
 
 

@@ -1,6 +1,7 @@
+using Creatures.Player;
 using UnityEngine;
 
-namespace Player
+namespace Creatures
 {
     public class ArmPlayerComponent : MonoBehaviour
     {

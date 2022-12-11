@@ -8758,6 +8758,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45e0d3483ef07684bbd30bb9d746d447, type: 3}
+--- !u!4 &1214889797 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4372885476232784303, guid: 76744fe3c924da842b140633aa9bc6cb,
+    type: 3}
+  m_PrefabInstance: {fileID: 4372885476251171769}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1217754599
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24660,7 +24666,7 @@ PrefabInstance:
     - target: {fileID: 2427943495945562232, guid: 7a79cf71e4b4b624c9bc7936f3b8c242,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -28.64
+      value: -28.56
       objectReference: {fileID: 0}
     - target: {fileID: 2427943495945562232, guid: 7a79cf71e4b4b624c9bc7936f3b8c242,
         type: 3}
@@ -27387,12 +27393,12 @@ PrefabInstance:
     - target: {fileID: 2532081266675386070, guid: a5b011ba8d1290843a9a9e40c268392b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -34.604706
+      value: -34.607464
       objectReference: {fileID: 0}
     - target: {fileID: 2532081266675386070, guid: a5b011ba8d1290843a9a9e40c268392b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.7332366
+      value: -0.7338961
       objectReference: {fileID: 0}
     - target: {fileID: 2532081266675386070, guid: a5b011ba8d1290843a9a9e40c268392b,
         type: 3}
@@ -28240,7 +28246,7 @@ PrefabInstance:
     - target: {fileID: 4372885476232784303, guid: 76744fe3c924da842b140633aa9bc6cb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -85.1891
+      value: -85.03909
       objectReference: {fileID: 0}
     - target: {fileID: 4372885476232784303, guid: 76744fe3c924da842b140633aa9bc6cb,
         type: 3}
@@ -28378,7 +28384,7 @@ PrefabInstance:
     - target: {fileID: 4721150701775001660, guid: 3dbb76121098c834a98bfd1603aa85cb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -39.05
+      value: -38.9
       objectReference: {fileID: 0}
     - target: {fileID: 4721150701775001660, guid: 3dbb76121098c834a98bfd1603aa85cb,
         type: 3}
@@ -29072,7 +29078,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _target
       value: 
-      objectReference: {fileID: 1118316117}
+      objectReference: {fileID: 1214889797}
     - target: {fileID: 7942525497675331549, guid: 580fd8103074806429cdf6d9639b7f21,
         type: 3}
       propertyPath: m_Name

@@ -1,4 +1,4 @@
-﻿using Player.Model;
+﻿using Creatures.Model;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 

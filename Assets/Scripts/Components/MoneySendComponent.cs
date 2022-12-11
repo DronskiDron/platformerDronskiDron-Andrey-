@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using Player;
+using Creatures;
 
 namespace General.Components
 {

@@ -1,7 +1,7 @@
-﻿using Player.Model;
+﻿using Creatures.Model;
 using UnityEngine;
 
-namespace Player
+namespace Creatures
 {
     public class CoinCounter : MonoBehaviour
     {

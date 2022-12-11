@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Player
+namespace Creatures
 {
     public class PlayerInputReaderSpherecast : MonoBehaviour
     {
