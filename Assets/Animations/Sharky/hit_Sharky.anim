@@ -20,13 +20,13 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 3c5b159fef3cd334e885495d9b4f680a, type: 3}
+      value: {fileID: 21300000, guid: 6828810378cafee44aba9c80df19b6d4, type: 3}
     - time: 0.1
-      value: {fileID: 21300000, guid: 2158a2a1831463d4ca15d41d192e086b, type: 3}
+      value: {fileID: 21300000, guid: 270c1ebe1a3c2d848a782be743768921, type: 3}
     - time: 0.2
-      value: {fileID: 21300000, guid: d3444042689768c44828908b43fa3472, type: 3}
+      value: {fileID: 21300000, guid: 6af2201faec06164c85a49ac652b4c47, type: 3}
     - time: 0.3
-      value: {fileID: 21300000, guid: a869a9884c9ebeb48a106da3fca467e8, type: 3}
+      value: {fileID: 21300000, guid: 3cacee364f4a2ed4783e61313f1ed477, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -46,10 +46,10 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 3c5b159fef3cd334e885495d9b4f680a, type: 3}
-    - {fileID: 21300000, guid: 2158a2a1831463d4ca15d41d192e086b, type: 3}
-    - {fileID: 21300000, guid: d3444042689768c44828908b43fa3472, type: 3}
-    - {fileID: 21300000, guid: a869a9884c9ebeb48a106da3fca467e8, type: 3}
+    - {fileID: 21300000, guid: 6828810378cafee44aba9c80df19b6d4, type: 3}
+    - {fileID: 21300000, guid: 270c1ebe1a3c2d848a782be743768921, type: 3}
+    - {fileID: 21300000, guid: 6af2201faec06164c85a49ac652b4c47, type: 3}
+    - {fileID: 21300000, guid: 3cacee364f4a2ed4783e61313f1ed477, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -74,18 +74,4 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events:
-  - time: 0
-    functionName: BecomeImmortal
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.3
-    functionName: BecomeMortal
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
+  m_Events: []

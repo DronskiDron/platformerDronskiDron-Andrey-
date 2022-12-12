@@ -7,7 +7,7 @@ namespace Creatures
     public class PlayerInputReader : MonoBehaviour
     {
         [SerializeField] private PlayerController _player;
-        [SerializeField] private LayerCheck _playerJumpChecker;
+        [SerializeField] private LayerCheckCreatures _groundCheck;
 
 
         private void OnTotalMovement(InputValue context)
@@ -21,7 +21,7 @@ namespace Creatures
         private void OnJumping(InputValue context)
         {
             var jumpVector = context.Get<Vector2>();
-            _playerJumpChecker.SetIsPressingJump(jumpVector);
+            _groundCheck.SetIsPressingJump(jumpVector);
         }
 
 

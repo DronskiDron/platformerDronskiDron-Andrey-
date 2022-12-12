@@ -5281,7 +5281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 4721150701775001663}
-  _playerJumpChecker: {fileID: 4721150702822014572}
+  _groundCheck: {fileID: 4721150702822014572}
 --- !u!114 &4721150701775001663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5297,7 +5297,6 @@ MonoBehaviour:
   _speed: 5
   JumpForce: 12
   _damageJumpForce: 10
-  _damage: 1
   Health: {fileID: 6669306786479704690}
   _attackRange: {fileID: 1802801993}
   Particles: {fileID: 331407863}
@@ -5306,7 +5305,6 @@ MonoBehaviour:
   _slamDownDamageVelocity: 22
   _slamDownDamageValue: 1
   _interactionCheck: {fileID: 39893651}
-  _interactionRadius: 0.6
   _coinCounter: {fileID: 4721150701775001651}
   _armed: {fileID: 9100000, guid: de4997dc4caf65f43afc84da57bff926, type: 2}
   _disarmed: {fileID: 9100000, guid: 78beabe6e432b5540b8af84f0812a4b1, type: 2}
@@ -5554,10 +5552,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4721150702240915402}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f001644eff76aa74d867d82bffeb0231, type: 3}
+  m_Script: {fileID: 11500000, guid: 5943fafb61af5064b86a47ed74876ea9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _layer:
+  Layer:
     serializedVersion: 2
     m_Bits: 256
   _isTouchingLayer: 0

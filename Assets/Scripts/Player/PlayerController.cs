@@ -67,7 +67,7 @@ namespace Creatures.Player
         }
 
 
-        protected override void TakeDamage()
+        public override void TakeDamage()
         {
             base.TakeDamage();
             if (_session.Data.Coins > 0)

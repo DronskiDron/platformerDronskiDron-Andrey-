@@ -14,7 +14,7 @@ namespace Creatures
         [Header("Creature Checkers")]
         [SerializeField] private CheckCircleOverlap _attackRange;
         [SerializeField] protected SpawnListComponent Particles;
-        [SerializeField] protected LayerCheck GroundCheck;
+        [SerializeField] protected LayerCheckCreatures GroundCheck;
 
         protected Rigidbody2D Rigidbody;
         private Vector2 _moveDirection;
@@ -130,7 +130,7 @@ namespace Creatures
         }
 
 
-        protected virtual void TakeDamage()
+        public virtual void TakeDamage()
         {
             IsJumping = false;
             Animator.SetTrigger(Hit);
