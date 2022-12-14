@@ -6,6 +6,24 @@ namespace General.Components
     {
         [SerializeField] private Transform _target;
         [SerializeField] private GameObject _prefab;
+        [SerializeField] private bool _isPrefabFlipX;
+
+        private SpriteRenderer _spriteRenderer;
+
+
+        private void Awake()
+        {
+            _spriteRenderer = _prefab.GetComponent<SpriteRenderer>();
+        }
+
+
+        private void Start()
+        {
+            if (_isPrefabFlipX)
+            {
+                _spriteRenderer.flipX = true;
+            }
+        }
 
 
         [ContextMenu("Spawn")]

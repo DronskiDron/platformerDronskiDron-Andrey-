@@ -10,6 +10,8 @@ namespace Creatures
         [SerializeField] protected float JumpForce = 1f;
         [SerializeField] private float _damageJumpForce = 10f;
         [SerializeField] protected HealthComponent Health;
+        [SerializeField] private bool _invertScale;
+        public bool InvertScale => _invertScale;
 
         [Header("Creature Checkers")]
         [SerializeField] private CheckCircleOverlap _attackRange;
@@ -45,6 +47,7 @@ namespace Creatures
         protected virtual void FixedUpdate()
         {
             PlayerMover();
+            UpdateSpriteDirection();
             AniimationSwitcher();
         }
 
@@ -118,14 +121,19 @@ namespace Creatures
             Animator.SetBool(IsRunning, _moveDirection.x != 0);
             Animator.SetBool(IsGround, IsGroundedNow);
             Animator.SetFloat(VerticalVelocity, Rigidbody.velocity.y);
+        }
 
+
+        private void UpdateSpriteDirection()
+        {
+            var multiplier = _invertScale ? -1 : 1;
             if (_moveDirection.x > 0)
             {
-                transform.localScale = Vector3.one;
+                transform.localScale = new Vector3(multiplier, 1, 1);
             }
             else if (_moveDirection.x < 0)
             {
-                transform.localScale = new Vector3(-1, 1, 1);
+                transform.localScale = new Vector3(-1 * multiplier, 1, 1);
             }
         }
 

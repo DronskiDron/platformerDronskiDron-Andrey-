@@ -121,6 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _target: {fileID: 1387890960}
   _prefab: {fileID: 4209286332357354079, guid: 56cb4ad74a794f547a6205fbbaff695b, type: 3}
+  _isPrefabFlipX: 0
 --- !u!1 &1578835226
 GameObject:
   m_ObjectHideFlags: 0
@@ -4978,6 +4979,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _target: {fileID: 1585879531}
   _prefab: {fileID: 4838915102552124004, guid: 90d8919e7bc46b7438ff50590bf4c6b9, type: 3}
+  _isPrefabFlipX: 0
 --- !u!1 &1802801991
 GameObject:
   m_ObjectHideFlags: 0
@@ -5100,6 +5102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _target: {fileID: 893038762968479055}
   _prefab: {fileID: 2479424980182007388, guid: 6e52913843edede429b905d45c3ab8bb, type: 3}
+  _isPrefabFlipX: 0
 --- !u!1 &4721150701775001659
 GameObject:
   m_ObjectHideFlags: 0
@@ -5298,6 +5301,7 @@ MonoBehaviour:
   JumpForce: 12
   _damageJumpForce: 10
   Health: {fileID: 6669306786479704690}
+  _invertScale: 0
   _attackRange: {fileID: 1802801993}
   Particles: {fileID: 331407863}
   GroundCheck: {fileID: 4721150702822014572}
@@ -5559,7 +5563,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   _isTouchingLayer: 0
-  _collider: {fileID: 4721150702240915404}
   _drawSphereRadius: 0.3
 --- !u!1 &4801355957240188693
 GameObject:
@@ -5606,3 +5609,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _target: {fileID: 739699777672410364}
   _prefab: {fileID: 8015012442368583878, guid: c499f0cd70531d14e8cd399e7da30f9a, type: 3}
+  _isPrefabFlipX: 0

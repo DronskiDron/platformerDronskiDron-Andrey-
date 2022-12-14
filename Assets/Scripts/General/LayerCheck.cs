@@ -6,7 +6,7 @@ namespace General.Components
     {
         [SerializeField] protected LayerMask Layer;
         [SerializeField] protected bool _isTouchingLayer;
-        [SerializeField] private Collider2D _collider;
+        private Collider2D _collider;
 
         public bool IsTouchingLayer => _isTouchingLayer;
 
@@ -26,6 +26,13 @@ namespace General.Components
         private void OnTriggerExit2D(Collider2D collision)
         {
             _isTouchingLayer = _collider.IsTouchingLayers(Layer);
+        }
+
+
+        public void OnStopTouchingLayer()
+        {
+            _isTouchingLayer = false;
+            Debug.Log("111111111111");
         }
     }
 }
