@@ -10,10 +10,18 @@ namespace Creatures
         [SerializeField] private int _direction;
         [SerializeField] private Creature _creature;
 
+        private MobAI _mobAI;
+
+
+        private void Awake()
+        {
+            _mobAI = GetComponent<MobAI>();
+        }
+
 
         public override IEnumerator DoPatrol()
         {
-            while (enabled)
+            while (enabled && !_mobAI.IsDead)
             {
                 if (_groundCheck.IsTouchingLayer)
                 {

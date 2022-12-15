@@ -32,7 +32,6 @@ namespace General.Components
         public void OnStopTouchingLayer()
         {
             _isTouchingLayer = false;
-            Debug.Log("111111111111");
         }
     }
 }

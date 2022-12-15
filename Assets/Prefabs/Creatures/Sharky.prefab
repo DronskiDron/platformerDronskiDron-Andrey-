@@ -31,7 +31,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4721150701775001660}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &266501105
 BoxCollider2D:
@@ -46,7 +46,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.88741326, y: 0.4569043}
+  m_Offset: {x: -0.97679853, y: 0.29714358}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -57,7 +57,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.1840167, y: 1.6859705}
+  m_Size: {x: 4.3377476, y: 1.3664491}
   m_EdgeRadius: 0
 --- !u!114 &1199655351724045846
 MonoBehaviour:
@@ -180,7 +180,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4721150701775001660}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1802801993
 MonoBehaviour:
@@ -443,6 +443,7 @@ GameObject:
   - component: {fileID: 3419200235148880614}
   - component: {fileID: 1780606718}
   - component: {fileID: 7780517866537752234}
+  - component: {fileID: 1077038333}
   m_Layer: 8
   m_Name: Sharky
   m_TagString: Enemy
@@ -466,8 +467,8 @@ Transform:
   - {fileID: 893038762968479055}
   - {fileID: 4313611381014788188}
   - {fileID: 3094336273095693983}
-  - {fileID: 1802801992}
   - {fileID: 266501104}
+  - {fileID: 1802801992}
   - {fileID: 4800518701553419573}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -681,9 +682,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _vision: {fileID: 1199655351724045846}
   _canAttack: {fileID: 365017980}
-  _agrDelay: 0.5
+  _agrDelay: 0.05
   _attackCooldown: 1
   _missPlayerCooldown: 1
+  _spriteYDifference: 0.5
 --- !u!114 &7780517866537752234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -699,6 +701,44 @@ MonoBehaviour:
   _groundCheck: {fileID: 5488529485129573690}
   _direction: 1
   _creature: {fileID: 3419200235148880614}
+--- !u!114 &1077038333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4721150701775001659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a4ebb7e5ef789947a1a8029086b8df7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tag: Enemy
+  _action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5488529485129573690}
+        m_MethodName: OnStopTouchingLayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1780606718}
+        m_MethodName: OnPatrol
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4721150702240915402
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ namespace Creatures
         [SerializeField] private float _agrDelay = 0.5f;
         [SerializeField] private float _attackCooldown = 1f;
         [SerializeField] private float _missPlayerCooldown = 1f;
+        [SerializeField] private float _spriteYDifference = 0.5f;
 
         private Coroutine _current;
         private GameObject _target;
@@ -19,6 +20,7 @@ namespace Creatures
         private Creature _creature;
         private Animator _animator;
         private bool _isDead;
+        public bool IsDead => _isDead;
         private Patrol _patrol;
 
         private static readonly int IsDeadKey = Animator.StringToHash("is-dead");
@@ -68,6 +70,7 @@ namespace Creatures
                 {
                     SetDirectionToTarget();
                 }
+
                 yield return null;
             }
 
@@ -95,6 +98,12 @@ namespace Creatures
         }
 
 
+        public void OnPatrol()
+        {
+            StartState(_patrol.DoPatrol());
+        }
+
+
         private void StartState(IEnumerator coroutine)
         {
             _creature.SetMoveDirection(Vector2.zero);
@@ -111,6 +120,13 @@ namespace Creatures
             _animator.SetBool(IsDeadKey, true);
 
             if (_current != null) StopCoroutine(_current);
+        }
+
+
+        public bool CompareY()
+        {
+            var result = _target.transform.position.y - _spriteYDifference < transform.position.y;
+            return result;
         }
     }
 }
