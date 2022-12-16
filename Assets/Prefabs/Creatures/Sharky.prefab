@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 1585879531}
-  _prefab: {fileID: 8884899127860789305, guid: 1796ad5c12165de4e879da257a3b0485, type: 3}
+  _prefab: {fileID: 4838915102552124004, guid: 90d8919e7bc46b7438ff50590bf4c6b9, type: 3}
   _isPrefabFlipX: 1
 --- !u!1 &1802801991
 GameObject:

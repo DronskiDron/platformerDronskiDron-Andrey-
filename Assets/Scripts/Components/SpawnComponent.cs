@@ -8,21 +8,18 @@ namespace General.Components
         [SerializeField] private GameObject _prefab;
         [SerializeField] private bool _isPrefabFlipX;
 
-        private SpriteRenderer _spriteRenderer;
+        private Transform _transform;
 
 
         private void Awake()
         {
-            _spriteRenderer = _prefab.GetComponent<SpriteRenderer>();
+            _transform = GetComponent<Transform>();
         }
 
 
         private void Start()
         {
-            if (_isPrefabFlipX)
-            {
-                _spriteRenderer.flipX = true;
-            }
+            FlipXParticle();
         }
 
 
@@ -37,6 +34,15 @@ namespace General.Components
         public void SpawnRandom(GameObject prefab, Vector3 position, Quaternion quaternion)
         {
             var instance = Instantiate(prefab, position, quaternion);
+        }
+
+
+        private void FlipXParticle()
+        {
+            if (_isPrefabFlipX)
+            {
+                _transform.localScale = new Vector3(_transform.lossyScale.x * -1, _transform.localScale.y, _transform.localScale.z);
+            }
         }
     }
 }

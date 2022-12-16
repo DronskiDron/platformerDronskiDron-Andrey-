@@ -2,6 +2,7 @@
 using UnityEditor.Animations;
 using Utils;
 using Creatures.Model;
+using System;
 
 namespace Creatures.Player
 {
@@ -156,6 +157,12 @@ namespace Creatures.Player
         private void UpdatePlayerWeapon()
         {
             Animator.runtimeAnimatorController = _session.Data.IsArmed ? _armed : _disarmed;
+        }
+
+
+        internal void Throw()
+        {
+            throw new NotImplementedException();
         }
     }
 }

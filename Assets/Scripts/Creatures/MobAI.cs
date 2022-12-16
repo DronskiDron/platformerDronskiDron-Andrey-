@@ -10,9 +10,8 @@ namespace Creatures
         [SerializeField] private LayerCheck _vision;
         [SerializeField] private LayerCheck _canAttack;
         [SerializeField] private float _agrDelay = 0.5f;
-        [SerializeField] private float _attackCooldown = 1f;
+        [SerializeField] private float _attackCooldown = 0.2f;
         [SerializeField] private float _missPlayerCooldown = 1f;
-        [SerializeField] private float _spriteYDifference = 0.5f;
 
         private Coroutine _current;
         private GameObject _target;
@@ -22,6 +21,7 @@ namespace Creatures
         private bool _isDead;
         public bool IsDead => _isDead;
         private Patrol _patrol;
+        private bool _isAttackingNow = false;
 
         private static readonly int IsDeadKey = Animator.StringToHash("is-dead");
 
@@ -79,16 +79,19 @@ namespace Creatures
             StartState(_patrol.DoPatrol());
         }
 
+
         private IEnumerator Attack()
         {
             while (_canAttack.IsTouchingLayer)
             {
+                _isAttackingNow = true;
                 _creature.Attack();
                 yield return new WaitForSeconds(_attackCooldown);
             }
-
+            _isAttackingNow = false;
             StartState(GoToHero());
         }
+
 
         private void SetDirectionToTarget()
         {
@@ -100,7 +103,10 @@ namespace Creatures
 
         public void OnPatrol()
         {
-            StartState(_patrol.DoPatrol());
+            if (!_isAttackingNow)
+            {
+                StartState(_patrol.DoPatrol());
+            }
         }
 
 
@@ -120,13 +126,6 @@ namespace Creatures
             _animator.SetBool(IsDeadKey, true);
 
             if (_current != null) StopCoroutine(_current);
-        }
-
-
-        public bool CompareY()
-        {
-            var result = _target.transform.position.y - _spriteYDifference < transform.position.y;
-            return result;
         }
     }
 }

@@ -35,6 +35,12 @@ namespace Creatures
         {
             _player.Attack();
         }
+
+
+        private void OnThrow(InputValue context)
+        {
+            _player.Throw();
+        }
     }
 }
 
