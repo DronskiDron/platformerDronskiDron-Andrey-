@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine;
 
 namespace Creatures.Model
 {
@@ -7,17 +8,14 @@ namespace Creatures.Model
     {
         public int Coins;
         public int Hp;
+        public int Swords;
         public bool IsArmed;
 
 
         public PlayerData Clone()
         {
-            return new PlayerData
-            {
-                Coins = Coins,
-                Hp = Hp,
-                IsArmed = IsArmed
-            };
+            var json = JsonUtility.ToJson(this);
+            return JsonUtility.FromJson<PlayerData>(json);
         }
     }
 }

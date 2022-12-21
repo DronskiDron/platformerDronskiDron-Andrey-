@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using General.Components;
 using General.Components.Creatures;
 using UnityEngine;
@@ -41,24 +42,31 @@ namespace Creatures
         }
 
 
-        public void OnHeroeInVision(GameObject go)
+        public void OnPlayerInVision(GameObject go)
         {
             if (_isDead) return;
 
             _target = go;
-            StartState(AgroToHero());
+            StartState(AgroToPlayer());
         }
 
 
-        private IEnumerator AgroToHero()
+        private IEnumerator AgroToPlayer()
         {
+            LookAtPlayer();
             _particles.Spawn("Exclamation");
             yield return new WaitForSeconds(_agrDelay);
-            StartState(GoToHero());
+            StartState(GoToPlayer());
         }
 
+        private void LookAtPlayer()
+        {
+            var direction = GetDirectionToTarget();
+            _creature.SetMoveDirection(Vector2.zero);
+            _creature.UpdateSpriteDirection(direction);
+        }
 
-        private IEnumerator GoToHero()
+        private IEnumerator GoToPlayer()
         {
             while (_vision.IsTouchingLayer)
             {
@@ -74,6 +82,7 @@ namespace Creatures
                 yield return null;
             }
 
+            _creature.SetMoveDirection(Vector2.zero);
             _particles.Spawn("MissPlayer");
             yield return new WaitForSeconds(_missPlayerCooldown);
             StartState(_patrol.DoPatrol());
@@ -89,15 +98,22 @@ namespace Creatures
                 yield return new WaitForSeconds(_attackCooldown);
             }
             _isAttackingNow = false;
-            StartState(GoToHero());
+            StartState(GoToPlayer());
         }
 
 
         private void SetDirectionToTarget()
         {
+            var direction = GetDirectionToTarget();
+            _creature.SetMoveDirection(direction);
+        }
+
+
+        private Vector2 GetDirectionToTarget()
+        {
             var direction = _target.transform.position - transform.position;
             direction.y = 0;
-            _creature.SetMoveDirection(direction.normalized);
+            return direction.normalized;
         }
 
 

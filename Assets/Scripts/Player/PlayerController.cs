@@ -3,6 +3,7 @@ using UnityEditor.Animations;
 using Utils;
 using Creatures.Model;
 using System;
+using System.Collections;
 
 namespace Creatures.Player
 {
@@ -16,19 +17,27 @@ namespace Creatures.Player
         [Header("Player Checkers")]
         [SerializeField] private CheckCircleOverlap _interactionCheck;
         [SerializeField] private CoinCounter _coinCounter;
+        [SerializeField] private Cooldown _throwCooldown;
 
         [Header("Weapon States")]
         [SerializeField] private AnimatorController _armed;
         [SerializeField] private AnimatorController _disarmed;
 
+        [Header("Super throw")]
+        [SerializeField] private Cooldown _superThrowCooldown;
+        [SerializeField] private int _superThrowParticles;
+        [SerializeField] private float _superThrowDelay;
+
         [Header("Particles")]
         [SerializeField] private ParticleSystem _hitParticles;
+        private static readonly int ThrowKey = Animator.StringToHash("throw");
 
         private bool _allowDoubleJump;
         private bool _wasDoubleJump = false;
         private bool _isAllowSlamDownParticle = true;
         private float _startSlamDownDamageVelocity;
         public float StartSlamDownDamageVelocity => _startSlamDownDamageVelocity;
+        private bool _superThrow = false;
 
         private GameSession _session;
 
@@ -154,15 +163,63 @@ namespace Creatures.Player
         }
 
 
+        public void CollectSwords()
+        {
+            _session.Data.Swords += 1;
+        }
+
+
         private void UpdatePlayerWeapon()
         {
             Animator.runtimeAnimatorController = _session.Data.IsArmed ? _armed : _disarmed;
         }
 
 
-        internal void Throw()
+        public void Throw()
         {
-            throw new NotImplementedException();
+            if (_session.Data.IsArmed && _throwCooldown.IsReady && _session.Data.Swords > 1)
+            {
+                Animator.SetTrigger(ThrowKey);
+                _throwCooldown.Reset();
+            }
+        }
+
+
+        public void IsSuperThrowAvailable(bool value)
+        {
+            _superThrow = value;
+        }
+
+
+        private void ThrowAndRemoveFromInventory()
+        {
+            Particles.Spawn("Throw");
+            _session.Data.Swords -= 1;
+        }
+
+
+        public void ThrowAction()
+        {
+            if (_superThrow)
+            {
+                var numThrows = Mathf.Min(_superThrowParticles, _session.Data.Swords - 1);
+                StartCoroutine(DoSuperThrow(numThrows));
+            }
+            else
+            {
+                ThrowAndRemoveFromInventory();
+            }
+            _superThrow = false;
+        }
+
+
+        private IEnumerator DoSuperThrow(int numThrows)
+        {
+            for (int i = 0; i < numThrows; i++)
+            {
+                ThrowAndRemoveFromInventory();
+                yield return new WaitForSeconds(_superThrowDelay);
+            }
         }
     }
 }

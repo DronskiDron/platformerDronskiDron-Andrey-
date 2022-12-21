@@ -24827,6 +24827,7 @@ MonoBehaviour:
   _data:
     Coins: 0
     Hp: 0
+    Swords: 5
     IsArmed: 0
 --- !u!4 &1857664937
 Transform:

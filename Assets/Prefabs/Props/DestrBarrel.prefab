@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 3257753438635650853}
   - component: {fileID: 724317585}
   - component: {fileID: 1371547962}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: DestrBarrel
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -234,6 +234,9 @@ MonoBehaviour:
           m_StringArgument: destroy
           m_BoolArgument: 0
         m_CallState: 2
+  _onChange:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &3257753438635650852
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -249,7 +252,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.015602112, y: -0.017200947}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 0.03125, y: 0.0625, z: 0.0625, w: 0.09375}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.8125, y: 0.9375}
     newSize: {x: 0.26, y: 0.3}
@@ -295,6 +298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _target: {fileID: 3257753438635650848}
   _prefab: {fileID: 1305749284219007200, guid: 7273bee4a2474ef439b45bf1989ff83b, type: 3}
+  _isPrefabFlipX: 0
 --- !u!114 &1371547962
 MonoBehaviour:
   m_ObjectHideFlags: 0

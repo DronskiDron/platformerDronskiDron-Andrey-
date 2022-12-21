@@ -47,7 +47,7 @@ namespace Creatures
         protected virtual void FixedUpdate()
         {
             PlayerMover();
-            UpdateSpriteDirection();
+            UpdateSpriteDirection(_moveDirection);
             AniimationSwitcher();
         }
 
@@ -124,7 +124,7 @@ namespace Creatures
         }
 
 
-        private void UpdateSpriteDirection()
+        public void UpdateSpriteDirection(Vector2 direction)
         {
             var multiplier = _invertScale ? -1 : 1;
             if (_moveDirection.x > 0)

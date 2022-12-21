@@ -208,7 +208,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a4ebb7e5ef789947a1a8029086b8df7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tag: Ground
+  _tag: 
+  _layer:
+    serializedVersion: 2
+    m_Bits: 4352
   _action:
     m_PersistentCalls:
       m_Calls:
@@ -257,7 +260,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b742182a9a1cf6d41aae36147da7e9d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tag: Player
+  _tag: 
+  _layer:
+    serializedVersion: 2
+    m_Bits: 8192
   _action:
     m_PersistentCalls:
       m_Calls:
@@ -339,7 +345,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98044bc95b436bd41b40b1651e066b76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tag: Player
+  _tag: 
+  _layer:
+    serializedVersion: 2
+    m_Bits: 8192
   _action:
     m_PersistentCalls:
       m_Calls:

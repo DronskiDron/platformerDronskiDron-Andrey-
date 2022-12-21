@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 266501105}
   - component: {fileID: 1199655351724045846}
   - component: {fileID: 4581458322036389344}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Vision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.97679853, y: 0.29714358}
+  m_Offset: {x: -0.97679853, y: 0.10323733}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -57,7 +57,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.3377476, y: 1.3664491}
+  m_Size: {x: 4.3377476, y: 0.38338864}
   m_EdgeRadius: 0
 --- !u!114 &1199655351724045846
 MonoBehaviour:
@@ -87,12 +87,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8089f4cf29cd50145bfbe6a6d540c708, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tag: Player
+  _tag: 
+  _layer:
+    serializedVersion: 2
+    m_Bits: 12288
   _action:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1780606718}
-        m_MethodName: OnHeroeInVision
+        m_MethodName: OnPlayerInVision
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -112,7 +115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1585879531}
   - component: {fileID: 1585879532}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FootStepPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -270,7 +273,7 @@ GameObject:
   - component: {fileID: 4800518701553419573}
   - component: {fileID: 6682492660793956706}
   - component: {fileID: 5488529485129573690}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: PatrolDirectionChecker
   m_TagString: Enemy
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
@@ -343,7 +346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3094336273095693983}
   - component: {fileID: 4523205025433000706}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: MissPlayerSpawnPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -389,7 +392,7 @@ GameObject:
   m_Component:
   - component: {fileID: 893038762968479055}
   - component: {fileID: 4000715441732818910}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: JumpDustPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -444,7 +447,7 @@ GameObject:
   - component: {fileID: 1780606718}
   - component: {fileID: 7780517866537752234}
   - component: {fileID: 1077038333}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: Sharky
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -685,7 +688,6 @@ MonoBehaviour:
   _agrDelay: 0.05
   _attackCooldown: 1
   _missPlayerCooldown: 1
-  _spriteYDifference: 0.5
 --- !u!114 &7780517866537752234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -713,7 +715,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a4ebb7e5ef789947a1a8029086b8df7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tag: Enemy
+  _tag: 
+  _layer:
+    serializedVersion: 2
+    m_Bits: 4096
   _action:
     m_PersistentCalls:
       m_Calls:
@@ -750,7 +755,7 @@ GameObject:
   - component: {fileID: 4721150702240915405}
   - component: {fileID: 4721150702240915404}
   - component: {fileID: 4721150702822014572}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -814,7 +819,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4313611381014788188}
   - component: {fileID: 8936232762767273400}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ExclamationSpawnPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}

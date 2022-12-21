@@ -28,34 +28,34 @@ namespace General.Components.Creatures
 
         public void RenewHealth(int gotHelth)
         {
-            if (_health > 0)
+            if (_health <= 0) return;
+
+            if (_isImmortal)
             {
-                if (_isImmortal)
-                {
-                    gotHelth = 0;
-                }
-
-                _health += gotHelth;
-
-                if (gotHelth > 0)
-                {
-                    _onHeal?.Invoke();
-                    if (_health > _startHealth) _health = _startHealth;
-                }
-                else
-                {
-                    _onDamage?.Invoke();
-                    if (_health <= 0)
-                    {
-                        _onDie?.Invoke();
-                    }
-                }
-                if (_target.CompareTag("Player"))
-                {
-                    Debug.Log($"У Вас осталось {_health} жизней");
-                }
-                 _onChange?.Invoke(_health);
+                gotHelth = 0;
             }
+
+            _health += gotHelth;
+
+            if (gotHelth > 0)
+            {
+                _onHeal?.Invoke();
+                if (_health > _startHealth) _health = _startHealth;
+            }
+            else
+            {
+                _onDamage?.Invoke();
+                if (_health <= 0)
+                {
+                    _onDie?.Invoke();
+                }
+            }
+            if (_target.CompareTag("Player"))
+            {
+                Debug.Log($"У Вас осталось {_health} жизней");
+            }
+            _onChange?.Invoke(_health);
+
         }
 
 

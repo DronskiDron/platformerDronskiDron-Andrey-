@@ -20,11 +20,11 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 2ee5286fdfb6c6640a9a6d4ef9bc6536, type: 3}
+      value: {fileID: 21300000, guid: d91b7729a0f155d4ea66725df4e78494, type: 3}
     - time: 0.1
-      value: {fileID: 21300000, guid: 071516fe807cf1749b392e5949afefdb, type: 3}
+      value: {fileID: 21300000, guid: 68faa6b45d776bd4982c752c0dc6ab71, type: 3}
     - time: 0.2
-      value: {fileID: 21300000, guid: 0e0287cb6ea0de048a27bb9991ac3198, type: 3}
+      value: {fileID: 21300000, guid: 72729694097b931499f38480a754cab9, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -44,9 +44,9 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 2ee5286fdfb6c6640a9a6d4ef9bc6536, type: 3}
-    - {fileID: 21300000, guid: 071516fe807cf1749b392e5949afefdb, type: 3}
-    - {fileID: 21300000, guid: 0e0287cb6ea0de048a27bb9991ac3198, type: 3}
+    - {fileID: 21300000, guid: d91b7729a0f155d4ea66725df4e78494, type: 3}
+    - {fileID: 21300000, guid: 68faa6b45d776bd4982c752c0dc6ab71, type: 3}
+    - {fileID: 21300000, guid: 72729694097b931499f38480a754cab9, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -73,7 +73,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.1
-    functionName: AttackAction
+    functionName: ThrowAction
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

@@ -41,6 +41,13 @@ namespace Creatures
         {
             _player.Throw();
         }
+
+
+        private void OnSuperThrow(InputValue context)
+        {
+            _player.IsSuperThrowAvailable(true);
+            _player.Throw();
+        }
     }
 }
 
