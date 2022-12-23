@@ -334,7 +334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Layer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 16640
   _isTouchingLayer: 0
 --- !u!1 &1149133291563307482
 GameObject:
@@ -806,7 +806,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Layer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 16640
   _isTouchingLayer: 0
   _drawSphereRadius: 0.3
 --- !u!1 &6543381445244774401

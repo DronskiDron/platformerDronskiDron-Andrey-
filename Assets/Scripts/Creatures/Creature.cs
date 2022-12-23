@@ -1,4 +1,6 @@
-﻿using General.Components.Creatures;
+﻿using General.Components.ColliderBased;
+using General.Components.Creatures;
+using General.Components.Health;
 using UnityEngine;
 
 namespace Creatures
@@ -19,7 +21,7 @@ namespace Creatures
         [SerializeField] protected LayerCheckCreatures GroundCheck;
 
         protected Rigidbody2D Rigidbody;
-        private Vector2 _moveDirection;
+        protected Vector2 MoveDirection;
         protected Animator Animator;
         protected bool IsGroundedNow;
         protected bool IsJumping;
@@ -47,7 +49,7 @@ namespace Creatures
         protected virtual void FixedUpdate()
         {
             PlayerMover();
-            UpdateSpriteDirection(_moveDirection);
+            UpdateSpriteDirection(MoveDirection);
             AniimationSwitcher();
         }
 
@@ -60,7 +62,7 @@ namespace Creatures
 
         public void SetMoveDirection(Vector2 direction)
         {
-            _moveDirection = direction;
+            MoveDirection = direction;
         }
 
 
@@ -73,7 +75,7 @@ namespace Creatures
 
         private void PlayerMover()
         {
-            var xVelocity = _moveDirection.x * _speed;
+            var xVelocity = MoveDirection.x * _speed;
             var yVelocity = CalculateVelocity();
             Rigidbody.velocity = new Vector2(xVelocity, yVelocity);
         }
@@ -118,7 +120,7 @@ namespace Creatures
 
         private void AniimationSwitcher()
         {
-            Animator.SetBool(IsRunning, _moveDirection.x != 0);
+            Animator.SetBool(IsRunning, MoveDirection.x != 0);
             Animator.SetBool(IsGround, IsGroundedNow);
             Animator.SetFloat(VerticalVelocity, Rigidbody.velocity.y);
         }
@@ -127,11 +129,11 @@ namespace Creatures
         public void UpdateSpriteDirection(Vector2 direction)
         {
             var multiplier = _invertScale ? -1 : 1;
-            if (_moveDirection.x > 0)
+            if (MoveDirection.x > 0)
             {
                 transform.localScale = new Vector3(multiplier, 1, 1);
             }
-            else if (_moveDirection.x < 0)
+            else if (MoveDirection.x < 0)
             {
                 transform.localScale = new Vector3(-1 * multiplier, 1, 1);
             }

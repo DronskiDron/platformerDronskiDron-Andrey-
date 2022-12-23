@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using General.Components.ColliderBased;
 using UnityEngine;
 
 namespace General.Components

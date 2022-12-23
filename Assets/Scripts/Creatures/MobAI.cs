@@ -1,6 +1,6 @@
-﻿using System;
-using System.Collections;
-using General.Components;
+﻿using System.Collections;
+using Creatures.Patrolling;
+using General.Components.ColliderBased;
 using General.Components.Creatures;
 using UnityEngine;
 

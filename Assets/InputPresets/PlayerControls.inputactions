@@ -78,17 +78,6 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "down",
-                    "id": "7630fa2a-e515-48e4-af2c-801d388aa1ca",
-                    "path": "<Keyboard>/s",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "TotalMovement",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
                     "name": "left",
                     "id": "75e8fff3-5c6e-4d80-b884-d8d6ff63deef",
                     "path": "<Keyboard>/a",
@@ -158,7 +147,7 @@
                     "name": "",
                     "id": "ae2a5fdb-a153-412e-ac52-d17a083396f9",
                     "path": "<Keyboard>/q",
-                    "interactions": "Press(pressPoint=0.1,behavior=1)",
+                    "interactions": "Press(behavior=1)",
                     "processors": "",
                     "groups": "",
                     "action": "Throw",

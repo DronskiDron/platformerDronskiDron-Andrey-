@@ -2,8 +2,9 @@
 using UnityEditor.Animations;
 using Utils;
 using Creatures.Model;
-using System;
 using System.Collections;
+using General.Components.Collectables;
+using General.Components.ColliderBased;
 
 namespace Creatures.Player
 {
@@ -16,6 +17,7 @@ namespace Creatures.Player
 
         [Header("Player Checkers")]
         [SerializeField] private CheckCircleOverlap _interactionCheck;
+        [SerializeField] private LayerCheck _wallCheck;
         [SerializeField] private CoinCounter _coinCounter;
         [SerializeField] private Cooldown _throwCooldown;
 
@@ -33,6 +35,7 @@ namespace Creatures.Player
         private static readonly int ThrowKey = Animator.StringToHash("throw");
 
         private bool _allowDoubleJump;
+        private bool _isOnWall;
         private bool _wasDoubleJump = false;
         private bool _isAllowSlamDownParticle = true;
         private float _startSlamDownDamageVelocity;
@@ -40,6 +43,14 @@ namespace Creatures.Player
         private bool _superThrow = false;
 
         private GameSession _session;
+        private float _defaultGravityScale;
+
+
+        protected override void Awake()
+        {
+            base.Awake();
+            _defaultGravityScale = Rigidbody.gravityScale;
+        }
 
 
         protected override void Start()
@@ -52,11 +63,25 @@ namespace Creatures.Player
         }
 
 
+        protected override void Update()
+        {
+            base.Update();
+            WallClimb();
+        }
+
+
         protected override float CalculateVelocity()
         {
-            if (IsGroundedNow)
+            var isJumpPressing = MoveDirection.y > 0;
+
+            if (IsGroundedNow || _isOnWall)
             {
                 _allowDoubleJump = true;
+            }
+
+            if (!isJumpPressing && _isOnWall)
+            {
+                return 0f;
             }
 
             return base.CalculateVelocity();
@@ -74,6 +99,21 @@ namespace Creatures.Player
             }
 
             return base.CalculateJumpVelocity(yVelocity);
+        }
+
+
+        private void WallClimb()
+        {
+            if (_wallCheck.IsTouchingLayer && MoveDirection.x == transform.localScale.x)
+            {
+                _isOnWall = true;
+                Rigidbody.gravityScale = 0;
+            }
+            else
+            {
+                _isOnWall = false;
+                Rigidbody.gravityScale = _defaultGravityScale;
+            }
         }
 
 
