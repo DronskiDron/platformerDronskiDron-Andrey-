@@ -90,7 +90,7 @@ MonoBehaviour:
   _tag: 
   _layer:
     serializedVersion: 2
-    m_Bits: 12288
+    m_Bits: 8192
   _action:
     m_PersistentCalls:
       m_Calls:
@@ -381,7 +381,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Layer:
     serializedVersion: 2
-    m_Bits: 16640
+    m_Bits: 49408
   _isTouchingLayer: 0
 --- !u!1 &1149133291563307482
 GameObject:
@@ -876,7 +876,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Layer:
     serializedVersion: 2
-    m_Bits: 16640
+    m_Bits: 20736
   _isTouchingLayer: 0
   _drawSphereRadius: 0.3
 --- !u!1 &6543381445244774401
