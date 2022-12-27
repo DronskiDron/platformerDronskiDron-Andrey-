@@ -33,6 +33,7 @@ namespace Creatures.Player
         [Header("Particles")]
         [SerializeField] private ParticleSystem _hitParticles;
         private static readonly int ThrowKey = Animator.StringToHash("throw");
+        private static readonly int IsOnWall = Animator.StringToHash("is-on-wall");
 
         private bool _allowDoubleJump;
         private bool _isOnWall;
@@ -90,7 +91,7 @@ namespace Creatures.Player
 
         protected override float CalculateJumpVelocity(float yVelocity)
         {
-            if (!IsGroundedNow && _allowDoubleJump)
+            if (!IsGroundedNow && _allowDoubleJump && !_isOnWall)
             {
                 Particles.Spawn("Jump");
                 _allowDoubleJump = false;
@@ -104,7 +105,8 @@ namespace Creatures.Player
 
         private void WallClimb()
         {
-            if (_wallCheck.IsTouchingLayer && MoveDirection.x == transform.localScale.x)
+            var moveToSameDirection = MoveDirection.x * transform.lossyScale.x > 0;
+            if (_wallCheck.IsTouchingLayer && moveToSameDirection)
             {
                 _isOnWall = true;
                 Rigidbody.gravityScale = 0;
@@ -114,6 +116,7 @@ namespace Creatures.Player
                 _isOnWall = false;
                 Rigidbody.gravityScale = _defaultGravityScale;
             }
+            Animator.SetBool(IsOnWall, _isOnWall);
         }
 
 

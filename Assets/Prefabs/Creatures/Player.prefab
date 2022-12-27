@@ -5364,9 +5364,9 @@ MonoBehaviour:
   _armed: {fileID: 9100000, guid: de4997dc4caf65f43afc84da57bff926, type: 2}
   _disarmed: {fileID: 9100000, guid: 78beabe6e432b5540b8af84f0812a4b1, type: 2}
   _superThrowCooldown:
-    _value: 0
-  _superThrowParticles: 0
-  _superThrowDelay: 0
+    _value: 1
+  _superThrowParticles: 3
+  _superThrowDelay: 0.2
   _hitParticles: {fileID: 1578835228}
 --- !u!114 &4721150701775001658
 MonoBehaviour:
@@ -5492,7 +5492,7 @@ Animator:
   m_GameObject: {fileID: 4721150701775001659}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: de4997dc4caf65f43afc84da57bff926, type: 2}
+  m_Controller: {fileID: 9100000, guid: 78beabe6e432b5540b8af84f0812a4b1, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -5618,7 +5618,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Layer:
     serializedVersion: 2
-    m_Bits: 20736
+    m_Bits: 53504
   _isTouchingLayer: 0
   _drawSphereRadius: 0.3
 --- !u!1 &4801355957240188693
