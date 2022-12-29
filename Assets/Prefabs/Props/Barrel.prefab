@@ -63,9 +63,9 @@ GameObject:
   - component: {fileID: 2105227131}
   - component: {fileID: 1026240452}
   - component: {fileID: 1256857929}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Barrel
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -211,7 +211,7 @@ MonoBehaviour:
   _tag: 
   _layer:
     serializedVersion: 2
-    m_Bits: 4352
+    m_Bits: 21760
   _action:
     m_PersistentCalls:
       m_Calls:
