@@ -5,13 +5,13 @@ namespace General.Components.Collectables
 {
     public class MoneySendComponent : MonoBehaviour
     {
-        [SerializeField] private CoinCounter _coincounter;
         [SerializeField] private int _coinCost = 1;
 
 
-        public void SendMoney()
+        public void SendMoney(GameObject go)
         {
-            _coincounter.GetMoney(_coinCost);
+            var player = go.GetComponent<CoinCounter>();
+            player.GetMoney(_coinCost);
         }
     }
 }

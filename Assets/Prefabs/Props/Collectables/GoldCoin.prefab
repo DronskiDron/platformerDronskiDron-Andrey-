@@ -116,12 +116,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tag: Player
+  _layer:
+    serializedVersion: 2
+    m_Bits: 4294967295
   _action:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 3265628417296353478}
         m_MethodName: SendMoney
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -177,7 +180,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 261e7d485ac1cbf4ab9ff7b9e807fe05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _coincounter: {fileID: 0}
   _coinCost: 10
 --- !u!114 &3265628417296353483
 MonoBehaviour:
