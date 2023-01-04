@@ -321,4 +321,4 @@ MonoBehaviour:
   _lootDropChance: 100
   _spawnObjectsCount: 3
   _spawnComponent: {fileID: 724317585}
-  _sphereRadius: 0.35
+  _sphereRadius: 0.32

@@ -11,7 +11,7 @@ namespace General.Components.Health
 
         [SerializeField] private UnityEvent _onHeal;
         [SerializeField] private UnityEvent _onDamage;
-        [SerializeField] private UnityEvent _onDie;
+        [SerializeField] public UnityEvent _onDie;
         [SerializeField] private HealthChangeEvent _onChange;
 
         private int _startHealth;
@@ -77,6 +77,13 @@ namespace General.Components.Health
                 Debug.Log($"Я смертен(");
             }
         }
+
+
+        private void OnDestroy()
+        {
+            _onDie.RemoveAllListeners();
+        }
+
 
         [Serializable]
         public class HealthChangeEvent : UnityEvent<int>

@@ -134,16 +134,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 8801466389762006252}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ad70911bd507744aab183a931a069dd, type: 3}
+  m_Script: {fileID: 11500000, guid: 3f229d1a3aa3b4340a76f0921f678499, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _vision: {fileID: 8801466391206387185}
   _meleeCooldown:
-    _value: 2
+    _value: 1
   _meleeAttack: {fileID: 8801466390659527873}
   _meleeCanAttack: {fileID: 8801466390659529532}
   _rangeCooldown:
-    _value: 2
+    _value: 1
   _rangeAttack: {fileID: 8801466390728014671}
 --- !u!114 &2644279609532032898
 MonoBehaviour:
@@ -387,7 +387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 8801466390728014670}
-  _prefab: {fileID: 1639409159451080843, guid: cb7fe275a8d450841a713fbceb5c05e4, type: 3}
+  _prefab: {fileID: 1639409159451080843, guid: eeb07cee5abf1d64cbce348a4ed86439, type: 3}
   _isPrefabFlipX: 0
 --- !u!1 &8801466391206387187
 GameObject:

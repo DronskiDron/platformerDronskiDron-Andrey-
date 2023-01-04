@@ -381,7 +381,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Layer:
     serializedVersion: 2
-    m_Bits: 16640
+    m_Bits: 20736
   _isTouchingLayer: 0
 --- !u!1 &1149133291563307482
 GameObject:
@@ -678,8 +678,8 @@ Rigidbody2D:
   m_GravityScale: 2.7
   m_Material: {fileID: 6200000, guid: 71735259ed0d7de4a82801cf5ae7d56d, type: 2}
   m_Interpolate: 1
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 2
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!95 &4721150701775001650
 Animator:
@@ -792,8 +792,8 @@ MonoBehaviour:
   _action:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5488529485129573690}
-        m_MethodName: OnStopTouchingLayer
+      - m_Target: {fileID: 1780606718}
+        m_MethodName: OnPatrol
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -803,8 +803,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1780606718}
-        m_MethodName: OnPatrol
+      - m_Target: {fileID: 5488529485129573690}
+        m_MethodName: OnStopTouchingLayer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -876,7 +876,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Layer:
     serializedVersion: 2
-    m_Bits: 20736
+    m_Bits: 17664
   _isTouchingLayer: 0
   _drawSphereRadius: 0.3
 --- !u!1 &6543381445244774401

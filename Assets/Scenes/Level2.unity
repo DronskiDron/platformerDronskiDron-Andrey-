@@ -19478,7 +19478,7 @@ PrefabInstance:
     - target: {fileID: 3257753438635650848, guid: 3e445a289d31e074dbc8cefd769e8163,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 23.82
+      value: 23.31
       objectReference: {fileID: 0}
     - target: {fileID: 3257753438635650848, guid: 3e445a289d31e074dbc8cefd769e8163,
         type: 3}
@@ -30163,7 +30163,7 @@ PrefabInstance:
     - target: {fileID: 2532081266675386070, guid: a5b011ba8d1290843a9a9e40c268392b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.453087
+      value: -14.453095
       objectReference: {fileID: 0}
     - target: {fileID: 2532081266675386070, guid: a5b011ba8d1290843a9a9e40c268392b,
         type: 3}
@@ -32493,7 +32493,7 @@ PrefabInstance:
     - target: {fileID: 4372885476232784303, guid: 76744fe3c924da842b140633aa9bc6cb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -62.569084
+      value: -62.56909
       objectReference: {fileID: 0}
     - target: {fileID: 4372885476232784303, guid: 76744fe3c924da842b140633aa9bc6cb,
         type: 3}
@@ -48448,6 +48448,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 938350483}
     m_Modifications:
+    - target: {fileID: 436517206, guid: 9d2e21e018f21a1439469ad2c50cb1f3, type: 3}
+      propertyPath: _meleeCooldown._value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8801466389762006252, guid: 9d2e21e018f21a1439469ad2c50cb1f3,
         type: 3}
       propertyPath: m_Name
