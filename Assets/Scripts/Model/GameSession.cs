@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Creatures.Model
+namespace Creatures.Model.Data
 {
     public class GameSession : MonoBehaviour
     {

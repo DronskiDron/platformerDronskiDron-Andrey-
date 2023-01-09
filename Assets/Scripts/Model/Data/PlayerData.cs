@@ -1,11 +1,13 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Creatures.Model
+namespace Creatures.Model.Data
 {
     [Serializable]
     public class PlayerData
     {
+        [SerializeField] private InventoryData _inventory;
+
         public int Coins;
         public int Hp;
         public int Swords;

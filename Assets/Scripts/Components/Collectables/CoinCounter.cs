@@ -1,4 +1,4 @@
-﻿using Creatures.Model;
+﻿using Creatures.Model.Data;
 using UnityEngine;
 
 namespace General.Components.Collectables

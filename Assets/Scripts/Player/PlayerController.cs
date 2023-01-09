@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEditor.Animations;
 using Utils;
-using Creatures.Model;
+using Creatures.Model.Data;
 using System.Collections;
 using General.Components.Collectables;
 using General.Components.ColliderBased;

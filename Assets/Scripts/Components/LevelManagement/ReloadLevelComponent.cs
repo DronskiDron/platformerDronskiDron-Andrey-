@@ -1,5 +1,5 @@
 ﻿using System.Reflection;
-using Creatures.Model;
+using Creatures.Model.Data;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
