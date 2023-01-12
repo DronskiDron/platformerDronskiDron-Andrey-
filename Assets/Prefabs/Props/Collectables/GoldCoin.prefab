@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 7991468201186171058}
   - component: {fileID: 3265628417296353480}
   - component: {fileID: 3265628417296353481}
-  - component: {fileID: 3265628417296353478}
   - component: {fileID: 3265628417296353483}
   - component: {fileID: 8461866374993173478}
+  - component: {fileID: 7468426411235562951}
   m_Layer: 0
   m_Name: GoldCoin
   m_TagString: Untagged
@@ -145,8 +145,8 @@ MonoBehaviour:
   _action:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3265628417296353478}
-        m_MethodName: SendMoney
+      - m_Target: {fileID: 7468426411235562951}
+        m_MethodName: Add
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -191,19 +191,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _objectToDestroy: {fileID: 3265628417296353474}
---- !u!114 &3265628417296353478
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3265628417296353474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 261e7d485ac1cbf4ab9ff7b9e807fe05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _coinCost: 10
 --- !u!114 &3265628417296353483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,3 +253,17 @@ MonoBehaviour:
   _frequency: 6
   _amplitude: 0.1
   _randomize: 1
+--- !u!114 &7468426411235562951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3265628417296353474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98cda059accbaab4e9894c9b530acbc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _id: Coin
+  _count: 10

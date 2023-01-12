@@ -3,8 +3,8 @@ using UnityEditor.Animations;
 using Utils;
 using Creatures.Model.Data;
 using System.Collections;
-using General.Components.Collectables;
 using General.Components.ColliderBased;
+using General.Components.Health;
 
 namespace Creatures.Player
 {
@@ -18,7 +18,6 @@ namespace Creatures.Player
         [Header("Player Checkers")]
         [SerializeField] private CheckCircleOverlap _interactionCheck;
         [SerializeField] private LayerCheck _wallCheck;
-        [SerializeField] private CoinCounter _coinCounter;
         [SerializeField] private Cooldown _throwCooldown;
 
         [Header("Weapon States")]
@@ -46,6 +45,9 @@ namespace Creatures.Player
         private GameSession _session;
         private float _defaultGravityScale;
 
+        private int CoinCount => _session.Data.Inventory.Count("Coin");
+        private int SwordCount => _session.Data.Inventory.Count("Sword");
+
 
         protected override void Awake()
         {
@@ -59,8 +61,31 @@ namespace Creatures.Player
             base.Start();
             _session = FindObjectOfType<GameSession>();
             _session.Data.Hp = Health.Health;
-            UpdatePlayerWeapon();
+            _session.Data.Inventory.OnChanged += OnInventoryChanged;
+            _session.Data.Inventory.OnChanged += InventoryLogger;
+
             _startSlamDownDamageVelocity = _slamDownDamageVelocity;
+            UpdatePlayerWeapon();
+        }
+
+
+        private void OnDestroy()
+        {
+            _session.Data.Inventory.OnChanged -= OnInventoryChanged;
+            _session.Data.Inventory.OnChanged -= InventoryLogger;
+        }
+
+
+        private void InventoryLogger(string id, int value)
+        {
+            Debug.Log($"Congratulations! You have got: {id}:{value}");
+        }
+
+
+        private void OnInventoryChanged(string id, int value)
+        {
+            if (id == "Sword")
+                UpdatePlayerWeapon();
         }
 
 
@@ -120,10 +145,16 @@ namespace Creatures.Player
         }
 
 
+        public void AddInInventory(string id, int value)
+        {
+            _session.Data.Inventory.Add(id, value);
+        }
+
+
         public override void TakeDamage()
         {
             base.TakeDamage();
-            if (_session.Data.Coins > 0)
+            if (CoinCount > 0)
             {
                 SpawnCoins();
             }
@@ -132,8 +163,8 @@ namespace Creatures.Player
 
         private void SpawnCoins()
         {
-            var numCoinsToDespose = Mathf.Min(_session.Data.Coins, 5);
-            _coinCounter.GetMoney(-numCoinsToDespose);
+            var numCoinsToDespose = Mathf.Min(CoinCount, 5);
+            _session.Data.Inventory.Remove("Coin", numCoinsToDespose);
 
             var burst = _hitParticles.emission.GetBurst(0);
             burst.count = numCoinsToDespose;
@@ -193,34 +224,21 @@ namespace Creatures.Player
 
         public override void Attack()
         {
-            if (!_session.Data.IsArmed) return;
+            if (SwordCount <= 0) return;
 
             base.Attack();
         }
 
 
-        internal void ArmPlayer()
-        {
-            _session.Data.IsArmed = true;
-            UpdatePlayerWeapon();
-        }
-
-
-        public void CollectSwords()
-        {
-            _session.Data.Swords += 1;
-        }
-
-
         private void UpdatePlayerWeapon()
         {
-            Animator.runtimeAnimatorController = _session.Data.IsArmed ? _armed : _disarmed;
+            Animator.runtimeAnimatorController = SwordCount > 0 ? _armed : _disarmed;
         }
 
 
         public void Throw()
         {
-            if (_session.Data.IsArmed && _throwCooldown.IsReady && _session.Data.Swords > 1)
+            if (_throwCooldown.IsReady && SwordCount > 1)
             {
                 Animator.SetTrigger(ThrowKey);
                 _throwCooldown.Reset();
@@ -237,7 +255,7 @@ namespace Creatures.Player
         private void ThrowAndRemoveFromInventory()
         {
             Particles.Spawn("Throw");
-            _session.Data.Swords -= 1;
+            _session.Data.Inventory.Remove("Sword", 1);
         }
 
 
@@ -245,7 +263,7 @@ namespace Creatures.Player
         {
             if (_superThrow)
             {
-                var numThrows = Mathf.Min(_superThrowParticles, _session.Data.Swords - 1);
+                var numThrows = Mathf.Min(_superThrowParticles, SwordCount - 1);
                 StartCoroutine(DoSuperThrow(numThrows));
             }
             else
@@ -262,6 +280,17 @@ namespace Creatures.Player
             {
                 ThrowAndRemoveFromInventory();
                 yield return new WaitForSeconds(_superThrowDelay);
+            }
+        }
+
+
+        public void UsePotion()
+        {
+            var potionCount = _session.Data.Inventory.Count("HealthPotion");
+            if (potionCount > 0)
+            {
+                Health.RenewHealth(5);
+                _session.Data.Inventory.Remove("HealthPotion", 1);
             }
         }
     }

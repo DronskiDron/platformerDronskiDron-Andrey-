@@ -8,10 +8,8 @@ namespace Creatures.Model.Data
     {
         [SerializeField] private InventoryData _inventory;
 
-        public int Coins;
         public int Hp;
-        public int Swords;
-        public bool IsArmed;
+        public InventoryData Inventory => _inventory;
 
 
         public PlayerData Clone()

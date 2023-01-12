@@ -49,6 +49,12 @@ namespace Creatures
             _player.IsSuperThrowAvailable(true);
             _player.Throw();
         }
+
+
+        private void OnUse(InputValue context)
+        {
+            _player.UsePotion();
+        }
     }
 }
 

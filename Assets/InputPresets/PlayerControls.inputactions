@@ -52,6 +52,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Use",
+                    "type": "Button",
+                    "id": "203c9556-cb0f-4c70-b654-3ae571e7797a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -146,7 +154,7 @@
                 {
                     "name": "",
                     "id": "ae2a5fdb-a153-412e-ac52-d17a083396f9",
-                    "path": "<Keyboard>/q",
+                    "path": "<Keyboard>/alt",
                     "interactions": "Press(behavior=1)",
                     "processors": "",
                     "groups": "",
@@ -157,11 +165,22 @@
                 {
                     "name": "",
                     "id": "cddda44a-712c-4bd9-8225-0110e2fbb4b7",
-                    "path": "<Keyboard>/q",
+                    "path": "<Keyboard>/alt",
                     "interactions": "Hold(duration=1)",
                     "processors": "",
                     "groups": "",
                     "action": "SuperThrow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "97905e59-68f3-46b3-b936-c30cf4e69fa4",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Use",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

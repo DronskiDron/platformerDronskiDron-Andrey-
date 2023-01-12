@@ -5165,7 +5165,6 @@ GameObject:
   - component: {fileID: 4721150701775001658}
   - component: {fileID: 4721150701775001648}
   - component: {fileID: 4721150701775001649}
-  - component: {fileID: 4721150701775001651}
   - component: {fileID: 4721150701775001650}
   - component: {fileID: 331407863}
   m_Layer: 13
@@ -5358,7 +5357,6 @@ MonoBehaviour:
   _slamDownDamageValue: 1
   _interactionCheck: {fileID: 39893651}
   _wallCheck: {fileID: 9190910179703740315}
-  _coinCounter: {fileID: 4721150701775001651}
   _throwCooldown:
     _value: 1
   _armed: {fileID: 9100000, guid: de4997dc4caf65f43afc84da57bff926, type: 2}
@@ -5470,18 +5468,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &4721150701775001651
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4721150701775001659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ed06f14587ccdf46a912de90b11fe4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &4721150701775001650
 Animator:
   serializedVersion: 3
