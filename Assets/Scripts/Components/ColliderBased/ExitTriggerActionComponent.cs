@@ -4,7 +4,7 @@ namespace General.Components.ColliderBased
 {
     public class ExitTriggerActionComponent : MonoBehaviour
     {
-        [SerializeField] private LayerCheck _layerCheck;
+        [SerializeField] private ColliderCheck _layerCheck;
         [SerializeField] private EnterEvent _action;
 
 

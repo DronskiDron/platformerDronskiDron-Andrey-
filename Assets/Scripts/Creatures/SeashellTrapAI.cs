@@ -9,10 +9,10 @@ namespace Creatures
     public class SeashellTrapAI : MonoBehaviour
     {
         [Header("Melee")]
-        [SerializeField] private LayerCheck _vision;
+        [SerializeField] private ColliderCheck _vision;
         [SerializeField] private Cooldown _meleeCooldown;
         [SerializeField] private CheckCircleOverlap _meleeAttack;
-        [SerializeField] private LayerCheck _meleeCanAttack;
+        [SerializeField] private ColliderCheck _meleeCanAttack;
 
         [Header("Range")]
         [SerializeField] private Cooldown _rangeCooldown;

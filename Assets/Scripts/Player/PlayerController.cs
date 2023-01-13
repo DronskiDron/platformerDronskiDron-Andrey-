@@ -17,7 +17,7 @@ namespace Creatures.Player
 
         [Header("Player Checkers")]
         [SerializeField] private CheckCircleOverlap _interactionCheck;
-        [SerializeField] private LayerCheck _wallCheck;
+        [SerializeField] private ColliderCheck _wallCheck;
         [SerializeField] private Cooldown _throwCooldown;
 
         [Header("Weapon States")]

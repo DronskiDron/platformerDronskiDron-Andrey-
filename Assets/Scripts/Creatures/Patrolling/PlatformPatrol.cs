@@ -7,6 +7,7 @@ namespace Creatures.Patrolling
     public class PlatformPatrol : Patrol
     {
         [SerializeField] private LayerCheck _groundCheck;
+        [SerializeField] private LayerCheck _obstacleCheck;
         [SerializeField] private int _direction;
         [SerializeField] private Creature _creature;
 
@@ -23,7 +24,7 @@ namespace Creatures.Patrolling
         {
             while (enabled && !_mobAI.IsDead)
             {
-                if (_groundCheck.IsTouchingLayer)
+                if (_groundCheck.IsTouchingLayer && !_obstacleCheck.IsTouchingLayer)
                 {
                     _creature.SetMoveDirection(new Vector2(_direction, 0));
                 }
@@ -31,9 +32,8 @@ namespace Creatures.Patrolling
                 {
                     _direction = -_direction;
                     _creature.SetMoveDirection(new Vector2(_direction, 0));
-                    yield return null;
-                    yield return null;
                 }
+
                 yield return null;
             }
         }

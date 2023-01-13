@@ -8,8 +8,8 @@ namespace Creatures
 {
     public class MobAI : MonoBehaviour
     {
-        [SerializeField] private LayerCheck _vision;
-        [SerializeField] private LayerCheck _canAttack;
+        [SerializeField] private ColliderCheck _vision;
+        [SerializeField] private ColliderCheck _canAttack;
         [SerializeField] private float _agrDelay = 0.5f;
         [SerializeField] private float _attackCooldown = 0.2f;
         [SerializeField] private float _missPlayerCooldown = 1f;
@@ -114,15 +114,6 @@ namespace Creatures
             var direction = _target.transform.position - transform.position;
             direction.y = 0;
             return direction.normalized;
-        }
-
-
-        public void OnPatrol()
-        {
-            if (!_isAttackingNow)
-            {
-                StartState(_patrol.DoPatrol());
-            }
         }
 
 

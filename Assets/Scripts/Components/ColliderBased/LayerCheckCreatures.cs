@@ -5,7 +5,7 @@ using Utils;
 
 namespace General.Components.ColliderBased
 {
-    public class LayerCheckCreatures : LayerCheck
+    public class LayerCheckCreatures : ColliderCheck
     {
         [SerializeField] private float _drawSphereRadius = 0.3f;
 

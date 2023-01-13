@@ -8,7 +8,7 @@ namespace Creatures
 {
     public class ShootingTrapAI : MonoBehaviour
     {
-        [SerializeField] public LayerCheck Vision;
+        [SerializeField] public ColliderCheck Vision;
         [SerializeField] private Cooldown _cooldown;
         [SerializeField] private SpriteAnimation _animation;
 
