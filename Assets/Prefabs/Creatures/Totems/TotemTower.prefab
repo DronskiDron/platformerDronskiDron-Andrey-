@@ -59,6 +59,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8408550426284432222}
     m_Modifications:
+    - target: {fileID: 5893797012040632973, guid: 933d6ddc42647b0479f518a273f94638,
+        type: 3}
+      propertyPath: m_Layer
+      value: 17
+      objectReference: {fileID: 0}
     - target: {fileID: 5893797012311803983, guid: 933d6ddc42647b0479f518a273f94638,
         type: 3}
       propertyPath: m_Name
@@ -124,6 +129,11 @@ PrefabInstance:
       propertyPath: Vision
       value: 
       objectReference: {fileID: 8408550426083098069}
+    - target: {fileID: 5893797012498098455, guid: 933d6ddc42647b0479f518a273f94638,
+        type: 3}
+      propertyPath: m_Layer
+      value: 17
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 933d6ddc42647b0479f518a273f94638, type: 3}
 --- !u!4 &8408550426165370012 stripped
@@ -163,6 +173,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8408550426284432222}
     m_Modifications:
+    - target: {fileID: 6282480738702008989, guid: fb77bcbd3e9d8604d8f54d4bc31535df,
+        type: 3}
+      propertyPath: m_Layer
+      value: 17
+      objectReference: {fileID: 0}
     - target: {fileID: 6282480738985795649, guid: fb77bcbd3e9d8604d8f54d4bc31535df,
         type: 3}
       propertyPath: m_RootOrder
@@ -223,6 +238,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Totem3Head
       objectReference: {fileID: 0}
+    - target: {fileID: 6282480739167813895, guid: fb77bcbd3e9d8604d8f54d4bc31535df,
+        type: 3}
+      propertyPath: m_Layer
+      value: 17
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb77bcbd3e9d8604d8f54d4bc31535df, type: 3}
 --- !u!4 &861046834878826731 stripped
@@ -250,6 +270,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8408550426284432222}
     m_Modifications:
+    - target: {fileID: 5893797012040632973, guid: 933d6ddc42647b0479f518a273f94638,
+        type: 3}
+      propertyPath: m_Layer
+      value: 17
+      objectReference: {fileID: 0}
     - target: {fileID: 5893797012311803983, guid: 933d6ddc42647b0479f518a273f94638,
         type: 3}
       propertyPath: m_Name
@@ -315,6 +340,11 @@ PrefabInstance:
       propertyPath: Vision
       value: 
       objectReference: {fileID: 2700986769816666753}
+    - target: {fileID: 5893797012498098455, guid: 933d6ddc42647b0479f518a273f94638,
+        type: 3}
+      propertyPath: m_Layer
+      value: 17
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 933d6ddc42647b0479f518a273f94638, type: 3}
 --- !u!4 &2700986769597031368 stripped
