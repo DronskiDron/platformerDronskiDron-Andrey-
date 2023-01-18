@@ -1,4 +1,5 @@
-﻿using General.Components.ColliderBased;
+﻿using General.Components.Audio;
+using General.Components.ColliderBased;
 using General.Components.Creatures;
 using General.Components.Health;
 using UnityEngine;
@@ -23,6 +24,7 @@ namespace Creatures
         protected Rigidbody2D Rigidbody;
         protected Vector2 MoveDirection;
         protected Animator Animator;
+        protected PlaySoundsComponent Sounds;
         protected bool IsGroundedNow;
         protected bool IsJumping;
 
@@ -37,6 +39,7 @@ namespace Creatures
         {
             Rigidbody = GetComponent<Rigidbody2D>();
             Animator = GetComponent<Animator>();
+            Sounds = GetComponent<PlaySoundsComponent>();
         }
 
 
@@ -111,10 +114,17 @@ namespace Creatures
             if (IsGroundedNow)
             {
                 yVelocity += JumpForce;
-                Particles.Spawn("Jump");
+                DoJumpVfx();
             }
 
             return yVelocity;
+        }
+
+
+        protected void DoJumpVfx()
+        {
+            Particles.Spawn("Jump");
+            Sounds.Play("Jump");
         }
 
 
@@ -151,12 +161,14 @@ namespace Creatures
         public void Healing()
         {
             Animator.SetTrigger(Heal);
+            Sounds.Play("Heal");
         }
 
 
         public virtual void Attack()
         {
             Animator.SetTrigger(AttackKey);
+            Sounds.Play("Melee");
         }
 
 

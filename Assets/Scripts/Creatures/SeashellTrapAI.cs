@@ -1,5 +1,6 @@
 ﻿using System;
 using General.Components;
+using General.Components.Audio;
 using General.Components.ColliderBased;
 using UnityEngine;
 using Utils;
@@ -22,11 +23,13 @@ namespace Creatures
         private static readonly int Range = Animator.StringToHash("range");
 
         private Animator _animator;
+        protected PlaySoundsComponent Sounds;
 
 
         private void Awake()
         {
             _animator = GetComponent<Animator>();
+            Sounds = GetComponent<PlaySoundsComponent>();
         }
 
 
@@ -60,6 +63,7 @@ namespace Creatures
         {
             _rangeCooldown.Reset();
             _animator.SetTrigger(Range);
+            Sounds.Play("Range");
         }
 
 
@@ -73,6 +77,7 @@ namespace Creatures
         public void OnMeleeAttack()
         {
             _meleeAttack.Check();
+            Sounds.Play("Melee");
         }
 
 

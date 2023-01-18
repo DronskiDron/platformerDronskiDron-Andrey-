@@ -118,9 +118,9 @@ namespace Creatures.Player
         {
             if (!IsGroundedNow && _allowDoubleJump && !_isOnWall)
             {
-                Particles.Spawn("Jump");
                 _allowDoubleJump = false;
                 _wasDoubleJump = true;
+                DoJumpVfx();
                 return JumpForce;
             }
 
@@ -254,6 +254,7 @@ namespace Creatures.Player
 
         private void ThrowAndRemoveFromInventory()
         {
+            Sounds.Play("Range");
             Particles.Spawn("Throw");
             _session.Data.Inventory.Remove("Sword", 1);
         }
