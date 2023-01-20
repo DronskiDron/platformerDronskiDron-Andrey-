@@ -20,7 +20,7 @@ namespace Creatures.Weapons
         {
             var position = Rigidbody.position;
             position.x += Direction * Speed;
-            position.y = _originalY + Mathf.Sin(_time * _frequency) * _amplitude;
+            position.y = _originalY + Mathf.Cos(_time * _frequency) * _amplitude;
             Rigidbody.MovePosition(position);
             _time += Time.fixedDeltaTime;
         }

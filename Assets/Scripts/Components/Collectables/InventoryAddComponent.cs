@@ -1,6 +1,7 @@
-﻿using Creatures.Model.Definitions;
-using Creatures.Player;
+﻿using Creatures.Model.Data;
+using Creatures.Model.Definitions;
 using UnityEngine;
+using Utils;
 
 namespace General.Components.Collectables
 {
@@ -12,7 +13,7 @@ namespace General.Components.Collectables
 
         public void Add(GameObject go)
         {
-            var player = go.GetComponent<PlayerController>();
+            var player = go.GetInterface<ICanAddInInventory>();
             player?.AddInInventory(_id, _count);
         }
     }

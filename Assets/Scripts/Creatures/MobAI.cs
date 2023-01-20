@@ -22,7 +22,6 @@ namespace Creatures
         private bool _isDead;
         public bool IsDead => _isDead;
         private Patrol _patrol;
-        private bool _isAttackingNow = false;
 
         private static readonly int IsDeadKey = Animator.StringToHash("is-dead");
 
@@ -93,11 +92,9 @@ namespace Creatures
         {
             while (_canAttack.IsTouchingLayer)
             {
-                _isAttackingNow = true;
                 _creature.Attack();
                 yield return new WaitForSeconds(_attackCooldown);
             }
-            _isAttackingNow = false;
             StartState(GoToPlayer());
         }
 

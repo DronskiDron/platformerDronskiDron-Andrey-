@@ -5791,7 +5791,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Layer:
     serializedVersion: 2
-    m_Bits: 185600
+    m_Bits: 193792
   _isTouchingLayer: 0
   _drawSphereRadius: 0.3
 --- !u!1 &4801355957240188693
@@ -5948,7 +5948,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c1f7f04b149cf7f4c97693b6e57cb8a3, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.2
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0

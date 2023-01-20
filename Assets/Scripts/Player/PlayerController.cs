@@ -4,11 +4,10 @@ using Utils;
 using Creatures.Model.Data;
 using System.Collections;
 using General.Components.ColliderBased;
-using General.Components.Health;
 
 namespace Creatures.Player
 {
-    public class PlayerController : Creature
+    public class PlayerController : Creature, ICanAddInInventory
     {
         [Header("Player Params")]
         [SerializeField] private float _slamDownVelocity = 15f;
