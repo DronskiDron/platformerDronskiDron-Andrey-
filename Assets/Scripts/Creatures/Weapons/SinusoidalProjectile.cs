@@ -18,6 +18,12 @@ namespace Creatures.Weapons
 
         private void FixedUpdate()
         {
+            SetGameObjectTrajectory();
+        }
+
+
+        private void SetGameObjectTrajectory()
+        {
             var position = Rigidbody.position;
             position.x += Direction * Speed;
             position.y = _originalY + Mathf.Cos(_time * _frequency) * _amplitude;

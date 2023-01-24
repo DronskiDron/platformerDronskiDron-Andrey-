@@ -13,7 +13,6 @@ namespace Creatures.Patrolling
 
         private MobAI _mobAI;
 
-
         private void Awake()
         {
             _mobAI = GetComponent<MobAI>();
@@ -28,7 +27,7 @@ namespace Creatures.Patrolling
                 {
                     _creature.SetMoveDirection(new Vector2(_direction, 0));
                 }
-                else
+                else if (!_mobAI.IsFollow)
                 {
                     _direction = -_direction;
                     _creature.SetMoveDirection(new Vector2(_direction, 0));

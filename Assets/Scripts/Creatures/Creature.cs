@@ -16,6 +16,11 @@ namespace Creatures
         [SerializeField] private bool _invertScale;
         public bool InvertScale => _invertScale;
 
+        [Header("Mob Params")]
+        [SerializeField] private bool _isMob;
+        [SerializeField] private float _mobJumpForce = 2f;
+        private bool _mobCanJump = false;
+
         [Header("Creature Checkers")]
         [SerializeField] private CheckCircleOverlap _attackRange;
         [SerializeField] protected SpawnListComponent Particles;
@@ -34,6 +39,7 @@ namespace Creatures
         private static readonly int Hit = Animator.StringToHash("hit");
         private static readonly int Heal = Animator.StringToHash("heal");
         private static readonly int AttackKey = Animator.StringToHash("attack");
+
 
         protected virtual void Awake()
         {
@@ -78,9 +84,16 @@ namespace Creatures
 
         private void PlayerMover()
         {
-            var xVelocity = MoveDirection.x * _speed;
-            var yVelocity = CalculateVelocity();
-            Rigidbody.velocity = new Vector2(xVelocity, yVelocity);
+            if (_mobCanJump)
+            {
+                StartMobJump();
+            }
+            else
+            {
+                var xVelocity = MoveDirection.x * _speed;
+                var yVelocity = CalculateVelocity();
+                Rigidbody.velocity = new Vector2(xVelocity, yVelocity);
+            }
         }
 
 
@@ -117,6 +130,7 @@ namespace Creatures
                 DoJumpVfx();
             }
 
+            StopMobJump();
             return yVelocity;
         }
 
@@ -176,6 +190,29 @@ namespace Creatures
         {
             Particles.Spawn("SwordAttack");
             _attackRange.Check();
+        }
+
+
+        public void StartMobJump()
+        {
+            _mobCanJump = true;
+            if (_isMob && IsGroundedNow)
+            {
+                var vector = new Vector2(MoveDirection.x, 1);
+                GroundCheck.SetIsPressingJump(vector);
+                Rigidbody.AddForce(vector.normalized * _mobJumpForce, ForceMode2D.Impulse);
+                _mobCanJump = false;
+            }
+        }
+
+
+        public void StopMobJump()
+        {
+            if (_isMob)
+            {
+                var vector = new Vector2(MoveDirection.x, MoveDirection.y);
+                GroundCheck.SetIsPressingJump(vector);
+            }
         }
     }
 }

@@ -46,7 +46,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.97679853, y: 0.10323733}
+  m_Offset: {x: -3.5924501, y: 0.61455846}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -57,7 +57,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.3377476, y: 0.38338864}
+  m_Size: {x: 9.569052, y: 3.5132923}
   m_EdgeRadius: 0
 --- !u!114 &1199655351724045846
 MonoBehaviour:
@@ -94,7 +94,7 @@ MonoBehaviour:
   _action:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1780606718}
+      - m_Target: {fileID: 3866918395913893889}
         m_MethodName: OnPlayerInVision
         m_Mode: 0
         m_Arguments:
@@ -130,7 +130,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 444987212}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.39, y: 0.105, z: 0}
+  m_LocalPosition: {x: -0.6229994, y: 0.105, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 565818539}
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Layer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 17664
   _isTouchingLayer: 0
   _target: {fileID: 565818539}
 --- !u!1 &565818538
@@ -178,7 +178,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 565818538}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.561, z: 0}
+  m_LocalPosition: {x: 0, y: -1.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 444987213}
@@ -653,9 +653,9 @@ GameObject:
   - component: {fileID: 4721150701775001650}
   - component: {fileID: 331407863}
   - component: {fileID: 3419200235148880614}
-  - component: {fileID: 1780606718}
   - component: {fileID: 7780517866537752234}
   - component: {fileID: 1073702949}
+  - component: {fileID: 3866918395913893889}
   m_Layer: 12
   m_Name: Crabby
   m_TagString: Enemy
@@ -783,7 +783,7 @@ MonoBehaviour:
   _onDie:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1780606718}
+      - m_Target: {fileID: 3866918395913893889}
         m_MethodName: OnDie
         m_Mode: 1
         m_Arguments:
@@ -920,30 +920,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 2
-  JumpForce: 20
+  JumpForce: 10
   _damageJumpForce: 2
   Health: {fileID: 6669306786479704690}
   _invertScale: 1
+  _isMob: 1
+  _mobJumpForce: 2
   _attackRange: {fileID: 1802801993}
   Particles: {fileID: 331407863}
   GroundCheck: {fileID: 4721150702822014572}
---- !u!114 &1780606718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4721150701775001659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9733ee71947cf914cad1876cbc6cdc35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _vision: {fileID: 1199655351724045846}
-  _canAttack: {fileID: 365017980}
-  _agrDelay: 0.05
-  _attackCooldown: 1
-  _missPlayerCooldown: 1
 --- !u!114 &7780517866537752234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -980,6 +965,25 @@ MonoBehaviour:
     _clip: {fileID: 8300000, guid: d513e02aec6da704b97a82ed656643a0, type: 3}
   - _id: Die
     _clip: {fileID: 8300000, guid: cb94b327c3a0cd44ba24cb006f8006fb, type: 3}
+--- !u!114 &3866918395913893889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4721150701775001659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b194bcc81378b334a9aa06701eb4dd8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vision: {fileID: 1199655351724045846}
+  CanAttack: {fileID: 365017980}
+  _agrDelay: 0.1
+  _attackCooldown: 1
+  _beforeAttackDelay: 0.2
+  MissPlayerCooldown: 1
+  _mobJumpChecker: {fileID: 3656764001208017880}
 --- !u!1 &4721150702240915402
 GameObject:
   m_ObjectHideFlags: 0
@@ -1025,9 +1029,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.008327211, y: 0.014146558}
+  m_Offset: {x: 0.008327211, y: -0.011188209}
   serializedVersion: 2
-  m_Radius: 0.40484974
+  m_Radius: 0.4301845
 --- !u!114 &4721150702822014572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1042,7 +1046,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Layer:
     serializedVersion: 2
-    m_Bits: 17664
+    m_Bits: 194304
   _isTouchingLayer: 0
   _drawSphereRadius: 0.3
 --- !u!1 &6543381445244774401
@@ -1116,7 +1120,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8022337131242891331}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.427, y: -0.107, z: 0}
+  m_LocalPosition: {x: -0.66, y: -0.107, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1866792241013732129}

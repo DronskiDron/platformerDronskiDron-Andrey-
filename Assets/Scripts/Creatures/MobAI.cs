@@ -8,68 +8,74 @@ namespace Creatures
 {
     public class MobAI : MonoBehaviour
     {
-        [SerializeField] private ColliderCheck _vision;
-        [SerializeField] private ColliderCheck _canAttack;
+        [SerializeField] protected ColliderCheck Vision;
+        [SerializeField] protected ColliderCheck CanAttack;
         [SerializeField] private float _agrDelay = 0.5f;
         [SerializeField] private float _attackCooldown = 0.2f;
-        [SerializeField] private float _missPlayerCooldown = 1f;
+        [SerializeField] private float _beforeAttackDelay = 0;
+        [SerializeField] protected float MissPlayerCooldown = 1f;
 
         private Coroutine _current;
-        private GameObject _target;
-        private SpawnListComponent _particles;
-        private Creature _creature;
+        protected GameObject Target;
+        protected SpawnListComponent Particles;
+        protected Creature Creature;
         private Animator _animator;
         private bool _isDead;
         public bool IsDead => _isDead;
-        private Patrol _patrol;
+
+        protected Patrol Patrol;
+        private bool _isFollow = false;
+        public bool IsFollow { get => _isFollow; set => _isFollow = value; }
 
         private static readonly int IsDeadKey = Animator.StringToHash("is-dead");
 
 
         private void Awake()
         {
-            _particles = GetComponent<SpawnListComponent>();
-            _creature = GetComponent<Creature>();
+            Particles = GetComponent<SpawnListComponent>();
+            Creature = GetComponent<Creature>();
             _animator = GetComponent<Animator>();
-            _patrol = GetComponent<Patrol>();
+            Patrol = GetComponent<Patrol>();
         }
 
 
         private void Start()
         {
-            StartState(_patrol.DoPatrol());
+            StartState(Patrol.DoPatrol());
         }
 
 
-        public void OnPlayerInVision(GameObject go)
+        public virtual void OnPlayerInVision(GameObject go)
         {
             if (_isDead) return;
 
-            _target = go;
+            Target = go;
             StartState(AgroToPlayer());
         }
 
 
-        private IEnumerator AgroToPlayer()
+        protected virtual IEnumerator AgroToPlayer()
         {
             LookAtPlayer();
-            _particles.Spawn("Exclamation");
+            Particles.Spawn("Exclamation");
             yield return new WaitForSeconds(_agrDelay);
             StartState(GoToPlayer());
         }
 
-        private void LookAtPlayer()
+
+        protected virtual void LookAtPlayer()
         {
             var direction = GetDirectionToTarget();
-            _creature.SetMoveDirection(Vector2.zero);
-            _creature.UpdateSpriteDirection(direction);
+            Creature.SetMoveDirection(Vector2.zero);
+            Creature.UpdateSpriteDirection(direction);
         }
 
-        private IEnumerator GoToPlayer()
+
+        protected virtual IEnumerator GoToPlayer()
         {
-            while (_vision.IsTouchingLayer)
+            while (Vision.IsTouchingLayer)
             {
-                if (_canAttack.IsTouchingLayer)
+                if (CanAttack.IsTouchingLayer)
                 {
                     StartState(Attack());
                 }
@@ -81,42 +87,43 @@ namespace Creatures
                 yield return null;
             }
 
-            _creature.SetMoveDirection(Vector2.zero);
-            _particles.Spawn("MissPlayer");
-            yield return new WaitForSeconds(_missPlayerCooldown);
-            StartState(_patrol.DoPatrol());
+            Creature.SetMoveDirection(Vector2.zero);
+            Particles.Spawn("MissPlayer");
+            yield return new WaitForSeconds(MissPlayerCooldown);
+            StartState(Patrol.DoPatrol());
         }
 
 
-        private IEnumerator Attack()
+        protected virtual IEnumerator Attack()
         {
-            while (_canAttack.IsTouchingLayer)
+            while (CanAttack.IsTouchingLayer)
             {
-                _creature.Attack();
+                yield return new WaitForSeconds(_beforeAttackDelay);
+                Creature.Attack();
                 yield return new WaitForSeconds(_attackCooldown);
             }
             StartState(GoToPlayer());
         }
 
 
-        private void SetDirectionToTarget()
+        protected void SetDirectionToTarget()
         {
             var direction = GetDirectionToTarget();
-            _creature.SetMoveDirection(direction);
+            Creature.SetMoveDirection(direction);
         }
 
 
-        private Vector2 GetDirectionToTarget()
+        protected virtual Vector2 GetDirectionToTarget()
         {
-            var direction = _target.transform.position - transform.position;
+            var direction = Target.transform.position - transform.position;
             direction.y = 0;
             return direction.normalized;
         }
 
 
-        private void StartState(IEnumerator coroutine)
+        protected void StartState(IEnumerator coroutine)
         {
-            _creature.SetMoveDirection(Vector2.zero);
+            Creature.SetMoveDirection(Vector2.zero);
             if (_current != null) StopCoroutine(_current);
 
             _current = StartCoroutine(coroutine);
@@ -125,7 +132,7 @@ namespace Creatures
 
         public void OnDie()
         {
-            _creature.SetMoveDirection(Vector2.zero);
+            Creature.SetMoveDirection(Vector2.zero);
             _isDead = true;
             _animator.SetBool(IsDeadKey, true);
 

@@ -924,6 +924,7 @@ MonoBehaviour:
   _damageJumpForce: 2
   Health: {fileID: 6669306786479704690}
   _invertScale: 1
+  _isMob: 1
   _attackRange: {fileID: 1802801993}
   Particles: {fileID: 331407863}
   GroundCheck: {fileID: 4721150702822014572}
@@ -939,11 +940,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9733ee71947cf914cad1876cbc6cdc35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _vision: {fileID: 1199655351724045846}
-  _canAttack: {fileID: 365017980}
+  Vision: {fileID: 1199655351724045846}
+  CanAttack: {fileID: 365017980}
   _agrDelay: 0.05
   _attackCooldown: 1
-  _missPlayerCooldown: 1
+  _beforeAttackDelay: 0
+  MissPlayerCooldown: 1
 --- !u!114 &7780517866537752234
 MonoBehaviour:
   m_ObjectHideFlags: 0
