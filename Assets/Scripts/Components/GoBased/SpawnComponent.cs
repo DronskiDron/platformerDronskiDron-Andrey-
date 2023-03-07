@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Utils;
 
 namespace General.Components
 {
@@ -26,14 +27,14 @@ namespace General.Components
         [ContextMenu("Spawn")]
         public void Spawn()
         {
-            var instance = Instantiate(_prefab, _target.position, Quaternion.identity);
+            var instance = SpawnUtils.Spawn(_prefab, _target.position);
             instance.transform.localScale = _target.lossyScale;
         }
 
 
-        public void SpawnRandom(GameObject prefab, Vector3 position, Quaternion quaternion)
+        public void SpawnRandom(GameObject prefab, Vector3 position)
         {
-            var instance = Instantiate(prefab, position, quaternion);
+            var instance = SpawnUtils.Spawn(prefab, position);
         }
 
 

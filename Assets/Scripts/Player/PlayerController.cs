@@ -59,7 +59,7 @@ namespace Creatures.Player
         {
             base.Start();
             _session = FindObjectOfType<GameSession>();
-            _session.Data.Hp = Health.Health;
+            _session.Data.Hp.Value = Health.Health;
             _session.Data.Inventory.OnChanged += OnInventoryChanged;
             _session.Data.Inventory.OnChanged += InventoryLogger;
 
@@ -175,7 +175,7 @@ namespace Creatures.Player
 
         public void OnHealthChanged(int currentHealth)
         {
-            _session.Data.Hp = currentHealth;
+            _session.Data.Hp.Value = currentHealth;
         }
 
 

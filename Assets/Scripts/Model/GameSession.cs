@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Creatures.Model.Data
 {
@@ -11,6 +12,8 @@ namespace Creatures.Model.Data
 
         private void Awake()
         {
+            LoadHud();
+
             if (IsSessionExit())
             {
                 Destroy(gameObject);
@@ -19,6 +22,12 @@ namespace Creatures.Model.Data
             {
                 DontDestroyOnLoad(this);
             }
+        }
+
+
+        private void LoadHud()
+        {
+            SceneManager.LoadScene("Hud", LoadSceneMode.Additive);
         }
 
 

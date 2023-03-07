@@ -41,7 +41,7 @@ namespace General.Components
                     if (randomValue <= _lootTable[j].DropRarity)
                     {
                         _spawnComponent.SpawnRandom(_lootTable[j].Item,
-                        transform.position + Random.insideUnitSphere * _sphereRadius, Quaternion.identity);
+                        transform.position + Random.insideUnitSphere * _sphereRadius);
                         break;
                     }
                     randomValue -= _lootTable[j].DropRarity;

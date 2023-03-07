@@ -1,4 +1,5 @@
 ﻿using System;
+using Creatures.Model.Data.Properties;
 using UnityEngine;
 
 namespace Creatures.Model.Data
@@ -8,7 +9,7 @@ namespace Creatures.Model.Data
     {
         [SerializeField] private InventoryData _inventory;
 
-        public int Hp;
+        public IntProperty Hp = new IntProperty(1);
         public InventoryData Inventory => _inventory;
 
 
