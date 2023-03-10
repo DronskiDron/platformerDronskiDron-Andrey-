@@ -6,13 +6,13 @@ namespace General.Components.Health
 {
     public class HealthComponent : MonoBehaviour
     {
-        [SerializeField] private int _health;
+        [SerializeField] protected int _health;
         [SerializeField] private GameObject _target;
 
         [SerializeField] private UnityEvent _onHeal;
         [SerializeField] private UnityEvent _onDamage;
         [SerializeField] public UnityEvent _onDie;
-        [SerializeField] private HealthChangeEvent _onChange;
+        [SerializeField] public HealthChangeEvent _onChange;
 
         private int _startHealth;
         private bool _isImmortal = false;
@@ -82,6 +82,12 @@ namespace General.Components.Health
         private void OnDestroy()
         {
             _onDie.RemoveAllListeners();
+        }
+
+
+        public void Loogg()
+        {
+            Debug.Log("AAAAA");
         }
 
 

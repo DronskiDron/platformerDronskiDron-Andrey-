@@ -18694,6 +18694,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TotemTower (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8408550426284432221, guid: df5ece4374d421d4fa16a42be3294857,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8408550426284432222, guid: df5ece4374d421d4fa16a42be3294857,
         type: 3}
       propertyPath: m_RootOrder
@@ -19237,6 +19242,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sharky (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4721150701775001659, guid: b686391ff07b083409fd9ec837160189,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4721150701775001660, guid: b686391ff07b083409fd9ec837160189,
         type: 3}
       propertyPath: m_RootOrder
@@ -19757,6 +19767,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crabby (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4721150701775001659, guid: 73d2ffc6f1c96214896040b993e2b619,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4721150701775001660, guid: 73d2ffc6f1c96214896040b993e2b619,
         type: 3}
       propertyPath: m_RootOrder
@@ -20196,6 +20211,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Seashell (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801466389762006252, guid: 9d2e21e018f21a1439469ad2c50cb1f3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8801466389762006258, guid: 9d2e21e018f21a1439469ad2c50cb1f3,
         type: 3}
@@ -21121,12 +21141,12 @@ PrefabInstance:
     - target: {fileID: 4721150701775001660, guid: 3dbb76121098c834a98bfd1603aa85cb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.22
+      value: 94.06
       objectReference: {fileID: 0}
     - target: {fileID: 4721150701775001660, guid: 3dbb76121098c834a98bfd1603aa85cb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.59
+      value: -1.47
       objectReference: {fileID: 0}
     - target: {fileID: 4721150701775001660, guid: 3dbb76121098c834a98bfd1603aa85cb,
         type: 3}
@@ -22023,6 +22043,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sharky (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4721150701775001659, guid: b686391ff07b083409fd9ec837160189,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4721150701775001660, guid: b686391ff07b083409fd9ec837160189,
         type: 3}
       propertyPath: m_RootOrder
@@ -22832,6 +22857,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Crabby
+      objectReference: {fileID: 0}
+    - target: {fileID: 4721150701775001659, guid: 73d2ffc6f1c96214896040b993e2b619,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4721150701775001660, guid: 73d2ffc6f1c96214896040b993e2b619,
         type: 3}
@@ -24321,6 +24351,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sharky (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4721150701775001659, guid: b686391ff07b083409fd9ec837160189,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4721150701775001660, guid: b686391ff07b083409fd9ec837160189,
         type: 3}
       propertyPath: m_RootOrder
@@ -24737,6 +24772,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Crabby (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4721150701775001659, guid: 73d2ffc6f1c96214896040b993e2b619,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4721150701775001660, guid: 73d2ffc6f1c96214896040b993e2b619,
         type: 3}
@@ -27126,6 +27166,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sharky
       objectReference: {fileID: 0}
+    - target: {fileID: 4721150701775001659, guid: b686391ff07b083409fd9ec837160189,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4721150701775001660, guid: b686391ff07b083409fd9ec837160189,
         type: 3}
       propertyPath: m_RootOrder
@@ -27180,6 +27225,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7253294409283743402, guid: b686391ff07b083409fd9ec837160189,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b686391ff07b083409fd9ec837160189, type: 3}
@@ -28399,6 +28449,7 @@ Transform:
   - {fileID: 1849250721}
   - {fileID: 579827091}
   - {fileID: 447731534}
+  - {fileID: 1654664461}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -29067,6 +29118,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sharky (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4721150701775001659, guid: b686391ff07b083409fd9ec837160189,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4721150701775001660, guid: b686391ff07b083409fd9ec837160189,
         type: 3}
       propertyPath: m_RootOrder
@@ -29637,6 +29693,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TotemTower (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408550426284432221, guid: df5ece4374d421d4fa16a42be3294857,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8408550426284432222, guid: df5ece4374d421d4fa16a42be3294857,
         type: 3}
@@ -31063,12 +31124,12 @@ PrefabInstance:
     - target: {fileID: 2532081266675386070, guid: a5b011ba8d1290843a9a9e40c268392b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.243087
+      value: 96.036896
       objectReference: {fileID: 0}
     - target: {fileID: 2532081266675386070, guid: a5b011ba8d1290843a9a9e40c268392b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.8438909
+      value: -0.7238911
       objectReference: {fileID: 0}
     - target: {fileID: 2532081266675386070, guid: a5b011ba8d1290843a9a9e40c268392b,
         type: 3}
@@ -31305,6 +31366,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Crabby (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4721150701775001659, guid: 73d2ffc6f1c96214896040b993e2b619,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4721150701775001660, guid: 73d2ffc6f1c96214896040b993e2b619,
         type: 3}
@@ -32318,6 +32384,81 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 894919109}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1654664460
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1112293537}
+    m_Modifications:
+    - target: {fileID: 1917532564182156484, guid: 9cc37816802104044bccd5276285b386,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917532564182156484, guid: 9cc37816802104044bccd5276285b386,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 100.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917532564182156484, guid: 9cc37816802104044bccd5276285b386,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917532564182156484, guid: 9cc37816802104044bccd5276285b386,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 739.99243
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917532564182156484, guid: 9cc37816802104044bccd5276285b386,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917532564182156484, guid: 9cc37816802104044bccd5276285b386,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917532564182156484, guid: 9cc37816802104044bccd5276285b386,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917532564182156484, guid: 9cc37816802104044bccd5276285b386,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917532564182156484, guid: 9cc37816802104044bccd5276285b386,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917532564182156484, guid: 9cc37816802104044bccd5276285b386,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917532564182156484, guid: 9cc37816802104044bccd5276285b386,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917532564182156486, guid: 9cc37816802104044bccd5276285b386,
+        type: 3}
+      propertyPath: m_Name
+      value: Sword (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9cc37816802104044bccd5276285b386, type: 3}
+--- !u!4 &1654664461 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1917532564182156484, guid: 9cc37816802104044bccd5276285b386,
+    type: 3}
+  m_PrefabInstance: {fileID: 1654664460}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1660582379
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33275,6 +33416,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sharky (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4721150701775001659, guid: b686391ff07b083409fd9ec837160189,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4721150701775001660, guid: b686391ff07b083409fd9ec837160189,
         type: 3}
       propertyPath: m_RootOrder
@@ -33530,12 +33676,12 @@ PrefabInstance:
     - target: {fileID: 4372885476232784303, guid: 76744fe3c924da842b140633aa9bc6cb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -60.359085
+      value: 47.9209
       objectReference: {fileID: 0}
     - target: {fileID: 4372885476232784303, guid: 76744fe3c924da842b140633aa9bc6cb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5700777
+      value: 3.6900775
       objectReference: {fileID: 0}
     - target: {fileID: 4372885476232784303, guid: 76744fe3c924da842b140633aa9bc6cb,
         type: 3}
@@ -33602,6 +33748,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sharky (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4721150701775001659, guid: b686391ff07b083409fd9ec837160189,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4721150701775001660, guid: b686391ff07b083409fd9ec837160189,
         type: 3}
@@ -48092,6 +48243,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Seashell (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8801466389762006252, guid: 9d2e21e018f21a1439469ad2c50cb1f3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8801466389762006258, guid: 9d2e21e018f21a1439469ad2c50cb1f3,
         type: 3}
       propertyPath: m_RootOrder
@@ -49629,6 +49785,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Seashell
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801466389762006252, guid: 9d2e21e018f21a1439469ad2c50cb1f3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8801466389762006258, guid: 9d2e21e018f21a1439469ad2c50cb1f3,
         type: 3}

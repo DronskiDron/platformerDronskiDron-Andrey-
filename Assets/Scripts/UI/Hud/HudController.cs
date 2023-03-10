@@ -2,6 +2,7 @@
 using Creatures.Model.Definitions;
 using UI.Widgets;
 using UnityEngine;
+using Utils;
 
 namespace UI.Hud
 {
@@ -26,6 +27,12 @@ namespace UI.Hud
             var maxHealth = DefsFacade.I.Player.MaxHealth;
             var value = (float)newValue / maxHealth;
             _healthBar.SetProgress(value);
+        }
+
+
+        public void OnSettings()
+        {
+            WindowUtils.CreateWindow("UI/InGameMenuWindow");
         }
 
 
