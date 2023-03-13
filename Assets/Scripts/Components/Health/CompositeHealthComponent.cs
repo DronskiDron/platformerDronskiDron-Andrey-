@@ -1,36 +1,55 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UI.Widgets;
+using Utils.Disposables;
 
 namespace General.Components.Health
 {
     public class CompositeHealthComponent : HealthComponent
     {
-        private List<HealthComponent> _compositeHp = new List<HealthComponent>();
+        private ProgressBarWidget _lifeBar;
+        private int _maxHp;
+
+        private readonly CompositeDisposable _trash = new CompositeDisposable();
 
 
         private void Awake()
         {
-            ListFiller();
-            TotalHpCounter();
+            HpManager();
+            LifeBarSearch();
         }
 
 
-        private void ListFiller()
+        private void LifeBarSearch()
+        {
+            var bars = GetComponentsInChildren<ProgressBarWidget>();
+            foreach (var item in bars)
+            {
+                _lifeBar = item;
+            }
+        }
+
+
+        private void HpManager()
         {
             var commonHp = GetComponentsInChildren<HealthComponent>();
-            foreach (var value in commonHp)
+
+            foreach (var member in commonHp)
             {
-                _compositeHp.Add(value);
+                _maxHp = member.Health;
+                _trash.Retain(member._onChange.Subscribe(OnHpChanged));
             }
         }
 
 
-        private void TotalHpCounter()
+        private void OnHpChanged(int hp)
         {
-            foreach (var value in _compositeHp)
-            {
-                _health += value.Health;
-            }
+            var progress = (float)hp / _maxHp;
+            _lifeBar.SetProgress(progress);
+        }
+
+
+        private void OnDestroy()
+        {
+            _trash.Dispose();
         }
     }
 }

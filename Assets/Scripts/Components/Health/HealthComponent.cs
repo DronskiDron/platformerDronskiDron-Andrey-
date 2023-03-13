@@ -85,12 +85,6 @@ namespace General.Components.Health
         }
 
 
-        public void Loogg()
-        {
-            Debug.Log("AAAAA");
-        }
-
-
         [Serializable]
         public class HealthChangeEvent : UnityEvent<int>
         {

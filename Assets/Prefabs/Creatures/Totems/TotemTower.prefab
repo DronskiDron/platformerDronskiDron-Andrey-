@@ -288,9 +288,9 @@ GameObject:
   - component: {fileID: 8408550426284432222}
   - component: {fileID: 8408550426284432223}
   - component: {fileID: 6555364810222401587}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: TotemTower
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -344,7 +344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 0
-  _target: {fileID: 8408550426284432221}
+  _target: {fileID: 0}
   _onHeal:
     m_PersistentCalls:
       m_Calls: []

@@ -37,7 +37,6 @@ namespace UI.Widgets
         {
             var progress = (float)hp / _maxHp;
             _lifeBar.SetProgress(progress);
-            _hp.Loogg();
         }
 
 
