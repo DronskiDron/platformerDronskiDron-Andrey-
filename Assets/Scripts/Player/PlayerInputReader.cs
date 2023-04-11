@@ -40,7 +40,7 @@ namespace Creatures
 
         private void OnThrow(InputValue context)
         {
-            _player.Throw();
+            _player.UseInventory();
         }
 
 
@@ -51,9 +51,9 @@ namespace Creatures
         }
 
 
-        private void OnUse(InputValue context)
+        private void OnNextItem(InputValue context)
         {
-            _player.UsePotion();
+            _player.NextItem();
         }
     }
 }

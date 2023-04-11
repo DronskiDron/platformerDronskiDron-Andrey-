@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Creatures.Model.Definitions;
+using Creatures.Model.Definitions.Items;
+using Creatures.Model.Definitions.Repository.Items;
 using UnityEngine;
 
 namespace Creatures.Model.Data
@@ -21,7 +24,7 @@ namespace Creatures.Model.Data
             var itemDef = DefsFacade.I.Items.Get(id);
             if (itemDef.IsVoid) return;
 
-            if (itemDef.IsStackable)
+            if (itemDef.HasTag(ItemTag.Stackable))
             {
                 AddToStack(id, value);
             }
@@ -31,6 +34,22 @@ namespace Creatures.Model.Data
             }
 
             OnChanged?.Invoke(id, Count(id));
+        }
+
+
+        public InventoryItemData[] GetAll(params ItemTag[] tags)
+        {
+            var retValue = new List<InventoryItemData>();
+
+            foreach (var item in _inventory)
+            {
+                var itemDef = DefsFacade.I.Items.Get(item.Id);
+                var isAllRequirementsMet = tags.All(x => itemDef.HasTag(x));
+                if (isAllRequirementsMet)
+                    retValue.Add(item);
+            }
+
+            return retValue.ToArray();
         }
 
 
@@ -68,7 +87,7 @@ namespace Creatures.Model.Data
             var itemDef = DefsFacade.I.Items.Get(id);
             if (itemDef.IsVoid) return;
 
-            if (itemDef.IsStackable)
+            if (itemDef.HasTag(ItemTag.Stackable))
             {
                 RemoveFromStack(id, value);
             }
@@ -128,18 +147,18 @@ namespace Creatures.Model.Data
             }
             return null;
         }
+    }
 
 
-        [Serializable]
-        public class InventoryItemData
+    [Serializable]
+    public class InventoryItemData
+    {
+        [InventoryId] public string Id;
+        public int Value;
+
+        public InventoryItemData(string id)
         {
-            [InventoryId] public string Id;
-            public int Value;
-
-            public InventoryItemData(string id)
-            {
-                Id = id;
-            }
+            Id = id;
         }
     }
 }

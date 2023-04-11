@@ -7,10 +7,16 @@ namespace Utils
     public class Cooldown
     {
         [SerializeField] private float _value;
-        public float Value => _value;
 
         private float _timesUp;
+
+        public float Value
+        {
+            get => _value;
+            set => _value = value;
+        }
         public bool IsReady => _timesUp <= Time.time;
+        public float TimeLasts => Mathf.Max(_timesUp - Time.deltaTime, 0);
 
 
         public void Reset()

@@ -4125,6 +4125,7 @@ Transform:
   - {fileID: 247632984}
   - {fileID: 1604059053}
   - {fileID: 1803073974}
+  - {fileID: 1697525111}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7128,6 +7129,75 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7397012320786172862}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &926800222
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 660789848}
+    m_Modifications:
+    - target: {fileID: 2010720066437477363, guid: 660c45e5f01af1b468eb0dee61cf2b67,
+        type: 3}
+      propertyPath: m_Name
+      value: SmallHealPotion
+      objectReference: {fileID: 0}
+    - target: {fileID: 7598233981592598132, guid: 660c45e5f01af1b468eb0dee61cf2b67,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7598233981592598132, guid: 660c45e5f01af1b468eb0dee61cf2b67,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -13.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 7598233981592598132, guid: 660c45e5f01af1b468eb0dee61cf2b67,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 31.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 7598233981592598132, guid: 660c45e5f01af1b468eb0dee61cf2b67,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.3724608
+      objectReference: {fileID: 0}
+    - target: {fileID: 7598233981592598132, guid: 660c45e5f01af1b468eb0dee61cf2b67,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7598233981592598132, guid: 660c45e5f01af1b468eb0dee61cf2b67,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7598233981592598132, guid: 660c45e5f01af1b468eb0dee61cf2b67,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7598233981592598132, guid: 660c45e5f01af1b468eb0dee61cf2b67,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7598233981592598132, guid: 660c45e5f01af1b468eb0dee61cf2b67,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7598233981592598132, guid: 660c45e5f01af1b468eb0dee61cf2b67,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7598233981592598132, guid: 660c45e5f01af1b468eb0dee61cf2b67,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 660c45e5f01af1b468eb0dee61cf2b67, type: 3}
 --- !u!1 &953156737
 GameObject:
   m_ObjectHideFlags: 0
@@ -25467,6 +25537,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1688084961}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1697525111 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7598233981592598132, guid: 660c45e5f01af1b468eb0dee61cf2b67,
+    type: 3}
+  m_PrefabInstance: {fileID: 926800222}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1698476568
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25877,6 +25953,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 660789848}
     m_Modifications:
+    - target: {fileID: 1729064139960358553, guid: 25203e40bcf0eca4980b6ff5d5c3fa96,
+        type: 3}
+      propertyPath: _id
+      value: Coin
+      objectReference: {fileID: 0}
     - target: {fileID: 2010720066437477363, guid: 25203e40bcf0eca4980b6ff5d5c3fa96,
         type: 3}
       propertyPath: m_Name
@@ -26273,7 +26354,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _data:
     _inventory:
-      _inventory: []
+      _inventory:
+      - Id: SpeedUpPotion
+        Value: 2
     Hp:
       _value: 0
 --- !u!4 &1857664937

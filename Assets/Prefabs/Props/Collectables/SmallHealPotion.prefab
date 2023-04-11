@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 9127787250348969369}
   - component: {fileID: 8515817472588004011}
   m_Layer: 0
-  m_Name: HealPotion
+  m_Name: SmallHealPotion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 3714227102187029162, guid: d8c975ea1b9c69847a310b68883fc968,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.6981132, b: 0.8830061, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98cda059accbaab4e9894c9b530acbc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _id: HealthPotion
+  _id: SmallHealthPotion
   _count: 1
 --- !u!114 &9127787250348969369
 MonoBehaviour:

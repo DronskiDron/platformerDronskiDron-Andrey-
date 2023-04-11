@@ -90,10 +90,16 @@ namespace Creatures
             }
             else
             {
-                var xVelocity = MoveDirection.x * _speed;
+                var xVelocity = MoveDirection.x * CalculateSpeed();
                 var yVelocity = CalculateVelocity();
                 Rigidbody.velocity = new Vector2(xVelocity, yVelocity);
             }
+        }
+
+
+        protected virtual float CalculateSpeed()
+        {
+            return _speed;
         }
 
 

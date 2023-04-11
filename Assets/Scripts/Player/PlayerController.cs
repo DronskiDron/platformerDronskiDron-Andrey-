@@ -4,6 +4,9 @@ using Utils;
 using Creatures.Model.Data;
 using System.Collections;
 using General.Components.ColliderBased;
+using General.Components;
+using Creatures.Model.Definitions;
+using Creatures.Model.Definitions.Items;
 
 namespace Creatures.Player
 {
@@ -27,6 +30,7 @@ namespace Creatures.Player
         [SerializeField] private Cooldown _superThrowCooldown;
         [SerializeField] private int _superThrowParticles;
         [SerializeField] private float _superThrowDelay;
+        [SerializeField] private SpawnComponent _throwSpawner;
 
         [Header("Particles")]
         [SerializeField] private ParticleSystem _hitParticles;
@@ -44,8 +48,22 @@ namespace Creatures.Player
         private GameSession _session;
         private float _defaultGravityScale;
 
+        private const string SwordId = "Sword";
         private int CoinCount => _session.Data.Inventory.Count("Coin");
-        private int SwordCount => _session.Data.Inventory.Count("Sword");
+        private int SwordCount => _session.Data.Inventory.Count(SwordId);
+        private string SelectedItemId => _session.QuickInventory.SelectedItem.Id;
+
+        private bool CanThrow
+        {
+            get
+            {
+                if (SelectedItemId == SwordId)
+                    return SwordCount > 1;
+
+                var def = DefsFacade.I.Items.Get(SelectedItemId);
+                return def.HasTag(ItemTag.Throwable);
+            }
+        }
 
 
         protected override void Awake()
@@ -83,7 +101,7 @@ namespace Creatures.Player
 
         private void OnInventoryChanged(string id, int value)
         {
-            if (id == "Sword")
+            if (id == SwordId)
                 UpdatePlayerWeapon();
         }
 
@@ -235,13 +253,60 @@ namespace Creatures.Player
         }
 
 
-        public void Throw()
+        public void UseInventory()
         {
-            if (_throwCooldown.IsReady && SwordCount > 1)
+            if (IsSelectedItem(ItemTag.Throwable))
+                Throw();
+
+            else if (IsSelectedItem(ItemTag.Potion))
+                UsePotion();
+
+        }
+
+
+        private void UsePotion()
+        {
+            var potion = DefsFacade.I.Potions.Get(SelectedItemId);
+
+            switch (potion.Effect)
             {
-                Animator.SetTrigger(ThrowKey);
-                _throwCooldown.Reset();
+                case Model.Definitions.Repository.Effect.AddHp:
+                    Health.RenewHealth((int)potion.Value);
+                    break;
+                case Model.Definitions.Repository.Effect.SpeedUp:
+                    _speedUpCooldown.Value = _speedUpCooldown.TimeLasts + potion.Time;
+                    _additionalSpeed = Mathf.Max(potion.Value, _additionalSpeed);
+                    _speedUpCooldown.Reset();
+                    break;
             }
+
+            _session.Data.Inventory.Remove(potion.Id, 1);
+        }
+
+
+        private readonly Cooldown _speedUpCooldown = new Cooldown();
+        private float _additionalSpeed;
+
+        protected override float CalculateSpeed()
+        {
+            if (_speedUpCooldown.IsReady)
+                _additionalSpeed = 0f;
+            return base.CalculateSpeed() + _additionalSpeed;
+        }
+
+
+        private bool IsSelectedItem(ItemTag tag)
+        {
+            return _session.QuickInventory.SelectedDef.HasTag(tag);
+        }
+
+
+        internal void Throw()
+        {
+            if (!_throwCooldown.IsReady || !CanThrow) return;
+
+            Animator.SetTrigger(ThrowKey);
+            _throwCooldown.Reset();
         }
 
 
@@ -254,8 +319,12 @@ namespace Creatures.Player
         private void ThrowAndRemoveFromInventory()
         {
             Sounds.Play("Range");
-            Particles.Spawn("Throw");
-            _session.Data.Inventory.Remove("Sword", 1);
+
+            var throwableId = _session.QuickInventory.SelectedItem.Id;
+            var throwableDef = DefsFacade.I.Throwable.Get(throwableId);
+            _throwSpawner.SetPrefab(throwableDef.Projectile);
+            _throwSpawner.Spawn();
+            _session.Data.Inventory.Remove(throwableId, 1);
         }
 
 
@@ -263,7 +332,10 @@ namespace Creatures.Player
         {
             if (_superThrow)
             {
-                var numThrows = Mathf.Min(_superThrowParticles, SwordCount - 1);
+                var throwableCount = _session.Data.Inventory.Count(SelectedItemId);
+                var possibleCount = SelectedItemId == SwordId ? throwableCount - 1 : throwableCount;
+
+                var numThrows = Mathf.Min(_superThrowParticles, possibleCount);
                 StartCoroutine(DoSuperThrow(numThrows));
             }
             else
@@ -284,14 +356,9 @@ namespace Creatures.Player
         }
 
 
-        public void UsePotion()
+        internal void NextItem()
         {
-            var potionCount = _session.Data.Inventory.Count("HealthPotion");
-            if (potionCount > 0)
-            {
-                Health.RenewHealth(5);
-                _session.Data.Inventory.Remove("HealthPotion", 1);
-            }
+            _session.QuickInventory.SetNextItem();
         }
     }
 }

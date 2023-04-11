@@ -5218,7 +5218,7 @@ GameObject:
   - component: {fileID: 5465245495022948808}
   - component: {fileID: 3216513719131989604}
   m_Layer: 13
-  m_Name: ThrowSordPosition
+  m_Name: ThrowSpawnPosition
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -5541,6 +5541,7 @@ MonoBehaviour:
     _value: 1
   _superThrowParticles: 3
   _superThrowDelay: 0.2
+  _throwSpawner: {fileID: 3216513719131989604}
   _hitParticles: {fileID: 1578835228}
 --- !u!114 &4721150701775001658
 MonoBehaviour:

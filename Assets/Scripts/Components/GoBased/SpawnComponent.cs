@@ -45,5 +45,11 @@ namespace General.Components
                 _transform.localScale = new Vector3(_transform.lossyScale.x * -1, _transform.localScale.y, _transform.localScale.z);
             }
         }
+
+
+        internal void SetPrefab(GameObject prefab)
+        {
+            _prefab = prefab;
+        }
     }
 }

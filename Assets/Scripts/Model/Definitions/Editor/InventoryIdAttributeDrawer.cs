@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEditor;
 using System.Collections.Generic;
+using Creatures.Model.Definitions.Repository.Items;
 
 namespace Creatures.Model.Definitions.Editor
 {

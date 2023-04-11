@@ -15,17 +15,6 @@ namespace Creatures.Model.Data.Properties
         public delegate void OnPropertyChanged(TPropertyType newValue, TPropertyType oldValue);
         public event OnPropertyChanged OnChanged;
 
-        public IDisposable Subscribe(OnPropertyChanged call)
-        {
-            OnChanged += call;
-            return new ActionDisposable(() => OnChanged -= call);
-        }
-
-        public ObservableProperty(TPropertyType defaultValue)
-        {
-            _defaultValue = defaultValue;
-        }
-
         public TPropertyType Value
         {
             get => _stored;
@@ -40,6 +29,27 @@ namespace Creatures.Model.Data.Properties
 
                 OnChanged?.Invoke(value, oldValue);
             }
+        }
+
+        public ObservableProperty(TPropertyType defaultValue)
+        {
+            _defaultValue = defaultValue;
+        }
+
+
+        public IDisposable Subscribe(OnPropertyChanged call)
+        {
+            OnChanged += call;
+            return new ActionDisposable(() => OnChanged -= call);
+        }
+
+
+        public IDisposable SubscribeAndInvoke(OnPropertyChanged call)
+        {
+            OnChanged += call;
+            var dispose = new ActionDisposable(() => OnChanged -= call);
+            call(_value, _value);
+            return dispose;
         }
 
 

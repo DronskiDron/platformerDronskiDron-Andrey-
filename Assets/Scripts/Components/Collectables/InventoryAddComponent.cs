@@ -1,5 +1,5 @@
 ﻿using Creatures.Model.Data;
-using Creatures.Model.Definitions;
+using Creatures.Model.Definitions.Repository.Items;
 using UnityEngine;
 using Utils;
 
