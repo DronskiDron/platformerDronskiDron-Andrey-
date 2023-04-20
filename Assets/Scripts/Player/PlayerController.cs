@@ -65,6 +65,9 @@ namespace Creatures.Player
             }
         }
 
+        private readonly Cooldown _speedUpCooldown = new Cooldown();
+        private float _additionalSpeed;
+
 
         protected override void Awake()
         {
@@ -283,9 +286,6 @@ namespace Creatures.Player
             _session.Data.Inventory.Remove(potion.Id, 1);
         }
 
-
-        private readonly Cooldown _speedUpCooldown = new Cooldown();
-        private float _additionalSpeed;
 
         protected override float CalculateSpeed()
         {
