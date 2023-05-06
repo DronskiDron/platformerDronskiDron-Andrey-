@@ -1,13 +1,14 @@
 ﻿using Creatures.Model.Data;
 using Creatures.Model.Definitions;
 using Creatures.Model.Definitions.Items;
+using UI.Widgets;
 using UnityEngine;
 using UnityEngine.UI;
 using Utils.Disposables;
 
 namespace UI.Hud.QuickInventory
 {
-    public class InventoryItemWidget : MonoBehaviour
+    public class InventoryItemWidget : MonoBehaviour, IItemRenderer<InventoryItemData>
     {
         [SerializeField] private Image _icon;
         [SerializeField] private GameObject _selection;

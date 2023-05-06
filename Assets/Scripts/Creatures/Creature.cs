@@ -20,6 +20,7 @@ namespace Creatures
         [SerializeField] private bool _isMob;
         [SerializeField] private float _mobJumpForce = 2f;
         private bool _mobCanJump = false;
+        public bool MobCanJump { get => _mobCanJump; set => _mobCanJump = value; }
 
         [Header("Creature Checkers")]
         [SerializeField] private CheckCircleOverlap _attackRange;

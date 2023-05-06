@@ -7,46 +7,42 @@ using Utils;
 
 namespace General.Components.ColliderBased
 {
-    public class CheckCircleOverlap : MonoBehaviour
+    public class CheckLineOverlap : MonoBehaviour
     {
-        [SerializeField] private float _radius = 1;
+        [SerializeField] private GameObject _target;
         [SerializeField] private LayerMask _mask;
         [SerializeField] private string[] _tags;
         [SerializeField] private OnOverlapEvent _onOverlap;
+        [SerializeField] private UnityEvent _selfEvent;
 
-        private readonly Collider2D[] _interactionResult = new Collider2D[10];
+        private readonly RaycastHit2D[] _interactionResult = new RaycastHit2D[10];
 
 
         private void OnDrawGizmosSelected()
         {
             Handles.color = HandlesUtils.TranspanentRed;
-            Handles.DrawSolidDisc(transform.position, Vector3.forward, _radius);
+            Handles.DrawLine(transform.position, _target.transform.position);
         }
 
 
         public void Check()
         {
-            var size = Physics2D.OverlapCircleNonAlloc(
+            var size = Physics2D.RaycastNonAlloc(
                 transform.position,
-                _radius,
+                _target.transform.position,
                 _interactionResult,
                 _mask);
 
             for (int i = 0; i < size; i++)
             {
                 var overlapResult = _interactionResult[i];
-                var isInTags = _tags.Any(tag => overlapResult.CompareTag(tag));
+                var isInTags = _tags.Any(tag => overlapResult.transform.CompareTag(tag));
                 if (isInTags)
                 {
-                    _onOverlap?.Invoke(_interactionResult[i].gameObject);
+                    _selfEvent?.Invoke();
+                    _onOverlap?.Invoke(_interactionResult[i].transform.gameObject);
                 }
             }
         }
-    }
-
-
-    [Serializable]
-    public class OnOverlapEvent : UnityEvent<GameObject>
-    {
     }
 }

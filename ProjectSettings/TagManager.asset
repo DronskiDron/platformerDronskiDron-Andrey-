@@ -9,6 +9,7 @@ TagManager:
   - Interactable
   - SfxAudioSource
   - UI
+  - StoneDoor
   layers:
   - Default
   - TransparentFX

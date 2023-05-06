@@ -138,5 +138,15 @@ namespace Creatures
 
             if (_current != null) StopCoroutine(_current);
         }
+
+
+        public void OnChangeSpriteDirection()
+        {
+            IsFollow = false;
+            Creature.MobCanJump = false;
+            var direction = GetDirectionToTarget();
+            StartState(Patrol.DoPatrol());
+            Creature.UpdateSpriteDirection(direction);
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Creatures.Model.Data;
+using UI.Widgets;
 using UnityEngine;
 using Utils.Disposables;
 
@@ -15,10 +16,12 @@ namespace UI.Hud.QuickInventory
 
         private GameSession _session;
         private List<InventoryItemWidget> _createdItem = new List<InventoryItemWidget>();
+        private DataGroup<InventoryItemData, InventoryItemWidget> _dataGroup;
 
 
         private void Start()
         {
+            _dataGroup = new DataGroup<InventoryItemData, InventoryItemWidget>(_prefab, _container);
             _session = FindObjectOfType<GameSession>();
             _trash.Retain(_session.QuickInventory.Subscribe(Rebuild));
 
@@ -29,23 +32,7 @@ namespace UI.Hud.QuickInventory
         private void Rebuild()
         {
             var inventory = _session.QuickInventory.Inventory;
-
-            for (var i = _createdItem.Count; i < inventory.Length; i++)
-            {
-                var item = Instantiate(_prefab, _container);
-                _createdItem.Add(item);
-            }
-
-            for (var i = 0; i < inventory.Length; i++)
-            {
-                _createdItem[i].SetData(inventory[i], i);
-                _createdItem[i].gameObject?.SetActive(true);
-            }
-
-            for (var i = inventory.Length; i < _createdItem.Count; i++)
-            {
-                _createdItem[i].gameObject.SetActive(false);
-            }
+            _dataGroup.SetData(inventory);
         }
 
 
