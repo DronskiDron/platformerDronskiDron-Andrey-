@@ -10,6 +10,9 @@ namespace General.Components.Dialogs
         private OptionDialogController _dialogBox;
 
 
+        public static bool _letNextPhrase = true;
+
+
         public void Show()
         {
             if (_dialogBox == null)
