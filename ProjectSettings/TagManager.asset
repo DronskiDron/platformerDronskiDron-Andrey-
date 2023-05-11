@@ -10,6 +10,8 @@ TagManager:
   - SfxAudioSource
   - UI
   - StoneDoor
+  - SimpleDialog
+  - PersonalizedDialog
   layers:
   - Default
   - TransparentFX
