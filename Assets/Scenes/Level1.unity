@@ -26587,7 +26587,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _data:
     _inventory:
-      _inventory: []
+      _inventory:
+      - Id: Sword
+        Value: 5
     Hp:
       _value: 0
 --- !u!4 &1857664937
@@ -29496,12 +29498,12 @@ PrefabInstance:
     - target: {fileID: 2532081266675386070, guid: a5b011ba8d1290843a9a9e40c268392b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -34.605534
+      value: -11.193104
       objectReference: {fileID: 0}
     - target: {fileID: 2532081266675386070, guid: a5b011ba8d1290843a9a9e40c268392b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.44302446
+      value: 7.206109
       objectReference: {fileID: 0}
     - target: {fileID: 2532081266675386070, guid: a5b011ba8d1290843a9a9e40c268392b,
         type: 3}
@@ -30390,12 +30392,12 @@ PrefabInstance:
     - target: {fileID: 4372885476232784303, guid: 76744fe3c924da842b140633aa9bc6cb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -85.2391
+      value: -59.3091
       objectReference: {fileID: 0}
     - target: {fileID: 4372885476232784303, guid: 76744fe3c924da842b140633aa9bc6cb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.9600775
+      value: 11.620077
       objectReference: {fileID: 0}
     - target: {fileID: 4372885476232784303, guid: 76744fe3c924da842b140633aa9bc6cb,
         type: 3}
@@ -30528,12 +30530,12 @@ PrefabInstance:
     - target: {fileID: 4721150701775001660, guid: 3dbb76121098c834a98bfd1603aa85cb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -39.1
+      value: -13.17
       objectReference: {fileID: 0}
     - target: {fileID: 4721150701775001660, guid: 3dbb76121098c834a98bfd1603aa85cb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.2
+      value: 6.46
       objectReference: {fileID: 0}
     - target: {fileID: 4721150701775001660, guid: 3dbb76121098c834a98bfd1603aa85cb,
         type: 3}
