@@ -1,0 +1,7 @@
+menu_title	Menu
+button_start	start
+button_option	options
+button_exit	exit
+selcted_language	Selected language is: {0}
+some_icon	some-icon/resource/1
+button_back	back

@@ -12,6 +12,7 @@ TagManager:
   - StoneDoor
   - SimpleDialog
   - PersonalizedDialog
+  - Obstacle
   layers:
   - Default
   - TransparentFX

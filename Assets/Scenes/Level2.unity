@@ -22933,19 +22933,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 938350483}
     m_Modifications:
-    - target: {fileID: 1070489320, guid: 73d2ffc6f1c96214896040b993e2b619, type: 3}
-      propertyPath: _layer.m_Bits
-      value: 17408
-      objectReference: {fileID: 0}
     - target: {fileID: 4721150701775001659, guid: 73d2ffc6f1c96214896040b993e2b619,
         type: 3}
       propertyPath: m_Name
       value: Crabby
-      objectReference: {fileID: 0}
-    - target: {fileID: 4721150701775001659, guid: 73d2ffc6f1c96214896040b993e2b619,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4721150701775001660, guid: 73d2ffc6f1c96214896040b993e2b619,
         type: 3}

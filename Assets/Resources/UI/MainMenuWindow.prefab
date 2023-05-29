@@ -91,7 +91,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faeae49412632104e8946ed6525fc7f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _key: button_locales
+  _keys:
+  - selcted_language
   _capitalize: 1
 --- !u!1 &3418253508291561711
 GameObject:
@@ -184,7 +185,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faeae49412632104e8946ed6525fc7f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _key: button_exit
+  _keys:
+  - button_exit
   _capitalize: 1
 --- !u!1 &3418253508366464345
 GameObject:
@@ -366,7 +368,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faeae49412632104e8946ed6525fc7f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _key: button_exit
+  _keys:
+  - button_exit
   _capitalize: 1
 --- !u!1 &3418253508490693211
 GameObject:
@@ -459,7 +462,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faeae49412632104e8946ed6525fc7f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _key: button_option
+  _keys:
+  - button_option
   _capitalize: 1
 --- !u!1 &3418253509115171718
 GameObject:
@@ -552,7 +556,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faeae49412632104e8946ed6525fc7f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _key: button_start
+  _keys:
+  - button_start
   _capitalize: 1
 --- !u!1 &3418253509211568695
 GameObject:
@@ -714,7 +719,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faeae49412632104e8946ed6525fc7f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _key: button_start
+  _keys:
+  - button_start
   _capitalize: 1
 --- !u!1 &3418253509297181024
 GameObject:
@@ -807,7 +813,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faeae49412632104e8946ed6525fc7f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _key: button_option
+  _keys:
+  - button_option
   _capitalize: 1
 --- !u!1 &3418253509305741216
 GameObject:
@@ -1261,7 +1268,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faeae49412632104e8946ed6525fc7f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _key: menu_title
+  _keys:
+  - menu_title
   _capitalize: 0
 --- !u!1 &3418253510378611947
 GameObject:
@@ -1637,7 +1645,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: LANGUAGES
+  m_Text: ANGUAGES
 --- !u!114 &7595619089108145578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1650,5 +1658,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faeae49412632104e8946ed6525fc7f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _key: button_locales
+  _keys:
+  - selcted_language
   _capitalize: 1

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -35,16 +36,37 @@ namespace Creatures.Model.Definitions.Localisation
         }
 
 
+#if UNITY_EDITOR
+        [ContextMenu("Update from file")]
+        public void UpdateLocaleFromFile()
+        {
+            var path = UnityEditor.EditorUtility.OpenFilePanel("Open local file", "", "tsv");
+            if (path.Length != 0)
+            {
+                var data = File.ReadAllText(path);
+                ParseData(data);
+            }
+        }
+#endif
+
+
         private void OnDataLoaded(AsyncOperation operation)
         {
             if (operation.isDone)
             {
-                var rows = _request.downloadHandler.text.Split('\n');
-                _localeItems.Clear();
-                foreach (var row in rows)
-                {
-                    AddLocalItem(row);
-                }
+                var data = _request.downloadHandler.text;
+                ParseData(data);
+            }
+        }
+
+
+        private void ParseData(string data)
+        {
+            var rows = data.Split('\n');
+            _localeItems.Clear();
+            foreach (var row in rows)
+            {
+                AddLocalItem(row);
             }
         }
 

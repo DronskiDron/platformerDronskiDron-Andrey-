@@ -14,8 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _url: https://docs.google.com/spreadsheets/d/e/2PACX-1vRyZLIOapXUsJVgU9pYHIj2eHAIFgekbC5XGbrapGugbeegjpzT9IHBiE84ypxqQOWP7rRXf-yUHuUY/pub?gid=0&single=true&output=tsv
   _localeItems:
+  - Key: '###_yes_###'
+    Value: "Yes\r"
+  - Key: '###_no_###'
+    Value: "No\r"
+  - Key: '###_UI_###'
+    Value: ".\r"
   - Key: menu_title
-    Value: "Main menu\r"
+    Value: "Menu\r"
   - Key: button_start
     Value: "start\r"
   - Key: button_option
@@ -23,4 +29,16 @@ MonoBehaviour:
   - Key: button_exit
     Value: "exit\r"
   - Key: selcted_language
-    Value: 'Selected language is: {0}'
+    Value: "language\r"
+  - Key: some_icon
+    Value: "some-icon/resource/1\r"
+  - Key: button_back
+    Value: "back\r"
+  - Key: '###_dialogs_###'
+    Value: ".\r"
+  - Key: helm_message_1
+    Value: "Use helm?\r"
+  - Key: '###_interactions_###'
+    Value: ".\r"
+  - Key: '###_items_###'
+    Value: .

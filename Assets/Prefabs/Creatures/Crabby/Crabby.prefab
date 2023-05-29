@@ -1129,7 +1129,7 @@ MonoBehaviour:
   _tag: StoneDoor
   _layer:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 17408
   _action:
     m_PersistentCalls:
       m_Calls:
