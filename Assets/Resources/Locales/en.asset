@@ -18,10 +18,14 @@ MonoBehaviour:
     Value: "Yes\r"
   - Key: '###_no_###'
     Value: "No\r"
+  - Key: '###_continue_###'
+    Value: "Continue\r"
   - Key: '###_UI_###'
-    Value: ".\r"
+    Value: "###\r"
   - Key: menu_title
     Value: "Menu\r"
+  - Key: pause_title
+    Value: "Pause\r"
   - Key: button_start
     Value: "start\r"
   - Key: button_option
@@ -34,11 +38,23 @@ MonoBehaviour:
     Value: "some-icon/resource/1\r"
   - Key: button_back
     Value: "back\r"
+  - Key: button_restart
+    Value: "restart\r"
   - Key: '###_dialogs_###'
-    Value: ".\r"
-  - Key: helm_message_1
-    Value: "Use helm?\r"
+    Value: "###\r"
+  - Key: krab_dial_1
+    Value: "I can teach you!\r"
+  - Key: krab_dial_2
+    Value: "Good!\r"
+  - Key: krab_dial_3
+    Value: "Let's go!\r"
   - Key: '###_interactions_###'
-    Value: ".\r"
+    Value: "###\r"
+  - Key: helm_interact
+    Value: "Use helm?\r"
+  - Key: teleport_interact
+    Value: "Use teleport?\r"
+  - Key: door_interact
+    Value: "Enter the door?\r"
   - Key: '###_items_###'
-    Value: .
+    Value: '###'

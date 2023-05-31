@@ -1,4 +1,5 @@
-﻿using Creatures.Model.Data;
+﻿using System;
+using Creatures.Model.Data;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Utils;
@@ -8,6 +9,7 @@ namespace UI.InGameMenu
     public class InGameMenuWindow : AnimatedWindow
     {
         private float _defaultTimeScale;
+        private Action _closeAction;
 
 
         protected override void Start()
@@ -21,6 +23,13 @@ namespace UI.InGameMenu
         public void OnShowSettings()
         {
             WindowUtils.CreateWindow("UI/SettingsWindow");
+        }
+
+
+        public void OnLanguages()
+        {
+            WindowUtils.CreateWindow("UI/LocalizationWindow");
+            Close();
         }
 
 

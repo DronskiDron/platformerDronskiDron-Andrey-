@@ -18,8 +18,10 @@ MonoBehaviour:
     Value: "S\xED\r"
   - Key: '###_no_###'
     Value: "No\r"
+  - Key: '###_continue_###'
+    Value: "Continuar\r"
   - Key: '###_UI_###'
-    Value: ".\r"
+    Value: "###\r"
   - Key: menu_title
     Value: "Men\xFA\r"
   - Key: button_start
@@ -35,8 +37,14 @@ MonoBehaviour:
   - Key: button_back
     Value: "atr\xE1s\r"
   - Key: '###_dialogs_###'
-    Value: ".\r"
+    Value: "###\r"
+  - Key: krab_dial_1
+    Value: "\xA1Puedo ense\xF1arte!\r"
+  - Key: krab_dial_2
+    Value: "\xA1Bueno!\r"
+  - Key: krab_dial_3
+    Value: "\xA1Vamos!\r"
   - Key: '###_interactions_###'
-    Value: ".\r"
+    Value: "###\r"
   - Key: '###_items_###'
-    Value: .
+    Value: '###'

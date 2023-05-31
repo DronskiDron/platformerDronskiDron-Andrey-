@@ -166,7 +166,7 @@ PrefabInstance:
     - target: {fileID: 3418253509211568688, guid: bf474541fcaefc844b6a562c31f791b6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3418253509211568688, guid: bf474541fcaefc844b6a562c31f791b6,
         type: 3}
@@ -262,6 +262,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MainMenuWindow
+      objectReference: {fileID: 0}
+    - target: {fileID: 3418253509211568695, guid: bf474541fcaefc844b6a562c31f791b6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3418253509305741217, guid: bf474541fcaefc844b6a562c31f791b6,
         type: 3}

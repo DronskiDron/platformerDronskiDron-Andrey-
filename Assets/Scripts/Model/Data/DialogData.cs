@@ -21,9 +21,11 @@ namespace Creatures.Model.Data
         [SerializeField] private Sprite _icon;
         [SerializeField] private Side _side;
 
-        public string Valued => _valued;
+       /*  public string Valued => _valued; */
         public Sprite Icon => _icon;
         public Side Side => _side;
+
+        public string Valued { get => _valued; set => _valued = value; }
     }
 
 

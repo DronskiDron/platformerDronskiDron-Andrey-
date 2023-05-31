@@ -15,6 +15,9 @@ namespace General.Components.Dialogs
         private DialogBoxController _dialogBox;
 
 
+        public DialogData Bound => _bound;
+
+
         public void Show()
         {
             _dialogBox = FindDialogController();

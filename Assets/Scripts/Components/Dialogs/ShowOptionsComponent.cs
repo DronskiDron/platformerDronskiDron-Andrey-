@@ -7,6 +7,8 @@ namespace General.Components.Dialogs
     {
         [SerializeField] private OptionDialogData _data;
 
+        public OptionDialogData Data { get => _data; set => _data = value; }
+
         private OptionDialogController _dialogBox;
 
 
@@ -17,7 +19,7 @@ namespace General.Components.Dialogs
         {
             if (_dialogBox == null)
                 _dialogBox = FindObjectOfType<OptionDialogController>();
-            _dialogBox.Show(_data);
+            _dialogBox.Show(Data);
         }
     }
 }
