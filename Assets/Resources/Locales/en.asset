@@ -27,19 +27,19 @@ MonoBehaviour:
   - Key: pause_title
     Value: "Pause\r"
   - Key: button_start
-    Value: "start\r"
+    Value: "Start\r"
   - Key: button_option
-    Value: "options\r"
+    Value: "Options\r"
   - Key: button_exit
-    Value: "exit\r"
+    Value: "Exit\r"
   - Key: selcted_language
-    Value: "language\r"
+    Value: "Language\r"
   - Key: some_icon
     Value: "some-icon/resource/1\r"
   - Key: button_back
-    Value: "back\r"
+    Value: "Back\r"
   - Key: button_restart
-    Value: "restart\r"
+    Value: "Restart\r"
   - Key: '###_dialogs_###'
     Value: "###\r"
   - Key: krab_dial_1
@@ -57,4 +57,18 @@ MonoBehaviour:
   - Key: door_interact
     Value: "Enter the door?\r"
   - Key: '###_items_###'
-    Value: '###'
+    Value: "###\r"
+  - Key: item_Coin
+    Value: "Coin\r"
+  - Key: item_Sword
+    Value: "Sword\r"
+  - Key: item_Key
+    Value: "Key\r"
+  - Key: item_LargeHealthPotion
+    Value: "Large Health Potion\r"
+  - Key: item_SmallHealthPotion
+    Value: "Small Health Potion\r"
+  - Key: item_SpeedUpPotion
+    Value: "Speed Up Potion\r"
+  - Key: item_PerlProjectile
+    Value: Perl Projectile

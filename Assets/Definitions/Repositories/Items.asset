@@ -14,23 +14,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _collection:
   - _id: Coin
+    _itemTitle: 
+    _localeKey: item_Coin
     _icon: {fileID: 6582046967323461550, guid: 6b07546531d3dcb4dbe6652726c0977f, type: 3}
     _tags: 00000000
   - _id: Sword
+    _itemTitle: 
+    _localeKey: item_Sword
     _icon: {fileID: 21300000, guid: a90a8c5a424ad914e86273e75237d15d, type: 3}
     _tags: 000000000100000002000000
   - _id: Key
+    _itemTitle: 
+    _localeKey: item_Key
     _icon: {fileID: 21300000, guid: 2d2ee7a036bfb564897ec15dc0bb1ca8, type: 3}
     _tags: 00000000
   - _id: LargeHealthPotion
+    _itemTitle: 
+    _localeKey: item_LargeHealthPotion
     _icon: {fileID: 3714227102187029162, guid: d8c975ea1b9c69847a310b68883fc968, type: 3}
     _tags: 000000000100000003000000
   - _id: SmallHealthPotion
+    _itemTitle: 
+    _localeKey: item_SmallHealthPotion
     _icon: {fileID: 3714227102187029162, guid: 5404953cce4c8974db6b820f5acfc1c4, type: 3}
     _tags: 000000000100000003000000
   - _id: SpeedUpPotion
+    _itemTitle: 
+    _localeKey: item_SpeedUpPotion
     _icon: {fileID: 2011574832808370117, guid: 5404953cce4c8974db6b820f5acfc1c4, type: 3}
     _tags: 000000000100000003000000
   - _id: PerlProjectile
+    _itemTitle: 
+    _localeKey: item_PerlProjectile
     _icon: {fileID: 21300000, guid: 30bccebfc3dc1654daf12d575e41dd3a, type: 3}
     _tags: 000000000100000002000000

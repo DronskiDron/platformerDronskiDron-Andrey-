@@ -1,7 +1,29 @@
+###_yes_###	Sí
+###_no_###	No
+###_continue_###	Continuar
+###_UI_###	###
 menu_title	Menú
-button_start	comenzar
-button_option	ajustes
-button_exit	salida
-selcted_language	Idioma seleccionado: {0}
-some_icon	some-icon/resource/3
-button_back	atrás
+pause_title	Pausa
+button_start	Comenzar
+button_option	Opciones
+button_exit	Salida
+selcted_language	Idioma
+some_icon	some-icon/resource/1
+button_back	Atrás
+button_restart	Reanudar
+###_dialogs_###	###
+krab_dial_1	¡Puedo enseñarte!
+krab_dial_2	Bueno!
+krab_dial_3	¡Vamos!
+###_interactions_###	###
+helm_interact	¿Usar timón?
+teleport_interact	¿Usar teletransporte?
+door_interact	¿Entrar por la puerta?
+###_items_###	###
+item_Coin	Moneda
+item_Sword	Espada
+item_Key	Llave
+item_LargeHealthPotion	Poción de salud grande
+item_SmallHealthPotion	Poción de salud pequeña
+item_SpeedUpPotion	Poción de aceleración
+item_PerlProjectile	Proyectil Perl

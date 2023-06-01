@@ -1,7 +1,29 @@
+###_yes_###	Yes
+###_no_###	No
+###_continue_###	Continue
+###_UI_###	###
 menu_title	Menu
-button_start	start
-button_option	options
-button_exit	exit
-selcted_language	Selected language is: {0}
+pause_title	Pause
+button_start	Start
+button_option	Options
+button_exit	Exit
+selcted_language	Language
 some_icon	some-icon/resource/1
-button_back	back
+button_back	Back
+button_restart	Restart
+###_dialogs_###	###
+krab_dial_1	I can teach you!
+krab_dial_2	Good!
+krab_dial_3	Let's go!
+###_interactions_###	###
+helm_interact	Use helm?
+teleport_interact	Use teleport?
+door_interact	Enter the door?
+###_items_###	###
+item_Coin	Coin
+item_Sword	Sword
+item_Key	Key
+item_LargeHealthPotion	Large Health Potion
+item_SmallHealthPotion	Small Health Potion
+item_SpeedUpPotion	Speed Up Potion
+item_PerlProjectile	Perl Projectile

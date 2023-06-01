@@ -1,7 +1,29 @@
+###_yes_###	Да
+###_no_###	Нет
+###_continue_###	Продолжить
+###_UI_###	###
 menu_title	Меню
-button_start	начать
-button_option	настройки
-button_exit	выход
-selcted_language	Выбран язык: {0}
+pause_title	Пауза
+button_start	Начать
+button_option	Опции
+button_exit	Выход
+selcted_language	Язык
 some_icon	some-icon/resource/2
-button_back	назад
+button_back	Назад
+button_restart	Начать заново
+###_dialogs_###	###
+krab_dial_1	Я могу тебя обучить!
+krab_dial_2	Хорошо
+krab_dial_3	Мне пора!
+###_interactions_###	###
+helm_interact	Использовать штурвал?
+teleport_interact	Использовать телепорт?
+door_interact	Войти в дверь?
+###_items_###	###
+item_Coin	Монета
+item_Sword	Меч
+item_Key	Ключ
+item_LargeHealthPotion	Большое зелье здоровья
+item_SmallHealthPotion	Малое зелье здоровья
+item_SpeedUpPotion	Зелье ускорения
+item_PerlProjectile	Снаряд-жемчужина

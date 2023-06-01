@@ -24,27 +24,51 @@ MonoBehaviour:
     Value: "###\r"
   - Key: menu_title
     Value: "Men\xFA\r"
+  - Key: pause_title
+    Value: "Pausa\r"
   - Key: button_start
-    Value: "comenzar\r"
+    Value: "Comenzar\r"
   - Key: button_option
-    Value: "ajustes\r"
+    Value: "Opciones\r"
   - Key: button_exit
-    Value: "salida\r"
+    Value: "Salida\r"
   - Key: selcted_language
     Value: "Idioma\r"
   - Key: some_icon
-    Value: "some-icon/resource/3\r"
+    Value: "some-icon/resource/1\r"
   - Key: button_back
-    Value: "atr\xE1s\r"
+    Value: "Atr\xE1s\r"
+  - Key: button_restart
+    Value: "Reanudar\r"
   - Key: '###_dialogs_###'
     Value: "###\r"
   - Key: krab_dial_1
     Value: "\xA1Puedo ense\xF1arte!\r"
   - Key: krab_dial_2
-    Value: "\xA1Bueno!\r"
+    Value: "Bueno!\r"
   - Key: krab_dial_3
     Value: "\xA1Vamos!\r"
   - Key: '###_interactions_###'
     Value: "###\r"
+  - Key: helm_interact
+    Value: "\xBFUsar tim\xF3n?\r"
+  - Key: teleport_interact
+    Value: "\xBFUsar teletransporte?\r"
+  - Key: door_interact
+    Value: "\xBFEntrar por la puerta?\r"
   - Key: '###_items_###'
-    Value: '###'
+    Value: "###\r"
+  - Key: item_Coin
+    Value: "Moneda\r"
+  - Key: item_Sword
+    Value: "Espada\r"
+  - Key: item_Key
+    Value: "Llave\r"
+  - Key: item_LargeHealthPotion
+    Value: "Poci\xF3n de salud grande\r"
+  - Key: item_SmallHealthPotion
+    Value: "Poci\xF3n de salud peque\xF1a\r"
+  - Key: item_SpeedUpPotion
+    Value: "Poci\xF3n de aceleraci\xF3n\r"
+  - Key: item_PerlProjectile
+    Value: Proyectil Perl
