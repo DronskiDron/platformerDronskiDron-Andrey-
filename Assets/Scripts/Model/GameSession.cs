@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using System.Linq;
+using General.Components.LevelManagement;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using Utils.Disposables;
 
@@ -7,6 +10,8 @@ namespace Creatures.Model.Data
     public class GameSession : MonoBehaviour
     {
         [SerializeField] private PlayerData _data;
+        [SerializeField] private string _defaultCheckPoint;
+
         public PlayerData Data => _data;
         private PlayerData _sessionSave;
 
@@ -14,21 +19,48 @@ namespace Creatures.Model.Data
 
         public QuickInventoryModel QuickInventory { get; private set; }
 
+        private List<string> _checkpoints = new List<string>();
+
 
         private void Awake()
         {
-            LoadHud();
-
-            if (IsSessionExit())
+            var existsSession = GetExistsSession();
+            if (existsSession != null)
             {
+                existsSession.StartSession(_defaultCheckPoint);
                 Destroy(gameObject);
             }
             else
             {
                 InitModels();
                 DontDestroyOnLoad(this);
+                StartSession(_defaultCheckPoint);
             }
         }
+
+
+        private void StartSession(string defaultCheckPoint)
+        {
+            SetChecked(defaultCheckPoint);
+            LoadHud();
+            SpawnPlayer();
+        }
+
+
+        private void SpawnPlayer()
+        {
+            var checkpoints = FindObjectsOfType<CheckPointComponent>();
+            var lastCheckPoint = _checkpoints.Last();
+            foreach (var checkPoint in checkpoints)
+            {
+                if (checkPoint.Id == lastCheckPoint)
+                {
+                    checkPoint.SpawnPlayer();
+                    break;
+                }
+            }
+        }
+
 
         private void InitModels()
         {
@@ -49,14 +81,15 @@ namespace Creatures.Model.Data
         }
 
 
-        private bool IsSessionExit()
+        private GameSession GetExistsSession()
         {
             var sessions = FindObjectsOfType<GameSession>();
             foreach (var gameSession in sessions)
             {
-                if (gameSession != this) return true;
+                if (gameSession != this)
+                    return gameSession;
             }
-            return false;
+            return null;
         }
 
 
@@ -72,6 +105,22 @@ namespace Creatures.Model.Data
 
             _trash.Dispose();
             InitModels();
+        }
+
+
+        public bool IsChecked(string id)
+        {
+            return _checkpoints.Contains(id);
+        }
+
+
+        public void SetChecked(string id)
+        {
+            if (!_checkpoints.Contains(id))
+            {
+                SaveSession();
+                _checkpoints.Add(id);
+            }
         }
 
 

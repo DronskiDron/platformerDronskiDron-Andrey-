@@ -15,6 +15,7 @@ namespace General.Components
         private void Awake()
         {
             _transform = GetComponent<Transform>();
+            FlipXParticle();
         }
 
 

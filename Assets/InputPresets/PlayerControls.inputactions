@@ -154,7 +154,7 @@
                 {
                     "name": "",
                     "id": "ae2a5fdb-a153-412e-ac52-d17a083396f9",
-                    "path": "<Keyboard>/alt",
+                    "path": "<Keyboard>/r",
                     "interactions": "Press(behavior=1)",
                     "processors": "",
                     "groups": "",
@@ -165,7 +165,7 @@
                 {
                     "name": "",
                     "id": "cddda44a-712c-4bd9-8225-0110e2fbb4b7",
-                    "path": "<Keyboard>/alt",
+                    "path": "<Keyboard>/r",
                     "interactions": "Hold(duration=1)",
                     "processors": "",
                     "groups": "",
