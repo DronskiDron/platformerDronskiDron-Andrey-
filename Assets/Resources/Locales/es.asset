@@ -48,6 +48,10 @@ MonoBehaviour:
     Value: "Bueno!\r"
   - Key: krab_dial_3
     Value: "\xA1Vamos!\r"
+  - Key: wood_door_dial_1
+    Value: "Necesitas una llave...\r"
+  - Key: wood_door_dial_2
+    Value: "Encuentra uno en alg\xFAn lugar...\r"
   - Key: '###_interactions_###'
     Value: "###\r"
   - Key: helm_interact
