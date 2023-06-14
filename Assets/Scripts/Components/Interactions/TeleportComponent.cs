@@ -1,4 +1,5 @@
 ﻿using BackGround;
+using Creatures.Player;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -13,11 +14,21 @@ namespace General.Components.Interactions
         [SerializeField] private ParticleSystem[] _particles;
         [SerializeField] private BackGroundFollowScript _backGround;
 
+        private GameObject _player;
+        private int _particleSysInPlayerGOIndex = 0;
 
-        public void Teleport(GameObject target)
+
+        private void Start()
         {
-            StartCoroutine(AnimateTeleport(target));
-            _particles[0].gameObject.SetActive(false);
+            _player = FindObjectOfType<PlayerController>().gameObject;
+        }
+
+
+        public void TeleportPlayer()
+        {
+            StartCoroutine(AnimateTeleport(_player));
+            var particle = _player.transform.GetChild(_particleSysInPlayerGOIndex);
+            particle.gameObject?.SetActive(false);
         }
 
 

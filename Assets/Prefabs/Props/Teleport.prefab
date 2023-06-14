@@ -68,7 +68,7 @@ MonoBehaviour:
   _alphaTime: 1
   _moveTime: 1
   _particles:
-  - {fileID: 0}
+  - {fileID: 5174376194251356200}
   _backGround: {fileID: 0}
 --- !u!114 &1638843938
 MonoBehaviour:
@@ -119,12 +119,12 @@ MonoBehaviour:
       OnSelect:
         m_PersistentCalls:
           m_Calls:
-          - m_Target: {fileID: 0}
-            m_MethodName: Teleport
-            m_Mode: 2
+          - m_Target: {fileID: 1638843937}
+            m_MethodName: TeleportPlayer
+            m_Mode: 1
             m_Arguments:
               m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
               m_IntArgument: 0
               m_FloatArgument: 0
               m_StringArgument: 

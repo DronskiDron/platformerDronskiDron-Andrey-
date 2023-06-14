@@ -437,6 +437,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 36641137}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &43994507 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5174376194251356200, guid: f9227236e5f6cf446b6f32f32f461a6a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1344158674}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &53872827 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4721150701775001660, guid: 73d2ffc6f1c96214896040b993e2b619,
@@ -17685,7 +17691,7 @@ PrefabInstance:
     - target: {fileID: 1968190483569318570, guid: f9227236e5f6cf446b6f32f32f461a6a,
         type: 3}
       propertyPath: _data.Options.Array.data[0].OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Teleport
+      value: TeleportPlayer
       objectReference: {fileID: 0}
     - target: {fileID: 1968190483569318570, guid: f9227236e5f6cf446b6f32f32f461a6a,
         type: 3}
@@ -21344,6 +21350,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764964598462070854, guid: d905f4d7a415f754ab24667e2fc887a9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 87
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764964598462070854, guid: d905f4d7a415f754ab24667e2fc887a9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 4.186
       objectReference: {fileID: 0}
     - target: {fileID: 6830021961027278407, guid: d905f4d7a415f754ab24667e2fc887a9,
         type: 3}
@@ -29030,6 +29046,16 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 4764964598462070854, guid: d905f4d7a415f754ab24667e2fc887a9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -10.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764964598462070854, guid: d905f4d7a415f754ab24667e2fc887a9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 3.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6830021961027278407, guid: d905f4d7a415f754ab24667e2fc887a9,
         type: 3}
       propertyPath: _action.m_PersistentCalls.m_Calls.Array.size
@@ -30350,7 +30376,7 @@ PrefabInstance:
     - target: {fileID: 1638843937, guid: f9227236e5f6cf446b6f32f32f461a6a, type: 3}
       propertyPath: _particles.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 43994507}
     - target: {fileID: 1663410446400094381, guid: f9227236e5f6cf446b6f32f32f461a6a,
         type: 3}
       propertyPath: m_Name
@@ -30413,18 +30439,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1968190483569318570, guid: f9227236e5f6cf446b6f32f32f461a6a,
         type: 3}
+      propertyPath: _data.Options.Array.data[0].OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1968190483569318570, guid: f9227236e5f6cf446b6f32f32f461a6a,
+        type: 3}
       propertyPath: _data.Options.Array.data[0].OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1344158675}
     - target: {fileID: 1968190483569318570, guid: f9227236e5f6cf446b6f32f32f461a6a,
         type: 3}
       propertyPath: _data.Options.Array.data[0].OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Teleport
+      value: TeleportPlayer
       objectReference: {fileID: 0}
     - target: {fileID: 1968190483569318570, guid: f9227236e5f6cf446b6f32f32f461a6a,
         type: 3}
       propertyPath: _data.Options.Array.data[0].OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1968190483569318570, guid: f9227236e5f6cf446b6f32f32f461a6a,
+        type: 3}
+      propertyPath: _data.Options.Array.data[0].OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9227236e5f6cf446b6f32f32f461a6a, type: 3}
