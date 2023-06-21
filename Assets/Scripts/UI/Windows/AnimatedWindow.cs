@@ -5,12 +5,15 @@ namespace UI
     public class AnimatedWindow : MonoBehaviour
     {
         private Animator _animator;
+        protected float DefaultTimeScale;
+
         private static readonly int Show = Animator.StringToHash("Show");
         private static readonly int Hide = Animator.StringToHash("Hide");
 
 
         protected virtual void Start()
         {
+            DefaultTimeScale = Time.timeScale;
             _animator = GetComponent<Animator>();
             _animator.SetTrigger(Show);
         }

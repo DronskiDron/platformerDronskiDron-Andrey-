@@ -8,14 +8,12 @@ namespace UI.InGameMenu
 {
     public class InGameMenuWindow : AnimatedWindow
     {
-        private float _defaultTimeScale;
         private Action _closeAction;
 
 
         protected override void Start()
         {
             base.Start();
-            _defaultTimeScale = Time.timeScale;
             Time.timeScale = 0;
         }
 
@@ -29,7 +27,6 @@ namespace UI.InGameMenu
         public void OnLanguages()
         {
             WindowUtils.CreateWindow("UI/LocalizationWindow");
-            Close();
         }
 
 
@@ -44,7 +41,7 @@ namespace UI.InGameMenu
 
         private void OnDestroy()
         {
-            Time.timeScale = _defaultTimeScale;
+            Time.timeScale = DefaultTimeScale;
         }
     }
 }
