@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 7397012321753068561}
   - component: {fileID: 1882563586}
   - component: {fileID: 9006448670726998573}
+  - component: {fileID: 2670741991214126227}
   m_Layer: 16
   m_Name: Key
   m_TagString: Untagged
@@ -245,6 +246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _objectToDestroy: {fileID: 7397012321753068566}
+  _state: {fileID: 2670741991214126227}
 --- !u!114 &1882563586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,3 +273,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mode: 1
+  _isThatGoDestructable: 1
+--- !u!114 &2670741991214126227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7397012321753068566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fd7b26dd2accbe4283f64d62f72975f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _id: Key

@@ -1,5 +1,4 @@
 ﻿using Cinemachine;
-using Creatures;
 using Creatures.Player;
 using UnityEngine;
 

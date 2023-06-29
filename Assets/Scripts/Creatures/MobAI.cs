@@ -1,7 +1,9 @@
 ﻿using System.Collections;
+using Creatures.Model.Data;
 using Creatures.Patrolling;
 using General.Components.ColliderBased;
 using General.Components.Creatures;
+using General.Components.LevelManagement;
 using UnityEngine;
 
 namespace Creatures
@@ -14,6 +16,7 @@ namespace Creatures
         [SerializeField] private float _attackCooldown = 0.2f;
         [SerializeField] private float _beforeAttackDelay = 0;
         [SerializeField] protected float MissPlayerCooldown = 1f;
+        [SerializeField] private RestoreStateComponent _state;
 
         private Coroutine _current;
         protected GameObject Target;
@@ -135,6 +138,7 @@ namespace Creatures
             Creature.SetMoveDirection(Vector2.zero);
             _isDead = true;
             _animator.SetBool(IsDeadKey, true);
+            FindObjectOfType<GameSession>().StoreState(_state.Id);
 
             if (_current != null) StopCoroutine(_current);
         }

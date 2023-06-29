@@ -128,6 +128,22 @@ namespace Creatures.Model.Data
         {
             _trash.Dispose();
         }
+
+
+        private List<string> _removedItems = new List<string>();
+
+
+        internal bool RestoreState(string itemID)
+        {
+            return _removedItems.Contains(itemID);
+        }
+
+
+        internal void StoreState(string itemID)
+        {
+            if (!_removedItems.Contains(itemID))
+                _removedItems.Add(itemID);
+        }
     }
 }
 

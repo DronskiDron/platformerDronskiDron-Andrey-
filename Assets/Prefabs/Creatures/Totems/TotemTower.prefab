@@ -288,6 +288,8 @@ GameObject:
   - component: {fileID: 8408550426284432222}
   - component: {fileID: 8408550426284432223}
   - component: {fileID: 6555364810222401587}
+  - component: {fileID: 5258944010603632533}
+  - component: {fileID: 1071358657486617720}
   m_Layer: 17
   m_Name: TotemTower
   m_TagString: Enemy
@@ -357,6 +359,33 @@ MonoBehaviour:
   _onChange:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5258944010603632533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8408550426284432221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fd7b26dd2accbe4283f64d62f72975f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _id: TotemTower
+--- !u!114 &1071358657486617720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8408550426284432221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ef8203dc20251f4d9eab29b3f46c35b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectToDestroy: {fileID: 8408550426284432221}
+  _state: {fileID: 5258944010603632533}
 --- !u!1001 &2700986769759884493
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -694,6 +723,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904130158621005798, guid: 933d6ddc42647b0479f518a273f94638,
+        type: 3}
+      propertyPath: _id
+      value: Totem3 (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 933d6ddc42647b0479f518a273f94638, type: 3}

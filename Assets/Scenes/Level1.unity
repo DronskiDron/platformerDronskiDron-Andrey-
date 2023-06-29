@@ -1084,6 +1084,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DestrBarrel (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 6145420199598250180, guid: 3e445a289d31e074dbc8cefd769e8163,
+        type: 3}
+      propertyPath: _id
+      value: DestrBarrel (7)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e445a289d31e074dbc8cefd769e8163, type: 3}
 --- !u!4 &158462404 stripped
@@ -4188,6 +4193,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DestrBarrel (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 6145420199598250180, guid: 3e445a289d31e074dbc8cefd769e8163,
+        type: 3}
+      propertyPath: _id
+      value: DestrBarrel (6)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e445a289d31e074dbc8cefd769e8163, type: 3}
 --- !u!4 &651067374 stripped
@@ -4383,6 +4393,11 @@ PrefabInstance:
     - target: {fileID: 3257753438635650851, guid: 3e445a289d31e074dbc8cefd769e8163,
         type: 3}
       propertyPath: m_Name
+      value: DestrBarrel (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6145420199598250180, guid: 3e445a289d31e074dbc8cefd769e8163,
+        type: 3}
+      propertyPath: _id
       value: DestrBarrel (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -7572,6 +7587,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mode: 1
+  _isThatGoDestructable: 0
 --- !u!82 &953156740
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8507,6 +8523,11 @@ PrefabInstance:
     - target: {fileID: 3257753438635650851, guid: 3e445a289d31e074dbc8cefd769e8163,
         type: 3}
       propertyPath: m_Name
+      value: DestrBarrel (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6145420199598250180, guid: 3e445a289d31e074dbc8cefd769e8163,
+        type: 3}
+      propertyPath: _id
       value: DestrBarrel (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -10387,6 +10408,11 @@ PrefabInstance:
     - target: {fileID: 3257753438635650851, guid: 3e445a289d31e074dbc8cefd769e8163,
         type: 3}
       propertyPath: m_Name
+      value: DestrBarrel (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6145420199598250180, guid: 3e445a289d31e074dbc8cefd769e8163,
+        type: 3}
+      propertyPath: _id
       value: DestrBarrel (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -25177,6 +25203,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2427943495945562231, guid: 819ba0a17523ef448957ae0d8e33a9e3,
         type: 3}
+    - target: {fileID: 2677133875448732787, guid: 3e445a289d31e074dbc8cefd769e8163,
+        type: 3}
+      propertyPath: _isDestructable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2677133875448732787, guid: 3e445a289d31e074dbc8cefd769e8163,
+        type: 3}
+      propertyPath: _isThatGoDestructable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2677133875448732787, guid: 3e445a289d31e074dbc8cefd769e8163,
+        type: 3}
+      propertyPath: _isThatGameObjectDestructable
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3257753438635650848, guid: 3e445a289d31e074dbc8cefd769e8163,
         type: 3}
       propertyPath: m_RootOrder
@@ -25237,6 +25278,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: DestrBarrel (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3257753438635650851, guid: 3e445a289d31e074dbc8cefd769e8163,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3257753438635650855, guid: 3e445a289d31e074dbc8cefd769e8163,
+        type: 3}
+      propertyPath: _state
+      value: 
+      objectReference: {fileID: 1594741886}
+    - target: {fileID: 3257753438635650855, guid: 3e445a289d31e074dbc8cefd769e8163,
+        type: 3}
+      propertyPath: _storeSate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6145420199598250180, guid: 3e445a289d31e074dbc8cefd769e8163,
+        type: 3}
+      propertyPath: _id
+      value: DestrBarrel (4)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e445a289d31e074dbc8cefd769e8163, type: 3}
 --- !u!4 &1594741885 stripped
@@ -25245,6 +25306,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1594741884}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1594741886 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6145420199598250180, guid: 3e445a289d31e074dbc8cefd769e8163,
+    type: 3}
+  m_PrefabInstance: {fileID: 1594741884}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fd7b26dd2accbe4283f64d62f72975f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1602053754
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26803,7 +26876,7 @@ MonoBehaviour:
     _inventory:
       _inventory:
       - Id: Sword
-        Value: 5
+        Value: 1
     Hp:
       _value: 0
   _defaultCheckPoint: level1-checkpoint1
@@ -28150,6 +28223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mode: 0
+  _isThatGoDestructable: 0
 --- !u!82 &2045664241
 AudioSource:
   m_ObjectHideFlags: 0
@@ -28990,6 +29064,11 @@ PrefabInstance:
     - target: {fileID: 3257753438635650851, guid: 3e445a289d31e074dbc8cefd769e8163,
         type: 3}
       propertyPath: m_Name
+      value: DestrBarrel (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6145420199598250180, guid: 3e445a289d31e074dbc8cefd769e8163,
+        type: 3}
+      propertyPath: _id
       value: DestrBarrel (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []

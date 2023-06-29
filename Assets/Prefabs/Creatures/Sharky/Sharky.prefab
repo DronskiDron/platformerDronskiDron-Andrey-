@@ -679,6 +679,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mode: 1
+  _isThatGoDestructable: 1
 --- !u!1 &4219164256921480313
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,6 +745,7 @@ GameObject:
   - component: {fileID: 1780606718}
   - component: {fileID: 7780517866537752234}
   - component: {fileID: 1073702949}
+  - component: {fileID: 1906573095541609916}
   m_Layer: 12
   m_Name: Sharky
   m_TagString: Enemy
@@ -1036,6 +1038,7 @@ MonoBehaviour:
   _attackCooldown: 1
   _beforeAttackDelay: 0
   MissPlayerCooldown: 1
+  _state: {fileID: 1906573095541609916}
 --- !u!114 &7780517866537752234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1072,6 +1075,19 @@ MonoBehaviour:
     _clip: {fileID: 8300000, guid: d513e02aec6da704b97a82ed656643a0, type: 3}
   - _id: Die
     _clip: {fileID: 8300000, guid: cb94b327c3a0cd44ba24cb006f8006fb, type: 3}
+--- !u!114 &1906573095541609916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4721150701775001659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fd7b26dd2accbe4283f64d62f72975f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _id: Sharky
 --- !u!1 &4721150702240915402
 GameObject:
   m_ObjectHideFlags: 0

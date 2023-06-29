@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using General.Components;
 using General.Components.Health;
 using UnityEngine;
 using Utils;
@@ -12,10 +13,13 @@ namespace Creatures
         [SerializeField] private Cooldown _cooldown;
 
         private int _currentTrap;
+        private DestroyObjectComponent _destructor;
 
 
         private void Start()
         {
+            _destructor = GetComponent<DestroyObjectComponent>();
+
             foreach (var shootingTrapAI in _traps)
             {
                 shootingTrapAI.enabled = false;
@@ -41,7 +45,7 @@ namespace Creatures
             if (_traps.Count == 0)
             {
                 enabled = false;
-                Destroy(gameObject, 1f);
+                _destructor.DestroyObject();
             }
             var hasAnyTarget = _traps.Any(x => x.Vision.IsTouchingLayer);
 

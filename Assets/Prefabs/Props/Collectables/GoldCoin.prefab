@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 7468426411235562951}
   - component: {fileID: 6203748103989658246}
   - component: {fileID: 5359039400673768104}
+  - component: {fileID: 185247708675422492}
   m_Layer: 0
   m_Name: GoldCoin
   m_TagString: Untagged
@@ -204,6 +205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _objectToDestroy: {fileID: 3265628417296353474}
+  _state: {fileID: 185247708675422492}
 --- !u!114 &3265628417296353483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,3 +308,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mode: 1
+  _isThatGoDestructable: 1
+--- !u!114 &185247708675422492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3265628417296353474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fd7b26dd2accbe4283f64d62f72975f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _id: GoldCoin

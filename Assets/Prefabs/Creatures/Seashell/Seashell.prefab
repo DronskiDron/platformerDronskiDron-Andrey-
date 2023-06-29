@@ -329,6 +329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mode: 1
+  _isThatGoDestructable: 1
 --- !u!1 &8780161737415204856
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,6 +436,7 @@ GameObject:
   - component: {fileID: 2240003590049107598}
   - component: {fileID: 2127499917671347517}
   - component: {fileID: 7463011455499109545}
+  - component: {fileID: 4829872241090280237}
   m_Layer: 12
   m_Name: Seashell
   m_TagString: Enemy
@@ -649,6 +651,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _objectToDestroy: {fileID: 8801466389762006252}
+  _state: {fileID: 4829872241090280237}
 --- !u!114 &2127499917671347517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -686,6 +689,19 @@ MonoBehaviour:
     _clip: {fileID: 8300000, guid: d513e02aec6da704b97a82ed656643a0, type: 3}
   - _id: Die
     _clip: {fileID: 8300000, guid: cb94b327c3a0cd44ba24cb006f8006fb, type: 3}
+--- !u!114 &4829872241090280237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8801466389762006252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fd7b26dd2accbe4283f64d62f72975f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _id: Seashell
 --- !u!1 &8801466390659529534
 GameObject:
   m_ObjectHideFlags: 0
