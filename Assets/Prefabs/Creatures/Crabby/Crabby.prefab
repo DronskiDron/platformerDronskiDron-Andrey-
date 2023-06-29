@@ -719,7 +719,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mode: 1
-  _isThatGoDestructable: 1
+  _isThatGoDestructable: 0
 --- !u!1 &4219164256921480313
 GameObject:
   m_ObjectHideFlags: 0

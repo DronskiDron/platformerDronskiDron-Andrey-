@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Creatures.Player;
 using General.Components.ColliderBased;
 using UnityEngine;
 
@@ -36,6 +37,10 @@ namespace Creatures
 
         protected override Vector2 GetDirectionToTarget()
         {
+            if (Target == null)
+            {
+                Target = FindObjectOfType<PlayerController>().gameObject;
+            }
             var direction = Target.transform.position - transform.position;
             return direction.normalized;
         }

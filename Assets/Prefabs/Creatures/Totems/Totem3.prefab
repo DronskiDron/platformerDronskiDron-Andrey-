@@ -64,7 +64,6 @@ GameObject:
   - component: {fileID: 5893797012311803991}
   - component: {fileID: 5893797012311803990}
   - component: {fileID: 2919871264480571582}
-  - component: {fileID: 8904130158621005798}
   m_Layer: 17
   m_Name: Totem3
   m_TagString: Enemy
@@ -390,7 +389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _objectToDestroy: {fileID: 5893797012311803983}
-  _state: {fileID: 8904130158621005798}
+  _state: {fileID: 0}
 --- !u!114 &5893797012311803990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -426,19 +425,6 @@ MonoBehaviour:
     _clip: {fileID: 8300000, guid: d513e02aec6da704b97a82ed656643a0, type: 3}
   - _id: Die
     _clip: {fileID: 8300000, guid: cb94b327c3a0cd44ba24cb006f8006fb, type: 3}
---- !u!114 &8904130158621005798
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5893797012311803983}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fd7b26dd2accbe4283f64d62f72975f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _id: Totem3
 --- !u!1 &5893797012498098455
 GameObject:
   m_ObjectHideFlags: 0
@@ -654,4 +640,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mode: 1
-  _isThatGoDestructable: 1

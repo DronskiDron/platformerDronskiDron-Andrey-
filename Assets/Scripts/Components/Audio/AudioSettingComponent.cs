@@ -9,7 +9,6 @@ namespace General.Components.Audio
     public class AudioSettingComponent : MonoBehaviour
     {
         [SerializeField] private SoundSetting _mode;
-        [SerializeField] private bool _isThatGoDestructable = false;
 
         private FloatPersistentProperty _model;
         private AudioSource _source;
@@ -17,14 +16,11 @@ namespace General.Components.Audio
 
         private void Start()
         {
-            if (!_isThatGoDestructable)
-            {
-                _source = GetComponent<AudioSource>() != null ? GetComponent<AudioSource>() : AudioUtils.FindSfxSource();
+            _source = GetComponent<AudioSource>() != null ? GetComponent<AudioSource>() : AudioUtils.FindSfxSource();
 
-                _model = FindProperty();
-                _model.OnChanged += OnSoundSettingChanged;
-                OnSoundSettingChanged(_model.Value, _model.Value);
-            }
+            _model = FindProperty();
+            _model.OnChanged += OnSoundSettingChanged;
+            OnSoundSettingChanged(_model.Value, _model.Value);
         }
 
 
@@ -50,7 +46,7 @@ namespace General.Components.Audio
 
         private void OnDestroy()
         {
-            if (!_isThatGoDestructable)
+            if (_model != null)
                 _model.OnChanged -= OnSoundSettingChanged;
         }
     }
