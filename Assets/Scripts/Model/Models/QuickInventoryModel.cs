@@ -6,7 +6,7 @@ using Creatures.Model.Definitions.Repository.Items;
 using UnityEngine;
 using Utils.Disposables;
 
-namespace Creatures.Model.Data
+namespace Creatures.Model.Data.Models
 {
     public class QuickInventoryModel : IDisposable
     {

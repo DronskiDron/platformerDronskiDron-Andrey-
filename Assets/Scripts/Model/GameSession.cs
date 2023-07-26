@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Creatures.Model.Data.Models;
 using General.Components.LevelManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -14,6 +15,7 @@ namespace Creatures.Model.Data
 
         public PlayerData Data => _data;
         private PlayerData _sessionSave;
+        public PerksModel PerksModel;
 
         private readonly CompositeDisposable _trash = new CompositeDisposable();
 
@@ -66,6 +68,9 @@ namespace Creatures.Model.Data
         {
             QuickInventory = new QuickInventoryModel(Data);
             _trash.Retain(QuickInventory);
+
+            PerksModel = new PerksModel(_data);
+            _trash.Retain(PerksModel);
         }
 
 

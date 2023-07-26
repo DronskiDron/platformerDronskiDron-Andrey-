@@ -3,7 +3,7 @@ using Creatures.Model.Definitions.Localisation;
 using UI.Widgets;
 using UnityEngine;
 
-namespace UI.Localization
+namespace UI.Windows.Localization
 {
     public class LocalizationWindow : AnimatedWindow
     {

@@ -10,15 +10,18 @@ namespace Creatures.Model.Definitions
         [SerializeField] private ItemsRepository _items;
         [SerializeField] private ThrowableRepository _throwableItems;
         [SerializeField] private PotionRepository _potions;
+        [SerializeField] private PerkRepository _perks;
         [SerializeField] private PlayerDef _player;
 
         public ItemsRepository Items => _items;
         public ThrowableRepository Throwable => _throwableItems;
-        public PlayerDef Player => _player;
         public PotionRepository Potions => _potions;
+        public PerkRepository Perks => _perks;
+        public PlayerDef Player => _player;
 
         private static DefsFacade _instance;
         public static DefsFacade I => _instance == null ? LoadDefs() : _instance;
+
 
         private static DefsFacade LoadDefs()
         {

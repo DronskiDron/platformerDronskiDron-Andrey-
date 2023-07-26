@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03df267b12acbc64a92172945cd151f2, type: 3}
+  m_Name: Perks
+  m_EditorClassIdentifier: 
+  _collection:
+  - _id: double-jump
+    _icon: {fileID: 21300000, guid: d6e78965cbbc57e419cbfccf6a959f7d, type: 3}
+    _info: This is Double jump.
+    _price:
+      _itemId: Coin
+      _count: 5
+  - _id: super-throw
+    _icon: {fileID: 21300000, guid: 8f54db1d1c7e90040a69239e3ddf6c10, type: 3}
+    _info: This is Super-throw.
+    _price:
+      _itemId: Coin
+      _count: 10

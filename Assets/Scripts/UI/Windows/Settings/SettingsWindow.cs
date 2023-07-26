@@ -2,7 +2,7 @@
 using UI.Widgets;
 using UnityEngine;
 
-namespace UI.Settings
+namespace UI.Windows.Settings
 {
     public class SettingsWindow : AnimatedWindow
     {

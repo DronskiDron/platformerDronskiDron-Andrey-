@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Creatures.Model.Definitions;
 using Creatures.Model.Definitions.Items;
+using Creatures.Model.Definitions.Repository;
 using Creatures.Model.Definitions.Repository.Items;
 using UnityEngine;
 
@@ -146,6 +147,27 @@ namespace Creatures.Model.Data
                     return itemData;
             }
             return null;
+        }
+
+
+        internal bool IsEnough(params ItemWithCount[] items)
+        {
+            var joined = new Dictionary<string, int>();
+            foreach (var item in items)
+            {
+                if (joined.ContainsKey(item.ItemId))
+                    joined[item.ItemId] += item.Count;
+                else
+                    joined.Add(item.ItemId, item.Count);
+            }
+
+            foreach (var kvp in joined)
+            {
+                var count = Count(kvp.Key);
+                if (count < kvp.Value) return false;
+            }
+
+            return true;
         }
     }
 

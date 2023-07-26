@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Creatures.Model.Definitions.Repository
 {
-    [CreateAssetMenu(menuName = "Defs/Potions", fileName = "Potions")]
+    [CreateAssetMenu(menuName = "Defs/Repository/Potions", fileName = "Potions")]
     public class PotionRepository : DefRepository<PotionDef>
     {
 

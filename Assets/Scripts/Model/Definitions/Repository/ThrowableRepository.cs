@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Creatures.Model.Definitions
 {
-    [CreateAssetMenu(menuName = "Defs/Throwable", fileName = "Throwable")]
+    [CreateAssetMenu(menuName = "Defs/Repository/Throwable", fileName = "Throwable")]
     public class ThrowableRepository : DefRepository<ThrowableDef>
     {
 

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace Creatures.Model.Definitions.Repository
 {
@@ -11,7 +12,7 @@ namespace Creatures.Model.Definitions.Repository
         {
             if (string.IsNullOrEmpty(id))
                 return default;
-                
+
             foreach (var itemDef in _collection)
             {
                 if (itemDef.Id == id)
@@ -19,5 +20,8 @@ namespace Creatures.Model.Definitions.Repository
             }
             return default;
         }
+
+
+        public TDefType[] All => new List<TDefType>(_collection).ToArray();
     }
 }

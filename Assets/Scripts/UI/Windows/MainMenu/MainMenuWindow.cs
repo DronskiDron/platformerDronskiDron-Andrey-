@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Utils;
 
-namespace UI.MainMenu
+namespace UI.Windows.MainMenu
 {
     public class MainMenuWindow : AnimatedWindow
     {

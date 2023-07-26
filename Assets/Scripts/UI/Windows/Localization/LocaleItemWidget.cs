@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace UI.Localization
+namespace UI.Windows.Localization
 {
     public class LocaleItemWidget : MonoBehaviour, IItemRenderer<LocaleInfo>
     {
