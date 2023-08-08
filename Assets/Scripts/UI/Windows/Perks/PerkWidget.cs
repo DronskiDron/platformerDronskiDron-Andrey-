@@ -42,9 +42,9 @@ namespace UI.Windows.Perks
         }
 
 
-        /* public void OnSelect()
+        public void OnSelect()
         {
-
-        } */
+            _session.PerksModel.InterfaceSelection.Value = _data.Id;
+        }
     }
 }

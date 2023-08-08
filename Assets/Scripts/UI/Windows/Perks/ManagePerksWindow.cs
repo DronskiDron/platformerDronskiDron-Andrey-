@@ -1,5 +1,6 @@
 ﻿using Creatures.Model.Data;
 using Creatures.Model.Definitions;
+using Creatures.Model.Definitions.Localisation;
 using Creatures.Model.Definitions.Repository;
 using UI.Widgets;
 using UnityEngine;
@@ -29,6 +30,7 @@ namespace UI.Windows.Perks
             _dataGroup = new PredefinedDataGroup<PerkDef, PerkWidget>(_perksContainer);
             _session = FindObjectOfType<GameSession>();
 
+            _trash.Retain(_session.PerksModel.Subscribe(OnPerksChanged));
             _trash.Retain(_buyButton.onClick.Subscribe(OnBuy));
             _trash.Retain(_useButton.onClick.Subscribe(OnUse));
 
@@ -39,6 +41,19 @@ namespace UI.Windows.Perks
         private void OnPerksChanged()
         {
             _dataGroup.SetData(DefsFacade.I.Perks.All);
+
+            var selected = _session.PerksModel.InterfaceSelection.Value;
+
+            _useButton.gameObject.SetActive(_session.PerksModel.IsUnlocked(selected));
+            _useButton.interactable = _session.PerksModel.Used != selected;
+
+            _buyButton.gameObject.SetActive(!_session.PerksModel.IsUnlocked(selected));
+            _buyButton.interactable = _session.PerksModel.CanBuy(selected);
+
+            var def = DefsFacade.I.Perks.Get(selected);
+            _price.SetData(def.Price);
+
+            _info.text = LocalizationManager.I.Localize(def.Info);
         }
 
 

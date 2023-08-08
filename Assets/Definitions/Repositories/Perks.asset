@@ -25,3 +25,9 @@ MonoBehaviour:
     _price:
       _itemId: Coin
       _count: 10
+  - _id: sosat
+    _icon: {fileID: 21300000, guid: 8f54db1d1c7e90040a69239e3ddf6c10, type: 3}
+    _info: This is Super-throw.
+    _price:
+      _itemId: Coin
+      _count: 10

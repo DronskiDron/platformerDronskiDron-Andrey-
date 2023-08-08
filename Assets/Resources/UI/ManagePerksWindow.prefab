@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b48e36723fa4134ea465e3c9abd180f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _icon: {fileID: 802471369752683225}
+  _icon: {fileID: 802471369752683231}
   _isLocked: {fileID: 802471371628398247}
   _isUsed: {fileID: 802471371114647841}
   _isSelected: {fileID: 802471369874356326}
@@ -370,7 +370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b48e36723fa4134ea465e3c9abd180f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _icon: {fileID: 802471371424141110}
+  _icon: {fileID: 802471371424141108}
   _isLocked: {fileID: 802471370636089730}
   _isUsed: {fileID: 802471371467068989}
   _isSelected: {fileID: 802471371655373610}
@@ -742,7 +742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b48e36723fa4134ea465e3c9abd180f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _icon: {fileID: 802471370006656504}
+  _icon: {fileID: 802471370006656510}
   _isLocked: {fileID: 802471370280675602}
   _isUsed: {fileID: 802471370503418314}
   _isSelected: {fileID: 802471371485293512}
@@ -1040,7 +1040,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b48e36723fa4134ea465e3c9abd180f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _icon: {fileID: 802471370420048293}
+  _icon: {fileID: 802471370420048299}
   _isLocked: {fileID: 802471370901665606}
   _isUsed: {fileID: 802471371619909285}
   _isSelected: {fileID: 802471371406103028}
@@ -1693,7 +1693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b48e36723fa4134ea465e3c9abd180f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _icon: {fileID: 802471371443666450}
+  _icon: {fileID: 802471371443666448}
   _isLocked: {fileID: 802471371322815923}
   _isUsed: {fileID: 802471371063427605}
   _isSelected: {fileID: 802471370695306333}
@@ -1782,7 +1782,6 @@ GameObject:
   - component: {fileID: 802471370797045250}
   - component: {fileID: 802471370797045249}
   - component: {fileID: 802471370797045248}
-  - component: {fileID: 802471370797045251}
   m_Layer: 5
   m_Name: PriceLabel
   m_TagString: Untagged
@@ -1850,21 +1849,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'Price:'
---- !u!114 &802471370797045251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 802471370797045277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: faeae49412632104e8946ed6525fc7f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _keys:
-  - button_start
-  _capitalize: 1
 --- !u!1 &802471370851260592
 GameObject:
   m_ObjectHideFlags: 0
@@ -2359,7 +2343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b48e36723fa4134ea465e3c9abd180f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _icon: {fileID: 802471371672789980}
+  _icon: {fileID: 802471371672789954}
   _isLocked: {fileID: 802471371116176641}
   _isUsed: {fileID: 802471371256774019}
   _isSelected: {fileID: 802471369897636634}
@@ -2591,7 +2575,6 @@ GameObject:
   - component: {fileID: 802471371074197781}
   - component: {fileID: 802471371074197784}
   - component: {fileID: 802471371074197787}
-  - component: {fileID: 802471371074197786}
   m_Layer: 5
   m_Name: Value
   m_TagString: Untagged
@@ -2659,21 +2642,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 200
---- !u!114 &802471371074197786
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 802471371074197780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: faeae49412632104e8946ed6525fc7f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _keys:
-  - button_start
-  _capitalize: 1
 --- !u!1 &802471371093563160
 GameObject:
   m_ObjectHideFlags: 0
@@ -3329,7 +3297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b48e36723fa4134ea465e3c9abd180f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _icon: {fileID: 802471370049583774}
+  _icon: {fileID: 802471370049583772}
   _isLocked: {fileID: 802471371093563160}
   _isUsed: {fileID: 802471371296620644}
   _isSelected: {fileID: 802471370653603128}
@@ -3418,7 +3386,6 @@ GameObject:
   - component: {fileID: 802471371407659904}
   - component: {fileID: 802471371407659911}
   - component: {fileID: 802471371407659910}
-  - component: {fileID: 802471371407659905}
   m_Layer: 5
   m_Name: NormalText
   m_TagString: Untagged
@@ -3491,21 +3458,6 @@ MonoBehaviour:
 
 
     And you are awesome!'
---- !u!114 &802471371407659905
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 802471371407659907}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: faeae49412632104e8946ed6525fc7f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _keys:
-  - button_start
-  _capitalize: 1
 --- !u!1 &802471371424141110
 GameObject:
   m_ObjectHideFlags: 0
@@ -4581,7 +4533,9 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: -3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7752724644115442421, guid: b16ba8adf2461d94b9844031a74fe039, type: 3}
+    - {fileID: 7752724642229223359, guid: b16ba8adf2461d94b9844031a74fe039, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b16ba8adf2461d94b9844031a74fe039, type: 3}
 --- !u!114 &6968694291214669470 stripped
 MonoBehaviour:
@@ -4642,6 +4596,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -0.10000038
+      objectReference: {fileID: 0}
+    - target: {fileID: 7752724642229223358, guid: b16ba8adf2461d94b9844031a74fe039,
+        type: 3}
+      propertyPath: m_Text
+      value: BUY
       objectReference: {fileID: 0}
     - target: {fileID: 7752724644026376171, guid: b16ba8adf2461d94b9844031a74fe039,
         type: 3}
@@ -4753,6 +4712,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BuyButton
       objectReference: {fileID: 0}
+    - target: {fileID: 7752724644115442420, guid: b16ba8adf2461d94b9844031a74fe039,
+        type: 3}
+      propertyPath: m_Text
+      value: BUY
+      objectReference: {fileID: 0}
     - target: {fileID: 7752724644115442422, guid: b16ba8adf2461d94b9844031a74fe039,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -4783,7 +4747,9 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: -3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7752724642229223359, guid: b16ba8adf2461d94b9844031a74fe039, type: 3}
+    - {fileID: 7752724644115442421, guid: b16ba8adf2461d94b9844031a74fe039, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b16ba8adf2461d94b9844031a74fe039, type: 3}
 --- !u!114 &6968694290148986866 stripped
 MonoBehaviour:
