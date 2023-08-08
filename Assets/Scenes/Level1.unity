@@ -7587,7 +7587,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mode: 1
-  _isThatGoDestructable: 0
 --- !u!82 &953156740
 AudioSource:
   m_ObjectHideFlags: 0
@@ -26879,6 +26878,8 @@ MonoBehaviour:
         Value: 1
     Hp:
       _value: 0
+    Perks:
+      _unlocked: []
   _defaultCheckPoint: level1-checkpoint1
 --- !u!4 &1857664937
 Transform:
@@ -28223,7 +28224,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mode: 0
-  _isThatGoDestructable: 0
 --- !u!82 &2045664241
 AudioSource:
   m_ObjectHideFlags: 0

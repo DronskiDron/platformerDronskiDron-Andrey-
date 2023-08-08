@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Creatures.Model.Data.Properties
+﻿namespace Creatures.Model.Data.Properties
 {
     public class StringProperty : ObservableProperty<string>
     {
