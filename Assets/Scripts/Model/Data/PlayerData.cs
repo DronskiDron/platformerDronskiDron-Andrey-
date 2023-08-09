@@ -9,11 +9,10 @@ namespace Creatures.Model.Data
     {
         [SerializeField] private InventoryData _inventory;
 
-        private static int _defaultValue = 0;
 
-
-        public IntProperty Hp = new IntProperty(_defaultValue);
+        public IntProperty Hp = new IntProperty(default);
         public PerksData Perks = new PerksData();
+
         public InventoryData Inventory => _inventory;
 
 

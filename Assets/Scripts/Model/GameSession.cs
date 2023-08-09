@@ -15,11 +15,11 @@ namespace Creatures.Model.Data
 
         public PlayerData Data => _data;
         private PlayerData _sessionSave;
-        public PerksModel PerksModel;
 
         private readonly CompositeDisposable _trash = new CompositeDisposable();
 
         public QuickInventoryModel QuickInventory { get; private set; }
+        public PerksModel PerksModel { get; private set; }
 
         private List<string> _checkpoints = new List<string>();
 
@@ -138,13 +138,13 @@ namespace Creatures.Model.Data
         private List<string> _removedItems = new List<string>();
 
 
-        internal bool RestoreState(string itemID)
+        public bool RestoreState(string itemID)
         {
             return _removedItems.Contains(itemID);
         }
 
 
-        internal void StoreState(string itemID)
+        public void StoreState(string itemID)
         {
             if (!_removedItems.Contains(itemID))
                 _removedItems.Add(itemID);

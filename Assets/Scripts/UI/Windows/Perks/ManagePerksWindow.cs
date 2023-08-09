@@ -30,7 +30,7 @@ namespace UI.Windows.Perks
             _dataGroup = new PredefinedDataGroup<PerkDef, PerkWidget>(_perksContainer);
             _session = FindObjectOfType<GameSession>();
 
-            /* _trash.Retain(_session.PerksModel.Subscribe(OnPerksChanged)); */
+            _trash.Retain(_session.PerksModel.Subscribe(OnPerksChanged));
             _trash.Retain(_buyButton.onClick.Subscribe(OnBuy));
             _trash.Retain(_useButton.onClick.Subscribe(OnUse));
 
@@ -42,7 +42,7 @@ namespace UI.Windows.Perks
         {
             _dataGroup.SetData(DefsFacade.I.Perks.All);
 
-           /*  var selected = _session.PerksModel.InterfaceSelection.Value;
+            var selected = _session.PerksModel.InterfaceSelection.Value;
 
             _useButton.gameObject.SetActive(_session.PerksModel.IsUnlocked(selected));
             _useButton.interactable = _session.PerksModel.Used != selected;
@@ -53,7 +53,7 @@ namespace UI.Windows.Perks
             var def = DefsFacade.I.Perks.Get(selected);
             _price.SetData(def.Price);
 
-            _info.text = LocalizationManager.I.Localize(def.Info); */
+            _info.text = LocalizationManager.I.Localize(def.Info);
         }
 
 
