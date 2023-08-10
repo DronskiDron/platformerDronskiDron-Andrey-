@@ -12,7 +12,7 @@ namespace Creatures.Model.Data.Models
     {
         private readonly PlayerData _data;
         public InventoryItemData[] Inventory { get; private set; }
-        public readonly IntProperty SelectedIndex = new IntProperty(0);
+        public readonly IntProperty SelectedIndex = new IntProperty();
         public event Action OnChanged;
         public InventoryItemData SelectedItem
         {

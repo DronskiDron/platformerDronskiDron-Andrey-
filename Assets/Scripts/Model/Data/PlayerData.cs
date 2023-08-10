@@ -10,7 +10,7 @@ namespace Creatures.Model.Data
         [SerializeField] private InventoryData _inventory;
 
 
-        public IntProperty Hp = new IntProperty(default);
+        public IntProperty Hp = new IntProperty();
         public PerksData Perks = new PerksData();
 
         public InventoryData Inventory => _inventory;

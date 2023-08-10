@@ -5,36 +5,13 @@ using Utils.Disposables;
 namespace Creatures.Model.Data.Properties
 {
     [Serializable]
-    public abstract class ObservableProperty<TPropertyType>
+    public class ObservableProperty<TPropertyType>
     {
         [SerializeField] protected TPropertyType _value;
 
-        private TPropertyType _stored;
-        private TPropertyType _defaultValue;
-
         public delegate void OnPropertyChanged(TPropertyType newValue, TPropertyType oldValue);
+
         public event OnPropertyChanged OnChanged;
-
-        public TPropertyType Value
-        {
-            get => _stored;
-            set
-            {
-                var isEquals = _stored.Equals(value);
-                if (isEquals) return;
-
-                var oldValue = _stored;
-                Write(value);
-                _stored = _value = value;
-
-                OnChanged?.Invoke(value, oldValue);
-            }
-        }
-
-        public ObservableProperty(TPropertyType defaultValue)
-        {
-            _defaultValue = defaultValue;
-        }
 
 
         public IDisposable Subscribe(OnPropertyChanged call)
@@ -53,22 +30,24 @@ namespace Creatures.Model.Data.Properties
         }
 
 
-        protected void Init()
+        public virtual TPropertyType Value
         {
-            _stored = _value = Read(_defaultValue);
+            get => _value;
+            set
+            {
+                var isSame = _value.Equals(value);
+                if (isSame) return;
+                var oldValue = _value;
+                _value = value;
+                InvokeChangedEvent(_value, oldValue);
+            }
         }
 
 
-        protected abstract void Write(TPropertyType value);
-
-
-        protected abstract TPropertyType Read(TPropertyType defaultValue);
-
-
-        public void Validate()
+        protected void InvokeChangedEvent(TPropertyType newValue, TPropertyType oldValue)
         {
-            if (!_stored.Equals(_value))
-                Value = _value;
+            OnChanged?.Invoke(_value, oldValue);
         }
+
     }
 }

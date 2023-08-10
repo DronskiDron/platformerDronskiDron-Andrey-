@@ -8,7 +8,7 @@ namespace Creatures.Model.Data.Models
     public class PerksModel : IDisposable
     {
         private readonly PlayerData _data;
-        public readonly StringProperty InterfaceSelection = new StringProperty(default);
+        public readonly StringProperty InterfaceSelection = new StringProperty();
 
         private readonly CompositeDisposable _trash = new CompositeDisposable();
         public event Action OnChanged;

@@ -26875,10 +26875,14 @@ MonoBehaviour:
     _inventory:
       _inventory:
       - Id: Sword
-        Value: 1
+        Value: 10
+      - Id: LargeHealthPotion
+        Value: 10
     Hp:
       _value: 0
     Perks:
+      _used:
+        _value: 
       _unlocked: []
   _defaultCheckPoint: level1-checkpoint1
 --- !u!4 &1857664937
