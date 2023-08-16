@@ -150,7 +150,7 @@ namespace Creatures.Model.Data
         }
 
 
-        internal bool IsEnough(params ItemWithCount[] items)
+        public bool IsEnough(params ItemWithCount[] items)
         {
             var joined = new Dictionary<string, int>();
             foreach (var item in items)

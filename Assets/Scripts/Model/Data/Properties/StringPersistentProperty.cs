@@ -1,7 +1,9 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Creatures.Model.Data.Properties
 {
+    [Serializable]
     public class StringPersistentProperty : PrefsPersistentProperty<string>
     {
         public StringPersistentProperty(string defaultValue, string key) : base(defaultValue, key)

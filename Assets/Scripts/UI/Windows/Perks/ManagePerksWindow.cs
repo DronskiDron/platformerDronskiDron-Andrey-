@@ -14,7 +14,6 @@ namespace UI.Windows.Perks
         [SerializeField] private Button _buyButton;
         [SerializeField] private Button _useButton;
         [SerializeField] private ItemWidget _price;
-
         [SerializeField] private Text _info;
         [SerializeField] private Transform _perksContainer;
 

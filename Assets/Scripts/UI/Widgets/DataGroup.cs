@@ -41,7 +41,7 @@ namespace UI.Widgets
     }
 
 
-    public interface IItemRenderer<TDataType>
+    public interface IItemRenderer<in TDataType>
     {
         void SetData(TDataType data, int index);
     }

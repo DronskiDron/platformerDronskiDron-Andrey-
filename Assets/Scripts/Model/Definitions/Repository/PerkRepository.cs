@@ -20,7 +20,6 @@ namespace Creatures.Model.Definitions.Repository
         [SerializeField] private ItemWithCount _price;
 
         public string Id => _id;
-
         public Sprite Icon => _icon;
         public string Info => _info;
         public ItemWithCount Price => _price;

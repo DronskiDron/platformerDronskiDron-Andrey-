@@ -26878,11 +26878,11 @@ MonoBehaviour:
         Value: 10
       - Id: LargeHealthPotion
         Value: 10
+      - Id: Coin
+        Value: 100
     Hp:
-      _value: 0
+      _value: 5
     Perks:
-      _used:
-        _value: 
       _unlocked: []
   _defaultCheckPoint: level1-checkpoint1
 --- !u!4 &1857664937

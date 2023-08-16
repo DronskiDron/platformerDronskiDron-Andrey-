@@ -21,7 +21,7 @@ namespace Creatures.Model.Data
         public QuickInventoryModel QuickInventory { get; private set; }
         public PerksModel PerksModel { get; private set; }
 
-        private List<string> _checkpoints = new List<string>();
+        private readonly List<string> _checkpoints = new List<string>();
 
 
         private void Awake()
@@ -66,7 +66,7 @@ namespace Creatures.Model.Data
 
         private void InitModels()
         {
-            QuickInventory = new QuickInventoryModel(Data);
+            QuickInventory = new QuickInventoryModel(_data);
             _trash.Retain(QuickInventory);
 
             PerksModel = new PerksModel(_data);

@@ -13,8 +13,6 @@ namespace Creatures.Model.Data.Models
         private readonly CompositeDisposable _trash = new CompositeDisposable();
         public event Action OnChanged;
 
-        public string Used => _data.Perks.Used.Value;
-
         public PerksModel(PlayerData data)
         {
             _data = data;
@@ -32,6 +30,9 @@ namespace Creatures.Model.Data.Models
         }
 
 
+        public string Used => _data.Perks.Used.Value;
+
+
         public void Unlock(string id)
         {
             var def = DefsFacade.I.Perks.Get(id);
@@ -41,6 +42,8 @@ namespace Creatures.Model.Data.Models
             {
                 _data.Inventory.Remove(def.Price.ItemId, def.Price.Count);
                 _data.Perks.AddPerk(id);
+
+                OnChanged?.Invoke();
             }
         }
 
