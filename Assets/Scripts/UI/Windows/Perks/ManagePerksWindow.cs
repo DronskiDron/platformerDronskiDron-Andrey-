@@ -30,6 +30,7 @@ namespace UI.Windows.Perks
             _session = FindObjectOfType<GameSession>();
 
             _trash.Retain(_session.PerksModel.Subscribe(OnPerksChanged));
+
             _trash.Retain(_buyButton.onClick.Subscribe(OnBuy));
             _trash.Retain(_useButton.onClick.Subscribe(OnUse));
 
@@ -59,7 +60,7 @@ namespace UI.Windows.Perks
         private void OnUse()
         {
             var selected = _session.PerksModel.InterfaceSelection.Value;
-            _session.PerksModel.UsePerk(selected);
+            _session.PerksModel.SelectPerk(selected);
         }
 
 
@@ -67,6 +68,12 @@ namespace UI.Windows.Perks
         {
             var selected = _session.PerksModel.InterfaceSelection.Value;
             _session.PerksModel.Unlock(selected);
+        }
+
+
+        private void OnDestroy()
+        {
+            _trash.Dispose();
         }
     }
 }

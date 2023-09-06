@@ -3,6 +3,7 @@ using Creatures.Model.Data;
 using Creatures.Model.Definitions;
 using UI.Hud.Dialogs;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace General.Components.Dialogs
 {
@@ -11,6 +12,7 @@ namespace General.Components.Dialogs
         [SerializeField] private Mode _mode;
         [SerializeField] private DialogData _bound;
         [SerializeField] private DialogDef _external;
+        [SerializeField] private UnityEvent _onComplete;
 
         private DialogBoxController _dialogBox;
 
@@ -24,7 +26,7 @@ namespace General.Components.Dialogs
 
             if (_dialogBox == null)
                 _dialogBox = FindObjectOfType<DialogBoxController>();
-            _dialogBox.ShowDialog(Data);
+            _dialogBox.ShowDialog(Data, _onComplete);
         }
 
 

@@ -20,9 +20,8 @@ namespace UI.Windows.InGameMenu
 
         public void OnShowSettings()
         {
-            WindowUtils.CreateWindow("UI/ManagePerksWindow");
+            WindowUtils.CreateWindow("UI/SettingsWindow");
             Close();
-            /* WindowUtils.CreateWindow("UI/SettingsWindow"); */
         }
 
 

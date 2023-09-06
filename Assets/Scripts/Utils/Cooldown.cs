@@ -16,7 +16,7 @@ namespace Utils
             set => _value = value;
         }
         public bool IsReady => _timesUp <= Time.time;
-        public float TimeLasts => Mathf.Max(_timesUp - Time.deltaTime, 0);
+        public float RemainingTime => Mathf.Max(_timesUp - Time.time, 0);
 
 
         public void Reset()

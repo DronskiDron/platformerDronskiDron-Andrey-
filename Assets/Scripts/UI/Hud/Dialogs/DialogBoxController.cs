@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using Creatures.Model.Data;
 using UnityEngine;
+using UnityEngine.Events;
 using Utils;
 
 namespace UI.Hud.Dialogs
@@ -19,7 +20,7 @@ namespace UI.Hud.Dialogs
         [Space][SerializeField] protected DialogContent _content;
 
         private static readonly int IsOpen = Animator.StringToHash("IsOpen");
-
+        private UnityEvent _onComplete;
         private DialogData _data;
         private int _currentSentence;
         private AudioSource _sfxSource;
@@ -34,8 +35,9 @@ namespace UI.Hud.Dialogs
         }
 
 
-        public void ShowDialog(DialogData data)
+        public void ShowDialog(DialogData data, UnityEvent onComplete)
         {
+            _onComplete = onComplete;
             _data = data;
             _currentSentence = 0;
             CurrentContent.Text.text = string.Empty;
@@ -84,6 +86,7 @@ namespace UI.Hud.Dialogs
             if (isDialogCompleted)
             {
                 HideDialogBox();
+                _onComplete?.Invoke();
             }
             else
             {

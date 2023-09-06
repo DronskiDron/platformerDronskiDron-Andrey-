@@ -4498,6 +4498,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: UseButton
       objectReference: {fileID: 0}
+    - target: {fileID: 7752724644026376174, guid: b16ba8adf2461d94b9844031a74fe039,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7752724644115442420, guid: b16ba8adf2461d94b9844031a74fe039,
         type: 3}
       propertyPath: m_Text
@@ -4711,6 +4716,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BuyButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 7752724644026376174, guid: b16ba8adf2461d94b9844031a74fe039,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7752724644115442420, guid: b16ba8adf2461d94b9844031a74fe039,
         type: 3}

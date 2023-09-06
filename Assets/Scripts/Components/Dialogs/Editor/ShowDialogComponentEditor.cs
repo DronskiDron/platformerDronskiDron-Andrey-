@@ -7,11 +7,13 @@ namespace General.Components.Dialogs.Editor
     public class ShowDialogComponentEditor : UnityEditor.Editor
     {
         private SerializedProperty _modeProperty;
+        private SerializedProperty _onCompleteProperty;
 
 
         private void OnEnable()
         {
             _modeProperty = serializedObject.FindProperty("_mode");
+            _onCompleteProperty = serializedObject.FindProperty("_onComplete");
         }
 
 
@@ -32,6 +34,7 @@ namespace General.Components.Dialogs.Editor
                 }
             }
 
+            EditorGUILayout.PropertyField(_onCompleteProperty);
             serializedObject.ApplyModifiedProperties();
         }
     }

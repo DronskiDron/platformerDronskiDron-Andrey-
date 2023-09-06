@@ -7,6 +7,7 @@ using General.Components.ColliderBased;
 using General.Components;
 using Creatures.Model.Definitions;
 using Creatures.Model.Definitions.Items;
+using General.Components.Health;
 
 namespace Creatures.Player
 {
@@ -31,6 +32,7 @@ namespace Creatures.Player
         [SerializeField] private int _superThrowParticles;
         [SerializeField] private float _superThrowDelay;
         [SerializeField] private SpawnComponent _throwSpawner;
+        [SerializeField] private ShieldComponent _shield;
 
         [Header("Particles")]
         [SerializeField] private ParticleSystem _hitParticles;
@@ -47,6 +49,7 @@ namespace Creatures.Player
 
         private GameSession _session;
         private float _defaultGravityScale;
+        private HealthComponent _healthComponent;
 
         private const string SwordId = "Sword";
         private int CoinCount => _session.Data.Inventory.Count("Coin");
@@ -80,6 +83,7 @@ namespace Creatures.Player
         {
             base.Start();
             _session = FindObjectOfType<GameSession>();
+            _healthComponent = FindObjectOfType<HealthComponent>();
             _session.Data.Hp.Value = Health.Health;
             _session.Data.Inventory.OnChanged += OnInventoryChanged;
             _session.Data.Inventory.OnChanged += InventoryLogger;
@@ -136,8 +140,9 @@ namespace Creatures.Player
 
         protected override float CalculateJumpVelocity(float yVelocity)
         {
-            if (!IsGroundedNow && _allowDoubleJump && !_isOnWall)
+            if (!IsGroundedNow && _allowDoubleJump && _session.PerksModel.IsDoubleJumpSupported && !_isOnWall)
             {
+                _session.PerksModel.Cooldown.Reset();
                 _allowDoubleJump = false;
                 _wasDoubleJump = true;
                 DoJumpVfx();
@@ -183,6 +188,8 @@ namespace Creatures.Player
 
         private void SpawnCoins()
         {
+            if (_healthComponent.IsShieldUse)
+                return;
             var numCoinsToDespose = Mathf.Min(CoinCount, 5);
             _session.Data.Inventory.Remove("Coin", numCoinsToDespose);
 
@@ -277,7 +284,7 @@ namespace Creatures.Player
                     Health.RenewHealth((int)potion.Value);
                     break;
                 case Model.Definitions.Repository.Effect.SpeedUp:
-                    _speedUpCooldown.Value = _speedUpCooldown.TimeLasts + potion.Time;
+                    _speedUpCooldown.Value = _speedUpCooldown.RemainingTime + potion.Time;
                     _additionalSpeed = Mathf.Max(potion.Value, _additionalSpeed);
                     _speedUpCooldown.Reset();
                     break;
@@ -330,12 +337,13 @@ namespace Creatures.Player
 
         public void ThrowAction()
         {
-            if (_superThrow)
+            if (_superThrow && _session.PerksModel.IsSuperThrowSupported)
             {
                 var throwableCount = _session.Data.Inventory.Count(SelectedItemId);
                 var possibleCount = SelectedItemId == SwordId ? throwableCount - 1 : throwableCount;
 
                 var numThrows = Mathf.Min(_superThrowParticles, possibleCount);
+                _session.PerksModel.Cooldown.Reset();
                 StartCoroutine(DoSuperThrow(numThrows));
             }
             else
@@ -359,6 +367,16 @@ namespace Creatures.Player
         internal void NextItem()
         {
             _session.QuickInventory.SetNextItem();
+        }
+
+
+        public void UsePerk()
+        {
+            if (_session.PerksModel.IsShieldSupported)
+            {
+                _shield.Use();
+                _session.PerksModel.Cooldown.Reset();
+            }
         }
     }
 }

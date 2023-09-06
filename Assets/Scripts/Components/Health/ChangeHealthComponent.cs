@@ -1,5 +1,4 @@
-﻿using General.Components.Creatures;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace General.Components.Health
 {

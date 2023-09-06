@@ -2481,6 +2481,8 @@ GameObject:
   - component: {fileID: 403837134}
   - component: {fileID: 403837133}
   - component: {fileID: 403837135}
+  - component: {fileID: 403837136}
+  - component: {fileID: 403837137}
   m_Layer: 9
   m_Name: CrabbyDialog
   m_TagString: Interactable
@@ -2547,7 +2549,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 403837129}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -77.270004, y: -2.507, z: 0}
+  m_LocalPosition: {x: -77.86, y: -2.507, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2136118922}
@@ -2597,6 +2599,20 @@ MonoBehaviour:
       _side: 1
     _type: 1
   _external: {fileID: 0}
+  _onComplete:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 403837136}
+        m_MethodName: Show
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &403837134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2640,6 +2656,49 @@ MonoBehaviour:
   - krab_dial_2
   - krab_dial_3
   _capitalize: 0
+--- !u!114 &403837136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403837129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7efe4d8e4a19c049802f71004e0757e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _path: UI/ManagePerksWindow
+--- !u!114 &403837137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403837129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82b0d1736f0d8d44fbe6975e6cc85144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _frameRate: 10
+  _clips:
+  - _name: idle
+    _sprites:
+    - {fileID: 1237259564474456676, guid: efbfe64388ee87240af96c489d14ffa6, type: 3}
+    - {fileID: 6781877334341790625, guid: efbfe64388ee87240af96c489d14ffa6, type: 3}
+    - {fileID: -7988024427863313899, guid: efbfe64388ee87240af96c489d14ffa6, type: 3}
+    - {fileID: -8339802707405750284, guid: efbfe64388ee87240af96c489d14ffa6, type: 3}
+    - {fileID: 6233811717460821285, guid: efbfe64388ee87240af96c489d14ffa6, type: 3}
+    - {fileID: 8388748351631217864, guid: efbfe64388ee87240af96c489d14ffa6, type: 3}
+    - {fileID: -565611628317543566, guid: efbfe64388ee87240af96c489d14ffa6, type: 3}
+    - {fileID: 6729741187243169404, guid: efbfe64388ee87240af96c489d14ffa6, type: 3}
+    - {fileID: 3505128172380155607, guid: efbfe64388ee87240af96c489d14ffa6, type: 3}
+    _loop: 1
+    _allowNextClip: 0
+    _onComplete:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1001 &407604783
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26883,6 +26942,8 @@ MonoBehaviour:
     Hp:
       _value: 5
     Perks:
+      _used:
+        _value: 
       _unlocked: []
   _defaultCheckPoint: level1-checkpoint1
 --- !u!4 &1857664937

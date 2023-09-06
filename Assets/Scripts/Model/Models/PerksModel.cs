@@ -1,6 +1,7 @@
 ﻿using System;
 using Creatures.Model.Data.Properties;
 using Creatures.Model.Definitions;
+using Utils;
 using Utils.Disposables;
 
 namespace Creatures.Model.Data.Models
@@ -9,6 +10,8 @@ namespace Creatures.Model.Data.Models
     {
         private readonly PlayerData _data;
         public readonly StringProperty InterfaceSelection = new StringProperty();
+
+        public readonly Cooldown Cooldown = new Cooldown();
 
         private readonly CompositeDisposable _trash = new CompositeDisposable();
         public event Action OnChanged;
@@ -32,6 +35,10 @@ namespace Creatures.Model.Data.Models
 
         public string Used => _data.Perks.Used.Value;
 
+        public bool IsSuperThrowSupported => _data.Perks.Used.Value == "super-throw" && Cooldown.IsReady;
+        public bool IsDoubleJumpSupported => _data.Perks.Used.Value == "double-jump" && Cooldown.IsReady;
+        public bool IsShieldSupported => _data.Perks.Used.Value == "shield" && Cooldown.IsReady;
+
 
         public void Unlock(string id)
         {
@@ -48,8 +55,10 @@ namespace Creatures.Model.Data.Models
         }
 
 
-        public void UsePerk(string selected)
+        public void SelectPerk(string selected)
         {
+            var perkDef = DefsFacade.I.Perks.Get(selected);
+            Cooldown.Value = perkDef.Cooldown;
             _data.Perks.Used.Value = selected;
         }
 

@@ -16,8 +16,10 @@ namespace General.Components.Health
 
         private int _startHealth;
         private bool _isImmortal = false;
+        private bool _isShielUse = false;
 
         public int Health => _health;
+        public bool IsShieldUse { get => _isShielUse; set => _isShielUse = value; }
 
 
         private void Start()
@@ -71,7 +73,7 @@ namespace General.Components.Health
 
         public void BecomeMortal()
         {
-            if (_target.CompareTag("Player"))
+            if (_target.CompareTag("Player") && !IsShieldUse)
             {
                 _isImmortal = false;
                 Debug.Log($"Я смертен(");

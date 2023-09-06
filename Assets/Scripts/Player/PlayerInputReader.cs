@@ -55,6 +55,12 @@ namespace Creatures
         {
             _player.NextItem();
         }
+
+
+        private void OnUsePerk(InputValue context)
+        {
+            _player.UsePerk();
+        }
     }
 }
 
