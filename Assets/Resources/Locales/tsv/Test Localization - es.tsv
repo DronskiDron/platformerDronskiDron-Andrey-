@@ -11,10 +11,15 @@ selcted_language	Idioma
 some_icon	some-icon/resource/1
 button_back	Atrás
 button_restart	Reanudar
+button_buy	Comprar
+button_use	Usar
+price_label	Precio:
 ###_dialogs_###	###
 krab_dial_1	¡Puedo enseñarte!
 krab_dial_2	Bueno!
 krab_dial_3	¡Vamos!
+wood_door_dial_1	Necesitas una llave...
+wood_door_dial_2	Encuentra uno en algún lugar...
 ###_interactions_###	###
 helm_interact	¿Usar timón?
 teleport_interact	¿Usar teletransporte?
@@ -27,3 +32,7 @@ item_LargeHealthPotion	Poción de salud grande
 item_SmallHealthPotion	Poción de salud pequeña
 item_SpeedUpPotion	Poción de aceleración
 item_PerlProjectile	Proyectil Perl
+###_perks_###	###
+double_jump_info	¡Esto es doble salto!
+super_throw_info	¡Esto es un súper lanzamiento!
+shield_info	¡Este es el escudo de Fource!

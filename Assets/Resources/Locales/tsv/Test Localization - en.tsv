@@ -11,10 +11,15 @@ selcted_language	Language
 some_icon	some-icon/resource/1
 button_back	Back
 button_restart	Restart
+button_buy	Buy
+button_use	Use
+price_label	Price:
 ###_dialogs_###	###
 krab_dial_1	I can teach you!
 krab_dial_2	Good!
 krab_dial_3	Let's go!
+wood_door_dial_1	You need a key...
+wood_door_dial_2	Find one somewhere...
 ###_interactions_###	###
 helm_interact	Use helm?
 teleport_interact	Use teleport?
@@ -27,3 +32,7 @@ item_LargeHealthPotion	Large Health Potion
 item_SmallHealthPotion	Small Health Potion
 item_SpeedUpPotion	Speed Up Potion
 item_PerlProjectile	Perl Projectile
+###_perks_###	###
+double_jump_info	This is double jump!
+super_throw_info	This is super throw!
+shield_info	This is fource shield!

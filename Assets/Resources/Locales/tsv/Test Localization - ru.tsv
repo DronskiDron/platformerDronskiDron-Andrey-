@@ -11,10 +11,15 @@ selcted_language	Язык
 some_icon	some-icon/resource/2
 button_back	Назад
 button_restart	Начать заново
+button_buy	Купить
+button_use	Использовать
+price_label	Цена:
 ###_dialogs_###	###
 krab_dial_1	Я могу тебя обучить!
 krab_dial_2	Хорошо
 krab_dial_3	Мне пора!
+wood_door_dial_1	Тебе нужен ключ...
+wood_door_dial_2	Отыщи его...
 ###_interactions_###	###
 helm_interact	Использовать штурвал?
 teleport_interact	Использовать телепорт?
@@ -27,3 +32,7 @@ item_LargeHealthPotion	Большое зелье здоровья
 item_SmallHealthPotion	Малое зелье здоровья
 item_SpeedUpPotion	Зелье ускорения
 item_PerlProjectile	Снаряд-жемчужина
+###_perks_###	###
+double_jump_info	Двойной прыжок к Вашим услугам!
+super_throw_info	Супербросок поможет Вам!
+shield_info	Силовой щит защитит Вас!

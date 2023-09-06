@@ -40,6 +40,12 @@ MonoBehaviour:
     Value: "Back\r"
   - Key: button_restart
     Value: "Restart\r"
+  - Key: button_buy
+    Value: "Buy\r"
+  - Key: button_use
+    Value: "Use\r"
+  - Key: price_label
+    Value: "Price:\r"
   - Key: '###_dialogs_###'
     Value: "###\r"
   - Key: krab_dial_1
@@ -75,4 +81,12 @@ MonoBehaviour:
   - Key: item_SpeedUpPotion
     Value: "Speed Up Potion\r"
   - Key: item_PerlProjectile
-    Value: Perl Projectile
+    Value: "Perl Projectile\r"
+  - Key: '###_perks_###'
+    Value: "###\r"
+  - Key: double_jump_info
+    Value: "This is double jump!\r"
+  - Key: super_throw_info
+    Value: "This is super throw!\r"
+  - Key: shield_info
+    Value: This is fource shield!

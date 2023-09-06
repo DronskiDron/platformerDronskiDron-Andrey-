@@ -40,6 +40,12 @@ MonoBehaviour:
     Value: "Atr\xE1s\r"
   - Key: button_restart
     Value: "Reanudar\r"
+  - Key: button_buy
+    Value: "Comprar\r"
+  - Key: button_use
+    Value: "Usar\r"
+  - Key: price_label
+    Value: "Precio:\r"
   - Key: '###_dialogs_###'
     Value: "###\r"
   - Key: krab_dial_1
@@ -75,4 +81,12 @@ MonoBehaviour:
   - Key: item_SpeedUpPotion
     Value: "Poci\xF3n de aceleraci\xF3n\r"
   - Key: item_PerlProjectile
-    Value: Proyectil Perl
+    Value: "Proyectil Perl\r"
+  - Key: '###_perks_###'
+    Value: "###\r"
+  - Key: double_jump_info
+    Value: "\xA1Esto es doble salto!\r"
+  - Key: super_throw_info
+    Value: "\xA1Esto es un s\xFAper lanzamiento!\r"
+  - Key: shield_info
+    Value: "\xA1Este es el escudo de Fource!"
