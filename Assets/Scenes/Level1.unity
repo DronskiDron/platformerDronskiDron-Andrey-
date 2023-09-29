@@ -3611,7 +3611,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 562526265}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -28.720001, y: 3.1, z: 58.911175}
+  m_LocalPosition: {x: -32.62, y: 1.3, z: 58.911175}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1333885248}
@@ -19381,6 +19381,15 @@ Tilemap:
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       m_AllTileFlags: 1073741825
+  - first: {x: -20, y: 8, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
   - first: {x: -17, y: 8, z: 0}
     second:
       serializedVersion: 2
@@ -24864,7 +24873,7 @@ Tilemap:
       m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 270
+  - m_RefCount: 271
     m_Data: {fileID: 11400000, guid: 41ad726451f5c3d40853ac78bfac8fca, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: ebcff405d1422f74793819df033a0667, type: 2}
@@ -24901,7 +24910,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: c44c3775ac41cd94395d7b1a0075723e, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 270
+  - m_RefCount: 271
     m_Data: {fileID: -6385561380129853650, guid: 6a0b6709626008e4a92e6c39af5d9b42,
       type: 3}
   - m_RefCount: 10
@@ -24955,7 +24964,7 @@ Tilemap:
     m_Data: {fileID: -6659159618237571629, guid: d47e441577d10b845809cb4ef7b61a79,
       type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 875
+  - m_RefCount: 876
     m_Data:
       e00: 1
       e01: 0
@@ -24974,7 +24983,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 875
+  - m_RefCount: 876
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -26708,17 +26717,19 @@ MonoBehaviour:
     _inventory:
       _inventory:
       - Id: Sword
-        Value: 10
+        Value: 0
       - Id: LargeHealthPotion
         Value: 10
       - Id: Coin
-        Value: 100
+        Value: 1000
     Hp:
-      _value: 5
+      _value: 0
     Perks:
       _used:
         _value: 
       _unlocked: []
+    Levels:
+      _progress: []
   _defaultCheckPoint: level1-checkpoint1
 --- !u!4 &1857664937
 Transform:
@@ -26759,7 +26770,7 @@ PrefabInstance:
     - target: {fileID: 3265628417296353479, guid: 427872dd45ef1a345a578cd873b353d1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.58778524
+      value: -0.58778536
       objectReference: {fileID: 0}
     - target: {fileID: 3265628417296353479, guid: 427872dd45ef1a345a578cd873b353d1,
         type: 3}

@@ -8,6 +8,7 @@ using General.Components;
 using Creatures.Model.Definitions;
 using Creatures.Model.Definitions.Items;
 using General.Components.Health;
+using Creatures.Model.Definitions.Player;
 
 namespace Creatures.Player
 {
@@ -298,7 +299,9 @@ namespace Creatures.Player
         {
             if (_speedUpCooldown.IsReady)
                 _additionalSpeed = 0f;
-            return base.CalculateSpeed() + _additionalSpeed;
+
+            var defaultSpeed = _session.StatsModel.GetValue(StatId.Speed);
+            return defaultSpeed + _additionalSpeed;
         }
 
 

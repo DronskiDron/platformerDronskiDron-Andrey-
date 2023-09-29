@@ -1,4 +1,5 @@
-﻿using Creatures.Model.Definitions.Repository;
+﻿using Creatures.Model.Definitions.Player;
+using Creatures.Model.Definitions.Repository;
 using Creatures.Model.Definitions.Repository.Items;
 using UnityEngine;
 

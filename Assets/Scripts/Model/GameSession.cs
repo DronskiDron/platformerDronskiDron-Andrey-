@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Creatures.Model.Data.Models;
+using Creatures.Model.Definitions.Player;
 using General.Components.LevelManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -20,6 +21,7 @@ namespace Creatures.Model.Data
 
         public QuickInventoryModel QuickInventory { get; private set; }
         public PerksModel PerksModel { get; private set; }
+        public StatsModel StatsModel { get; private set; }
 
         private readonly List<string> _checkpoints = new List<string>();
 
@@ -71,6 +73,11 @@ namespace Creatures.Model.Data
 
             PerksModel = new PerksModel(_data);
             _trash.Retain(PerksModel);
+
+            StatsModel = new StatsModel(_data);
+            _trash.Retain(StatsModel);
+
+            _data.Hp.Value = (int)StatsModel.GetValue(StatId.Hp);
         }
 
 
