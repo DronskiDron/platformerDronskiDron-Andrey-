@@ -1,5 +1,4 @@
-﻿using System;
-using Creatures.Model.Data;
+﻿using Creatures.Model.Data;
 using Creatures.Model.Definitions;
 using Creatures.Model.Definitions.Player;
 using UI.Widgets;
@@ -21,6 +20,9 @@ namespace UI.Windows.Perks.PlayerStats
 
         private GameSession _session;
         private readonly CompositeDisposable _trash = new CompositeDisposable();
+
+
+        public Button UpgradeButton => _upgradeButton;
 
 
         protected override void Start()

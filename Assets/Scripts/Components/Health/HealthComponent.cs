@@ -1,4 +1,8 @@
 ﻿using System;
+using Creatures.Model.Data;
+using Creatures.Model.Data.Models;
+using Creatures.Model.Definitions.Player;
+using UI.Windows.Perks.PlayerStats;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -22,9 +26,31 @@ namespace General.Components.Health
         public bool IsShieldUse { get => _isShielUse; set => _isShielUse = value; }
 
 
+        public bool IsPlayer = false;
+        private GameSession _session;
+
+
         private void Start()
         {
-            _startHealth = _health;
+            _session = FindObjectOfType<GameSession>();
+
+            if (IsPlayer)
+            {
+                PlayerHealtUpgrade();
+                StatWidget.UpgradeStatHealth += PlayerHealtUpgrade;
+            }
+            else
+            {
+                _startHealth = _health;
+            }
+        }
+
+
+        private void PlayerHealtUpgrade()
+        {
+            var statsModel = new StatsModel(_session.Data);
+            _startHealth = (int)statsModel.GetValue(StatId.Hp);
+            _health = _startHealth;
         }
 
 
@@ -84,6 +110,7 @@ namespace General.Components.Health
         private void OnDestroy()
         {
             _onDie.RemoveAllListeners();
+            StatWidget.UpgradeStatHealth -= PlayerHealtUpgrade;
         }
 
 

@@ -1,5 +1,7 @@
 ﻿using Creatures.Model.Data;
+using Creatures.Model.Data.Models;
 using Creatures.Model.Definitions;
+using Creatures.Model.Definitions.Player;
 using UI.Widgets;
 using UnityEngine;
 using Utils;
@@ -41,7 +43,8 @@ namespace UI.Hud
 
         private void OnHealthChanged(int newValue, int oldValue)
         {
-            var maxHealth = DefsFacade.I.Player.MaxHealth;
+            var statsModel = new StatsModel(_session.Data);
+            var maxHealth = (int)statsModel.GetValue(StatId.Hp);
             var value = (float)newValue / maxHealth;
             _healthBar.SetProgress(value);
         }

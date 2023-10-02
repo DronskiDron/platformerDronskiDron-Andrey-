@@ -5344,6 +5344,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  IsPlayer: 1
 --- !u!114 &4721150701775001662
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -85,7 +85,7 @@ namespace Creatures.Player
             base.Start();
             _session = FindObjectOfType<GameSession>();
             _healthComponent = FindObjectOfType<HealthComponent>();
-            _session.Data.Hp.Value = Health.Health;
+            _session.Data.Hp.Value = (int)_session.StatsModel.GetValue(StatId.Hp); ;
             _session.Data.Inventory.OnChanged += OnInventoryChanged;
             _session.Data.Inventory.OnChanged += InventoryLogger;
 

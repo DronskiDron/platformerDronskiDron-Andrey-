@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using System;
+using System.Globalization;
 using Creatures.Model.Data;
 using Creatures.Model.Definitions;
 using Creatures.Model.Definitions.Localisation;
@@ -20,6 +21,10 @@ namespace UI.Windows.Perks.PlayerStats
 
         private GameSession _session;
         private StatDef _data;
+
+
+
+        public static Action UpgradeStatHealth;
 
 
         private void Start()
@@ -54,6 +59,12 @@ namespace UI.Windows.Perks.PlayerStats
             var maxLevel = DefsFacade.I.Player.GetStat(_data.ID).Levels.Length - 1;
             _progress.SetProgress(currentLevel / (float)maxLevel);
             _selector.SetActive(statsModel.InterfaceSelectedStat.Value == _data.ID);
+
+
+
+
+            _session.Data.Hp.Value = (int)statsModel.GetValue(StatId.Hp);
+            UpgradeStatHealth?.Invoke();
         }
 
 

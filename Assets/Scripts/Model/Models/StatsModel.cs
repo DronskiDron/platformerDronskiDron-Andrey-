@@ -42,22 +42,7 @@ namespace Creatures.Model.Data.Models
             _data.Inventory.Remove(price.ItemId, price.Count);
             _data.Levels.LevelUp(id);
 
-            PostProcessLevelUp(id);
-
             OnChanged?.Invoke();
-
-
-        }
-
-
-        private void PostProcessLevelUp(StatId statId)
-        {
-            switch (statId)
-            {
-                case StatId.Hp:
-                    _data.Hp.Value = (int)GetValue(statId);
-                    break;
-            }
         }
 
 
