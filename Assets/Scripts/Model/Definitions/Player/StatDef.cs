@@ -34,6 +34,7 @@ namespace Creatures.Model.Definitions.Player
     {
         Hp,
         Speed,
-        RangeDamage
+        RangeDamage,
+        CriticalDamage
     }
 }

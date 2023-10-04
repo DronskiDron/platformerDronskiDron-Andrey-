@@ -25124,6 +25124,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3257753438635650854, guid: 3e445a289d31e074dbc8cefd769e8163,
+        type: 3}
+      propertyPath: _health
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3257753438635650855, guid: 3e445a289d31e074dbc8cefd769e8163,
         type: 3}
       propertyPath: _state
@@ -26717,7 +26722,7 @@ MonoBehaviour:
     _inventory:
       _inventory:
       - Id: Sword
-        Value: 0
+        Value: 10
       - Id: LargeHealthPotion
         Value: 10
       - Id: Coin

@@ -76,8 +76,6 @@ namespace Creatures.Model.Data
 
             StatsModel = new StatsModel(_data);
             _trash.Retain(StatsModel);
-
-            _data.Hp.Value = (int)StatsModel.GetValue(StatId.Hp);
         }
 
 

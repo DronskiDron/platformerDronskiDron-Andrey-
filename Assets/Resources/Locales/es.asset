@@ -46,6 +46,8 @@ MonoBehaviour:
     Value: "Usar\r"
   - Key: price_label
     Value: "Precio:\r"
+  - Key: button_upgrade
+    Value: "Mejora\r"
   - Key: '###_dialogs_###'
     Value: "###\r"
   - Key: krab_dial_1
@@ -89,4 +91,14 @@ MonoBehaviour:
   - Key: super_throw_info
     Value: "\xA1Esto es un s\xFAper lanzamiento!\r"
   - Key: shield_info
-    Value: "\xA1Este es el escudo de Fource!"
+    Value: "\xA1Este es el escudo de Fource!\r"
+  - Key: '###_stats_###'
+    Value: "\r"
+  - Key: health_stat
+    Value: "Salud\r"
+  - Key: speed_stat
+    Value: "Velocidad\r"
+  - Key: range_damage_stat
+    Value: "Da\xF1oDeAlcance\r"
+  - Key: critical_damage_stat
+    Value: "Da\xF1o\u0421r\xEDtico"

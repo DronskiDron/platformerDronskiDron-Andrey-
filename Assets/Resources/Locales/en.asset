@@ -46,6 +46,8 @@ MonoBehaviour:
     Value: "Use\r"
   - Key: price_label
     Value: "Price:\r"
+  - Key: button_upgrade
+    Value: "Upgrade\r"
   - Key: '###_dialogs_###'
     Value: "###\r"
   - Key: krab_dial_1
@@ -89,4 +91,14 @@ MonoBehaviour:
   - Key: super_throw_info
     Value: "This is super throw!\r"
   - Key: shield_info
-    Value: This is fource shield!
+    Value: "This is fource shield!\r"
+  - Key: '###_stats_###'
+    Value: "\r"
+  - Key: health_stat
+    Value: "Health\r"
+  - Key: speed_stat
+    Value: "Speed\r"
+  - Key: range_damage_stat
+    Value: "RangeDamage\r"
+  - Key: critical_damage_stat
+    Value: CriticalDamage

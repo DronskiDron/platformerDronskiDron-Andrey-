@@ -21,13 +21,11 @@ namespace General.Components.Health
         private int _startHealth;
         private bool _isImmortal = false;
         private bool _isShielUse = false;
+        public bool IsPlayer = false;
+        private GameSession _session;
 
         public int Health => _health;
         public bool IsShieldUse { get => _isShielUse; set => _isShielUse = value; }
-
-
-        public bool IsPlayer = false;
-        private GameSession _session;
 
 
         private void Start()
@@ -37,7 +35,7 @@ namespace General.Components.Health
             if (IsPlayer)
             {
                 PlayerHealtUpgrade();
-                StatWidget.UpgradeStatHealth += PlayerHealtUpgrade;
+                StatWidget.UpgradeStatsAction += PlayerHealtUpgrade;
             }
             else
             {
@@ -110,7 +108,7 @@ namespace General.Components.Health
         private void OnDestroy()
         {
             _onDie.RemoveAllListeners();
-            StatWidget.UpgradeStatHealth -= PlayerHealtUpgrade;
+            StatWidget.UpgradeStatsAction -= PlayerHealtUpgrade;
         }
 
 
