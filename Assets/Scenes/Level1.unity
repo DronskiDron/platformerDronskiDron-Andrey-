@@ -26723,10 +26723,16 @@ MonoBehaviour:
       _inventory:
       - Id: Sword
         Value: 10
+      - Id: Coin
+        Value: 10
+      - Id: Key
+        Value: 10
       - Id: LargeHealthPotion
         Value: 10
-      - Id: Coin
-        Value: 1000
+      - Id: SmallHealthPotion
+        Value: 10
+      - Id: PerlProjectile
+        Value: 10
     Hp:
       _value: 0
     Perks:

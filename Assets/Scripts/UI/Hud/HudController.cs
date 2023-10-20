@@ -66,5 +66,11 @@ namespace UI.Hud
         {
             WindowUtils.CreateWindow("UI/PlayerStatsWindow");
         }
+
+
+        public void OnBigInventory()
+        {
+            WindowUtils.CreateWindow("UI/PlayerInventory");
+        }
     }
 }

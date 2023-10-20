@@ -139,7 +139,7 @@ namespace Creatures.Model.Data
         }
 
 
-        private InventoryItemData GetItem(string id)
+        public InventoryItemData GetItem(string id)
         {
             foreach (var itemData in _inventory)
             {

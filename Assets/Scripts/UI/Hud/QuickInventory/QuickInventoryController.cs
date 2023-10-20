@@ -15,7 +15,7 @@ namespace UI.Hud.QuickInventory
 
 
         private GameSession _session;
-        private List<InventoryItemWidget> _createdItem = new List<InventoryItemWidget>();
+        /* private List<InventoryItemWidget> _createdItem = new List<InventoryItemWidget>(); */
         private DataGroup<InventoryItemData, InventoryItemWidget> _dataGroup;
 
 
