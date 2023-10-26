@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Creatures.Model.Data;
+using UI.Hud.BigInventory;
 using UI.Widgets;
 using UnityEngine;
 using Utils.Disposables;
@@ -13,9 +14,7 @@ namespace UI.Hud.QuickInventory
 
         private readonly CompositeDisposable _trash = new CompositeDisposable();
 
-
         private GameSession _session;
-        /* private List<InventoryItemWidget> _createdItem = new List<InventoryItemWidget>(); */
         private DataGroup<InventoryItemData, InventoryItemWidget> _dataGroup;
 
 

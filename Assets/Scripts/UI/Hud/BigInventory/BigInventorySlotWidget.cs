@@ -1,20 +1,26 @@
-﻿using UnityEngine;
+﻿using System;
+using Creatures.Model.Definitions.Repository.Items;
+using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace UI.Hud.BigInventory
 {
+    [Serializable]
     public class BigInventorySlotWidget : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         [SerializeField] private GameObject _selection;
+        [InventoryId] public string Id;
 
         public Image Icon { get => _icon; set => _icon = value; }
-        public Text Value { get => _value; set => _value = value; }
+        public Text TextValue { get => _textValue; set => _textValue = value; }
+        public int Value { get => _value; set => _value = value; }
 
         private int _childObjArrayIndex = 1;
         private CanvasGroup _canvasGroup;
         private Image _icon;
-        private Text _value;
+        private Text _textValue;
+        private int _value;
 
 
         private void Awake()
@@ -26,15 +32,16 @@ namespace UI.Hud.BigInventory
         public void LoadLocalData()
         {
             _icon = transform.GetChild(_childObjArrayIndex).GetComponent<Image>();
-            _value = _icon.gameObject.transform.GetChild(_childObjArrayIndex).GetComponent<Text>();
+            _textValue = _icon.gameObject.transform.GetChild(_childObjArrayIndex).GetComponent<Text>();
         }
 
 
         public void ActivateSlot()
         {
             _canvasGroup = _icon.gameObject.GetComponent<CanvasGroup>();
-            _canvasGroup.alpha = 1;
-            _value.gameObject.SetActive(true);
+            if (_icon.sprite != null)
+                _canvasGroup.alpha = 1;
+            _textValue.gameObject.SetActive(true);
         }
 
 

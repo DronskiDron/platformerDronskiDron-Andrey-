@@ -58,20 +58,26 @@ namespace UI.Hud.BigInventory
                 var donorWidget = draggedObject.GetComponent<SlotTransferWidget>();
                 if (donorWidget.ParentSlot.Icon.sprite != null)
                 {
+                    _slotManager.InconstantId = _parentSlot.Id;
                     _slotManager.InconstantItemSprite = _parentSlot.Icon.sprite;
-                    _slotManager.InconstantItemValue = _parentSlot.Value.text;
+                    _slotManager.InconstantItemTextValue = _parentSlot.TextValue.text;
+                    _slotManager.InconstantValue = _parentSlot.Value;
 
+                    _parentSlot.Id = donorWidget.ParentSlot.Id;
                     _parentSlot.Icon.sprite = donorWidget.ParentSlot.Icon.sprite;
-                    _parentSlot.Value.text = donorWidget.ParentSlot.Value.text;
-                    _parentSlot.Value.gameObject.SetActive(true);
+                    _parentSlot.TextValue.text = donorWidget.ParentSlot.TextValue.text;
+                    _parentSlot.Value = donorWidget.ParentSlot.Value;
+                    _parentSlot.TextValue.gameObject.SetActive(true);
 
                     if (_parentSlot.Icon.sprite != null)
                         CanvasGroup.alpha = 1;
 
                     DonorAfterDrug(donorWidget);
 
+                    donorWidget.ParentSlot.Id = _slotManager.InconstantId;
                     donorWidget.ParentSlot.Icon.sprite = _slotManager.InconstantItemSprite;
-                    donorWidget.ParentSlot.Value.text = _slotManager.InconstantItemValue;
+                    donorWidget.ParentSlot.TextValue.text = _slotManager.InconstantItemTextValue;
+                    donorWidget.ParentSlot.Value = _slotManager.InconstantValue;
 
                     if (donorWidget.ParentSlot.Icon.sprite == null)
                         donorWidget.CanvasGroup.alpha = 0;

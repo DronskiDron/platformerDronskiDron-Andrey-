@@ -417,6 +417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _selection: {fileID: 991914307402744846}
+  Id: 
 --- !u!1 &605771509640100786
 GameObject:
   m_ObjectHideFlags: 0
@@ -844,6 +845,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _selection: {fileID: 276063457947243065}
+  Id: 
 --- !u!1 &991914307402744846
 GameObject:
   m_ObjectHideFlags: 0
@@ -1189,6 +1191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _selection: {fileID: 4397403967939189979}
+  Id: 
 --- !u!1 &1368885587128279567
 GameObject:
   m_ObjectHideFlags: 0
@@ -1260,7 +1263,68 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4d06052502ba4f4eb4aa7032885718f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _slotContainer: {fileID: 265367981639891252}
+  _slots:
+  - {fileID: 5601074557165280741}
+  - {fileID: 4800423190933063357}
+  - {fileID: 7415378245398994081}
+  - {fileID: 2711199648721780603}
+  - {fileID: 773356212688912609}
+  - {fileID: 6808444377346652894}
+  - {fileID: 4825486881485616097}
+  - {fileID: 1749173545963215822}
+  - {fileID: 7266310005417197567}
+  - {fileID: 4543338695663017509}
+  - {fileID: 2515574862419039269}
+  - {fileID: 7232899711091299484}
+  _inventorySlots:
+  - Id: 
+    Sprite: {fileID: 0}
+    TextValue: 
+    Value: 0
+  - Id: 
+    Sprite: {fileID: 0}
+    TextValue: 
+    Value: 0
+  - Id: 
+    Sprite: {fileID: 0}
+    TextValue: 
+    Value: 0
+  - Id: 
+    Sprite: {fileID: 0}
+    TextValue: 
+    Value: 0
+  - Id: 
+    Sprite: {fileID: 0}
+    TextValue: 
+    Value: 0
+  - Id: 
+    Sprite: {fileID: 0}
+    TextValue: 
+    Value: 0
+  - Id: 
+    Sprite: {fileID: 0}
+    TextValue: 
+    Value: 0
+  - Id: 
+    Sprite: {fileID: 0}
+    TextValue: 
+    Value: 0
+  - Id: 
+    Sprite: {fileID: 0}
+    TextValue: 
+    Value: 0
+  - Id: 
+    Sprite: {fileID: 0}
+    TextValue: 
+    Value: 0
+  - Id: 
+    Sprite: {fileID: 0}
+    TextValue: 
+    Value: 0
+  - Id: 
+    Sprite: {fileID: 0}
+    TextValue: 
+    Value: 0
 --- !u!114 &2430872391288748995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1273,9 +1337,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fdcb4481aeb582458c4838098ae5dcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _slotList: []
+  InconstantId: 
   InconstantItemSprite: {fileID: 0}
-  InconstantItemValue: 
+  InconstantItemTextValue: 
+  InconstantValue: 0
 --- !u!1 &1379999995329738606
 GameObject:
   m_ObjectHideFlags: 0
@@ -1913,6 +1978,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _selection: {fileID: 35010479887802463}
+  Id: 
 --- !u!1 &2345333011827824008
 GameObject:
   m_ObjectHideFlags: 0
@@ -2077,6 +2143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _selection: {fileID: 3905855727562817356}
+  Id: 
 --- !u!1 &2569359786799529896
 GameObject:
   m_ObjectHideFlags: 0
@@ -3129,6 +3196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _selection: {fileID: 3836618816261701582}
+  Id: 
 --- !u!1 &4548748072802464750
 GameObject:
   m_ObjectHideFlags: 0
@@ -3630,6 +3698,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _selection: {fileID: 6584256532364763146}
+  Id: 
 --- !u!1 &5832411973425668133
 GameObject:
   m_ObjectHideFlags: 0
@@ -3794,6 +3863,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _selection: {fileID: 7717838603543488020}
+  Id: 
 --- !u!1 &5994989896088025643
 GameObject:
   m_ObjectHideFlags: 0
@@ -4208,6 +4278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _selection: {fileID: 2569359786799529896}
+  Id: 
 --- !u!1 &6383179997580930819
 GameObject:
   m_ObjectHideFlags: 0
@@ -4298,6 +4369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _selection: {fileID: 1078189267772983524}
+  Id: 
 --- !u!1 &6449729863192441808
 GameObject:
   m_ObjectHideFlags: 0
@@ -4696,6 +4768,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _selection: {fileID: 805356662193307248}
+  Id: None
 --- !u!1 &7456575749241855565
 GameObject:
   m_ObjectHideFlags: 0
@@ -5529,6 +5602,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _selection: {fileID: 1922188036723148831}
+  Id: 
 --- !u!1001 &4259542897055753144
 PrefabInstance:
   m_ObjectHideFlags: 0

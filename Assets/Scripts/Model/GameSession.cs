@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Creatures.Model.Data.Models;
-using Creatures.Model.Definitions.Player;
 using General.Components.LevelManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -20,6 +19,7 @@ namespace Creatures.Model.Data
         private readonly CompositeDisposable _trash = new CompositeDisposable();
 
         public QuickInventoryModel QuickInventory { get; private set; }
+        public BigInventoryModel BigInventory { get; private set; }
         public PerksModel PerksModel { get; private set; }
         public StatsModel StatsModel { get; private set; }
 
@@ -70,6 +70,9 @@ namespace Creatures.Model.Data
         {
             QuickInventory = new QuickInventoryModel(_data);
             _trash.Retain(QuickInventory);
+
+            BigInventory = new BigInventoryModel(_data);
+            _trash.Retain(BigInventory);
 
             PerksModel = new PerksModel(_data);
             _trash.Retain(PerksModel);

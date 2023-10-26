@@ -5,7 +5,9 @@ using Creatures.Model.Definitions;
 using Creatures.Model.Definitions.Items;
 using Creatures.Model.Definitions.Repository;
 using Creatures.Model.Definitions.Repository.Items;
+using UI.Hud.BigInventory;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Creatures.Model.Data
 {
@@ -13,6 +15,8 @@ namespace Creatures.Model.Data
     public class InventoryData
     {
         [SerializeField] private List<InventoryItemData> _inventory = new List<InventoryItemData>();
+        [SerializeField] private InventorySlotData[] _inventorySlots = new InventorySlotData[12];
+        [HideInInspector] public bool BigInventoryOnceWasFilled = false;
 
         public delegate void OnInventoryChanged(string id, int value);
         public OnInventoryChanged OnChanged;
@@ -169,6 +173,38 @@ namespace Creatures.Model.Data
 
             return true;
         }
+
+
+        public void FillBigInventory(InventorySlotData[] localArray)
+        {
+            for (int i = 0; i < _inventorySlots.Length; i++)
+            {
+                _inventorySlots[i].Id = null;
+                _inventorySlots[i].Sprite = null;
+                _inventorySlots[i].TextValue = null;
+                _inventorySlots[i].Value = 0;
+            }
+
+            for (int i = 0; i < _inventorySlots.Length; i++)
+            {
+                for (int t = 0; t < localArray.Length; t++)
+                {
+                    if (i == t && localArray[t].Value > 0)
+                    {
+                        _inventorySlots[i].Id = localArray[t].Id;
+                        _inventorySlots[i].Sprite = localArray[t].Sprite;
+                        _inventorySlots[i].TextValue = localArray[t].TextValue;
+                        _inventorySlots[i].Value = localArray[t].Value;
+                    }
+                }
+            }
+        }
+
+
+        public InventorySlotData[] GetBigInventory()
+        {
+            return _inventorySlots;
+        }
     }
 
 
@@ -182,5 +218,14 @@ namespace Creatures.Model.Data
         {
             Id = id;
         }
+    }
+
+    [Serializable]
+    public class InventorySlotData
+    {
+        [InventoryId] public string Id;
+        public Sprite Sprite;
+        public string TextValue;
+        public int Value;
     }
 }
