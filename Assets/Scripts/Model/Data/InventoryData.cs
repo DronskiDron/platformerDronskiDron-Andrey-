@@ -5,9 +5,7 @@ using Creatures.Model.Definitions;
 using Creatures.Model.Definitions.Items;
 using Creatures.Model.Definitions.Repository;
 using Creatures.Model.Definitions.Repository.Items;
-using UI.Hud.BigInventory;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Creatures.Model.Data
 {

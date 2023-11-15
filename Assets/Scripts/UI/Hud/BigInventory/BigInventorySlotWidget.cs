@@ -1,4 +1,5 @@
 ﻿using System;
+using Creatures.Model.Data;
 using Creatures.Model.Definitions.Repository.Items;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -9,6 +10,7 @@ namespace UI.Hud.BigInventory
     [Serializable]
     public class BigInventorySlotWidget : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
+        /* public InventorySlotData _data; */
         [SerializeField] private GameObject _selection;
         [InventoryId] public string Id;
 
