@@ -26721,68 +26721,35 @@ MonoBehaviour:
   _data:
     _inventory:
       _inventory:
-      - Id: Sword
-        Value: 10
       - Id: Coin
-        Value: 10
-      - Id: Key
-        Value: 10
-      - Id: LargeHealthPotion
-        Value: 10
-      - Id: SmallHealthPotion
-        Value: 10
-      - Id: PerlProjectile
-        Value: 10
+        Value: 1000
+      - Id: Sword
+        Value: 5
       _inventorySlots:
       - Id: None
-        Sprite: {fileID: 0}
-        TextValue: 
         Value: 0
       - Id: None
-        Sprite: {fileID: 0}
-        TextValue: 
         Value: 0
       - Id: None
-        Sprite: {fileID: 0}
-        TextValue: 
         Value: 0
       - Id: None
-        Sprite: {fileID: 0}
-        TextValue: 
         Value: 0
       - Id: None
-        Sprite: {fileID: 0}
-        TextValue: 
         Value: 0
       - Id: None
-        Sprite: {fileID: 0}
-        TextValue: 
         Value: 0
       - Id: None
-        Sprite: {fileID: 0}
-        TextValue: 
         Value: 0
       - Id: None
-        Sprite: {fileID: 0}
-        TextValue: 
         Value: 0
-      - Id: 
-        Sprite: {fileID: 0}
-        TextValue: 
+      - Id: None
         Value: 0
-      - Id: 
-        Sprite: {fileID: 0}
-        TextValue: 
+      - Id: None
         Value: 0
-      - Id: 
-        Sprite: {fileID: 0}
-        TextValue: 
+      - Id: None
         Value: 0
-      - Id: 
-        Sprite: {fileID: 0}
-        TextValue: 
+      - Id: None
         Value: 0
-      BigInventoryOnceWasFilled: 0
     Hp:
       _value: 0
     Perks:

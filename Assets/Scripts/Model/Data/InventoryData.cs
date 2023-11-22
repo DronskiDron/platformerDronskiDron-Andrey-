@@ -5,6 +5,7 @@ using Creatures.Model.Definitions;
 using Creatures.Model.Definitions.Items;
 using Creatures.Model.Definitions.Repository;
 using Creatures.Model.Definitions.Repository.Items;
+using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine;
 
 namespace Creatures.Model.Data
@@ -13,8 +14,7 @@ namespace Creatures.Model.Data
     public class InventoryData
     {
         [SerializeField] private List<InventoryItemData> _inventory = new List<InventoryItemData>();
-        [SerializeField] private InventorySlotData[] _inventorySlots = new InventorySlotData[12];
-        [HideInInspector] public bool BigInventoryOnceWasFilled = false;
+        [SerializeField] private InventoryItemData[] _inventorySlots = new InventoryItemData[12];
 
         public delegate void OnInventoryChanged(string id, int value);
         public OnInventoryChanged OnChanged;
@@ -27,13 +27,19 @@ namespace Creatures.Model.Data
             var itemDef = DefsFacade.I.Items.Get(id);
             if (itemDef.IsVoid) return;
 
+            var noneList = SearchEmptyItem();
+
             if (itemDef.HasTag(ItemTag.Stackable))
             {
-                AddToStack(id, value);
+                if (IsStackAlreadyExists(id))
+                    AddToStack(id, value);
+                if (!IsStackAlreadyExists(id) && noneList.Count != 0)
+                    SettleStack(id, value, noneList[0]);
             }
             else
             {
-                AddNonStack(id, value);
+                if (noneList.Count <= 0) return;
+                AddNonStack(id, value, noneList[0]);
             }
 
             OnChanged?.Invoke(id, Count(id));
@@ -56,31 +62,39 @@ namespace Creatures.Model.Data
         }
 
 
-        private void AddToStack(string id, int value)
+        private void SettleStack(string id, int value, int index)
         {
-            var isFull = _inventory.Count >= DefsFacade.I.Player.InventorySize;
             var item = GetItem(id);
             if (item == null)
             {
-                if (isFull) return;
-
                 item = new InventoryItemData(id);
-                _inventory.Add(item);
+                _inventory[index] = item;
+                item.Value += value;
             }
+        }
 
+
+        private bool IsStackAlreadyExists(string id)
+        {
+            var item = GetItem(id);
+            if (item == null) return false;
+            else return true;
+        }
+
+
+        private void AddToStack(string id, int value/* , int index */)
+        {
+            var item = GetItem(id);
             item.Value += value;
         }
 
 
-        private void AddNonStack(string id, int value)
+        private void AddNonStack(string id, int value, int index)
         {
-            var itemLasts = DefsFacade.I.Player.InventorySize - _inventory.Count;
-            value = Mathf.Min(itemLasts, value);
-
             for (int i = 0; i < value; i++)
             {
                 var item = new InventoryItemData(id) { Value = 1 };
-                _inventory.Add(item);
+                _inventory[index] = item;
             }
         }
 
@@ -89,21 +103,22 @@ namespace Creatures.Model.Data
         {
             var itemDef = DefsFacade.I.Items.Get(id);
             if (itemDef.IsVoid) return;
+            var index = GetItemIndex(id);
 
             if (itemDef.HasTag(ItemTag.Stackable))
             {
-                RemoveFromStack(id, value);
+                RemoveFromStack(id, value, index);
             }
             else
             {
-                RemoveNonStack(id, value);
+                RemoveNonStack(id, value, index);
             }
 
             OnChanged?.Invoke(id, Count(id));
         }
 
 
-        private void RemoveFromStack(string id, int value)
+        private void RemoveFromStack(string id, int value, int index)
         {
             var item = GetItem(id);
             if (item == null) return;
@@ -111,19 +126,29 @@ namespace Creatures.Model.Data
             item.Value -= value;
 
             if (item.Value <= 0)
-                _inventory.Remove(item);
+            {
+                _inventory[index] = new InventoryItemData("None");
+                _inventory[index].Value = 0;
+            }
         }
 
 
-        private void RemoveNonStack(string id, int value)
+        private void RemoveNonStack(string id, int value, int index)
         {
             for (int i = 0; i < value; i++)
             {
                 var item = GetItem(id);
                 if (item == null) return;
-
-                _inventory.Remove(item);
+                _inventory[index] = new InventoryItemData("None");
+                _inventory[index].Value = 0;
             }
+        }
+
+
+        public void RemoveDefiniteItem(int index)
+        {
+            _inventory[index] = new InventoryItemData("None");
+            _inventory[index].Value = 0;
         }
 
 
@@ -152,6 +177,17 @@ namespace Creatures.Model.Data
         }
 
 
+        public int GetItemIndex(string id)
+        {
+            for (int i = 0; i < _inventory.Count; i++)
+            {
+                if (_inventory[i].Id == id)
+                    return i;
+            }
+            return -1;
+        }
+
+
         public bool IsEnough(params ItemWithCount[] items)
         {
             var joined = new Dictionary<string, int>();
@@ -173,35 +209,32 @@ namespace Creatures.Model.Data
         }
 
 
-        public void FillBigInventory(InventorySlotData[] localArray)
+        public InventoryItemData[] GetBigInventoryData()
         {
-            for (int i = 0; i < _inventorySlots.Length; i++)
-            {
-                _inventorySlots[i].Id = null;
-                _inventorySlots[i].Sprite = null;
-                _inventorySlots[i].TextValue = null;
-                _inventorySlots[i].Value = 0;
-            }
-
-            for (int i = 0; i < _inventorySlots.Length; i++)
-            {
-                for (int t = 0; t < localArray.Length; t++)
-                {
-                    if (i == t && localArray[t].Value > 0)
-                    {
-                        _inventorySlots[i].Id = localArray[t].Id;
-                        _inventorySlots[i].Sprite = localArray[t].Sprite;
-                        _inventorySlots[i].TextValue = localArray[t].TextValue;
-                        _inventorySlots[i].Value = localArray[t].Value;
-                    }
-                }
-            }
+            return _inventorySlots;
         }
 
 
-        public InventorySlotData[] GetBigInventory()
+        public void RenewInventory()
         {
-            return _inventorySlots;
+            _inventory.Clear();
+            _inventory = _inventorySlots.ToList();
+            OnChanged?.Invoke("None", 0);
+        }
+
+
+        private List<int> SearchEmptyItem()
+        {
+            List<int> list = new List<int>();
+            for (int i = 0; i < _inventory.Count; i++)
+            {
+                if (_inventory[i].Id == "None")
+                {
+                    list.Add(i);
+                    break;
+                }
+            }
+            return list;
         }
     }
 
@@ -216,14 +249,5 @@ namespace Creatures.Model.Data
         {
             Id = id;
         }
-    }
-
-    [Serializable]
-    public class InventorySlotData
-    {
-        [InventoryId] public string Id;
-        public Sprite Sprite;
-        public string TextValue;
-        public int Value;
     }
 }

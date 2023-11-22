@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using Creatures.Model.Data;
+using Creatures.Model.Definitions;
+using Creatures.Model.Definitions.Items;
+using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -7,30 +10,30 @@ namespace UI.Hud.BigInventory
 {
     public class SlotTransferWidget : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropHandler
     {
-        [SerializeField] private BigInventorySlotManager _slotManager;
+        [SerializeField] private BigInventoryTemp _temp;
         [SerializeField] private Image _panel;
         [SerializeField] private BigInventorySlotWidget _parentSlot;
         [SerializeField] private Transform _executiveObj;
 
         public Image Panel => _panel;
-        public BigInventorySlotWidget ParentSlot { get => _parentSlot; set => _parentSlot = value; }
-        public CanvasGroup CanvasGroup { get => _canvasGroup; set => _canvasGroup = value; }
+        public BigInventorySlotWidget ParentSlot { get => _parentSlot; private set => _parentSlot = value; }
+        public CanvasGroup CanvasGroup { get; set; }
 
         [HideInInspector] public bool WasDone = false;
-        private CanvasGroup _canvasGroup;
 
 
         private void Start()
         {
-            _canvasGroup = gameObject.GetComponent<CanvasGroup>();
+            CanvasGroup = gameObject.GetComponent<CanvasGroup>();
         }
 
 
         public void OnBeginDrag(PointerEventData eventData)
         {
+            _temp.SlotIndex = _parentSlot.SlotIndex;
             transform.SetParent(_executiveObj);
             Panel.gameObject.SetActive(true);
-            _canvasGroup.blocksRaycasts = false;
+            CanvasGroup.blocksRaycasts = false;
             WasDone = false;
         }
 
@@ -58,10 +61,10 @@ namespace UI.Hud.BigInventory
                 var donorWidget = draggedObject.GetComponent<SlotTransferWidget>();
                 if (donorWidget.ParentSlot.Icon.sprite != null)
                 {
-                    _slotManager.InconstantId = _parentSlot.Id;
-                    _slotManager.InconstantItemSprite = _parentSlot.Icon.sprite;
-                    _slotManager.InconstantItemTextValue = _parentSlot.TextValue.text;
-                    _slotManager.InconstantValue = _parentSlot.Value;
+                    _temp.InconstantId = _parentSlot.Id;
+                    _temp.InconstantItemSprite = _parentSlot.Icon.sprite;
+                    _temp.InconstantItemTextValue = _parentSlot.TextValue.text;
+                    _temp.InconstantValue = _parentSlot.Value;
 
                     _parentSlot.Id = donorWidget.ParentSlot.Id;
                     _parentSlot.Icon.sprite = donorWidget.ParentSlot.Icon.sprite;
@@ -74,15 +77,17 @@ namespace UI.Hud.BigInventory
 
                     DonorAfterDrug(donorWidget);
 
-                    donorWidget.ParentSlot.Id = _slotManager.InconstantId;
-                    donorWidget.ParentSlot.Icon.sprite = _slotManager.InconstantItemSprite;
-                    donorWidget.ParentSlot.TextValue.text = _slotManager.InconstantItemTextValue;
-                    donorWidget.ParentSlot.Value = _slotManager.InconstantValue;
+                    donorWidget.ParentSlot.Id = _temp.InconstantId;
+                    donorWidget.ParentSlot.Icon.sprite = _temp.InconstantItemSprite;
+                    donorWidget.ParentSlot.TextValue.text = _temp.InconstantItemTextValue;
+                    donorWidget.ParentSlot.Value = _temp.InconstantValue;
 
                     if (donorWidget.ParentSlot.Icon.sprite == null)
                         donorWidget.CanvasGroup.alpha = 0;
 
                     donorWidget.WasDone = true;
+
+                    _parentSlot.Onchanged?.Invoke();
                 }
             }
 
@@ -110,6 +115,25 @@ namespace UI.Hud.BigInventory
             donorWidget.Panel.gameObject.SetActive(false);
             donorWidget.gameObject.SetActive(true);
             donorWidget.gameObject.GetComponent<CanvasGroup>().blocksRaycasts = true;
+        }
+
+
+        public void ClearSlot()
+        {
+            var def = DefsFacade.I.Items.Get(_parentSlot.Id);
+            if (def.HasTag(ItemTag.OneMustStay))
+            {
+                _parentSlot.Value = 1;
+                _parentSlot.TextValue.text = _parentSlot.Value.ToString();
+            }
+            else
+            {
+                _parentSlot.Id = "None";
+                _parentSlot.Icon.sprite = null;
+                _parentSlot.TextValue.text = null;
+                _parentSlot.Value = 0;
+                CanvasGroup.alpha = 0;
+            }
         }
     }
 }

@@ -5674,7 +5674,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Layer:
     serializedVersion: 2
-    m_Bits: 194304
+    m_Bits: 259840
   _isTouchingLayer: 0
   _drawSphereRadius: 0.3
 --- !u!1 &4801355957240188693
