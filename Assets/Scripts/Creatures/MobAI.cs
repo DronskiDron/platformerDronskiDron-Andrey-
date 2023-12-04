@@ -27,8 +27,7 @@ namespace Creatures
         public bool IsDead => _isDead;
 
         protected Patrol Patrol;
-        private bool _isFollow = false;
-        public bool IsFollow { get => _isFollow; set => _isFollow = value; }
+        public bool IsFollow { get; set; }
 
         private static readonly int IsDeadKey = Animator.StringToHash("is-dead");
 
@@ -39,6 +38,7 @@ namespace Creatures
             Creature = GetComponent<Creature>();
             _animator = GetComponent<Animator>();
             Patrol = GetComponent<Patrol>();
+            IsFollow = false;
         }
 
 
@@ -118,7 +118,9 @@ namespace Creatures
 
         protected virtual Vector2 GetDirectionToTarget()
         {
-            var direction = Target.transform.position - transform.position;
+            var direction = transform.position;
+            if (Target != null)
+                direction = Target.transform.position - transform.position;
             direction.y = 0;
             return direction.normalized;
         }
@@ -151,6 +153,17 @@ namespace Creatures
             var direction = GetDirectionToTarget();
             StartState(Patrol.DoPatrol());
             Creature.UpdateSpriteDirection(direction);
+        }
+
+
+        public void OnStopMoving()
+        {
+            Invoke("SloMob", 0.5f);
+        }
+
+        private void SloMob()
+        {
+            Creature.ChangeSpeed(0);
         }
     }
 }

@@ -35,6 +35,7 @@ namespace Creatures.Model.Definitions.Player
         Hp,
         Speed,
         RangeDamage,
-        CriticalDamage
+        CriticalDamage,
+        PowerWave
     }
 }

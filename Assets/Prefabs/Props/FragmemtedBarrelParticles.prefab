@@ -145,6 +145,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1305749284219007207}
+  - component: {fileID: 2604593763207359728}
+  - component: {fileID: 7540472565907174092}
   m_Layer: 0
   m_Name: FragmemtedBarrelParticles
   m_TagString: Untagged
@@ -170,6 +172,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2604593763207359728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305749284219007200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5957bf106631a54093bad9e0d056d1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _velosity: 3
+--- !u!114 &7540472565907174092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305749284219007200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 782d9b8a5e440a2409cf67b042b97675, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _explosion: {fileID: 2604593763207359728}
+  _goArray:
+  - {fileID: 1305749283268075598}
+  - {fileID: 1305749284761796338}
+  - {fileID: 1305749284719955539}
+  - {fileID: 1305749284851087165}
 --- !u!1 &1305749284719955539
 GameObject:
   m_ObjectHideFlags: 0

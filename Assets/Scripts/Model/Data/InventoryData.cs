@@ -5,7 +5,6 @@ using Creatures.Model.Definitions;
 using Creatures.Model.Definitions.Items;
 using Creatures.Model.Definitions.Repository;
 using Creatures.Model.Definitions.Repository.Items;
-using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine;
 
 namespace Creatures.Model.Data
@@ -82,10 +81,11 @@ namespace Creatures.Model.Data
         }
 
 
-        private void AddToStack(string id, int value/* , int index */)
+        private void AddToStack(string id, int value)
         {
             var item = GetItem(id);
             item.Value += value;
+            Debug.Log("AddToStack");
         }
 
 

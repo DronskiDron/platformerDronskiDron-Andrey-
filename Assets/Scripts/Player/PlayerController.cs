@@ -9,6 +9,7 @@ using Creatures.Model.Definitions;
 using Creatures.Model.Definitions.Items;
 using General.Components.Health;
 using Creatures.Model.Definitions.Player;
+using General.Components.Perks;
 
 namespace Creatures.Player
 {
@@ -28,12 +29,14 @@ namespace Creatures.Player
         [SerializeField] private AnimatorController _armed;
         [SerializeField] private AnimatorController _disarmed;
 
-        [Header("Super throw")]
+        [Header("Perks")]
         [SerializeField] private Cooldown _superThrowCooldown;
         [SerializeField] private int _superThrowParticles;
         [SerializeField] private float _superThrowDelay;
         [SerializeField] private SpawnComponent _throwSpawner;
         [SerializeField] private ShieldComponent _shield;
+        [SerializeField] private CheckCircleOverlap _waveRange;
+        [SerializeField] private PowerWaveController _waveController;
 
         [Header("Particles")]
         [SerializeField] private ParticleSystem _hitParticles;
@@ -378,6 +381,12 @@ namespace Creatures.Player
             if (_session.PerksModel.IsShieldSupported)
             {
                 _shield.Use();
+                _session.PerksModel.Cooldown.Reset();
+            }
+            if (_session.PerksModel.IsWaveSupported)
+            {
+                _waveRange.Check();
+                _waveController.StartPowerWaveAnimation();
                 _session.PerksModel.Cooldown.Reset();
             }
         }

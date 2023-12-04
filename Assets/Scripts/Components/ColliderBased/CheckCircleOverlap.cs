@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using General.Components.Movement;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
@@ -9,18 +10,18 @@ namespace General.Components.ColliderBased
 {
     public class CheckCircleOverlap : MonoBehaviour
     {
-        [SerializeField] private float _radius = 1;
-        [SerializeField] private LayerMask _mask;
-        [SerializeField] private string[] _tags;
-        [SerializeField] private OnOverlapEvent _onOverlap;
+        [SerializeField] protected float Radius = 1;
+        [SerializeField] protected LayerMask Mask;
+        [SerializeField] protected string[] Tags;
+        [SerializeField] protected OnOverlapEvent OnOverlap;
 
-        private readonly Collider2D[] _interactionResult = new Collider2D[10];
+        protected readonly Collider2D[] InteractionResult = new Collider2D[10];
 
 
         private void OnDrawGizmosSelected()
         {
             Handles.color = HandlesUtils.TranspanentRed;
-            Handles.DrawSolidDisc(transform.position, Vector3.forward, _radius);
+            Handles.DrawSolidDisc(transform.position, Vector3.forward, Radius);
         }
 
 
@@ -28,17 +29,17 @@ namespace General.Components.ColliderBased
         {
             var size = Physics2D.OverlapCircleNonAlloc(
                 transform.position,
-                _radius,
-                _interactionResult,
-                _mask);
+                Radius,
+                InteractionResult,
+                Mask);
 
             for (int i = 0; i < size; i++)
             {
-                var overlapResult = _interactionResult[i];
-                var isInTags = _tags.Any(tag => overlapResult.CompareTag(tag));
+                var overlapResult = InteractionResult[i];
+                var isInTags = Tags.Any(tag => overlapResult.CompareTag(tag));
                 if (isInTags)
                 {
-                    _onOverlap?.Invoke(_interactionResult[i].gameObject);
+                    OnOverlap?.Invoke(InteractionResult[i].gameObject);
                 }
             }
         }

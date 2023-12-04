@@ -1,5 +1,6 @@
 ﻿using System;
 using Creatures.Model.Data;
+using General.Components.TimeManipulation;
 using UI.Windows;
 using UnityEngine;
 
@@ -37,6 +38,7 @@ namespace UI.Hud.BigInventory
                 _session.BigInventory.FillSlotArray(_slots, baseInventory);
                 ActivateSlots();
             }
+            TimeManipulator.StopTime();
         }
 
 
@@ -62,6 +64,7 @@ namespace UI.Hud.BigInventory
             RenewData();
             _session.BigInventory.UnSubscribeSlotEvents(_slots, RenewData);
             _throwComponent.OnChanged -= RenewData;
+            TimeManipulator.RunTimeNormal();
         }
     }
 }

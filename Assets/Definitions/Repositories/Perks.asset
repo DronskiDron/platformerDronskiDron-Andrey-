@@ -34,3 +34,10 @@ MonoBehaviour:
       _itemId: Coin
       _count: 15
     _cooldown: 5
+  - _id: wave
+    _icon: {fileID: 21300000, guid: 429661fb6df54b14283dce0cf26ee0bb, type: 3}
+    _info: 
+    _price:
+      _itemId: Coin
+      _count: 15
+    _cooldown: 2

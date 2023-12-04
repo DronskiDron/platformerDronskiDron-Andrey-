@@ -1,6 +1,6 @@
 ﻿using System;
 using Creatures.Model.Data;
-using UnityEngine;
+using General.Components.TimeManipulation;
 using UnityEngine.SceneManagement;
 using Utils;
 
@@ -14,7 +14,7 @@ namespace UI.Windows.InGameMenu
         protected override void Start()
         {
             base.Start();
-            Time.timeScale = 0;
+            TimeManipulator.StopTime();
         }
 
 
@@ -42,7 +42,7 @@ namespace UI.Windows.InGameMenu
 
         private void OnDestroy()
         {
-            Time.timeScale = DefaultTimeScale;
+            TimeManipulator.RunTimeNormal();
         }
     }
 }

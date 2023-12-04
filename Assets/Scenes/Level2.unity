@@ -1037,12 +1037,12 @@ PrefabInstance:
     - target: {fileID: 7397012321753068564, guid: d3952a124bef11048a15acdd518e8ff7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.32
+      value: -11.27
       objectReference: {fileID: 0}
     - target: {fileID: 7397012321753068564, guid: d3952a124bef11048a15acdd518e8ff7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.07000017
+      value: 0.16
       objectReference: {fileID: 0}
     - target: {fileID: 7397012321753068564, guid: d3952a124bef11048a15acdd518e8ff7,
         type: 3}
@@ -19440,10 +19440,43 @@ MonoBehaviour:
   _data:
     _inventory:
       _inventory:
-      - Id: Coin
-        Value: 0
       - Id: Sword
-        Value: 10
+        Value: 1
+      - Id: Key
+        Value: 1
+      - Id: Key
+        Value: 1
+      - Id: Key
+        Value: 1
+      - Id: Key
+        Value: 1
+      - Id: Key
+        Value: 1
+      _inventorySlots:
+      - Id: None
+        Value: 0
+      - Id: None
+        Value: 0
+      - Id: None
+        Value: 0
+      - Id: None
+        Value: 0
+      - Id: None
+        Value: 0
+      - Id: None
+        Value: 0
+      - Id: None
+        Value: 0
+      - Id: None
+        Value: 0
+      - Id: None
+        Value: 0
+      - Id: None
+        Value: 0
+      - Id: None
+        Value: 0
+      - Id: None
+        Value: 0
     Hp:
       _value: 0
     Perks:
@@ -19452,7 +19485,15 @@ MonoBehaviour:
       _unlocked: []
     Levels:
       _progress: []
-  _defaultCheckPoint: level2-checkpoint1
+  _scenesInfo:
+  - _id: Level1
+    _sceneIndex: 0
+    _levelEnterCheckpoint: level1-checkpoint1
+    _levelExitCheckpoint: level1-checkpoint5
+  - _id: Level2
+    _sceneIndex: 1
+    _levelEnterCheckpoint: level2-checkpoint1
+    _levelExitCheckpoint: level2-checkpoint4
 --- !u!4 &357186670
 Transform:
   m_ObjectHideFlags: 0
@@ -22902,6 +22943,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Crabby
+      objectReference: {fileID: 0}
+    - target: {fileID: 4721150701775001659, guid: 73d2ffc6f1c96214896040b993e2b619,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4721150701775001660, guid: 73d2ffc6f1c96214896040b993e2b619,
         type: 3}
@@ -29288,6 +29334,11 @@ PrefabInstance:
       propertyPath: _id
       value: level2-checkpoint4
       objectReference: {fileID: 0}
+    - target: {fileID: 7953342450325434781, guid: 7031c8d629b08d74d9131690eabba3a8,
+        type: 3}
+      propertyPath: _theLastCheckpointOfTheScene
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7953342450325434783, guid: 7031c8d629b08d74d9131690eabba3a8,
         type: 3}
       propertyPath: m_Name
@@ -30443,6 +30494,16 @@ PrefabInstance:
         type: 3}
       propertyPath: _id
       value: level2-checkpoint1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6600093303050489549, guid: 9967ca0c81ef26c45a67f3fa3cb4f77d,
+        type: 3}
+      propertyPath: IsWayToNextLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6600093303050489549, guid: 9967ca0c81ef26c45a67f3fa3cb4f77d,
+        type: 3}
+      propertyPath: ReturnToPreviousLevel
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9967ca0c81ef26c45a67f3fa3cb4f77d, type: 3}
@@ -31726,6 +31787,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CheckPoint (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7953342450325434783, guid: 7031c8d629b08d74d9131690eabba3a8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7031c8d629b08d74d9131690eabba3a8, type: 3}

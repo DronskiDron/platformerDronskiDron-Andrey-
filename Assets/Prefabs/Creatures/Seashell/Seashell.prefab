@@ -329,7 +329,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mode: 1
-  _isThatGoDestructable: 1
 --- !u!1 &8780161737415204856
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,6 +637,7 @@ MonoBehaviour:
   _onChange:
     m_PersistentCalls:
       m_Calls: []
+  IsPlayer: 0
 --- !u!114 &2240003590049107598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -748,13 +748,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9d082d1d35c65240aa9905834df7f13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _radius: 0.38
-  _mask:
+  Radius: 0.38
+  Mask:
     serializedVersion: 2
     m_Bits: 8192
-  _tags:
+  Tags:
   - Player
-  _onOverlap:
+  OnOverlap:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8801466390659527874}
@@ -781,6 +781,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _changeHealthValue: -1
+  _isBelongToPlayer: 0
+  _isProjectile: 0
 --- !u!58 &8801466390659527875
 CircleCollider2D:
   m_ObjectHideFlags: 0

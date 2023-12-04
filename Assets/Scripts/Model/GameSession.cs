@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Creatures.Model.Data.Models;
+using Creatures.Model.Data.ScenesManagement;
 using General.Components.LevelManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,10 +13,11 @@ namespace Creatures.Model.Data
     public class GameSession : MonoBehaviour
     {
         [SerializeField] private PlayerData _data;
-        [SerializeField] private string _defaultCheckPoint;
+        [SerializeField] private ScenesManagementInfo[] _scenesInfo;
 
         public PlayerData Data => _data;
         private PlayerData _sessionSave;
+        private int _storedSceneIndex;
 
         private readonly CompositeDisposable _trash = new CompositeDisposable();
 
@@ -23,22 +26,35 @@ namespace Creatures.Model.Data
         public PerksModel PerksModel { get; private set; }
         public StatsModel StatsModel { get; private set; }
 
-        private readonly List<string> _checkpoints = new List<string>();
+        private List<string> _checkpoints = new List<string>();
 
 
         private void Awake()
         {
             var existsSession = GetExistsSession();
+            var currentSceneInfo = FindSceneManagementInfo(GetCurrentSceneName());
             if (existsSession != null)
             {
-                existsSession.StartSession(_defaultCheckPoint);
+                existsSession.StartSession(currentSceneInfo.LevelEnterCheckpoint);
                 Destroy(gameObject);
             }
             else
             {
                 InitModels();
                 DontDestroyOnLoad(this);
-                StartSession(_defaultCheckPoint);
+                StartSession(currentSceneInfo.LevelEnterCheckpoint);
+            }
+        }
+
+        private void Update()
+        {
+            if (GetCurrentSceneName() == "Level1")
+            {
+                Debug.Log("lev1");
+            }
+            else
+            {
+                Debug.Log("lev2");
             }
         }
 
@@ -53,14 +69,42 @@ namespace Creatures.Model.Data
 
         private void SpawnPlayer()
         {
+            var currentSceneName = GetCurrentSceneName();
+            var currentSceneInfo = FindSceneManagementInfo(currentSceneName);
             var checkpoints = FindObjectsOfType<CheckPointComponent>();
-            var lastCheckPoint = _checkpoints.Last();
-            foreach (var checkPoint in checkpoints)
+            if (currentSceneInfo.GetSceneStatusFlag() && !IsMoveToUpperIndexScene())
             {
-                if (checkPoint.Id == lastCheckPoint)
+                foreach (var checkPoint in checkpoints)
                 {
-                    checkPoint.SpawnPlayer();
-                    break;
+                    if (checkPoint.Id == FindSceneManagementInfo(GetCurrentSceneName()).LevelExitCheckpoint)
+                    {
+                        checkPoint.SpawnPlayer();
+                        break;
+                    }
+                }
+            }
+            else if (currentSceneInfo.GetSceneStatusFlag() && IsMoveToUpperIndexScene())
+            {
+                foreach (var checkPoint in checkpoints)
+                {
+                    if (checkPoint.Id == FindSceneManagementInfo(GetCurrentSceneName()).LevelEnterCheckpoint)
+                    {
+                        checkPoint.SpawnPlayer();
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                var lastCheckPoint = _checkpoints.Last();
+
+                foreach (var checkPoint in checkpoints)
+                {
+                    if (checkPoint.Id == lastCheckPoint)
+                    {
+                        checkPoint.SpawnPlayer();
+                        break;
+                    }
                 }
             }
         }
@@ -156,6 +200,83 @@ namespace Creatures.Model.Data
         {
             if (!_removedItems.Contains(itemID))
                 _removedItems.Add(itemID);
+        }
+
+
+        public void StoreCheckpoints()
+        {
+            var currentSceneInfo = FindSceneManagementInfo(GetCurrentSceneName());
+            currentSceneInfo.RenewStoredCheckpoints(_checkpoints);
+        }
+
+
+        public ScenesManagementInfo FindSceneManagementInfo(string value)
+        {
+            foreach (var scene in _scenesInfo)
+            {
+                if (scene.Id == value)
+                {
+                    return scene;
+                }
+            }
+            return null;
+        }
+
+
+        public string GetCurrentSceneName()
+        {
+            var currentSceneName = SceneManager.GetActiveScene().name;
+            return currentSceneName;
+        }
+
+
+        public void ClearCheckpointList()
+        {
+            _checkpoints.Clear();
+        }
+
+
+        public void SetThatLevelWasFinished()
+        {
+            foreach (var scene in _scenesInfo)
+            {
+                if (scene.Id == GetCurrentSceneName())
+                {
+                    scene.ChangeSceneStatusFlag(true);
+                    break;
+                }
+            }
+        }
+
+
+        public bool GetThatSceneWasFinished()
+        {
+            var checkpoints = FindObjectsOfType<CheckPointComponent>();
+            foreach (var checkpoint in checkpoints)
+            {
+                if (checkpoint.Id == FindSceneManagementInfo(GetCurrentSceneName()).LevelExitCheckpoint)
+                {
+                    if (checkpoint.WasChecked == true)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+
+        public void StoreSceneIndex()
+        {
+            var currentSceneInfo = FindSceneManagementInfo(GetCurrentSceneName());
+            _storedSceneIndex = currentSceneInfo.SceneIndex;
+        }
+
+
+        public bool IsMoveToUpperIndexScene()
+        {
+            var currentSceneInfo = FindSceneManagementInfo(GetCurrentSceneName());
+            return _storedSceneIndex < currentSceneInfo.SceneIndex ? true : false;
         }
     }
 }

@@ -221,5 +221,17 @@ namespace Creatures
                 GroundCheck.SetIsPressingJump(vector);
             }
         }
+
+
+        public Rigidbody2D GetRigidbody()
+        {
+            return Rigidbody;
+        }
+
+
+        public void ChangeSpeed(float value)
+        {
+            _speed = value;
+        }
     }
 }

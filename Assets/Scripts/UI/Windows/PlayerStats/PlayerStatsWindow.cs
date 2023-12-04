@@ -1,6 +1,7 @@
 ﻿using Creatures.Model.Data;
 using Creatures.Model.Definitions;
 using Creatures.Model.Definitions.Player;
+using General.Components.TimeManipulation;
 using UI.Widgets;
 using UnityEngine;
 using UnityEngine.UI;
@@ -38,6 +39,7 @@ namespace UI.Windows.Perks.PlayerStats
             _trash.Retain(_upgradeButton.onClick.Subscribe(OnUpgrade));
 
             OnStatsChanged();
+            TimeManipulator.StopTime();
         }
 
 
@@ -66,6 +68,7 @@ namespace UI.Windows.Perks.PlayerStats
         private void OnDestroy()
         {
             _trash.Dispose();
+            TimeManipulator.RunTimeNormal();
         }
     }
 }

@@ -2,6 +2,7 @@
 using Creatures.Model.Definitions;
 using Creatures.Model.Definitions.Localisation;
 using Creatures.Model.Definitions.Repository;
+using General.Components.TimeManipulation;
 using UI.Widgets;
 using UnityEngine;
 using UnityEngine.UI;

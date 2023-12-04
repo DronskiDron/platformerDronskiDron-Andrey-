@@ -11,10 +11,13 @@ namespace General.Components.LevelManagement
         [SerializeField] private SpawnComponent _playerSpawner;
         [SerializeField] private UnityEvent _setChecked;
         [SerializeField] private UnityEvent _setUnchecked;
+        [SerializeField] private bool _theLastCheckpointOfTheScene = false;
 
-        public string Id => _id;
+        public string Id { get => _id; set => _id = value; }
+        public bool WasChecked { get => _wasChecked; private set => _wasChecked = value; }
 
         private GameSession _session;
+        private bool _wasChecked = false;
 
 
         private void Start()
@@ -31,12 +34,22 @@ namespace General.Components.LevelManagement
         {
             _session.SetChecked(_id);
             _setChecked?.Invoke();
+            InformSession();
         }
 
 
         public void SpawnPlayer()
         {
             _playerSpawner.Spawn();
+        }
+
+
+        private void InformSession()
+        {
+            WasChecked = true;
+            if (_theLastCheckpointOfTheScene)
+                _session.SetThatLevelWasFinished();
+            _session.StoreCheckpoints();
         }
     }
 }

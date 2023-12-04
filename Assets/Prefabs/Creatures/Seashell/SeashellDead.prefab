@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 5892622798387508439}
   - component: {fileID: 3572076658932708812}
   - component: {fileID: 4556740508115097706}
+  - component: {fileID: 4553396087298690866}
+  - component: {fileID: 2928621820764670205}
   m_Layer: 12
   m_Name: SeashellDead
   m_TagString: Untagged
@@ -145,6 +147,45 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mode: 1
+--- !u!114 &4553396087298690866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2749635562111947085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 782d9b8a5e440a2409cf67b042b97675, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _explosion: {fileID: 2928621820764670205}
+  _goArray:
+  - {fileID: 8001041154572382655}
+  - {fileID: 4104189068914212019}
+  - {fileID: 3762667114168627587}
+  - {fileID: 3640778915777616442}
+--- !u!114 &2928621820764670205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2749635562111947085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5957bf106631a54093bad9e0d056d1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Radius: 1
+  Mask:
+    serializedVersion: 2
+    m_Bits: 0
+  Tags: []
+  OnOverlap:
+    m_PersistentCalls:
+      m_Calls: []
+  _velosity: 3
 --- !u!1 &3640778915777616442
 GameObject:
   m_ObjectHideFlags: 0
