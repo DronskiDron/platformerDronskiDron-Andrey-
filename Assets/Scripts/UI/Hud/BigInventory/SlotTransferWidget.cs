@@ -1,5 +1,4 @@
-﻿using Creatures.Model.Data;
-using Creatures.Model.Definitions;
+﻿using Creatures.Model.Definitions;
 using Creatures.Model.Definitions.Items;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -8,7 +7,7 @@ using UnityEngine.UI;
 
 namespace UI.Hud.BigInventory
 {
-    public class SlotTransferWidget : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropHandler
+    public class SlotTransferWidget : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropHandler, IPointerClickHandler
     {
         [SerializeField] private BigInventoryTemp _temp;
         [SerializeField] private Image _panel;
@@ -20,16 +19,25 @@ namespace UI.Hud.BigInventory
         public CanvasGroup CanvasGroup { get; set; }
 
         [HideInInspector] public bool WasDone = false;
+        private ItemInfoController _infoController;
 
 
         private void Start()
         {
             CanvasGroup = gameObject.GetComponent<CanvasGroup>();
+            _infoController = FindObjectOfType<ItemInfoController>();
+        }
+
+
+        public void OnPointerClick(PointerEventData eventData)
+        {
+            _infoController?.RenewItemInfo(_parentSlot);
         }
 
 
         public void OnBeginDrag(PointerEventData eventData)
         {
+            _infoController?.RenewItemInfo(_parentSlot);
             _temp.SlotIndex = _parentSlot.SlotIndex;
             transform.SetParent(_executiveObj);
             Panel.gameObject.SetActive(true);
@@ -61,26 +69,15 @@ namespace UI.Hud.BigInventory
                 var donorWidget = draggedObject.GetComponent<SlotTransferWidget>();
                 if (donorWidget.ParentSlot.Icon.sprite != null)
                 {
-                    _temp.InconstantId = _parentSlot.Id;
-                    _temp.InconstantItemSprite = _parentSlot.Icon.sprite;
-                    _temp.InconstantItemTextValue = _parentSlot.TextValue.text;
-                    _temp.InconstantValue = _parentSlot.Value;
-
-                    _parentSlot.Id = donorWidget.ParentSlot.Id;
-                    _parentSlot.Icon.sprite = donorWidget.ParentSlot.Icon.sprite;
-                    _parentSlot.TextValue.text = donorWidget.ParentSlot.TextValue.text;
-                    _parentSlot.Value = donorWidget.ParentSlot.Value;
+                    _temp.RenewTemp(_parentSlot);
+                    ExchangeInfo(_parentSlot, donorWidget.ParentSlot);
                     _parentSlot.TextValue.gameObject.SetActive(true);
 
                     if (_parentSlot.Icon.sprite != null)
                         CanvasGroup.alpha = 1;
 
                     DonorAfterDrug(donorWidget);
-
-                    donorWidget.ParentSlot.Id = _temp.InconstantId;
-                    donorWidget.ParentSlot.Icon.sprite = _temp.InconstantItemSprite;
-                    donorWidget.ParentSlot.TextValue.text = _temp.InconstantItemTextValue;
-                    donorWidget.ParentSlot.Value = _temp.InconstantValue;
+                    _temp.RenewFromTemp(donorWidget.ParentSlot);
 
                     if (donorWidget.ParentSlot.Icon.sprite == null)
                         donorWidget.CanvasGroup.alpha = 0;
@@ -115,6 +112,15 @@ namespace UI.Hud.BigInventory
             donorWidget.Panel.gameObject.SetActive(false);
             donorWidget.gameObject.SetActive(true);
             donorWidget.gameObject.GetComponent<CanvasGroup>().blocksRaycasts = true;
+        }
+
+
+        private void ExchangeInfo(BigInventorySlotWidget acceptorWidget, BigInventorySlotWidget donorWidget)
+        {
+            acceptorWidget.Id = donorWidget.Id;
+            acceptorWidget.Icon.sprite = donorWidget.Icon.sprite;
+            acceptorWidget.TextValue.text = donorWidget.TextValue.text;
+            acceptorWidget.Value = donorWidget.Value;
         }
 
 

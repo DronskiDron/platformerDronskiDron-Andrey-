@@ -46,18 +46,6 @@ namespace Creatures.Model.Data
             }
         }
 
-        private void Update()
-        {
-            if (GetCurrentSceneName() == "Level1")
-            {
-                Debug.Log("lev1");
-            }
-            else
-            {
-                Debug.Log("lev2");
-            }
-        }
-
 
         private void StartSession(string defaultCheckPoint)
         {

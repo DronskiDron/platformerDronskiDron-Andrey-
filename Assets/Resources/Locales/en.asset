@@ -92,6 +92,8 @@ MonoBehaviour:
     Value: "This is super throw!\r"
   - Key: shield_info
     Value: "This is fource shield!\r"
+  - Key: wave_info
+    Value: "This is power wave!\r"
   - Key: '###_stats_###'
     Value: "\r"
   - Key: health_stat

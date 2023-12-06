@@ -12,6 +12,24 @@ namespace UI.Hud.BigInventory
         [HideInInspector] public int SlotIndex;
 
 
+        public void RenewTemp(BigInventorySlotWidget slotWidget)
+        {
+            InconstantId = slotWidget.Id;
+            InconstantItemSprite = slotWidget.Icon.sprite;
+            InconstantItemTextValue = slotWidget.TextValue.text;
+            InconstantValue = slotWidget.Value;
+        }
+
+
+        public void RenewFromTemp(BigInventorySlotWidget slotWidget)
+        {
+            slotWidget.Id = InconstantId;
+            slotWidget.Icon.sprite = InconstantItemSprite;
+            slotWidget.TextValue.text = InconstantItemTextValue;
+            slotWidget.Value = InconstantValue;
+        }
+
+
 
     }
 }

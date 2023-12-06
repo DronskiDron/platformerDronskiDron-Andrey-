@@ -92,6 +92,8 @@ MonoBehaviour:
     Value: "\xA1Esto es un s\xFAper lanzamiento!\r"
   - Key: shield_info
     Value: "\xA1Este es el escudo de Fource!\r"
+  - Key: wave_info
+    Value: "\xA1Esta es una ola de energ\xEDa!\r"
   - Key: '###_stats_###'
     Value: "\r"
   - Key: health_stat

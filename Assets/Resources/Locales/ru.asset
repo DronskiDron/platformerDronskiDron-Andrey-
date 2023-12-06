@@ -98,6 +98,8 @@ MonoBehaviour:
   - Key: shield_info
     Value: "\u0421\u0438\u043B\u043E\u0432\u043E\u0439 \u0449\u0438\u0442 \u0437\u0430\u0449\u0438\u0442\u0438\u0442
       \u0412\u0430\u0441!\r"
+  - Key: wave_info
+    Value: "\u042D\u0442\u043E \u0441\u0438\u043B\u043E\u0432\u0430\u044F \u0432\u043E\u043B\u043D\u0430!\r"
   - Key: '###_stats_###'
     Value: "\r"
   - Key: health_stat
