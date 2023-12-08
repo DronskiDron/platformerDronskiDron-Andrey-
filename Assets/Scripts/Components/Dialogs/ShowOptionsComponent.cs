@@ -1,4 +1,5 @@
-﻿using UI.Hud.Dialogs;
+﻿using General.Components.TimeManipulation;
+using UI.Hud.Dialogs;
 using UnityEngine;
 
 namespace General.Components.Dialogs

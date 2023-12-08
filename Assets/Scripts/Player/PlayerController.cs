@@ -10,6 +10,7 @@ using Creatures.Model.Definitions.Items;
 using General.Components.Health;
 using Creatures.Model.Definitions.Player;
 using General.Components.Perks;
+using General.Components.TimeManipulation;
 
 namespace Creatures.Player
 {

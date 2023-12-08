@@ -2,7 +2,7 @@
 
 namespace General.Components.TimeManipulation
 {
-    public class TimeManipulator : MonoBehaviour
+    public class TimeManipulator
     {
         public static void StopTime()
         {

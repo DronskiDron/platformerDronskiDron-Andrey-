@@ -27046,6 +27046,10 @@ MonoBehaviour:
     _sceneIndex: 1
     _levelEnterCheckpoint: level2-checkpoint1
     _levelExitCheckpoint: level2-checkpoint4
+  - _id: Level3
+    _sceneIndex: 2
+    _levelEnterCheckpoint: level3-checkpoint1
+    _levelExitCheckpoint: level3-checkpoint4
 --- !u!4 &1857664937
 Transform:
   m_ObjectHideFlags: 0
