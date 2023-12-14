@@ -35,14 +35,7 @@ namespace Creatures.Model.Data.Properties
             get => _value;
             set
             {
-                /* var isSame = _value.Equals(value);
-                if (isSame) return;
-                var oldValue = _value;
-                _value = value;
-                InvokeChangedEvent(_value, oldValue); */
-                var isSame = false;
-                if (_value != null)
-                    isSame = _value.Equals(value);
+                var isSame = (_value != null) ? _value.Equals(value) : false;
                 if (isSame) return;
                 var oldValue = _value;
                 _value = value;

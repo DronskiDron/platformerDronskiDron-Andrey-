@@ -11,7 +11,8 @@
                     "id": "656bfa39-51ed-40ca-8479-40bd859044f6",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Jumping",
@@ -19,7 +20,8 @@
                     "id": "b67c8f95-a5fd-4987-b410-ba8af1edc8ea",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Interact",
@@ -27,7 +29,8 @@
                     "id": "2474d028-380b-41a4-bab6-15e5316248d6",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Attack",
@@ -35,7 +38,8 @@
                     "id": "9944b2a1-4df4-4435-bdb2-564184c34e3d",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Throw",
@@ -43,7 +47,8 @@
                     "id": "c15cd641-f292-4cf9-8a91-897121cb1ae5",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "SuperThrow",
@@ -51,7 +56,8 @@
                     "id": "25e63cd5-ea14-4d86-a5bb-70d0c8d66af8",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "NextItem",
@@ -59,7 +65,8 @@
                     "id": "203c9556-cb0f-4c70-b654-3ae571e7797a",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "UsePerk",
@@ -67,7 +74,17 @@
                     "id": "8c292d52-0a41-471a-ace5-51c52ab6d49a",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "UseLantern",
+                    "type": "Button",
+                    "id": "9b7ecb48-d522-451c-89d5-e51104ebf16b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -200,6 +217,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "UsePerk",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "eb2e5af4-dc4c-4812-8ddd-308017a0b8f0",
+                    "path": "<Keyboard>/v",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UseLantern",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

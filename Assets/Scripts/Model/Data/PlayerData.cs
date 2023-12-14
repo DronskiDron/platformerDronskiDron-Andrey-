@@ -12,6 +12,7 @@ namespace Creatures.Model.Data
         public IntProperty Hp = new IntProperty();
         public PerksData Perks = new PerksData();
         public LevelData Levels = new LevelData();
+        public IntProperty Fuel = new IntProperty();
 
         public InventoryData Inventory => _inventory;
 

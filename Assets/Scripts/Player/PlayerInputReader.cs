@@ -61,6 +61,12 @@ namespace Creatures
         {
             _player.UsePerk();
         }
+
+
+        private void OnUseLantern(InputValue context)
+        {
+            _player.UseLantern();
+        }
     }
 }
 

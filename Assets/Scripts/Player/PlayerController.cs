@@ -39,6 +39,9 @@ namespace Creatures.Player
         [SerializeField] private CheckCircleOverlap _waveRange;
         [SerializeField] private PowerWaveController _waveController;
 
+        [Header("Tools")]
+        [SerializeField] private GameObject _lantern;
+
         [Header("Particles")]
         [SerializeField] private ParticleSystem _hitParticles;
         private static readonly int ThrowKey = Animator.StringToHash("throw");
@@ -390,6 +393,13 @@ namespace Creatures.Player
                 _waveController.StartPowerWaveAnimation();
                 _session.PerksModel.Cooldown.Reset();
             }
+        }
+
+
+        public void UseLantern()
+        {
+            if (_session.Data.Fuel.Value > 0)
+                _lantern.SetActive(!_lantern.activeSelf);
         }
     }
 }
