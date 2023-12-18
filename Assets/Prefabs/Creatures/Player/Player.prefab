@@ -5604,7 +5604,7 @@ MonoBehaviour:
   _shield: {fileID: 5147739088167768295}
   _waveRange: {fileID: 4885326773362573550}
   _waveController: {fileID: 4331080892936099157}
-  _lantern: {fileID: 8417344968844800320}
+  _lantern: {fileID: 2432169607766799254}
   _hitParticles: {fileID: 1578835228}
 --- !u!114 &4721150701775001658
 MonoBehaviour:

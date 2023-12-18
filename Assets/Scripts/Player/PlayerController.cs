@@ -11,6 +11,7 @@ using General.Components.Health;
 using Creatures.Model.Definitions.Player;
 using General.Components.Perks;
 using General.Components.TimeManipulation;
+using General.Components.GameplayTools;
 
 namespace Creatures.Player
 {
@@ -40,7 +41,7 @@ namespace Creatures.Player
         [SerializeField] private PowerWaveController _waveController;
 
         [Header("Tools")]
-        [SerializeField] private GameObject _lantern;
+        [SerializeField] private LanternComponent _lantern;
 
         [Header("Particles")]
         [SerializeField] private ParticleSystem _hitParticles;
@@ -98,6 +99,7 @@ namespace Creatures.Player
 
             _startSlamDownDamageVelocity = _slamDownDamageVelocity;
             UpdatePlayerWeapon();
+            _lantern.InitLantern();
         }
 
 
@@ -399,7 +401,7 @@ namespace Creatures.Player
         public void UseLantern()
         {
             if (_session.Data.Fuel.Value > 0)
-                _lantern.SetActive(!_lantern.activeSelf);
+                _lantern.gameObject.SetActive(!_lantern.gameObject.activeSelf);
         }
     }
 }
