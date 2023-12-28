@@ -1,4 +1,5 @@
 ﻿using Creatures.Model.Data;
+using UI.LevelsLoader;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,6 +13,7 @@ namespace General.Components.LevelManagement
         public void Exit()
         {
             var session = FindObjectOfType<GameSession>();
+            var loader = FindObjectOfType<LevelLoader>();
 
             if (session.GetThatSceneWasFinished())
                 session.SetThatLevelWasFinished();
@@ -19,7 +21,7 @@ namespace General.Components.LevelManagement
             session.StoreSceneIndex();
             session.SaveSession();
             session.ClearCheckpointList();
-            SceneManager.LoadScene(_sceneName);
+            loader.LoadLevel(_sceneName);
         }
     }
 }

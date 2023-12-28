@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7416052736995849934}
   - component: {fileID: 7416052736995849937}
   - component: {fileID: 7416052736995849936}
+  - component: {fileID: 8940680691470451956}
   m_Layer: 9
   m_Name: CrabbyDialog
   m_TagString: Interactable
@@ -130,6 +131,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8940680691470451956}
+        m_MethodName: Set
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7416052736995849932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,6 +175,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7416052736995849937}
         m_MethodName: Show
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8940680691470451956}
+        m_MethodName: SetToDefault
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -232,3 +255,17 @@ MonoBehaviour:
     _onComplete:
       m_PersistentCalls:
         m_Calls: []
+--- !u!114 &8940680691470451956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7416052736995849928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3058dd9bcbcc0f946834039b3187adfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _profile: {fileID: 11400000, guid: b55e348f23addc14aaea2361893d7de7, type: 2}
+  _defaultProfile: {fileID: 11400000, guid: 77b3169e39d2c414d93ea72cd36f68c6, type: 2}

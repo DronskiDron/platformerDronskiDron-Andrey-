@@ -68,3 +68,6 @@ TagManager:
   - name: Grass
     uniqueID: 250578295
     locked: 0
+  - name: Overlay
+    uniqueID: 2504666129
+    locked: 0

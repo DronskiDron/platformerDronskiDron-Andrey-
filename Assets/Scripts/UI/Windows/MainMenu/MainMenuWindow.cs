@@ -1,6 +1,6 @@
 ﻿using System;
+using UI.LevelsLoader;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using Utils;
 
 namespace UI.Windows.MainMenu
@@ -18,7 +18,11 @@ namespace UI.Windows.MainMenu
 
         public void OnStartGame()
         {
-            _closeAction = () => { SceneManager.LoadScene("Level1"); };
+            _closeAction = () =>
+            {
+                var loader = FindObjectOfType<LevelLoader>();
+                loader.LoadLevel("Level1");
+            };
             Close();
         }
 

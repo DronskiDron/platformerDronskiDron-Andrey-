@@ -10,8 +10,8 @@ using Creatures.Model.Definitions.Items;
 using General.Components.Health;
 using Creatures.Model.Definitions.Player;
 using General.Components.Perks;
-using General.Components.TimeManipulation;
 using General.Components.GameplayTools;
+using Effects.CameraRelated;
 
 namespace Creatures.Player
 {
@@ -59,6 +59,7 @@ namespace Creatures.Player
         private GameSession _session;
         private float _defaultGravityScale;
         private HealthComponent _healthComponent;
+        private CameraShakeEffect _cameraShake;
 
         private const string SwordId = "Sword";
         private int CoinCount => _session.Data.Inventory.Count("Coin");
@@ -93,6 +94,7 @@ namespace Creatures.Player
             base.Start();
             _session = FindObjectOfType<GameSession>();
             _healthComponent = FindObjectOfType<HealthComponent>();
+            _cameraShake = FindObjectOfType<CameraShakeEffect>();
             _session.Data.Hp.Value = (int)_session.StatsModel.GetValue(StatId.Hp); ;
             _session.Data.Inventory.OnChanged += OnInventoryChanged;
             _session.Data.Inventory.OnChanged += InventoryLogger;
@@ -189,6 +191,7 @@ namespace Creatures.Player
         public override void TakeDamage()
         {
             base.TakeDamage();
+            _cameraShake?.Shake();
             if (CoinCount > 0)
             {
                 SpawnCoins();
@@ -391,6 +394,7 @@ namespace Creatures.Player
             }
             if (_session.PerksModel.IsWaveSupported)
             {
+                Sounds.Play("Range");
                 _waveRange.Check();
                 _waveController.StartPowerWaveAnimation();
                 _session.PerksModel.Cooldown.Reset();
