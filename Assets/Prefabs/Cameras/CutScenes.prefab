@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2625460724213754289}
   - component: {fileID: 2625460724213754288}
   m_Layer: 0
-  m_Name: CM StateDrivenCamera1
+  m_Name: CutScenes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

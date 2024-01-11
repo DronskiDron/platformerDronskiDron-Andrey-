@@ -7,6 +7,14 @@ namespace General.Components.Interactions
         [SerializeField] private Animator _animator;
         [SerializeField] private bool _state;
         [SerializeField] private string _animationKey;
+        [SerializeField] private bool _updateOnStart;
+
+
+        private void Start()
+        {
+            if (_updateOnStart)
+                _animator.SetBool(_animationKey, _state);
+        }
 
 
         public void Switch()
@@ -14,6 +22,7 @@ namespace General.Components.Interactions
             _state = !_state;
             _animator.SetBool(_animationKey, _state);
         }
+
 
         [ContextMenu("Switch")]
         public void SwitchIt()

@@ -1,7 +1,6 @@
 ﻿using Creatures.Model.Data;
 using UI.LevelsLoader;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace General.Components.LevelManagement
 {

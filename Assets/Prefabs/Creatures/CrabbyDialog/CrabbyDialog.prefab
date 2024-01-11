@@ -158,15 +158,13 @@ MonoBehaviour:
   _bound:
     _sentences:
     - _valued: I can teach you!
-      _icon: {fileID: 1237259564474456676, guid: efbfe64388ee87240af96c489d14ffa6,
-        type: 3}
+      _icon: {fileID: 21300000, guid: 45793854721a84eada5614a89b1b1e29, type: 3}
       _side: 1
     - _valued: Good!
-      _icon: {fileID: 21300000, guid: 64b4c424e7e4da940890369cbba85f7f, type: 3}
+      _icon: {fileID: 21300000, guid: 3a60a2548828f4c78b82c10389a7fec5, type: 3}
       _side: 0
     - _valued: Let's go!
-      _icon: {fileID: 1237259564474456676, guid: efbfe64388ee87240af96c489d14ffa6,
-        type: 3}
+      _icon: {fileID: 21300000, guid: 45793854721a84eada5614a89b1b1e29, type: 3}
       _side: 1
     _type: 1
   _external: {fileID: 0}

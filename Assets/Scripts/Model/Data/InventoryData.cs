@@ -85,7 +85,6 @@ namespace Creatures.Model.Data
         {
             var item = GetItem(id);
             item.Value += value;
-            Debug.Log("AddToStack");
         }
 
 

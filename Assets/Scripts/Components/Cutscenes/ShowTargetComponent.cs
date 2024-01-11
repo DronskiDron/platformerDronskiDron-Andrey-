@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 namespace General.Components.Cutscenes
 {
     public class ShowTargetComponent : MonoBehaviour
     {
         [SerializeField] private Transform _target;
-        [SerializeField] private CameraStateController _controller;
+        [SerializeField] private ShowTargetController _controller;
         [SerializeField] private float _delay = 0.5f;
 
 
@@ -13,7 +14,7 @@ namespace General.Components.Cutscenes
         {
             if (_controller == null)
             {
-                _controller = FindObjectOfType<CameraStateController>();
+                _controller = FindObjectOfType<ShowTargetController>();
             }
         }
 
