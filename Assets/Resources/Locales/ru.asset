@@ -60,6 +60,14 @@ MonoBehaviour:
     Value: "\u0422\u0435\u0431\u0435 \u043D\u0443\u0436\u0435\u043D \u043A\u043B\u044E\u0447...\r"
   - Key: wood_door_dial_2
     Value: "\u041E\u0442\u044B\u0449\u0438 \u0435\u0433\u043E...\r"
+  - Key: patric_dial_1p
+    Value: "\u042F \u0443\u0431\u044C\u044E \u0442\u0435\u0431\u044F!\r"
+  - Key: patric_dial_2h
+    Value: "\u041D\u0415\u0422! \u042F \u0443\u0431\u044C\u044E \u0442\u0435\u0431\u044F!\r"
+  - Key: patric_dial_3p
+    Value: "\u041D\u0435\u0435\u0435\u0442!!!!!!!!!!\r"
+  - Key: patric_dial_4h
+    Value: "\u042F \u0436\u0435 \u0433\u043E\u0432\u043E\u0440\u0438\u043B!\r"
   - Key: '###_interactions_###'
     Value: "###\r"
   - Key: helm_interact

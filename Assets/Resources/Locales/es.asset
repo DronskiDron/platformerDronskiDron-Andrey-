@@ -60,6 +60,14 @@ MonoBehaviour:
     Value: "Necesitas una llave...\r"
   - Key: wood_door_dial_2
     Value: "Encuentra uno en alg\xFAn lugar...\r"
+  - Key: patric_dial_1p
+    Value: "\xA1Voy a matarte!\r"
+  - Key: patric_dial_2h
+    Value: "\xA1NO! \xA1Voy a matarte!\r"
+  - Key: patric_dial_3p
+    Value: "No0000000!!!!!!!!!!!!\r"
+  - Key: patric_dial_4h
+    Value: "\xA1Te lo dije!\r"
   - Key: '###_interactions_###'
     Value: "###\r"
   - Key: helm_interact
