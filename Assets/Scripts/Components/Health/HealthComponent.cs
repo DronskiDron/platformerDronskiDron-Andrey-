@@ -20,12 +20,13 @@ namespace General.Components.Health
 
         private int _startHealth;
         private bool _isImmortal = false;
-        private bool _isShielUse = false;
+        private bool _isShieldUse = false;
         public bool IsPlayer = false;
         private GameSession _session;
 
         public int Health => _health;
-        public bool IsShieldUse { get => _isShielUse; set => _isShielUse = value; }
+        public bool IsShieldUse { get => _isShieldUse; set => _isShieldUse = value; }
+        public UnityEvent OnDamage => _onDamage;
 
 
         private void Start()
@@ -54,12 +55,10 @@ namespace General.Components.Health
 
         public void RenewHealth(int gotHelth)
         {
-            if (_health <= 0) return;
+            if (gotHelth == 0 || _health <= 0) return;
 
-            if (_isImmortal)
-            {
-                gotHelth = 0;
-            }
+            if (_isImmortal && gotHelth < 0)
+                return;
 
             _health += gotHelth;
 
@@ -68,9 +67,10 @@ namespace General.Components.Health
                 _onHeal?.Invoke();
                 if (_health > _startHealth) _health = _startHealth;
             }
-            else
+            else if (gotHelth < 0 && _isImmortal == false)
             {
                 _onDamage?.Invoke();
+
                 if (_health <= 0)
                 {
                     _onDie?.Invoke();
