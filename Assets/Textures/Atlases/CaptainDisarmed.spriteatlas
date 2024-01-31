@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CaptainDisarmed
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 0
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: ec25f1a967029b54d90de4f894d17d90, type: 3}
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: b255011023224c54aba96ec0a1229129, type: 3}
+  - {fileID: 21300000, guid: 84af2a50ca8907343a7ed8d0c329d608, type: 3}
+  - {fileID: 21300000, guid: 5836d9807fc94f14bb38712354db63b1, type: 3}
+  - {fileID: 21300000, guid: 10a5cd0184ffee544841744251099939, type: 3}
+  - {fileID: 21300000, guid: 24c128712a5c8ae49971d6d54b323fd0, type: 3}
+  - {fileID: 21300000, guid: 2b66d652233f44d42abc3a9241a52502, type: 3}
+  - {fileID: 21300000, guid: a5ce6492cc9dc584e84e1e2220a25a3a, type: 3}
+  - {fileID: 21300000, guid: de2318b3b745a134ab8678d40d97b796, type: 3}
+  - {fileID: 21300000, guid: d328eec32162a0b438be49e92c457434, type: 3}
+  - {fileID: 21300000, guid: 20cfb90445dbb2344873edeb16edc209, type: 3}
+  - {fileID: 21300000, guid: 65f02c140f1ad724d80a4df00dc2d1ec, type: 3}
+  - {fileID: 21300000, guid: 64b4c424e7e4da940890369cbba85f7f, type: 3}
+  - {fileID: 21300000, guid: f134f754b505f574db4cf2b1207c359b, type: 3}
+  - {fileID: 21300000, guid: da4480a42a7b8d342aaca43c161771af, type: 3}
+  - {fileID: 21300000, guid: 2b9f5425ae3dd0249ac6a3d696a6e6ee, type: 3}
+  - {fileID: 21300000, guid: b76ee975454778d489b9ae71de96021a, type: 3}
+  - {fileID: 21300000, guid: 70ab87950ba669c459a739ec2e37927a, type: 3}
+  - {fileID: 21300000, guid: e62912462227819458d1633012a39e42, type: 3}
+  - {fileID: 21300000, guid: c8192696e29e77940983efd25b925c66, type: 3}
+  - {fileID: 21300000, guid: 7c3b7db6c37555e418cabaaeee43cafd, type: 3}
+  - {fileID: 21300000, guid: 88167a28be4574742a1743440613b7ca, type: 3}
+  - {fileID: 21300000, guid: 5fc6fb482975528478be8b398279b078, type: 3}
+  - {fileID: 21300000, guid: bba5cf984c2ec51488fd60eb92f7e97c, type: 3}
+  - {fileID: 21300000, guid: a015dee8700a32f45bf9caaba3e2f8f6, type: 3}
+  - {fileID: 21300000, guid: 20a00af8f8b68d446aa04578b98514a5, type: 3}
+  - {fileID: 21300000, guid: 468db339c48cff24d82b132302151817, type: 3}
+  - {fileID: 21300000, guid: 30a31449d233a7b4e9f33dbb535071ff, type: 3}
+  - {fileID: 21300000, guid: 3d196999e9bced04d808e13b019ad91e, type: 3}
+  - {fileID: 21300000, guid: 8db00e993041ee24ba712daab7cf2c1f, type: 3}
+  - {fileID: 21300000, guid: 8c44efa9085835c45aef4d864f9331b7, type: 3}
+  - {fileID: 21300000, guid: 6cf330f9ae2b88a4e93f48896d37fd61, type: 3}
+  - {fileID: 21300000, guid: a359409aea28cc841a4a0b349b47f56f, type: 3}
+  - {fileID: 21300000, guid: cb6b8a7b377cbed4dbfe05fd3e6f231c, type: 3}
+  - {fileID: 21300000, guid: ed31aa7cfadc1e0449fe068267610e99, type: 3}
+  - {fileID: 21300000, guid: 1f99609de61f30544a8626ad8682b2b6, type: 3}
+  - {fileID: 21300000, guid: c2f0c62ef12633d47a4c339bf8324d5f, type: 3}
+  - {fileID: 21300000, guid: bd01eb6ee2a97d24195f715be7326603, type: 3}
+  - {fileID: 21300000, guid: 3cb22ecef287ac84ea3b0e070b9a3491, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Hit 03
+  - Idle 02
+  - wall-armed
+  - Idle 05
+  - Run 03
+  - Ground 02
+  - Idle 04
+  - Hit 01
+  - Dead Hit 02
+  - Hit 02
+  - Dead Hit 03
+  - Idle 01
+  - Dead Ground 01
+  - Heal 01
+  - wall
+  - Fall 01
+  - Heal 04
+  - Dead Ground 03
+  - Dead Hit 04
+  - Jump 02
+  - Hit 04
+  - Throw Sword 03
+  - Throw Sword 02
+  - Run 05
+  - Dead Ground 02
+  - Run 04
+  - Run 06
+  - Heal 03
+  - Run 02
+  - Jump 01
+  - Jump 03
+  - Ground 01
+  - Throw Sword 01
+  - Dead Ground 04
+  - Heal 02
+  - Dead Hit 01
+  - Run 01
+  - Idle 03
+  m_Tag: CaptainDisarmed
+  m_IsVariant: 0

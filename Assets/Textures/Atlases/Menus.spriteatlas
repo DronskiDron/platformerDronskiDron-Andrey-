@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Menus
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 0
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 07f49214e2e4d5349b7522eac727583d, type: 3}
+    - {fileID: 102900000, guid: c3c98c281d09df94d9ab8c8c03265c72, type: 3}
+    - {fileID: 102900000, guid: 0530d8970ce0c0f44b7541b4f16f80ef, type: 3}
+    - {fileID: 102900000, guid: 60073dbd5d463f54798b40181fcdad7c, type: 3}
+    - {fileID: 102900000, guid: 67abd76f3cc667647a4336ffab50b0ff, type: 3}
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 23816db013ed8e74c855e3805fa23d09, type: 3}
+  - {fileID: 21300000, guid: 7b26207146287e746a3bbebf50c379cb, type: 3}
+  - {fileID: 21300000, guid: 7e193081796924042957db6d01fe217a, type: 3}
+  - {fileID: 21300000, guid: 2044c71246555304e834cfaa23b42d88, type: 3}
+  - {fileID: 21300000, guid: afda6522c66f2eb4faba6a3cc0623cde, type: 3}
+  - {fileID: 21300000, guid: 11644e52f42e3774e9ad302f25d4fda1, type: 3}
+  - {fileID: 21300000, guid: 5aedfda27ed83904b9f4f1201fecd744, type: 3}
+  - {fileID: 21300000, guid: 59ffd5b39b4b32d40a775cb33de45a69, type: 3}
+  - {fileID: 21300000, guid: 99cc41246726c1d48a2055414316e122, type: 3}
+  - {fileID: 21300000, guid: 701c04446f3996843bcc21ad058df489, type: 3}
+  - {fileID: 21300000, guid: 96bd75b4a51fd8540aa2c07127e9d29a, type: 3}
+  - {fileID: 21300000, guid: f5bf0c05556edae4cb2fd86feb8e1463, type: 3}
+  - {fileID: 21300000, guid: dd26b9651f816444ea56776346b4eef7, type: 3}
+  - {fileID: 21300000, guid: bfa15346722ebab479562daa4bdb3c0c, type: 3}
+  - {fileID: 21300000, guid: a887fd677c389aa4da4f56574ddb3994, type: 3}
+  - {fileID: 21300000, guid: a0636cd7252c63048becf1518faa5762, type: 3}
+  - {fileID: 21300000, guid: 9dcf4c888e075c84fb331b8a95c0449e, type: 3}
+  - {fileID: 21300000, guid: a069bf88409feb7439fc46cbcca5e708, type: 3}
+  - {fileID: 21300000, guid: f1393c1915c53a74b89067bdcd4f28ff, type: 3}
+  - {fileID: 21300000, guid: 9ad2e00ab44cbda44a972aeab11ae9d7, type: 3}
+  - {fileID: 21300000, guid: f77b8e5aadce0e042a646ceb64b41afd, type: 3}
+  - {fileID: 21300000, guid: af541baa7f2527044867f2bd0f5a73f4, type: 3}
+  - {fileID: 21300000, guid: 13ed0daa3672c684780fabfb7b3c5d15, type: 3}
+  - {fileID: 21300000, guid: a65ddeea7eee613449cfbda1fb88fd2f, type: 3}
+  - {fileID: 21300000, guid: 1869f91cc7bcf6242b4ff34630448f69, type: 3}
+  - {fileID: 21300000, guid: 29bc4e1cb464e0f4784e2e63be23064d, type: 3}
+  - {fileID: 21300000, guid: 834deefc1bdbfa14fa3ac9f1d1e14aad, type: 3}
+  - {fileID: 21300000, guid: cdd98c2d2503ba24bafaa766333a969a, type: 3}
+  - {fileID: 21300000, guid: ad4df7bebf2959a49ae249f7316b026c, type: 3}
+  - {fileID: 21300000, guid: 1aff121f171a6b34387fe06621dc37a8, type: 3}
+  - {fileID: 21300000, guid: 12a7a16fb27cb944395f77f46643d407, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Flag_of_the_United_Kingdom_(3-5).svg
+  - 2
+  - Flag_of_Russia.svg
+  - InventorySlot
+  - I_Clock
+  - 3
+  - yellow-button
+  - common-button
+  - 1
+  - green-box-large
+  - Key
+  - item-small
+  - green-box-widel
+  - I_Clover
+  - slider-horizontal
+  - papper
+  - common-button-disabled
+  - 5
+  - RedBar
+  - common-button-selected
+  - Sword
+  - S_Magic08
+  - S_Buff04
+  - S_Bow13
+  - S_Holy03
+  - 4
+  - common-button-pressed
+  - item-selection
+  - PerlProjectile
+  - slider-horizontal-handle
+  - Flag_of_Spain_(Civil).svg
+  m_Tag: Menus
+  m_IsVariant: 0

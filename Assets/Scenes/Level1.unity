@@ -27097,7 +27097,7 @@ MonoBehaviour:
       _inventory:
       - Id: Sword
         Value: 1
-      - Id: Key
+      - Id: SpeedUpPotion
         Value: 1
       - Id: Key
         Value: 1
@@ -30126,6 +30126,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BloodSplash
       objectReference: {fileID: 0}
+    - target: {fileID: 1799194807192757482, guid: 4227c62fc117aaa4580c0a46c57c40f0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1799194807192757486, guid: 4227c62fc117aaa4580c0a46c57c40f0,
         type: 3}
       propertyPath: m_Pivot.x
@@ -32232,12 +32237,12 @@ PrefabInstance:
     - target: {fileID: 7953342450325434780, guid: 7031c8d629b08d74d9131690eabba3a8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -25.79
+      value: -25.52
       objectReference: {fileID: 0}
     - target: {fileID: 7953342450325434780, guid: 7031c8d629b08d74d9131690eabba3a8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 29.65
+      value: 29.67
       objectReference: {fileID: 0}
     - target: {fileID: 7953342450325434780, guid: 7031c8d629b08d74d9131690eabba3a8,
         type: 3}

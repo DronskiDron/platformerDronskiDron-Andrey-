@@ -19462,8 +19462,8 @@ MonoBehaviour:
       _inventory:
       - Id: Sword
         Value: 1
-      - Id: Key
-        Value: 1
+      - Id: Coin
+        Value: 1000
       - Id: Key
         Value: 1
       - Id: Key
@@ -23148,7 +23148,7 @@ PrefabInstance:
     - target: {fileID: 4721150701775001659, guid: 73d2ffc6f1c96214896040b993e2b619,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4721150701775001660, guid: 73d2ffc6f1c96214896040b993e2b619,
         type: 3}
@@ -34132,6 +34132,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BloodSplash
+      objectReference: {fileID: 0}
+    - target: {fileID: 1799194807192757482, guid: 4227c62fc117aaa4580c0a46c57c40f0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1799194807192757486, guid: 4227c62fc117aaa4580c0a46c57c40f0,
         type: 3}

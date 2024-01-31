@@ -1,0 +1,157 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: PatricTheBoss
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 0
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: d27ffb16d86b91845b18597248d76c06, type: 3}
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 15f282d1bb81b8e44ab3e4644c562d68, type: 3}
+  - {fileID: 21300000, guid: 289a53f16fe3af64882cdfa398c71226, type: 3}
+  - {fileID: 21300000, guid: 41c83e02d489c3c44bff0b8e1ea0c142, type: 3}
+  - {fileID: 21300000, guid: f03335232c104ee42be4c11ace36ffdf, type: 3}
+  - {fileID: 21300000, guid: f2d606a45bd2f5f4ca9eff8106a6c102, type: 3}
+  - {fileID: 21300000, guid: 31eea8f52eee4fc4eb1b7f44b90a664d, type: 3}
+  - {fileID: 6384462652563809282, guid: ebd19a26315d4443e9680f186c94f536, type: 3}
+  - {fileID: 4289065198383074631, guid: ebd19a26315d4443e9680f186c94f536, type: 3}
+  - {fileID: 6871045095198256065, guid: ebd19a26315d4443e9680f186c94f536, type: 3}
+  - {fileID: 781391785531551593, guid: ebd19a26315d4443e9680f186c94f536, type: 3}
+  - {fileID: 6584985522317171522, guid: ebd19a26315d4443e9680f186c94f536, type: 3}
+  - {fileID: 86831731946154089, guid: ebd19a26315d4443e9680f186c94f536, type: 3}
+  - {fileID: 5313534277958279983, guid: ebd19a26315d4443e9680f186c94f536, type: 3}
+  - {fileID: 286634159721035684, guid: ebd19a26315d4443e9680f186c94f536, type: 3}
+  - {fileID: -1582882548290806831, guid: ebd19a26315d4443e9680f186c94f536, type: 3}
+  - {fileID: 1141322216187628762, guid: ebd19a26315d4443e9680f186c94f536, type: 3}
+  - {fileID: -1716483664407934345, guid: ebd19a26315d4443e9680f186c94f536, type: 3}
+  - {fileID: 8122258944036600684, guid: ebd19a26315d4443e9680f186c94f536, type: 3}
+  - {fileID: 3466538821557242840, guid: ebd19a26315d4443e9680f186c94f536, type: 3}
+  - {fileID: -5660417143903998036, guid: ebd19a26315d4443e9680f186c94f536, type: 3}
+  - {fileID: 8464637951588160143, guid: ebd19a26315d4443e9680f186c94f536, type: 3}
+  - {fileID: 895464267672534491, guid: ebd19a26315d4443e9680f186c94f536, type: 3}
+  - {fileID: 4618094931158405355, guid: ebd19a26315d4443e9680f186c94f536, type: 3}
+  - {fileID: -7727101525452084109, guid: ebd19a26315d4443e9680f186c94f536, type: 3}
+  - {fileID: -4629638608183935849, guid: ebd19a26315d4443e9680f186c94f536, type: 3}
+  - {fileID: 8236299096297149549, guid: ebd19a26315d4443e9680f186c94f536, type: 3}
+  - {fileID: -4996653691489033217, guid: ebd19a26315d4443e9680f186c94f536, type: 3}
+  - {fileID: -9084912452087648884, guid: ebd19a26315d4443e9680f186c94f536, type: 3}
+  - {fileID: 1271835005940878463, guid: ebd19a26315d4443e9680f186c94f536, type: 3}
+  - {fileID: 1523366221006700818, guid: ebd19a26315d4443e9680f186c94f536, type: 3}
+  - {fileID: 5601577551393980886, guid: ebd19a26315d4443e9680f186c94f536, type: 3}
+  - {fileID: -544956165492079743, guid: ebd19a26315d4443e9680f186c94f536, type: 3}
+  - {fileID: 3566191888559478745, guid: ebd19a26315d4443e9680f186c94f536, type: 3}
+  - {fileID: -8343462353704588372, guid: ebd19a26315d4443e9680f186c94f536, type: 3}
+  - {fileID: -4176113005331844420, guid: ebd19a26315d4443e9680f186c94f536, type: 3}
+  - {fileID: 2730764555306426954, guid: ebd19a26315d4443e9680f186c94f536, type: 3}
+  - {fileID: 8397490769575819276, guid: ebd19a26315d4443e9680f186c94f536, type: 3}
+  - {fileID: -954975255204436224, guid: ebd19a26315d4443e9680f186c94f536, type: 3}
+  - {fileID: -6566005975616425886, guid: ebd19a26315d4443e9680f186c94f536, type: 3}
+  - {fileID: -3260212547697663061, guid: ebd19a26315d4443e9680f186c94f536, type: 3}
+  - {fileID: -2679042040590843802, guid: ebd19a26315d4443e9680f186c94f536, type: 3}
+  - {fileID: 4290508754344991712, guid: ebd19a26315d4443e9680f186c94f536, type: 3}
+  - {fileID: -8728333411645904814, guid: ebd19a26315d4443e9680f186c94f536, type: 3}
+  - {fileID: 2674706677924328230, guid: ebd19a26315d4443e9680f186c94f536, type: 3}
+  - {fileID: 6343445691887805515, guid: ebd19a26315d4443e9680f186c94f536, type: 3}
+  - {fileID: 21300000, guid: ee21dc46077d45442a6d3004ec83050b, type: 3}
+  - {fileID: 21300000, guid: 16914ee694492224c9ba2fe2f94a81ff, type: 3}
+  - {fileID: 21300000, guid: 9c528247a58c6a145a9a2d5a3bc2d04f, type: 3}
+  - {fileID: 21300000, guid: 282cf5e70bb5e9a4e969a58ea450bcbb, type: 3}
+  - {fileID: 21300000, guid: 72d8be3821dc90042b8bdb227383840d, type: 3}
+  - {fileID: 21300000, guid: 21ae020aa2dba824d90a69ffdd457c7c, type: 3}
+  - {fileID: 21300000, guid: 0839690c4b12b4ccfb2b1e00ffcc0696, type: 3}
+  - {fileID: 21300000, guid: ebd60dee268726c4cb102b02160fbd0d, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - 4
+  - 3
+  - 2
+  - 4
+  - 6
+  - 1
+  - Patric_38
+  - Patric_29
+  - Patric_32
+  - Patric_28
+  - Patric_33
+  - Patric_30
+  - Patric_31
+  - Patric_25
+  - Patric_36
+  - Patric_24
+  - Patric_37
+  - Patric_27
+  - Patric_34
+  - Patric_26
+  - Patric_35
+  - Patric_21
+  - Patric_20
+  - Patric_23
+  - Patric_22
+  - Patric_9
+  - Patric_8
+  - Patric_5
+  - Patric_14
+  - Patric_4
+  - Patric_15
+  - Patric_7
+  - Patric_16
+  - Patric_6
+  - Patric_17
+  - Patric_1
+  - Patric_10
+  - Patric_0
+  - Patric_11
+  - Patric_3
+  - Patric_12
+  - Patric_2
+  - Patric_13
+  - Patric_18
+  - Patric_19
+  - 1
+  - 2
+  - 1
+  - 1
+  - 5
+  - 7
+  - Patric-emission
+  - 3
+  m_Tag: PatricTheBoss
+  m_IsVariant: 0

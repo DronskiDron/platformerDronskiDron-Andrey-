@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Exclamations
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 0
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 9a0c8fe1bac60c149a8785df932d2199, type: 3}
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: ec7e5d71a0a59564da31a050b5df8860, type: 3}
+  - {fileID: 21300000, guid: bcc29d323872fc44e9c6805f759db1a2, type: 3}
+  - {fileID: 21300000, guid: 18705ab2f6aeb8a4f9936e98fae71d53, type: 3}
+  - {fileID: 21300000, guid: 4922b6d324331bb43923049e91d9dedc, type: 3}
+  - {fileID: 21300000, guid: 3946a5f3ca1165545ae2adc8e52e9787, type: 3}
+  - {fileID: 21300000, guid: 245c1694522fecf4797f469b76e2bda5, type: 3}
+  - {fileID: 21300000, guid: cc64b216aedd3ce4da2da04b516832ce, type: 3}
+  - {fileID: 21300000, guid: db73bd7612b8a124988adc14eea171da, type: 3}
+  - {fileID: 21300000, guid: 105d1f08d1b0c7f4cad61fec7dcbade5, type: 3}
+  - {fileID: 21300000, guid: e18bc41827fcef64db9dfa0d9b8c09d0, type: 3}
+  - {fileID: 21300000, guid: b8d38778e1d3a774a98764e0baba8902, type: 3}
+  - {fileID: 21300000, guid: 7803c52d003935443a8de64853981548, type: 3}
+  - {fileID: 21300000, guid: 4b7f7f7e403b4b54d92bf9d5e2f884e9, type: 3}
+  - {fileID: 21300000, guid: ddfda10f00704bc4e9fe35539d72646b, type: 3}
+  - {fileID: 21300000, guid: a12a227fdbc38b14b80f4820da857bbf, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Exclamation Out 02
+  - Dead In 02
+  - Dead Out 02
+  - Exclamation In 03
+  - Dead Out 01
+  - Interrogation Out 02
+  - Interrogation In 02
+  - Exclamation In 02
+  - Interrogation Out 01
+  - Dead In 01
+  - Exclamation In 01
+  - Interrogation In 03
+  - Exclamation Out 01
+  - Dead In 03
+  - Interrogation In 01
+  m_Tag: Exclamations
+  m_IsVariant: 0

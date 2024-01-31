@@ -1,0 +1,121 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: HUD
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 0
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 74124b77760c81648b4f85fd424b198b, type: 3}
+    - {fileID: 102900000, guid: a4a6bc25f78ef0e4b984f53571230e07, type: 3}
+    - {fileID: 102900000, guid: 0968f812ce5a51449853add654ca94ff, type: 3}
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 3a240330e1b3dd149850042046fc69a2, type: 3}
+  - {fileID: 21300000, guid: 052c1f60f1d7fb342adb3411695297d5, type: 3}
+  - {fileID: 21300000, guid: 6b0bd8c00a046d048b59b1a71fc15964, type: 3}
+  - {fileID: 21300000, guid: 4b686ad009b980b48a1e5105bc95dc78, type: 3}
+  - {fileID: 21300000, guid: 8ee03471358956445ad3f01004dc26fe, type: 3}
+  - {fileID: 21300000, guid: d8ecfca1c263a384e89c6acd22c9185c, type: 3}
+  - {fileID: 21300000, guid: 0568e6e1ec0a440cc8ae7922825b9119, type: 3}
+  - {fileID: 21300000, guid: a8177204f05df3b4fabd642421c38bb1, type: 3}
+  - {fileID: 21300000, guid: 3a60a2548828f4c78b82c10389a7fec5, type: 3}
+  - {fileID: 21300000, guid: 45793854721a84eada5614a89b1b1e29, type: 3}
+  - {fileID: 21300000, guid: d6e78965cbbc57e419cbfccf6a959f7d, type: 3}
+  - {fileID: 21300000, guid: 949bd3d550cf1c84992390c1d4bfe907, type: 3}
+  - {fileID: 21300000, guid: 95c10c061f392e643bf9897f80a11cf9, type: 3}
+  - {fileID: 21300000, guid: e01a21c6d3dda8147912e47465462fb7, type: 3}
+  - {fileID: 21300000, guid: fdff1c178639d744fba647eb22395cac, type: 3}
+  - {fileID: 21300000, guid: 59c03d08350f00546b42144042f8ff2f, type: 3}
+  - {fileID: 21300000, guid: 23705568c0265d94daf2d448c00e2ac3, type: 3}
+  - {fileID: 21300000, guid: 9855ea39721f3ca49bff67ba59853d1a, type: 3}
+  - {fileID: 21300000, guid: f769bfc92013af344a1d74701927653d, type: 3}
+  - {fileID: 21300000, guid: 429661fb6df54b14283dce0cf26ee0bb, type: 3}
+  - {fileID: 21300000, guid: 8efc757cbda463f4ea3bcf6aa40b43b0, type: 3}
+  - {fileID: 21300000, guid: c21fd8fcd00ed7640aec5d7a687eea3a, type: 3}
+  - {fileID: 21300000, guid: 8f54db1d1c7e90040a69239e3ddf6c10, type: 3}
+  - {fileID: 21300000, guid: 29f4dc6dc296a9c4b99f39f7842950f6, type: 3}
+  - {fileID: 21300000, guid: fd85738e05ab5417191e6c3169c7a0c4, type: 3}
+  - {fileID: 21300000, guid: 39c084ae2a4082346953a9df60286c3e, type: 3}
+  - {fileID: 5085415284296604745, guid: e6fa5b1f0f5382d4ea9847d733bbeb1a, type: 3}
+  - {fileID: 2389193319765324094, guid: e6fa5b1f0f5382d4ea9847d733bbeb1a, type: 3}
+  - {fileID: -4135836072091612975, guid: e6fa5b1f0f5382d4ea9847d733bbeb1a, type: 3}
+  - {fileID: 1691966074973790518, guid: e6fa5b1f0f5382d4ea9847d733bbeb1a, type: 3}
+  - {fileID: 21300000, guid: 51c3a02f5ca731f4c82b1a12e982e93f, type: 3}
+  - {fileID: 21300000, guid: de6fa95f2e0ae214ea30394a6504d7cc, type: 3}
+  - {fileID: 21300000, guid: a320406fdf80c964187f4f08ee8848d2, type: 3}
+  - {fileID: 21300000, guid: f22bba6fbce18804b86adf6e9fd42188, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - 4
+  - item-selection-common
+  - 2
+  - Check_Mark
+  - 5
+  - Square
+  - patric-face
+  - 9
+  - pirate-face
+  - crabbu-face
+  - dowble-jump
+  - 6
+  - 8
+  - 7
+  - 4
+  - 1
+  - 12
+  - 10
+  - 2
+  - force-shiled
+  - 1
+  - 3
+  - sword-super-throw
+  - 11
+  - sharky-face
+  - 3
+  - shield_1
+  - shield_0
+  - shield_3
+  - shield_2
+  - 7
+  - 8
+  - 6
+  - 5
+  m_Tag: HUD
+  m_IsVariant: 0

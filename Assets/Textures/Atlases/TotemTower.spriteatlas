@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: TotemTower
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 0
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: b444150cb61747042920ba7b72bfd6bd, type: 3}
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 7358b690710a3724f9f7ff5365a67e8f, type: 3}
+  - {fileID: 21300000, guid: d43ed311706753e4892b7877b37ae0bd, type: 3}
+  - {fileID: 21300000, guid: 40d96a51ae0cafd4f8897d3ed26569e6, type: 3}
+  - {fileID: 21300000, guid: 2ba83582e56987b4dab73eb793438e6c, type: 3}
+  - {fileID: 21300000, guid: ade11be2805c60243bc6f8b9c22e1c75, type: 3}
+  - {fileID: 21300000, guid: 4a1c6b832a0267a4ab3f68c53ca2219a, type: 3}
+  - {fileID: 21300000, guid: 156829d3c30b839459196d3cd7cb784a, type: 3}
+  - {fileID: 21300000, guid: 70efe764e6c96d744b52b1368a3fe316, type: 3}
+  - {fileID: 21300000, guid: 813d25944b7c2bf46b235a3a2a3e1ade, type: 3}
+  - {fileID: 21300000, guid: 1c81282587da61f4f9eb615acddc0ded, type: 3}
+  - {fileID: 21300000, guid: d804a8a582b51ab4cbe23ab1bd27f27e, type: 3}
+  - {fileID: 21300000, guid: f395b1b58fa2f074c97ccbbfc86711ad, type: 3}
+  - {fileID: 21300000, guid: 8759c9865a5a543458d162b22003e32f, type: 3}
+  - {fileID: 21300000, guid: f666169788720784e944a2568ceb06e4, type: 3}
+  - {fileID: 21300000, guid: ded989a7ac375be4d968a78039de6061, type: 3}
+  - {fileID: 21300000, guid: 0296f2f7d17b0da45a74a06f56399cb3, type: 3}
+  - {fileID: 21300000, guid: 91d086d855ea29a48b2b51a903bebb68, type: 3}
+  - {fileID: 21300000, guid: 596ef1c96723b34408b5ccf9d8c6c19b, type: 3}
+  - {fileID: 21300000, guid: 4d5585aae9830644ba74f8e7aa47fb33, type: 3}
+  - {fileID: 21300000, guid: 290f48ba456bc364f8e553629c9add82, type: 3}
+  - {fileID: 21300000, guid: 471cf71b111cf3045b2b0ae85c8b4fec, type: 3}
+  - {fileID: 21300000, guid: 8147d66b770133f47b3f85be31ca4a2d, type: 3}
+  - {fileID: 21300000, guid: 5af9a19b5c88fa64f944a9f1ecb155bb, type: 3}
+  - {fileID: 21300000, guid: 19cb911c4612db0469b43b9baecbb75c, type: 3}
+  - {fileID: 21300000, guid: b2c296ed708f096409229370a6d37c5c, type: 3}
+  - {fileID: 21300000, guid: c3e1d01fc5155d84c9b7af9194415c7b, type: 3}
+  - {fileID: 21300000, guid: d71b48cf50baede4baebe0a2cbb4e225, type: 3}
+  - {fileID: 21300000, guid: 0433e1efcd1b6624a9d9f553f5a8998b, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - 6
+  - 3
+  - 1
+  - 3
+  - 3
+  - 4
+  - 5
+  - 4
+  - 1
+  - 2
+  - 4
+  - 3
+  - 2
+  - 6
+  - 1
+  - 1
+  - 2
+  - 4
+  - 4
+  - 1
+  - 2
+  - 1
+  - 5
+  - 5
+  - 6
+  - 1
+  - 2
+  - 3
+  m_Tag: TotemTower
+  m_IsVariant: 0

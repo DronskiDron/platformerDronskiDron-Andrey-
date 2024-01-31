@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CrabbyDialog
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 0
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 9fe74182910cd1a47a97d68c81d90cc1, type: 3}
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 3505128172380155607, guid: efbfe64388ee87240af96c489d14ffa6, type: 3}
+  - {fileID: 6781877334341790625, guid: efbfe64388ee87240af96c489d14ffa6, type: 3}
+  - {fileID: 1237259564474456676, guid: efbfe64388ee87240af96c489d14ffa6, type: 3}
+  - {fileID: -8339802707405750284, guid: efbfe64388ee87240af96c489d14ffa6, type: 3}
+  - {fileID: -7988024427863313899, guid: efbfe64388ee87240af96c489d14ffa6, type: 3}
+  - {fileID: 8388748351631217864, guid: efbfe64388ee87240af96c489d14ffa6, type: 3}
+  - {fileID: 6233811717460821285, guid: efbfe64388ee87240af96c489d14ffa6, type: 3}
+  - {fileID: 6729741187243169404, guid: efbfe64388ee87240af96c489d14ffa6, type: 3}
+  - {fileID: -565611628317543566, guid: efbfe64388ee87240af96c489d14ffa6, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Crabby-crew_8
+  - Crabby-crew_1
+  - Crabby-crew_0
+  - Crabby-crew_3
+  - Crabby-crew_2
+  - Crabby-crew_5
+  - Crabby-crew_4
+  - Crabby-crew_7
+  - Crabby-crew_6
+  m_Tag: CrabbyDialog
+  m_IsVariant: 0
