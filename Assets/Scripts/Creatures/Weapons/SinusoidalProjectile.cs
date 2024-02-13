@@ -6,6 +6,7 @@ namespace Creatures.Weapons
     {
         [SerializeField] private float _frequency = 1f;
         [SerializeField] private float _amplitude = 1f;
+        private bool _wasFirstShot = false;
 
         private float _originalY;
         private float _time;
@@ -13,6 +14,14 @@ namespace Creatures.Weapons
         {
             base.Start();
             _originalY = Rigidbody.position.y;
+            _wasFirstShot = true;
+        }
+
+
+        private void OnEnable()
+        {
+            if (_wasFirstShot)
+                _originalY = Rigidbody.position.y;
         }
 
 

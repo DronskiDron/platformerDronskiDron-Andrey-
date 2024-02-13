@@ -13,6 +13,7 @@ TagManager:
   - SimpleDialog
   - PersonalizedDialog
   - Obstacle
+  - DestructableParticles
   layers:
   - Default
   - TransparentFX
@@ -32,7 +33,7 @@ TagManager:
   - DeadEnemy
   - Collectables
   - CollidebleEnemy
-  - 
+  - Technical
   - 
   - 
   - 

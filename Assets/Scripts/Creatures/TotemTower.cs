@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
-using General.Components;
 using General.Components.Health;
 using UnityEngine;
+using UnityEngine.Events;
 using Utils;
 
 namespace Creatures
@@ -11,15 +10,13 @@ namespace Creatures
     {
         [SerializeField] private List<ShootingTrapAI> _traps;
         [SerializeField] private Cooldown _cooldown;
+        [SerializeField] private UnityEvent _onDestroy;
 
         private int _currentTrap;
-        private DestroyObjectComponent _destructor;
 
 
         private void Start()
         {
-            _destructor = GetComponent<DestroyObjectComponent>();
-
             foreach (var shootingTrapAI in _traps)
             {
                 shootingTrapAI.enabled = false;
@@ -45,11 +42,10 @@ namespace Creatures
             if (_traps.Count == 0)
             {
                 enabled = false;
-                _destructor.DestroyObject();
+                _onDestroy?.Invoke();
             }
-            var hasAnyTarget = _traps.Any(x => x.Vision.IsTouchingLayer);
 
-            if (hasAnyTarget)
+            if (HasAnyTarget())
             {
                 if (_cooldown.IsReady)
                 {
@@ -58,6 +54,20 @@ namespace Creatures
                     _currentTrap = (int)Mathf.Repeat(_currentTrap + 1, _traps.Count);
                 }
             }
+        }
+
+
+        private bool HasAnyTarget()
+        {
+            foreach (var shootingTrapAI in _traps)
+            {
+                if (shootingTrapAI.Vision.IsTouchingLayer)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
     }
 }

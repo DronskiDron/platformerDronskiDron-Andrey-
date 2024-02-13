@@ -46,6 +46,7 @@ MonoBehaviour:
   _target: {fileID: 5893797012040632972}
   _prefab: {fileID: 7486087202470647692, guid: 14c5a8611dc6e82459613ea7279ee748, type: 3}
   _isPrefabFlipX: 0
+  _usePool: 1
 --- !u!1 &5893797012311803983
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,6 +407,7 @@ MonoBehaviour:
   _target: {fileID: 5893797012311803985}
   _prefab: {fileID: 2837078527908441497, guid: 859fe4767eb97ef41941b1726f722e20, type: 3}
   _isPrefabFlipX: 0
+  _usePool: 0
 --- !u!114 &2919871264480571582
 MonoBehaviour:
   m_ObjectHideFlags: 0

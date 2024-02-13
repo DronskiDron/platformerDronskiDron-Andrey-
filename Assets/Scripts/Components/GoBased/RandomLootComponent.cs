@@ -13,7 +13,9 @@ namespace General.Components
         [SerializeField][Range(1, 100)] private int _lootDropChance;
         [SerializeField] private int _spawnObjectsCount;
         [SerializeField] private SpawnComponent _spawnComponent;
-        [SerializeField] private float _sphereRadius = 0.3f;
+        [SerializeField] private float _spawnRadius = 0.3f;
+        [SerializeField] private float _spawnDistance = 1.0f;
+        [SerializeField] private Transform _spawnPoint;
 
 
         public void CalculateLoot()
@@ -41,13 +43,21 @@ namespace General.Components
                     if (randomValue <= _lootTable[j].DropRarity)
                     {
                         _spawnComponent.SpawnRandom(_lootTable[j].Item,
-                        transform.position + Random.insideUnitSphere * _sphereRadius);
+                        GetRandomSpawnPosition(), _lootTable[j].UsePool);
                         break;
                     }
                     randomValue -= _lootTable[j].DropRarity;
                 }
-                _spawnObjectsCount -= 1;
+                _spawnObjectsCount--;
             }
+        }
+
+
+        private Vector3 GetRandomSpawnPosition()
+        {
+            Vector3 randomDirection = Random.insideUnitSphere;
+            randomDirection.z = 0;
+            return _spawnPoint.position + randomDirection.normalized * _spawnDistance;
         }
 
 
@@ -55,7 +65,7 @@ namespace General.Components
         private void OnDrawGizmos()
         {
             Handles.color = HandlesUtils.TranspanentGreen;
-            Handles.DrawSolidDisc(transform.position, Vector3.forward, _sphereRadius);
+            Handles.DrawSolidDisc(_spawnPoint.position, Vector3.forward, _spawnRadius);
         }
 #endif
 
@@ -66,10 +76,12 @@ namespace General.Components
             [SerializeField] private string _name;
             [SerializeField] private GameObject _item;
             [SerializeField][Range(1, 100)] private int _dropRarity;
+            [SerializeField] private bool _usePool;
 
             public string Name => _name;
             public GameObject Item => _item;
             public int DropRarity => _dropRarity;
+            public bool UsePool => _usePool;
         }
     }
 }

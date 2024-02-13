@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1639409159451080846}
   - component: {fileID: 4736121916931989067}
   - component: {fileID: 8757332012898610864}
-  - component: {fileID: 4699674698516388118}
+  - component: {fileID: 2159174190554701610}
   m_Layer: 0
   m_Name: PearlHeroProjectile
   m_TagString: Untagged
@@ -138,6 +138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 11
   _invertX: 0
+  _belongToPlayer: 1
 --- !u!114 &4736121916931989067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,7 +154,7 @@ MonoBehaviour:
   _tag: 
   _layer:
     serializedVersion: 2
-    m_Bits: 152832
+    m_Bits: 21760
   _action:
     m_PersistentCalls:
       m_Calls:
@@ -168,8 +169,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 4699674698516388118}
-        m_MethodName: DestroyObject
+      - m_Target: {fileID: 2159174190554701610}
+        m_MethodName: Release
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -192,9 +193,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _changeHealthValue: -1
-  _isBelongToPlayer: 0
-  _isProjectile: 0
---- !u!114 &4699674698516388118
+  _isBelongToPlayer: 1
+  _isProjectile: 1
+--- !u!114 &2159174190554701610
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -203,8 +204,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1639409159451080843}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ef8203dc20251f4d9eab29b3f46c35b, type: 3}
+  m_Script: {fileID: 11500000, guid: fc97aacac0e81f545bb5e1f59342db95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _objectToDestroy: {fileID: 1639409159451080843}
-  _state: {fileID: 0}
+  _onRestart:
+    m_PersistentCalls:
+      m_Calls: []

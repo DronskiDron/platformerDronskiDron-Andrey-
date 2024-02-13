@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using Utils;
+using Utils.ObjectPool;
 
 namespace General.Components
 {
@@ -8,6 +9,7 @@ namespace General.Components
         [SerializeField] private Transform _target;
         [SerializeField] private GameObject _prefab;
         [SerializeField] private bool _isPrefabFlipX;
+        [SerializeField] private bool _usePool;
 
         private Transform _transform;
 
@@ -28,14 +30,19 @@ namespace General.Components
         [ContextMenu("Spawn")]
         public void Spawn()
         {
-            var instance = SpawnUtils.Spawn(_prefab, _target.position);
+            var targetPosition = _target.position;
+            var instance = _usePool
+            ? Pool.Instance.Get(_prefab, targetPosition)
+            : SpawnUtils.Spawn(_prefab, targetPosition);
             instance.transform.localScale = _target.lossyScale;
         }
 
 
-        public void SpawnRandom(GameObject prefab, Vector3 position)
+        public void SpawnRandom(GameObject prefab, Vector3 position, bool usePool = false)
         {
-            var instance = SpawnUtils.Spawn(prefab, position);
+            var instance = usePool
+            ? Pool.Instance.Get(prefab, position)
+            : SpawnUtils.Spawn(prefab, position);
         }
 
 

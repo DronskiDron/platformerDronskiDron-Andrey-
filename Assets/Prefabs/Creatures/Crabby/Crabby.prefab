@@ -230,6 +230,7 @@ MonoBehaviour:
   _target: {fileID: 1585879531}
   _prefab: {fileID: 4838915102552124004, guid: 90d8919e7bc46b7438ff50590bf4c6b9, type: 3}
   _isPrefabFlipX: 1
+  _usePool: 1
 --- !u!1 &1635234218
 GameObject:
   m_ObjectHideFlags: 0
@@ -580,6 +581,7 @@ MonoBehaviour:
   _target: {fileID: 3094336273095693983}
   _prefab: {fileID: 2806660358177559164, guid: f1a18f194636f294da896fb120e120a7, type: 3}
   _isPrefabFlipX: 0
+  _usePool: 1
 --- !u!1 &4076874428116668062
 GameObject:
   m_ObjectHideFlags: 0
@@ -767,6 +769,7 @@ MonoBehaviour:
   _target: {fileID: 893038762968479055}
   _prefab: {fileID: 2479424980182007388, guid: 6e52913843edede429b905d45c3ab8bb, type: 3}
   _isPrefabFlipX: 0
+  _usePool: 1
 --- !u!1 &4721150701775001659
 GameObject:
   m_ObjectHideFlags: 0
@@ -1447,6 +1450,7 @@ MonoBehaviour:
   _target: {fileID: 4313611381014788188}
   _prefab: {fileID: 7665987871245847071, guid: 4f110b2dd4de5514587fdece6514b34f, type: 3}
   _isPrefabFlipX: 0
+  _usePool: 1
 --- !u!1 &8022337131242891331
 GameObject:
   m_ObjectHideFlags: 0

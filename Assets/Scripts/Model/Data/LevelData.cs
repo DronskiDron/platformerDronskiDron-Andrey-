@@ -14,8 +14,15 @@ namespace Creatures.Model.Data
 
         public int GetLevel(StatId id)
         {
-            var progress = _progress.FirstOrDefault(x => x.Id == id);
-            return progress?.Level ?? 0;
+            foreach (var levelProgress in _progress)
+            {
+                if (levelProgress.Id == id)
+                {
+                    return levelProgress.Level;
+                }
+            }
+
+            return 0;
         }
 
 

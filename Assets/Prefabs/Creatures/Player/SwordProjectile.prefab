@@ -46,6 +46,7 @@ MonoBehaviour:
   _target: {fileID: 6357163119206585506}
   _prefab: {fileID: 8015012442368583878, guid: f2b857b5949f0fa4fa417745fae4f922, type: 3}
   _isPrefabFlipX: 0
+  _usePool: 0
 --- !u!1 &8015012442368583878
 GameObject:
   m_ObjectHideFlags: 0
@@ -64,6 +65,7 @@ GameObject:
   - component: {fileID: 5177289733482183953}
   - component: {fileID: 8479132581846204311}
   - component: {fileID: 1927187771015393928}
+  - component: {fileID: 3561882529187958855}
   m_Layer: 0
   m_Name: SwordProjectile
   m_TagString: Untagged
@@ -226,6 +228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 11
   _invertX: 0
+  _belongToPlayer: 1
 --- !u!114 &5177289733482183953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,8 +259,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8015012442368583877}
-        m_MethodName: DestroyObject
+      - m_Target: {fileID: 3561882529187958855}
+        m_MethodName: Release
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -312,8 +315,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8015012442368583877}
-        m_MethodName: DestroyObject
+      - m_Target: {fileID: 3561882529187958855}
+        m_MethodName: Release
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -321,5 +324,31 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3561882529187958855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8015012442368583878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc97aacac0e81f545bb5e1f59342db95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onRestart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8015012442368583876}
+        m_MethodName: SetClip
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: spinning
           m_BoolArgument: 0
         m_CallState: 2

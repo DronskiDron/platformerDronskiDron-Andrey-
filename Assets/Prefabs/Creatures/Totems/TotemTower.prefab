@@ -333,6 +333,20 @@ MonoBehaviour:
   - {fileID: 861046834878826735}
   _cooldown:
     _value: 2
+  _onDestroy:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1071358657486617720}
+        m_MethodName: DestroyWithDelay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6555364810222401587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -387,6 +401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _objectToDestroy: {fileID: 8408550426284432221}
   _state: {fileID: 5258944010603632533}
+  _delayValue: 1
 --- !u!1001 &2700986769759884493
 PrefabInstance:
   m_ObjectHideFlags: 0

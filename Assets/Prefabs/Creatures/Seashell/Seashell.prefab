@@ -667,6 +667,7 @@ MonoBehaviour:
   _target: {fileID: 8801466389762006258}
   _prefab: {fileID: 2749635562111947085, guid: 15173e7390ba7a54ebf47d8ead5af2d4, type: 3}
   _isPrefabFlipX: 0
+  _usePool: 0
 --- !u!114 &7463011455499109545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -861,6 +862,7 @@ MonoBehaviour:
   _target: {fileID: 8801466390728014670}
   _prefab: {fileID: 1639409159451080843, guid: eeb07cee5abf1d64cbce348a4ed86439, type: 3}
   _isPrefabFlipX: 0
+  _usePool: 1
 --- !u!1 &8801466391206387187
 GameObject:
   m_ObjectHideFlags: 0

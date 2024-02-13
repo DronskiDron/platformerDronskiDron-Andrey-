@@ -13,14 +13,14 @@ GameObject:
   - component: {fileID: 2427943495945562237}
   - component: {fileID: 2214559518926788064}
   - component: {fileID: 5497687730741296918}
-  - component: {fileID: 2427943495945562235}
   - component: {fileID: 2427943495945562233}
   - component: {fileID: 6924691457572477841}
   - component: {fileID: 618446364174284832}
   - component: {fileID: 6616925853220287681}
+  - component: {fileID: 7108904048100490562}
   m_Layer: 16
   m_Name: SilverCoinParticle
-  m_TagString: Untagged
+  m_TagString: DestructableParticles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -142,7 +142,7 @@ MonoBehaviour:
   _tag: 
   _layer:
     serializedVersion: 2
-    m_Bits: 8192
+    m_Bits: 270336
   _action:
     m_PersistentCalls:
       m_Calls:
@@ -179,31 +179,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &2427943495945562235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2427943495945562231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ef8203dc20251f4d9eab29b3f46c35b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _objectToDestroy: {fileID: 2427943495945562231}
-  _state: {fileID: 0}
 --- !u!114 &2427943495945562233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,8 +215,8 @@ MonoBehaviour:
     _onComplete:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2427943495945562235}
-          m_MethodName: DestroyObject
+        - m_Target: {fileID: 7108904048100490562}
+          m_MethodName: Release
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -291,3 +266,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mode: 1
+--- !u!114 &7108904048100490562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2427943495945562231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc97aacac0e81f545bb5e1f59342db95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onRestart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2427943495945562237}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2

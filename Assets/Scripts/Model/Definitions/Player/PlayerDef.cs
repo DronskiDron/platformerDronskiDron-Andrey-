@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Creatures.Model.Definitions.Player
 {
@@ -13,6 +12,17 @@ namespace Creatures.Model.Definitions.Player
         public StatDef[] Stats => _stats;
 
 
-        public StatDef GetStat(StatId id) => _stats.FirstOrDefault(x => x.ID == id);
+        public StatDef GetStat(StatId id)
+        {
+            foreach (var statDef in _stats)
+            {
+                if (statDef.ID == id)
+                {
+                    return statDef;
+                }
+            }
+
+            return default;
+        }
     }
 }

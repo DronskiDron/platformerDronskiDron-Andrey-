@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3709106500979994213}
   - component: {fileID: 4421200537188723795}
   - component: {fileID: 7969241544704865737}
-  - component: {fileID: 6576307930628132386}
+  - component: {fileID: 1805795393632871139}
   m_Layer: 0
   m_Name: Miss
   m_TagString: Untagged
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _frameRate: 10
   _clips:
-  - _name: ide
+  - _name: idle
     _sprites:
     - {fileID: 21300000, guid: a12a227fdbc38b14b80f4820da857bbf, type: 3}
     - {fileID: 21300000, guid: cc64b216aedd3ce4da2da04b516832ce, type: 3}
@@ -109,8 +109,8 @@ MonoBehaviour:
     _onComplete:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 6576307930628132386}
-          m_MethodName: DestroyObject
+        - m_Target: {fileID: 1805795393632871139}
+          m_MethodName: Release
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -120,7 +120,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &6576307930628132386
+--- !u!114 &1805795393632871139
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,8 +129,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 2806660358177559164}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ef8203dc20251f4d9eab29b3f46c35b, type: 3}
+  m_Script: {fileID: 11500000, guid: fc97aacac0e81f545bb5e1f59342db95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _objectToDestroy: {fileID: 2806660358177559164}
-  _state: {fileID: 0}
+  _onRestart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7969241544704865737}
+        m_MethodName: SetClip
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: idle
+          m_BoolArgument: 0
+        m_CallState: 2

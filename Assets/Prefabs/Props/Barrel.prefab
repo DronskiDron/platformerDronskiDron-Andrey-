@@ -46,6 +46,7 @@ MonoBehaviour:
   _target: {fileID: 1796145318}
   _prefab: {fileID: 8015012442368583878, guid: c499f0cd70531d14e8cd399e7da30f9a, type: 3}
   _isPrefabFlipX: 0
+  _usePool: 1
 --- !u!1 &7990524837623267504
 GameObject:
   m_ObjectHideFlags: 0
