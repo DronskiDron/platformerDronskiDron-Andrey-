@@ -24,7 +24,7 @@ namespace UI.Hud
 
         private void Start()
         {
-            _session = FindObjectOfType<GameSession>();
+            _session = GameSession.Instance;
             _lantern = LanternComponent.I;
 
             _session.Data.Fuel.OnChanged += UpdateFillAmount;

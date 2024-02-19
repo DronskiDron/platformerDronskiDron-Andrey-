@@ -12,15 +12,9 @@ namespace UI.Hud
         private GameSession _session;
 
 
-        private void Start()
-        {
-            _session = FindObjectOfType<GameSession>();
-        }
-
-
         private void Update()
         {
-            var cooldown = _session.PerksModel.Cooldown;
+            var cooldown = GameSession.Instance.PerksModel.Cooldown;
             _cooldownImage.fillAmount = cooldown.RemainingTime / cooldown.Value;
         }
 

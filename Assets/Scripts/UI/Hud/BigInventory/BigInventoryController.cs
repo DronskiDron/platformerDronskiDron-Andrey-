@@ -17,7 +17,7 @@ namespace UI.Hud.BigInventory
         protected override void Start()
         {
             base.Start();
-            _session = FindObjectOfType<GameSession>();
+            _session = GameSession.Instance;
 
             _session.BigInventory.SubscribeSlotEvents(_slots, RenewData);
             _throwComponent.OnChanged += RenewData;

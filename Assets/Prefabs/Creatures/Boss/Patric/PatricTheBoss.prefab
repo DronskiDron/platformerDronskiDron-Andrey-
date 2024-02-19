@@ -165,25 +165,26 @@ MonoBehaviour:
   - _sequence:
     - _prefab: {fileID: 4609938191790854757, guid: 8242653744a0c984aab58615cce46ff6,
         type: 3}
-      _burstCount: 10
+      _burstCount: 6
       _itemPerBurst: 2
       _delay: 1
+    - _prefab: {fileID: 4609938191790854757, guid: 8242653744a0c984aab58615cce46ff6,
+        type: 3}
+      _burstCount: 8
+      _itemPerBurst: 8
+      _delay: 0.5
+  - _sequence:
+    - _prefab: {fileID: 4609938191790854757, guid: 8242653744a0c984aab58615cce46ff6,
+        type: 3}
+      _burstCount: 10
+      _itemPerBurst: 2
+      _delay: 0.8
     - _prefab: {fileID: 4609938191790854757, guid: 8242653744a0c984aab58615cce46ff6,
         type: 3}
       _burstCount: 10
       _itemPerBurst: 10
       _delay: 0.5
-  - _sequence:
-    - _prefab: {fileID: 4609938191790854757, guid: 8242653744a0c984aab58615cce46ff6,
-        type: 3}
-      _burstCount: 15
-      _itemPerBurst: 3
-      _delay: 0.5
-    - _prefab: {fileID: 4609938191790854757, guid: 8242653744a0c984aab58615cce46ff6,
-        type: 3}
-      _burstCount: 15
-      _itemPerBurst: 15
-      _delay: 0.5
+  _usePool: 1
 --- !u!114 &6643121077617301672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,8 +208,8 @@ MonoBehaviour:
   _onDie:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6643121077676961676}
-        m_MethodName: Show
+      - m_Target: {fileID: 6643121077617301673}
+        m_MethodName: StopAllCoroutines
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -232,6 +233,28 @@ MonoBehaviour:
       - m_Target: {fileID: 0}
         m_MethodName: SetInput
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6643121077617301676}
+        m_MethodName: StopFlooding
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6643121077676961676}
+        m_MethodName: Show
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

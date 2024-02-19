@@ -11,7 +11,7 @@ namespace General.Components.LevelManagement
 
         public void Exit()
         {
-            var session = FindObjectOfType<GameSession>();
+            var session = GameSession.Instance;
             var loader = FindObjectOfType<LevelLoader>();
 
             if (session.GetThatSceneWasFinished())

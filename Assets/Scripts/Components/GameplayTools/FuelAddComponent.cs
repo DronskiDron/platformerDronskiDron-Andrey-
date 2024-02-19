@@ -14,7 +14,7 @@ namespace General.Components.GameplayTools
 
         private void Start()
         {
-            _session = FindObjectOfType<GameSession>();
+            _session = GameSession.Instance;
             _lanternWidget = LanternWidget.I;
         }
 

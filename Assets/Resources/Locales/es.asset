@@ -20,6 +20,8 @@ MonoBehaviour:
     Value: "No\r"
   - Key: '###_continue_###'
     Value: "Continuar\r"
+  - Key: '###_loading_###'
+    Value: "Cargando...\r"
   - Key: '###_UI_###'
     Value: "###\r"
   - Key: menu_title

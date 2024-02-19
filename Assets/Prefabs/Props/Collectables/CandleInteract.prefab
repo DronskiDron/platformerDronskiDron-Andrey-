@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 3298373127058266869}
   - component: {fileID: 3625149979062845974}
   - component: {fileID: 6995220609316974360}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CandleInteract
   m_TagString: Untagged
   m_Icon: {fileID: 0}

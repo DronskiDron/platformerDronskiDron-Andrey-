@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using General.Components.ColliderBased;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Creatures.Patrolling
 {
@@ -9,7 +11,7 @@ namespace Creatures.Patrolling
         [SerializeField] private LayerCheck _groundCheck;
         [SerializeField] private LayerCheck _obstacleCheck;
         [SerializeField] private int _direction;
-        [SerializeField] private Creature _creature;
+        [SerializeField] private OnChangeDirection _onChangeDirection;
 
         private MobAI _mobAI;
 
@@ -25,16 +27,44 @@ namespace Creatures.Patrolling
             {
                 if (_groundCheck.IsTouchingLayer && !_obstacleCheck.IsTouchingLayer)
                 {
-                    _creature.SetMoveDirection(new Vector2(_direction, 0));
+                    _onChangeDirection?.Invoke(new Vector2(_direction, 0));
                 }
                 else if (!_mobAI.IsFollow)
                 {
                     _direction = -_direction;
-                    _creature.SetMoveDirection(new Vector2(_direction, 0));
+                    _onChangeDirection?.Invoke(new Vector2(_direction, 0));
+                }
+
+                yield return null;
+            }
+        }
+
+
+        public override IEnumerator DoOneMorePatrol()
+        {
+            while (enabled)
+            {
+                if (_groundCheck.IsTouchingLayer && !_obstacleCheck.IsTouchingLayer)
+                {
+                    _onChangeDirection?.Invoke(new Vector2(_direction, 0));
+                }
+                else
+                {
+                    _direction = -_direction;
+                    _onChangeDirection?.Invoke(new Vector2(_direction, 0));
                 }
 
                 yield return null;
             }
         }
     }
+
+
+    [Serializable]
+    public class OnChangeDirection : UnityEvent<Vector2>
+    {
+
+    }
+
+
 }

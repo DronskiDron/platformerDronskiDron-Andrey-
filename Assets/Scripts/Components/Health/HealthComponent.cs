@@ -31,7 +31,7 @@ namespace General.Components.Health
 
         private void Start()
         {
-            _session = FindObjectOfType<GameSession>();
+            _session = GameSession.Instance;
 
             if (IsPlayer)
             {
@@ -76,32 +76,22 @@ namespace General.Components.Health
                     _onDie?.Invoke();
                 }
             }
-            if (_target.CompareTag("Player"))
-            {
-                Debug.Log($"У Вас осталось {_health} жизней");
-            }
-            _onChange?.Invoke(_health);
 
+            _onChange?.Invoke(_health);
         }
 
 
         public void BecomeImmortal()
         {
             if (_target.CompareTag("Player"))
-            {
                 _isImmortal = true;
-                Debug.Log($"Я бессмертен!");
-            }
         }
 
 
         public void BecomeMortal()
         {
             if (_target.CompareTag("Player") && !IsShieldUse)
-            {
                 _isImmortal = false;
-                Debug.Log($"Я смертен(");
-            }
         }
 
 

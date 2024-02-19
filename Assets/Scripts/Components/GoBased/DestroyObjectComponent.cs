@@ -16,7 +16,7 @@ namespace General.Components
         private void StateCheck()
         {
             if (_state != null)
-                FindObjectOfType<GameSession>().StoreState(_state.Id);
+                GameSession.Instance.StoreState(_state.Id);
         }
 
 

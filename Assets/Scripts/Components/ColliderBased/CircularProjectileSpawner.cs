@@ -3,12 +3,14 @@ using System.Collections;
 using Creatures.Weapons;
 using UnityEngine;
 using Utils;
+using Utils.ObjectPool;
 
 namespace General.Components.ColliderBased
 {
     public class CircularProjectileSpawner : MonoBehaviour
     {
         [SerializeField] private ProjectileSequence[] _settings;
+        [SerializeField] private bool _usePool;
         public int Stage { get; set; }
 
 
@@ -31,7 +33,9 @@ namespace General.Components.ColliderBased
                     var angle = sectorStep * i;
                     var direction = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
 
-                    var instance = SpawnUtils.Spawn(setting.Prefab.gameObject, transform.position);
+                    var instance = _usePool ? Pool.Instance.Get(setting.Prefab.gameObject, transform.position)
+                    : SpawnUtils.Spawn(setting.Prefab.gameObject, transform.position);
+
                     var projectile = instance.GetComponent<DirectionalProjectile>();
                     projectile.Launch(direction);
 

@@ -16,7 +16,7 @@ namespace Creatures.Boss
         public void StartFlooding()
         {
             if (_coroutine != null) return;
-            
+
             _coroutine = StartCoroutine(Animate());
         }
 
@@ -27,6 +27,14 @@ namespace Creatures.Boss
             yield return new WaitForSeconds(_floodTime);
             _floodAnimator.SetBool(IsFlooding, false);
             _coroutine = null;
+        }
+
+
+        public void StopFlooding()
+        {
+            // StopCoroutine(Animate());
+            _floodAnimator.SetBool(IsFlooding, false);
+            // _floodAnimator.Play("Hide");
         }
     }
 }

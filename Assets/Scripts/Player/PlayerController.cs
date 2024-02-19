@@ -92,12 +92,11 @@ namespace Creatures.Player
         protected override void Start()
         {
             base.Start();
-            _session = FindObjectOfType<GameSession>();
+            _session = GameSession.Instance;
             _healthComponent = FindObjectOfType<HealthComponent>();
             _cameraShake = FindObjectOfType<CameraShakeEffect>();
             _session.Data.Hp.Value = (int)_session.StatsModel.GetValue(StatId.Hp); ;
             _session.Data.Inventory.OnChanged += OnInventoryChanged;
-            _session.Data.Inventory.OnChanged += InventoryLogger;
 
             _startSlamDownDamageVelocity = _slamDownDamageVelocity;
             UpdatePlayerWeapon();
@@ -108,13 +107,6 @@ namespace Creatures.Player
         private void OnDestroy()
         {
             _session.Data.Inventory.OnChanged -= OnInventoryChanged;
-            _session.Data.Inventory.OnChanged -= InventoryLogger;
-        }
-
-
-        private void InventoryLogger(string id, int value)
-        {
-            Debug.Log($"Congratulations! You have got: {id}:{value}");
         }
 
 

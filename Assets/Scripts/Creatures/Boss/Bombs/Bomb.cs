@@ -12,11 +12,11 @@ namespace Creatures.Boss.Bombs
         private Coroutine _coroutine;
 
 
-        // private void OnEnable()
-        // {
-        //     TryStop();
-        //     _coroutine = StartCoroutine(WaitAndDetonate());
-        // }
+        private void OnEnable()
+        {
+            TryStop();
+            _coroutine = StartCoroutine(WaitAndDetonate());
+        }
 
 
         private void Start()
@@ -40,10 +40,10 @@ namespace Creatures.Boss.Bombs
         }
 
 
-        // private void OnDisable()
-        // {
-        //     TryStop();
-        // }
+        private void OnDisable()
+        {
+            TryStop();
+        }
 
 
         private void TryStop()

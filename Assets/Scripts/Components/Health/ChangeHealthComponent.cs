@@ -19,7 +19,7 @@ namespace General.Components.Health
         {
             if (_isBelongToPlayer)
             {
-                _session = FindObjectOfType<GameSession>();
+                _session = GameSession.Instance;
                 _referenceChangeHealthValue = _changeHealthValue;
 
                 if (_isProjectile)

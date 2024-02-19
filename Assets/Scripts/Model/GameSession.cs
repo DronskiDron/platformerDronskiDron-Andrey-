@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Creatures.Model.Data.Models;
 using Creatures.Model.Data.ScenesManagement;
@@ -14,6 +13,8 @@ namespace Creatures.Model.Data
     {
         [SerializeField] private PlayerData _data;
         [SerializeField] private ScenesManagementInfo[] _scenesInfo;
+
+        public static GameSession Instance { get; private set; }
 
         public PlayerData Data => _data;
         private PlayerData _sessionSave;
@@ -42,6 +43,7 @@ namespace Creatures.Model.Data
             {
                 InitModels();
                 DontDestroyOnLoad(this);
+                Instance = this;
                 StartSession(currentSceneInfo.LevelEnterCheckpoint);
             }
         }
@@ -171,6 +173,8 @@ namespace Creatures.Model.Data
 
         private void OnDestroy()
         {
+            if (Instance == this)
+                Instance = null;
             _trash.Dispose();
         }
 

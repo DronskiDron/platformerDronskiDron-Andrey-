@@ -39,5 +39,11 @@ namespace Creatures.Patrolling
         {
             return (_points[_destinationPointIndex].position - transform.position).magnitude < _treshold;
         }
+
+        public override IEnumerator DoOneMorePatrol()
+        {
+            return null;
+        }
+
     }
 }

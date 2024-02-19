@@ -18,7 +18,7 @@ namespace General.Components.Collectables
 
         public void DropInInventory()
         {
-            var session = FindObjectOfType<GameSession>();
+            var session = GameSession.Instance;
 
             foreach (var inventoryItemData in _items)
             {

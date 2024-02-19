@@ -19,7 +19,7 @@ namespace General.Components.GameplayTools
 
         private void OnEnable()
         {
-            _session = FindObjectOfType<GameSession>();
+            _session = GameSession.Instance;
             _startFuel = _session.Data.Fuel.Value;
             if (!_wasStarted)
                 StartCoroutine(SpendFuel());

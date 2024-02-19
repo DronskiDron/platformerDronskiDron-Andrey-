@@ -32,7 +32,7 @@ namespace UI.Windows.Perks.PlayerStats
 
             _dataGroup = new DataGroup<StatDef, StatWidget>(_prefab, _statsContainer);
 
-            _session = FindObjectOfType<GameSession>();
+            _session = GameSession.Instance;
             _session.StatsModel.InterfaceSelectedStat.Value = DefsFacade.I.Player.Stats[0].ID;
 
             _trash.Retain(_session.StatsModel.Subscribe(OnStatsChanged));
