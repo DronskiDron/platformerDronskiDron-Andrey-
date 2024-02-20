@@ -1,6 +1,4 @@
-﻿using General.Components;
-using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 using Utils;
 
 namespace General.Components.ColliderBased
@@ -10,7 +8,7 @@ namespace General.Components.ColliderBased
         [SerializeField] private float _drawSphereRadius = 0.3f;
 
         private bool _isPressingJump;
-        
+
         public LayerMask GroundLayer => Layer;
 
 
@@ -35,8 +33,8 @@ namespace General.Components.ColliderBased
 #if UNITY_EDITOR
         private void OnDrawGizmos()
         {
-            Handles.color = GetIsGrounded() ? HandlesUtils.TranspanentGreen : HandlesUtils.TranspanentRed;
-            Handles.DrawSolidDisc(transform.position, Vector3.forward, _drawSphereRadius);
+            UnityEditor.Handles.color = GetIsGrounded() ? HandlesUtils.TranspanentGreen : HandlesUtils.TranspanentRed;
+            UnityEditor.Handles.DrawSolidDisc(transform.position, Vector3.forward, _drawSphereRadius);
         }
 #endif
     }

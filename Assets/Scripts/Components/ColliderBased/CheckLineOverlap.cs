@@ -1,5 +1,4 @@
 ﻿using System.Linq;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 using Utils;
@@ -17,12 +16,13 @@ namespace General.Components.ColliderBased
         private readonly RaycastHit2D[] _interactionResult = new RaycastHit2D[10];
 
 
+#if UNITY_EDITOR
         private void OnDrawGizmosSelected()
         {
-            Handles.color = HandlesUtils.TranspanentRed;
-            Handles.DrawLine(transform.position, _target.transform.position);
+            UnityEditor.Handles.color = HandlesUtils.TranspanentRed;
+            UnityEditor.Handles.DrawLine(transform.position, _target.transform.position);
         }
-
+#endif
 
         public void Check()
         {

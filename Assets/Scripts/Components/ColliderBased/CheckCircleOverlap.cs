@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Linq;
-using General.Components.Movement;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 using Utils;
@@ -18,11 +16,13 @@ namespace General.Components.ColliderBased
         protected readonly Collider2D[] InteractionResult = new Collider2D[10];
 
 
+#if UNITY_EDITOR
         private void OnDrawGizmosSelected()
         {
-            Handles.color = HandlesUtils.TranspanentRed;
-            Handles.DrawSolidDisc(transform.position, Vector3.forward, Radius);
+            UnityEditor.Handles.color = HandlesUtils.TranspanentRed;
+            UnityEditor.Handles.DrawSolidDisc(transform.position, Vector3.forward, Radius);
         }
+#endif
 
 
         public void Check()

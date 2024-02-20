@@ -14,10 +14,13 @@ namespace General.Components.LevelManagement
 
             var scene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(scene.name);
+#if UNITY_EDITOR
             ClearLog();
+#endif
         }
 
 
+#if UNITY_EDITOR
         public void ClearLog()
         {
             var assembly = Assembly.GetAssembly(typeof(UnityEditor.Editor));
@@ -25,6 +28,7 @@ namespace General.Components.LevelManagement
             var method = type.GetMethod("Clear");
             method.Invoke(new object(), null);
         }
+#endif
     }
 }
 

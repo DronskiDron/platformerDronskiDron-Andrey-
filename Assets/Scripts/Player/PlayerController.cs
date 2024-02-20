@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEditor.Animations;
 using Utils;
 using Creatures.Model.Data;
 using System.Collections;
@@ -28,8 +27,8 @@ namespace Creatures.Player
         [SerializeField] private Cooldown _throwCooldown;
 
         [Header("Weapon States")]
-        [SerializeField] private AnimatorController _armed;
-        [SerializeField] private AnimatorController _disarmed;
+        [SerializeField] private RuntimeAnimatorController _armed;
+        [SerializeField] private RuntimeAnimatorController _disarmed;
 
         [Header("Perks")]
         [SerializeField] private Cooldown _superThrowCooldown;
