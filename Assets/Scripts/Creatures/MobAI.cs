@@ -23,7 +23,7 @@ namespace Creatures
         protected SpawnListComponent Particles;
         protected Creature Creature;
         private Animator _animator;
-        private bool _isDead;
+        public bool _isDead;
         public bool IsDead => _isDead;
 
         protected Patrol Patrol;
@@ -149,7 +149,6 @@ namespace Creatures
         public void OnChangeSpriteDirection()
         {
             IsFollow = false;
-            Creature.MobCanJump = false;
             var direction = GetDirectionToTarget();
             StartState(Patrol.DoPatrol());
             Creature.UpdateSpriteDirection(direction);

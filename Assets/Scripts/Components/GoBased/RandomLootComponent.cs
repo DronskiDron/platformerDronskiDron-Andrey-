@@ -13,7 +13,9 @@ namespace General.Components
         [SerializeField][Range(1, 100)] private int _lootDropChance;
         [SerializeField] private int _spawnObjectsCount;
         [SerializeField] private SpawnComponent _spawnComponent;
+#if UNITY_EDITOR
         [SerializeField] private float _spawnRadius = 0.3f;
+#endif
         [SerializeField] private float _spawnDistance = 1.0f;
         [SerializeField] private Transform _spawnPoint;
 

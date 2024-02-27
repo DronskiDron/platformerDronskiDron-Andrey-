@@ -5,8 +5,9 @@ namespace General.Components.ColliderBased
 {
     public class LayerCheckCreatures : ColliderCheck
     {
+#if UNITY_EDITOR
         [SerializeField] private float _drawSphereRadius = 0.3f;
-
+#endif
         private bool _isPressingJump;
 
         public LayerMask GroundLayer => Layer;

@@ -58,7 +58,7 @@ namespace General.Components.Movement
                 var pos = new Vector2(
                     Mathf.Cos(angle + _time * _speed) * _radius,
                     Mathf.Sin(angle + _time * _speed) * _radius
-                    );
+                );
 
                 _positions[i] = containerPosition + pos;
             }
@@ -70,12 +70,7 @@ namespace General.Components.Movement
         {
             UpdateContent();
             CalculatePositions();
-            for (int i = 0; i < _bodies.Length; i++)
-            {
-                _bodies[i].transform.position = _positions[i];
-            }
         }
-
 
         private void OnDrawGizmosSelected()
         {

@@ -7,6 +7,8 @@ namespace General.Components.Movement
         [SerializeField] private float _frequency = 1f;
         [SerializeField] private float _amplitude = 1f;
         [SerializeField] private bool _randomize;
+        [SerializeField] private bool _dontUsedInOtherMovement = true;
+
 
         private float _originalY;
         private Rigidbody2D _rigidbody;
@@ -27,9 +29,12 @@ namespace General.Components.Movement
 
         private void Update()
         {
-            var pos = _rigidbody.position;
-            pos.y = _originalY + Mathf.Sin(_seed + Time.time * _frequency) * _amplitude;
-            _rigidbody.MovePosition(pos);
+            if (_dontUsedInOtherMovement)
+            {
+                var pos = _rigidbody.position;
+                pos.y = _originalY + Mathf.Sin(_seed + Time.time * _frequency) * _amplitude;
+                _rigidbody.MovePosition(pos);
+            }
         }
     }
 }

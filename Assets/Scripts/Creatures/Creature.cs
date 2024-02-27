@@ -17,10 +17,8 @@ namespace Creatures
         public bool InvertScale => _invertScale;
 
         [Header("Mob Params")]
-        [SerializeField] private bool _isMob;
         [SerializeField] private float _mobJumpForce = 2f;
-        private bool _mobCanJump = false;
-        public bool MobCanJump { get => _mobCanJump; set => _mobCanJump = value; }
+        public bool MobCanJump { get; set; }
 
         [Header("Creature Checkers")]
         [SerializeField] private CheckCircleOverlap _attackRange;
@@ -47,6 +45,7 @@ namespace Creatures
             Rigidbody = GetComponent<Rigidbody2D>();
             Animator = GetComponent<Animator>();
             Sounds = GetComponent<PlaySoundsComponent>();
+            MobCanJump = true;
         }
 
 
@@ -66,7 +65,7 @@ namespace Creatures
 
         protected virtual void Update()
         {
-            IsGroundedNow = IsGrounded();
+            IsGroundedNow = GroundCheck.GetIsGrounded();
         }
 
 
@@ -76,25 +75,11 @@ namespace Creatures
         }
 
 
-        private bool IsGrounded()
-        {
-            var isGrounded = GroundCheck.GetIsGrounded();
-            return isGrounded;
-        }
-
-
         private void PlayerMover()
         {
-            if (_mobCanJump)
-            {
-                StartMobJump();
-            }
-            else
-            {
-                var xVelocity = MoveDirection.x * CalculateSpeed();
-                var yVelocity = CalculateVelocity();
-                Rigidbody.velocity = new Vector2(xVelocity, yVelocity);
-            }
+            var xVelocity = MoveDirection.x * CalculateSpeed();
+            var yVelocity = CalculateVelocity();
+            Rigidbody.velocity = new Vector2(xVelocity, yVelocity);
         }
 
 
@@ -202,30 +187,33 @@ namespace Creatures
 
         public void StartMobJump()
         {
-            _mobCanJump = true;
-            if (_isMob && IsGroundedNow)
+            if (IsGroundedNow)
             {
-                var vector = new Vector2(MoveDirection.x, 1);
-                GroundCheck.SetIsPressingJump(vector);
-                Rigidbody.AddForce(vector.normalized * _mobJumpForce, ForceMode2D.Impulse);
-                _mobCanJump = false;
+                MobJumpLogic();
             }
+        }
+
+
+        private void MobJumpLogic()
+        {
+            var vector = new Vector2(MoveDirection.x, 1);
+            GroundCheck.SetIsPressingJump(vector);
+            Rigidbody.AddForce(vector.normalized * _mobJumpForce, ForceMode2D.Impulse);
+        }
+
+
+        public void VerticalJumpLogic()
+        {
+            var vector = new Vector2(0, 1);
+            GroundCheck.SetIsPressingJump(vector);
+            Rigidbody.AddForce(vector.normalized * _mobJumpForce, ForceMode2D.Impulse);
         }
 
 
         public void StopMobJump()
         {
-            if (_isMob)
-            {
-                var vector = new Vector2(MoveDirection.x, MoveDirection.y);
-                GroundCheck.SetIsPressingJump(vector);
-            }
-        }
-
-
-        public Rigidbody2D GetRigidbody()
-        {
-            return Rigidbody;
+            var vector = new Vector2(MoveDirection.x, MoveDirection.y);
+            GroundCheck.SetIsPressingJump(vector);
         }
 
 

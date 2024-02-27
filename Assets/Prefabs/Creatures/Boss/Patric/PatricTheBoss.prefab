@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 6643121077617301674}
   - component: {fileID: 6643121077617301677}
   - component: {fileID: 6643121077617301676}
+  - component: {fileID: 2704703789403831110}
   m_Layer: 12
   m_Name: PatricTheBoss
   m_TagString: Enemy
@@ -263,6 +264,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2704703789403831110}
+        m_MethodName: OnStoreState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _onChange:
     m_PersistentCalls:
       m_Calls: []
@@ -337,6 +349,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _floodAnimator: {fileID: 0}
   _floodTime: 3
+--- !u!114 &2704703789403831110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6643121077617301683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fd7b26dd2accbe4283f64d62f72975f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _id: PatricTheBoss
+  _onRestore:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6643121077617301686}
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Die
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6643121077617301684}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6643121077676961674
 GameObject:
   m_ObjectHideFlags: 0

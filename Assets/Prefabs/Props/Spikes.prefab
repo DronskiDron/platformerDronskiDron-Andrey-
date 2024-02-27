@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5434894252385692518}
   - component: {fileID: 108324477}
   - component: {fileID: 5888883833475306232}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Spikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3494099965038632002}
   - component: {fileID: 480085662435469902}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: ColliderPhysic
   m_TagString: Untagged
   m_Icon: {fileID: 0}

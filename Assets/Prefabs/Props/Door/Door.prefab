@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1794428050}
   - component: {fileID: 3292914830782727771}
   - component: {fileID: 5047776308544655737}
+  - component: {fileID: 3825920347378470094}
   m_Layer: 10
   m_Name: Door
   m_TagString: StoneDoor
@@ -145,3 +146,32 @@ MonoBehaviour:
   _animator: {fileID: 1794428050}
   _state: 0
   _animationKey: is-Opened
+  _updateOnStart: 0
+  _restoreState: {fileID: 3825920347378470094}
+--- !u!114 &3825920347378470094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3413633145756024067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fd7b26dd2accbe4283f64d62f72975f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _id: Door
+  _onRestore:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5047776308544655737}
+        m_MethodName: SwitchIt
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

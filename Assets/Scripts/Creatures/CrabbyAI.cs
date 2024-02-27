@@ -8,6 +8,7 @@ namespace Creatures
     public class CrabbyAI : MobAI
     {
         [SerializeField] private LayerCheck _mobJumpChecker;
+        [SerializeField] private float _jumpCooldown = 0.2f;
 
 
         protected override IEnumerator GoToPlayer()
@@ -52,12 +53,27 @@ namespace Creatures
         }
 
 
+        private IEnumerator MobJump()
+        {
+            Creature.MobCanJump = false;
+            Creature.StartMobJump();
+            yield return new WaitForSeconds(_jumpCooldown);
+            Creature.MobCanJump = true;
+        }
+
+
+        public void PerformJump()
+        {
+            if (_mobJumpChecker.IsTouchingLayer && IsFollow && Creature.MobCanJump && !IsDead)
+            {
+                StartCoroutine(MobJump());
+            }
+        }
+
+
         private void Update()
         {
-            if (_mobJumpChecker.IsTouchingLayer && IsFollow && !IsDead)
-            {
-                Creature.StartMobJump();
-            }
+            PerformJump();
         }
     }
 }

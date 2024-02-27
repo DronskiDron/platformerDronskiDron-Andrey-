@@ -529,7 +529,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1132308581365152856}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.207, z: 0}
+  m_LocalPosition: {x: 0, y: 0.86, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 217135586906293548}
@@ -789,8 +789,9 @@ GameObject:
   - component: {fileID: 7780517866537752234}
   - component: {fileID: 1073702949}
   - component: {fileID: 3866918395913893889}
-  - component: {fileID: 1070489320}
   - component: {fileID: 7894153474055591666}
+  - component: {fileID: 4804419595536881437}
+  - component: {fileID: 171445630729578271}
   m_Layer: 12
   m_Name: Crabby
   m_TagString: Enemy
@@ -1072,7 +1073,6 @@ MonoBehaviour:
   _damageJumpForce: 2
   Health: {fileID: 6669306786479704690}
   _invertScale: 1
-  _isMob: 1
   _mobJumpForce: 2
   _attackRange: {fileID: 1802801993}
   Particles: {fileID: 331407863}
@@ -1145,37 +1145,9 @@ MonoBehaviour:
   _beforeAttackDelay: 0.2
   MissPlayerCooldown: 1
   _state: {fileID: 7894153474055591666}
+  _isDead: 0
   _mobJumpChecker: {fileID: 3656764001208017880}
---- !u!114 &1070489320
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4721150701775001659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a4ebb7e5ef789947a1a8029086b8df7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _tag: StoneDoor
-  _layer:
-    serializedVersion: 2
-    m_Bits: 17408
-  _action:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3866918395913893889}
-        m_MethodName: OnChangeSpriteDirection
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  _jumpCooldown: 0.2
 --- !u!114 &7894153474055591666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1189,6 +1161,65 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _id: Crabby
+  _onRestore:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 171445630729578271}
+        m_MethodName: DestroyObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4804419595536881437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4721150701775001659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cd08ef734d5f7540a848f3203cf702d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _obstacleCheck: {fileID: 3656764001208017880}
+  _mobAI: {fileID: 3866918395913893889}
+  _timeToWait: 1
+  CoroutineActivated: 0
+  _wasBug:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3866918395913893889}
+        m_MethodName: PerformJump
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &171445630729578271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4721150701775001659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ef8203dc20251f4d9eab29b3f46c35b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectToDestroy: {fileID: 4721150701775001659}
+  _state: {fileID: 7894153474055591666}
+  _delayValue: 1
 --- !u!1 &4721150702240915402
 GameObject:
   m_ObjectHideFlags: 0

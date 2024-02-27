@@ -32,6 +32,7 @@ namespace General.Components
             StartCoroutine(WaitAndDestroy());
         }
 
+
         private IEnumerator WaitAndDestroy()
         {
             yield return new WaitForSeconds(_delayValue);

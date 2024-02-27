@@ -206,6 +206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _objectToDestroy: {fileID: 2427943495945562231}
   _state: {fileID: 4745719383615900123}
+  _delayValue: 1
 --- !u!114 &2427943495945562233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,6 +269,7 @@ MonoBehaviour:
   _frequency: 6
   _amplitude: 0.1
   _randomize: 1
+  _dontUsedInOtherMovement: 1
 --- !u!114 &7364686843456101418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -321,3 +323,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _id: SilverCoin
+  _onRestore:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2427943495945562235}
+        m_MethodName: DestroyObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

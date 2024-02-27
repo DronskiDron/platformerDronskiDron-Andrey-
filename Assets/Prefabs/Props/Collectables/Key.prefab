@@ -247,6 +247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _objectToDestroy: {fileID: 7397012321753068566}
   _state: {fileID: 2670741991214126227}
+  _delayValue: 1
 --- !u!114 &1882563586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,3 +287,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _id: Key
+  _onRestore:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7397012321753068561}
+        m_MethodName: DestroyObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

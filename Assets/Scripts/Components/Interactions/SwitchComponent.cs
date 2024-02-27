@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using Creatures.Model.Data;
+using General.Components.LevelManagement;
+using UnityEngine;
 
 namespace General.Components.Interactions
 {
@@ -8,6 +10,7 @@ namespace General.Components.Interactions
         [SerializeField] private bool _state;
         [SerializeField] private string _animationKey;
         [SerializeField] private bool _updateOnStart;
+        [SerializeField] private RestoreStateComponent _restoreState;
 
 
         private void Start()
@@ -21,6 +24,8 @@ namespace General.Components.Interactions
         {
             _state = !_state;
             _animator.SetBool(_animationKey, _state);
+            if (_restoreState != null)
+                GameSession.Instance.StoreState(_restoreState.Id);
         }
 
 

@@ -62,6 +62,7 @@ namespace Creatures.Model.Data
             var currentSceneName = GetCurrentSceneName();
             var currentSceneInfo = FindSceneManagementInfo(currentSceneName);
             var checkpoints = FindObjectsOfType<CheckPointComponent>();
+            
             if (currentSceneInfo.GetSceneStatusFlag() && !IsMoveToUpperIndexScene())
             {
                 foreach (var checkPoint in checkpoints)

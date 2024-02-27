@@ -750,6 +750,8 @@ GameObject:
   - component: {fileID: 7780517866537752234}
   - component: {fileID: 1073702949}
   - component: {fileID: 1906573095541609916}
+  - component: {fileID: 7954917432607614012}
+  - component: {fileID: 2849884589419828494}
   m_Layer: 12
   m_Name: Sharky
   m_TagString: Enemy
@@ -1031,7 +1033,6 @@ MonoBehaviour:
   _damageJumpForce: 2
   Health: {fileID: 6669306786479704690}
   _invertScale: 1
-  _isMob: 1
   _mobJumpForce: 2
   _attackRange: {fileID: 1802801993}
   Particles: {fileID: 331407863}
@@ -1055,6 +1056,7 @@ MonoBehaviour:
   _beforeAttackDelay: 0
   MissPlayerCooldown: 1
   _state: {fileID: 1906573095541609916}
+  _isDead: 0
 --- !u!114 &7780517866537752234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1070,7 +1072,6 @@ MonoBehaviour:
   _groundCheck: {fileID: 444987214}
   _obstacleCheck: {fileID: 3656764001208017880}
   _direction: 1
-  _creature: {fileID: 3419200235148880614}
   _onChangeDirection:
     m_PersistentCalls:
       m_Calls:
@@ -1118,6 +1119,65 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _id: Sharky
+  _onRestore:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2849884589419828494}
+        m_MethodName: DestroyObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7954917432607614012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4721150701775001659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cd08ef734d5f7540a848f3203cf702d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _obstacleCheck: {fileID: 3656764001208017880}
+  _mobAI: {fileID: 1780606718}
+  _timeToWait: 0.4
+  CoroutineActivated: 0
+  _wasBug:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1780606718}
+        m_MethodName: OnChangeSpriteDirection
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2849884589419828494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4721150701775001659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ef8203dc20251f4d9eab29b3f46c35b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectToDestroy: {fileID: 4721150701775001659}
+  _state: {fileID: 1906573095541609916}
+  _delayValue: 1
 --- !u!1 &4721150702240915402
 GameObject:
   m_ObjectHideFlags: 0

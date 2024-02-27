@@ -1,5 +1,6 @@
 ﻿using Creatures.Model.Data;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace General.Components.LevelManagement
 {
@@ -7,6 +8,7 @@ namespace General.Components.LevelManagement
     {
         [SerializeField] private string _id;
         public string Id => _id;
+        public UnityEvent _onRestore;
 
         private GameSession _session;
 
@@ -22,7 +24,13 @@ namespace General.Components.LevelManagement
             _session = GameSession.Instance;
             var isDestroyed = _session.RestoreState(Id);
             if (isDestroyed)
-                Destroy(gameObject);
+                _onRestore?.Invoke();
+        }
+
+
+        public void OnStoreState()
+        {
+            GameSession.Instance.StoreState(Id);
         }
     }
 }
