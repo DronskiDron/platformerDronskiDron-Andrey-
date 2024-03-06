@@ -191,26 +191,32 @@ namespace Creatures.Model.Data
         }
 
 
-        [HideInInspector][SerializeField] private List<string> _removedItems = new List<string>();
+        [SerializeField] private Dictionary<string, List<string>> _removedItems = new Dictionary<string, List<string>>();
 
 
-        public bool RestoreState(string itemID)
+        public bool RestoreState(string sceneName, string itemID)
         {
-            return _removedItems.Contains(itemID);
+            if (_removedItems.ContainsKey(sceneName))
+                return _removedItems[sceneName].Contains(itemID);
+            else return false;
         }
 
 
-        public void StoreState(string itemID)
+        public void StoreState(string sceneName, string itemID)
         {
-            if (!_removedItems.Contains(itemID))
-                _removedItems.Add(itemID);
+            if (_removedItems.ContainsKey(sceneName))
+                _removedItems[sceneName].Add(itemID);
+            else
+                _removedItems.Add(sceneName, new List<string> { itemID });
         }
 
 
-        public void ClearRemoveItemsList()
+        public void ClearRemoveItemsList(string sceneName)
         {
             _checkpoints.Clear();
-            _removedItems.Clear();
+
+            if (_removedItems.ContainsKey(sceneName))
+                _removedItems[sceneName].Clear();
         }
 
 

@@ -137,10 +137,11 @@ namespace Creatures
 
         public void OnDie()
         {
+            var session = GameSession.Instance;
             Creature.SetMoveDirection(Vector2.zero);
             _isDead = true;
             _animator.SetBool(IsDeadKey, true);
-            GameSession.Instance.StoreState(_state.Id);
+            session.StoreState(session.GetCurrentSceneName(), _state.Id);
 
             if (_current != null) StopCoroutine(_current);
         }

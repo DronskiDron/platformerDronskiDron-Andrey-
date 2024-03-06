@@ -12,9 +12,12 @@ namespace General.Components.Interactions
         [SerializeField] private bool _updateOnStart;
         [SerializeField] private RestoreStateComponent _restoreState;
 
+        private GameSession _session;
+
 
         private void Start()
         {
+            _session = GameSession.Instance;
             if (_updateOnStart)
                 _animator.SetBool(_animationKey, _state);
         }
@@ -25,7 +28,7 @@ namespace General.Components.Interactions
             _state = !_state;
             _animator.SetBool(_animationKey, _state);
             if (_restoreState != null)
-                GameSession.Instance.StoreState(_restoreState.Id);
+                _session.StoreState(_session.GetCurrentSceneName(), _restoreState.Id);
         }
 
 

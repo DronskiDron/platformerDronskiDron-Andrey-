@@ -47,7 +47,7 @@ namespace General.Components.LevelManagement
             InformSession();
 
             if (_state != null)
-                GameSession.Instance.StoreState(_state.Id);
+                _session.StoreState(_session.GetCurrentSceneName(), _state.Id);
             _saveLoadManager.SaveData();
         }
 

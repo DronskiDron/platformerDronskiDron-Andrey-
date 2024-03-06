@@ -11,6 +11,7 @@ namespace General.Components.LevelManagement
         public UnityEvent _onRestore;
 
         private GameSession _session;
+        private string _sceneName;
 
 
         private void OnValidate()
@@ -22,7 +23,8 @@ namespace General.Components.LevelManagement
         private void Start()
         {
             _session = GameSession.Instance;
-            var isDestroyed = _session.RestoreState(Id);
+            _sceneName = GameSession.Instance.GetCurrentSceneName();
+            var isDestroyed = _session.RestoreState(_sceneName, Id);
             if (isDestroyed)
                 _onRestore?.Invoke();
         }
@@ -30,7 +32,7 @@ namespace General.Components.LevelManagement
 
         public void OnStoreState()
         {
-            GameSession.Instance.StoreState(Id);
+            GameSession.Instance.StoreState(_sceneName, Id);
         }
     }
 }

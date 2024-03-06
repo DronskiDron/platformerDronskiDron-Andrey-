@@ -15,8 +15,9 @@ namespace General.Components
 
         private void StateCheck()
         {
+            var session = GameSession.Instance;
             if (_state != null)
-                GameSession.Instance.StoreState(_state.Id);
+                session.StoreState(session.GetCurrentSceneName(), _state.Id);
         }
 
 
