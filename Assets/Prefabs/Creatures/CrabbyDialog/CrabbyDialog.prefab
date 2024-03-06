@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 7416052736995849937}
   - component: {fileID: 7416052736995849936}
   - component: {fileID: 8940680691470451956}
+  - component: {fileID: 3108746218733778812}
   m_Layer: 9
   m_Name: CrabbyDialog
   m_TagString: Interactable
@@ -193,6 +194,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3108746218733778812}
+        m_MethodName: SaveData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7416052736995849934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,3 +279,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _profile: {fileID: 11400000, guid: b55e348f23addc14aaea2361893d7de7, type: 2}
   _defaultProfile: {fileID: 11400000, guid: 77b3169e39d2c414d93ea72cd36f68c6, type: 2}
+--- !u!114 &3108746218733778812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7416052736995849928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c245ad4ae168a54e93d596c18e247cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _session: {fileID: 0}

@@ -1,0 +1,161 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2708878258833824854
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2708878258833824856}
+  - component: {fileID: 2708878258833824857}
+  - component: {fileID: 2708878258833824859}
+  m_Layer: 0
+  m_Name: GameSession
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2708878258833824856
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2708878258833824854}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 34.08646, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2708878258833824857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2708878258833824854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04da306cfaa710d4391ebb93a57fb1aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+    _inventory:
+      _inventory: []
+      _inventorySlots:
+      - Id: None
+        Value: 0
+      - Id: None
+        Value: 0
+      - Id: None
+        Value: 0
+      - Id: None
+        Value: 0
+      - Id: None
+        Value: 0
+      - Id: None
+        Value: 0
+      - Id: None
+        Value: 0
+      - Id: None
+        Value: 0
+      - Id: None
+        Value: 0
+      - Id: None
+        Value: 0
+      - Id: None
+        Value: 0
+      - Id: None
+        Value: 0
+    Hp:
+      _value: 0
+    Perks:
+      _used:
+        _value: 
+      _unlocked: []
+    Levels:
+      _progress: []
+    FuelLimit: 30
+    Fuel:
+      _value: 0
+  _scenesInfo:
+  - _id: Level1
+    _sceneIndex: 0
+    _levelEnterCheckpoint: level1-checkpoint1
+    _levelExitCheckpoint: level1-checkpoint5
+    _storedCheckpoints: []
+    _levelWasFinished: 0
+  - _id: Level2
+    _sceneIndex: 1
+    _levelEnterCheckpoint: level2-checkpoint1
+    _levelExitCheckpoint: level2-checkpoint5
+    _storedCheckpoints: []
+    _levelWasFinished: 0
+  - _id: Level3
+    _sceneIndex: 2
+    _levelEnterCheckpoint: level3-checkpoint1
+    _levelExitCheckpoint: level3-checkpoint4
+    _storedCheckpoints: []
+    _levelWasFinished: 0
+  _loader: {fileID: 2708878258833824859}
+  CurrentScene: 
+  _sessionSave:
+    _inventory:
+      _inventory: []
+      _inventorySlots:
+      - Id: 
+        Value: 0
+      - Id: 
+        Value: 0
+      - Id: 
+        Value: 0
+      - Id: None
+        Value: 0
+      - Id: 
+        Value: 0
+      - Id: 
+        Value: 0
+      - Id: 
+        Value: 0
+      - Id: 
+        Value: 0
+      - Id: 
+        Value: 0
+      - Id: 
+        Value: 0
+      - Id: None
+        Value: 0
+      - Id: 
+        Value: 0
+    Hp:
+      _value: 0
+    Perks:
+      _used:
+        _value: 
+      _unlocked: []
+    Levels:
+      _progress: []
+    FuelLimit: 30
+    Fuel:
+      _value: 0
+  _storedSceneIndex: 0
+  _checkpoints: []
+  _removedItems: []
+--- !u!114 &2708878258833824859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2708878258833824854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c245ad4ae168a54e93d596c18e247cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _session: {fileID: 2708878258833824857}

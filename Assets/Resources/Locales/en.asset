@@ -28,6 +28,8 @@ MonoBehaviour:
     Value: "Menu\r"
   - Key: pause_title
     Value: "Pause\r"
+  - Key: new_game
+    Value: "New game\r"
   - Key: button_start
     Value: "Start\r"
   - Key: button_option

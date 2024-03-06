@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Creatures.Model.Data.Models;
 using Creatures.Model.Data.ScenesManagement;
@@ -9,28 +10,32 @@ using Utils.Disposables;
 
 namespace Creatures.Model.Data
 {
+    [Serializable]
     public class GameSession : MonoBehaviour
     {
         [SerializeField] private PlayerData _data;
         [SerializeField] private ScenesManagementInfo[] _scenesInfo;
-
-        public static GameSession Instance { get; private set; }
-
-        public PlayerData Data => _data;
-        private PlayerData _sessionSave;
-        private int _storedSceneIndex;
-
-        private readonly CompositeDisposable _trash = new CompositeDisposable();
+        [SerializeField] private SaveLoadManager _loader;
 
         public QuickInventoryModel QuickInventory { get; private set; }
         public BigInventoryModel BigInventory { get; private set; }
         public PerksModel PerksModel { get; private set; }
         public StatsModel StatsModel { get; private set; }
 
-        private List<string> _checkpoints = new List<string>();
+        [HideInInspector][SerializeField] public string CurrentScene;
+        [HideInInspector][SerializeField] private PlayerData _sessionSave;
+        [HideInInspector][SerializeField] private int _storedSceneIndex;
+        [HideInInspector][SerializeField] private List<string> _checkpoints = new List<string>();
+
+        public PlayerData Data => _data;
+        public SaveLoadManager Loader => _loader;
+        public PlayerData SessionSave { get => _sessionSave; set => _sessionSave = value; }
+        public static GameSession Instance { get; set; }
+
+        private readonly CompositeDisposable _trash = new CompositeDisposable();
 
 
-        private void Awake()
+        protected virtual void Awake()
         {
             var existsSession = GetExistsSession();
             var currentSceneInfo = FindSceneManagementInfo(GetCurrentSceneName());
@@ -41,11 +46,22 @@ namespace Creatures.Model.Data
             }
             else
             {
+                if (_loader.ExistsSaveCheck())
+                    _loader.LoadData();
                 InitModels();
                 DontDestroyOnLoad(this);
                 Instance = this;
                 StartSession(currentSceneInfo.LevelEnterCheckpoint);
             }
+        }
+
+
+        protected virtual void Start()
+        {
+            if (_loader == null)
+                _loader = GetComponent<SaveLoadManager>();
+            SaveSession();
+            _loader.SaveData();
         }
 
 
@@ -62,7 +78,7 @@ namespace Creatures.Model.Data
             var currentSceneName = GetCurrentSceneName();
             var currentSceneInfo = FindSceneManagementInfo(currentSceneName);
             var checkpoints = FindObjectsOfType<CheckPointComponent>();
-            
+
             if (currentSceneInfo.GetSceneStatusFlag() && !IsMoveToUpperIndexScene())
             {
                 foreach (var checkPoint in checkpoints)
@@ -123,12 +139,6 @@ namespace Creatures.Model.Data
         }
 
 
-        private void Start()
-        {
-            SaveSession();
-        }
-
-
         private GameSession GetExistsSession()
         {
             var sessions = FindObjectsOfType<GameSession>();
@@ -143,6 +153,7 @@ namespace Creatures.Model.Data
 
         public void SaveSession()
         {
+            CurrentScene = GetCurrentSceneName();
             _sessionSave = _data.Clone();
         }
 
@@ -172,7 +183,7 @@ namespace Creatures.Model.Data
         }
 
 
-        private void OnDestroy()
+        protected virtual void OnDestroy()
         {
             if (Instance == this)
                 Instance = null;
@@ -180,7 +191,7 @@ namespace Creatures.Model.Data
         }
 
 
-        private List<string> _removedItems = new List<string>();
+        [HideInInspector][SerializeField] private List<string> _removedItems = new List<string>();
 
 
         public bool RestoreState(string itemID)
@@ -193,6 +204,13 @@ namespace Creatures.Model.Data
         {
             if (!_removedItems.Contains(itemID))
                 _removedItems.Add(itemID);
+        }
+
+
+        public void ClearRemoveItemsList()
+        {
+            _checkpoints.Clear();
+            _removedItems.Clear();
         }
 
 

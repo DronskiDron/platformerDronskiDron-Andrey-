@@ -20,6 +20,20 @@ namespace General.Components.LevelManagement
         }
 
 
+        public void ReloadFromBegining()
+        {
+            var session = GameSession.Instance;
+            session.ClearRemoveItemsList();
+            session.LoadLastSessionSave();
+
+            var scene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(scene.name);
+#if UNITY_EDITOR
+            ClearLog();
+#endif
+        }
+
+
 #if UNITY_EDITOR
         public void ClearLog()
         {

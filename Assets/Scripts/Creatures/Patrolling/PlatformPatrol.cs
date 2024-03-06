@@ -54,7 +54,7 @@ namespace Creatures.Patrolling
                     _onChangeDirection?.Invoke(new Vector2(_direction, 0));
                 }
 
-                yield return null;
+                yield return new WaitForSeconds(0.1f);
             }
         }
     }

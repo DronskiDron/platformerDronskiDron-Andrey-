@@ -1,4 +1,6 @@
 ﻿using System;
+using Creatures.Model.Data;
+using General.Components.LevelManagement;
 using UI.LevelsLoader;
 using UnityEngine;
 using Utils;
@@ -7,6 +9,8 @@ namespace UI.Windows.MainMenu
 {
     public class MainMenuWindow : AnimatedWindow
     {
+        [SerializeField] private MainMenuSession _session;
+
         private Action _closeAction;
 
 
@@ -21,7 +25,27 @@ namespace UI.Windows.MainMenu
             _closeAction = () =>
             {
                 var loader = FindObjectOfType<LevelLoader>();
+                var jsonLoader = FindObjectOfType<SaveLoadManager>();
+                jsonLoader.ResetData();
                 loader.LoadLevel("Level1");
+            };
+            Close();
+        }
+
+
+        public void OnContinueGame()
+        {
+            _closeAction = () =>
+            {
+                var loader = FindObjectOfType<LevelLoader>();
+                var jsonLoader = FindObjectOfType<SaveLoadManager>();
+                var lastScene = jsonLoader.LoadSaveDataToMenu(_session)?.CurrentScene;
+                if (lastScene != "" && lastScene != null)
+                    loader.LoadLevel(lastScene);
+                else
+                {
+                    loader.LoadLevel("Level1");
+                }
             };
             Close();
         }

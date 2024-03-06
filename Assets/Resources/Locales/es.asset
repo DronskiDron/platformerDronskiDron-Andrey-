@@ -28,6 +28,8 @@ MonoBehaviour:
     Value: "Men\xFA\r"
   - Key: pause_title
     Value: "Pausa\r"
+  - Key: new_game
+    Value: "Nuevo juego\r"
   - Key: button_start
     Value: "Comenzar\r"
   - Key: button_option

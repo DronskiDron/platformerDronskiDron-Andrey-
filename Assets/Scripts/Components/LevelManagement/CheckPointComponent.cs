@@ -5,6 +5,7 @@ using UnityEngine.Events;
 namespace General.Components.LevelManagement
 {
     [RequireComponent(typeof(SpawnComponent))]
+    [RequireComponent(typeof(SaveLoadManager))]
     public class CheckPointComponent : MonoBehaviour
     {
         [SerializeField] private string _id;
@@ -20,6 +21,13 @@ namespace General.Components.LevelManagement
 
         private GameSession _session;
         private bool _wasChecked = false;
+        private SaveLoadManager _saveLoadManager;
+
+
+        private void Awake()
+        {
+            _saveLoadManager = GetComponent<SaveLoadManager>();
+        }
 
 
         private void Start()
@@ -40,6 +48,7 @@ namespace General.Components.LevelManagement
 
             if (_state != null)
                 GameSession.Instance.StoreState(_state.Id);
+            _saveLoadManager.SaveData();
         }
 
 
