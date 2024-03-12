@@ -141,7 +141,7 @@ namespace Creatures
             Creature.SetMoveDirection(Vector2.zero);
             _isDead = true;
             _animator.SetBool(IsDeadKey, true);
-            session.StoreState(session.GetCurrentSceneName(), _state.Id);
+            session.ItemStateStorage.StoreState(session.GetCurrentSceneName(), _state.Id);
 
             if (_current != null) StopCoroutine(_current);
         }

@@ -1,9 +1,12 @@
-﻿using UnityEngine;
+﻿using Creatures.Player;
+using UnityEngine;
 
 namespace BackGround
 {
     public class BackGroundFollowScript : MonoBehaviour
     {
+        [SerializeField] private bool _connectedToPlayer = false;
+
         [Header("BgFollow")]
         [SerializeField] private Transform _target;
         [SerializeField] private float _damping = 15f;
@@ -18,6 +21,8 @@ namespace BackGround
 
         private void Start()
         {
+            if (_connectedToPlayer)
+                _target = FindObjectOfType<PlayerController>().transform;
             SetObjectStartPosition();
         }
 

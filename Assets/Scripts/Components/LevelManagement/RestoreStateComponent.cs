@@ -24,7 +24,7 @@ namespace General.Components.LevelManagement
         {
             _session = GameSession.Instance;
             _sceneName = GameSession.Instance.GetCurrentSceneName();
-            var isDestroyed = _session.RestoreState(_sceneName, Id);
+            var isDestroyed = _session.ItemStateStorage.RestoreState(_sceneName, Id);
             if (isDestroyed)
                 _onRestore?.Invoke();
         }
@@ -32,7 +32,7 @@ namespace General.Components.LevelManagement
 
         public void OnStoreState()
         {
-            GameSession.Instance.StoreState(_sceneName, Id);
+            GameSession.Instance.ItemStateStorage.StoreState(_sceneName, Id);
         }
     }
 }

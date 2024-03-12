@@ -23,7 +23,8 @@ namespace General.Components.LevelManagement
         public void ReloadFromBegining()
         {
             var session = GameSession.Instance;
-            session.ClearRemoveItemsList(session.GetCurrentSceneName());
+            session.ItemStateStorage.ClearRemoveItemsList(session.GetCurrentSceneName());
+            session.ClearCheckpointList();
             session.LoadLastSessionSave();
 
             var scene = SceneManager.GetActiveScene();

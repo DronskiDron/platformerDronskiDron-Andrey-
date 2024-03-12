@@ -1,7 +1,6 @@
 ﻿using Creatures.Model.Data;
 using UnityEngine;
 using UnityEngine.Events;
-using static Creatures.Model.Data.InventoryData;
 
 namespace General.Components.Interactions
 {
@@ -16,29 +15,29 @@ namespace General.Components.Interactions
 
         public void Check()
         {
-            var session = GameSession.Instance;
             var areAllRequirementsMet = true;
 
             foreach (var item in _required)
             {
-                var numItems = session.Data.Inventory.Count(item.Id);
+                var numItems = GameSession.Instance.Data.Inventory.Count(item.Id);
                 if (numItems < item.Value)
                     areAllRequirementsMet = false;
             }
 
             if (areAllRequirementsMet)
-            {
-                if (_removeAfterUse)
-                {
-                    foreach (var item in _required)
-                        session.Data.Inventory.Remove(item.Id, item.Value);
-                }
-
                 _onSuccess?.Invoke();
-            }
             else
-            {
                 _onFail?.Invoke();
+
+        }
+
+
+        public void TakeAwayItem()
+        {
+            if (_removeAfterUse)
+            {
+                foreach (var item in _required)
+                    GameSession.Instance.Data.Inventory.Remove(item.Id, item.Value);
             }
         }
     }

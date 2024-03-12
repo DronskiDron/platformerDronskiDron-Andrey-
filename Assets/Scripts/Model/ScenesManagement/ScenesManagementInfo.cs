@@ -13,6 +13,7 @@ namespace Creatures.Model.Data.ScenesManagement
         [SerializeField] private string _levelExitCheckpoint;
 
         [HideInInspector][SerializeField] private List<string> _storedCheckpoints = new List<string>();
+        [HideInInspector][SerializeField] private List<string> _storedItems = new List<string>();
         [HideInInspector][SerializeField] private bool _levelWasFinished = false;
 
         public string Id => _id;
@@ -36,6 +37,12 @@ namespace Creatures.Model.Data.ScenesManagement
         public void RenewStoredCheckpoints(List<string> list)
         {
             _storedCheckpoints = new List<string>(list);
+        }
+
+
+        public List<string> GetLevelStoredItems()
+        {
+            return _storedItems;
         }
     }
 }

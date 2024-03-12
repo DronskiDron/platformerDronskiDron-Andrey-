@@ -28,7 +28,7 @@ namespace General.Components.Interactions
             _state = !_state;
             _animator.SetBool(_animationKey, _state);
             if (_restoreState != null)
-                _session.StoreState(_session.GetCurrentSceneName(), _restoreState.Id);
+                _session?.ItemStateStorage.StoreState(_session.GetCurrentSceneName(), _restoreState.Id);
         }
 
 

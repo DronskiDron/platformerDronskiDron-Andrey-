@@ -17,7 +17,7 @@ namespace General.Components
         {
             var session = GameSession.Instance;
             if (_state != null)
-                session.StoreState(session.GetCurrentSceneName(), _state.Id);
+                session.ItemStateStorage.StoreState(session.GetCurrentSceneName(), _state.Id);
         }
 
 

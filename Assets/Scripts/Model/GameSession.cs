@@ -22,14 +22,15 @@ namespace Creatures.Model.Data
         public PerksModel PerksModel { get; private set; }
         public StatsModel StatsModel { get; private set; }
 
-        [HideInInspector][SerializeField] public string CurrentScene;
+        [HideInInspector] public readonly ItemsStateStorage ItemStateStorage = new ItemsStateStorage();
+
         [HideInInspector][SerializeField] private PlayerData _sessionSave;
         [HideInInspector][SerializeField] private int _storedSceneIndex;
+        [HideInInspector][SerializeField] private string _currentScene;
         [HideInInspector][SerializeField] private List<string> _checkpoints = new List<string>();
 
         public PlayerData Data => _data;
-        public SaveLoadManager Loader => _loader;
-        public PlayerData SessionSave { get => _sessionSave; set => _sessionSave = value; }
+        public string CurrentScene => _currentScene;
         public static GameSession Instance { get; set; }
 
         private readonly CompositeDisposable _trash = new CompositeDisposable();
@@ -39,6 +40,7 @@ namespace Creatures.Model.Data
         {
             var existsSession = GetExistsSession();
             var currentSceneInfo = FindSceneManagementInfo(GetCurrentSceneName());
+            ItemStateStorage.InitDestroyedItemsContainers(_scenesInfo);
             if (existsSession != null)
             {
                 existsSession.StartSession(currentSceneInfo.LevelEnterCheckpoint);
@@ -153,7 +155,7 @@ namespace Creatures.Model.Data
 
         public void SaveSession()
         {
-            CurrentScene = GetCurrentSceneName();
+            _currentScene = GetCurrentSceneName();
             _sessionSave = _data.Clone();
         }
 
@@ -188,35 +190,6 @@ namespace Creatures.Model.Data
             if (Instance == this)
                 Instance = null;
             _trash.Dispose();
-        }
-
-
-        [SerializeField] private Dictionary<string, List<string>> _removedItems = new Dictionary<string, List<string>>();
-
-
-        public bool RestoreState(string sceneName, string itemID)
-        {
-            if (_removedItems.ContainsKey(sceneName))
-                return _removedItems[sceneName].Contains(itemID);
-            else return false;
-        }
-
-
-        public void StoreState(string sceneName, string itemID)
-        {
-            if (_removedItems.ContainsKey(sceneName))
-                _removedItems[sceneName].Add(itemID);
-            else
-                _removedItems.Add(sceneName, new List<string> { itemID });
-        }
-
-
-        public void ClearRemoveItemsList(string sceneName)
-        {
-            _checkpoints.Clear();
-
-            if (_removedItems.ContainsKey(sceneName))
-                _removedItems[sceneName].Clear();
         }
 
 
