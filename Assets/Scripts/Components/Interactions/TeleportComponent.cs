@@ -1,5 +1,4 @@
-﻿using BackGround;
-using Creatures.Player;
+﻿using Creatures.Player;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -12,7 +11,6 @@ namespace General.Components.Interactions
         [SerializeField] private float _alphaTime = 1;
         [SerializeField] private float _moveTime = 1;
         [SerializeField] private ParticleSystem[] _particles;
-        [SerializeField] private BackGroundFollowScript _backGround;
 
         private GameObject _player;
         private int _particleSysInPlayerGOIndex = 0;
@@ -68,7 +66,6 @@ namespace General.Components.Interactions
                 moveTime += Time.deltaTime;
                 var progress = moveTime / _moveTime;
                 target.transform.position = Vector3.Lerp(target.transform.position, _destTransform.position, progress);
-                _backGround.SetObjectStartPosition();
 
                 yield return null;
             }

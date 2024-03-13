@@ -17615,7 +17615,7 @@ PrefabInstance:
     - target: {fileID: 1638843937, guid: f9227236e5f6cf446b6f32f32f461a6a, type: 3}
       propertyPath: _backGround
       value: 
-      objectReference: {fileID: 1853724836}
+      objectReference: {fileID: 0}
     - target: {fileID: 1638843937, guid: f9227236e5f6cf446b6f32f32f461a6a, type: 3}
       propertyPath: _destTransform
       value: 
@@ -22302,7 +22302,7 @@ PrefabInstance:
     - target: {fileID: 1638843937, guid: f9227236e5f6cf446b6f32f32f461a6a, type: 3}
       propertyPath: _backGround
       value: 
-      objectReference: {fileID: 1853724836}
+      objectReference: {fileID: 0}
     - target: {fileID: 1638843938, guid: f9227236e5f6cf446b6f32f32f461a6a, type: 3}
       propertyPath: _action.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -30730,7 +30730,7 @@ PrefabInstance:
     - target: {fileID: 1638843937, guid: f9227236e5f6cf446b6f32f32f461a6a, type: 3}
       propertyPath: _backGround
       value: 
-      objectReference: {fileID: 1853724836}
+      objectReference: {fileID: 0}
     - target: {fileID: 1638843937, guid: f9227236e5f6cf446b6f32f32f461a6a, type: 3}
       propertyPath: _destTransform
       value: 
@@ -34738,11 +34738,21 @@ PrefabInstance:
       propertyPath: _target
       value: 
       objectReference: {fileID: 1836532562}
+    - target: {fileID: 9100375624123152148, guid: b485405e0471b6b439deb383e39e5ed5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -80.1
+      objectReference: {fileID: 0}
     - target: {fileID: 9100375624123152151, guid: b485405e0471b6b439deb383e39e5ed5,
         type: 3}
       propertyPath: _target
       value: 
       objectReference: {fileID: 1836532562}
+    - target: {fileID: 9100375624241289105, guid: b485405e0471b6b439deb383e39e5ed5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.800001
+      objectReference: {fileID: 0}
     - target: {fileID: 9100375624358757430, guid: b485405e0471b6b439deb383e39e5ed5,
         type: 3}
       propertyPath: _target
@@ -34786,7 +34796,7 @@ PrefabInstance:
     - target: {fileID: 9100375626001177004, guid: b485405e0471b6b439deb383e39e5ed5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 52.4
       objectReference: {fileID: 0}
     - target: {fileID: 9100375626001177004, guid: b485405e0471b6b439deb383e39e5ed5,
         type: 3}
@@ -34840,18 +34850,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b485405e0471b6b439deb383e39e5ed5, type: 3}
---- !u!114 &1853724836 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9100375624123152151, guid: b485405e0471b6b439deb383e39e5ed5,
-    type: 3}
-  m_PrefabInstance: {fileID: 1853724835}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc2bdbf122b92584388a8845b97dc245, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1855637896
 PrefabInstance:
   m_ObjectHideFlags: 0
