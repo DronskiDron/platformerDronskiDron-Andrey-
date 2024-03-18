@@ -36,7 +36,7 @@ namespace General.Components.Health
             if (IsPlayer)
             {
                 PlayerHealtUpgrade();
-                StatWidget.UpgradeStatsAction += PlayerHealtUpgrade;
+                PlayerStatsWindow.UpgradeStatsAction += PlayerHealtUpgrade;
             }
             else
             {
@@ -98,7 +98,7 @@ namespace General.Components.Health
         private void OnDestroy()
         {
             _onDie.RemoveAllListeners();
-            StatWidget.UpgradeStatsAction -= PlayerHealtUpgrade;
+            PlayerStatsWindow.UpgradeStatsAction -= PlayerHealtUpgrade;
         }
 
 

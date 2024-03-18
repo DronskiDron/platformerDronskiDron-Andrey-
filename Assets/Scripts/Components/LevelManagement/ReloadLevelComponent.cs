@@ -10,7 +10,8 @@ namespace General.Components.LevelManagement
         public void Reload()
         {
             var session = GameSession.Instance;
-            session.LoadLastSessionSave();
+            // session.LoadLastSessionSave();
+            session.Loader.LoadData();
 
             var scene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(scene.name);
@@ -25,7 +26,9 @@ namespace General.Components.LevelManagement
             var session = GameSession.Instance;
             session.ItemStateStorage.ClearRemoveItemsList(session.GetCurrentSceneName());
             session.ClearCheckpointList();
+            session.FindSceneManagementInfo(session.GetCurrentSceneName()).ChangeSceneStatusFlag(false);
             session.LoadLastSessionSave();
+            session.Loader.SaveData();
 
             var scene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(scene.name);

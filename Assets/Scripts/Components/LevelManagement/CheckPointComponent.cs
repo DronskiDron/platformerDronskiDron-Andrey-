@@ -48,7 +48,7 @@ namespace General.Components.LevelManagement
 
             if (_state != null)
                 _session.ItemStateStorage.StoreState(_session.GetCurrentSceneName(), _state.Id);
-            _saveLoadManager.SaveData();
+            // _saveLoadManager.SaveData();
         }
 
 

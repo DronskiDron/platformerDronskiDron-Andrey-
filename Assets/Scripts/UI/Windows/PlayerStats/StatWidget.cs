@@ -22,8 +22,6 @@ namespace UI.Windows.Perks.PlayerStats
         private GameSession _session;
         private StatDef _data;
 
-        public static Action UpgradeStatsAction;
-
 
         private void Start()
         {
@@ -59,8 +57,6 @@ namespace UI.Windows.Perks.PlayerStats
             var maxLevel = DefsFacade.I.Player.GetStat(_data.ID).Levels.Length - 1;
             _progress.SetProgress(currentLevel / (float)maxLevel);
             _selector.SetActive(statsModel.InterfaceSelectedStat.Value == _data.ID);
-            _session.Data.Hp.Value = (int)statsModel.GetValue(StatId.Hp);
-            UpgradeStatsAction?.Invoke();
         }
 
 

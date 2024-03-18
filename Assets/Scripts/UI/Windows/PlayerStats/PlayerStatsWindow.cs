@@ -1,4 +1,5 @@
-﻿using Creatures.Model.Data;
+﻿using System;
+using Creatures.Model.Data;
 using Creatures.Model.Definitions;
 using Creatures.Model.Definitions.Player;
 using General.Components.TimeManipulation;
@@ -22,8 +23,7 @@ namespace UI.Windows.Perks.PlayerStats
         private GameSession _session;
         private readonly CompositeDisposable _trash = new CompositeDisposable();
 
-
-        public Button UpgradeButton => _upgradeButton;
+        public static Action UpgradeStatsAction;
 
 
         protected override void Start()
@@ -37,6 +37,7 @@ namespace UI.Windows.Perks.PlayerStats
 
             _trash.Retain(_session.StatsModel.Subscribe(OnStatsChanged));
             _trash.Retain(_upgradeButton.onClick.Subscribe(OnUpgrade));
+            _trash.Retain(_upgradeButton.onClick.Subscribe(OnHpStatClicked));
 
             OnStatsChanged();
             TimeManipulator.StopTime();
@@ -62,6 +63,17 @@ namespace UI.Windows.Perks.PlayerStats
 
             _price.gameObject.SetActive(def.Price.Count != 0);
             _upgradeButton.gameObject.SetActive(def.Price.Count != 0);
+        }
+
+
+        private void OnHpStatClicked()
+        {
+            var selected = _session.StatsModel.InterfaceSelectedStat.Value;
+            if (selected == StatId.Hp)
+            {
+                _session.Data.Hp.Value = (int)_session.StatsModel.GetValue(StatId.Hp);
+                UpgradeStatsAction?.Invoke();
+            }
         }
 
 

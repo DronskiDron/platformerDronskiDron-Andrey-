@@ -18,7 +18,6 @@ GameObject:
   - component: {fileID: 8602189532644879311}
   - component: {fileID: 6675602288928804753}
   - component: {fileID: 5894102282169119527}
-  - component: {fileID: 5826997733886552201}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
@@ -198,17 +197,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5826997733886552201}
-        m_MethodName: SaveData
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: pickUp
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 8602189532644879311}
         m_MethodName: Play
         m_Mode: 1
@@ -313,16 +301,3 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &5826997733886552201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1917532564182156486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c245ad4ae168a54e93d596c18e247cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _session: {fileID: 0}

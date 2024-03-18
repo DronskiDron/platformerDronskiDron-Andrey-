@@ -31,6 +31,7 @@ namespace Creatures.Model.Data
 
         public PlayerData Data => _data;
         public string CurrentScene => _currentScene;
+        public SaveLoadManager Loader => _loader;
         public static GameSession Instance { get; set; }
 
         private readonly CompositeDisposable _trash = new CompositeDisposable();
@@ -62,7 +63,7 @@ namespace Creatures.Model.Data
         {
             if (_loader == null)
                 _loader = GetComponent<SaveLoadManager>();
-            SaveSession();
+            // SaveSession();
             _loader.SaveData();
         }
 
