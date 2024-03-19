@@ -13,9 +13,6 @@ namespace General.Components.GameplayTools
         private int _startFuel;
         private GameSession _session;
 
-        private static LanternComponent _instance;
-        public static LanternComponent I => _instance;
-
 
         private void OnEnable()
         {
@@ -65,12 +62,6 @@ namespace General.Components.GameplayTools
                     _light.pointLightOuterRadius = radius;
                 }
             }
-        }
-
-
-        public void InitLantern()
-        {
-            _instance = this;
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Creatures.Model.Data;
+using Creatures.Player;
 using General.Components.GameplayTools;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,21 +12,14 @@ namespace UI.Hud
         [SerializeField] private Image _cooldownImage;
         private GameSession _session;
         private LanternComponent _lantern;
-
-        private static LanternWidget _instance;
-        public static LanternWidget I => _instance;
-
-
-        private void Awake()
-        {
-            _instance = this;
-        }
+        private PlayerController _playerController;
 
 
         private void Start()
         {
             _session = GameSession.Instance;
-            _lantern = LanternComponent.I;
+            _playerController = FindObjectOfType<PlayerController>();
+            _lantern = _playerController.Lantern;
 
             _session.Data.Fuel.OnChanged += UpdateFillAmount;
             UpdateFillAmount(_session.Data.Fuel.Value, 0);
@@ -46,7 +40,7 @@ namespace UI.Hud
         public void OnSwitchOnLight()
         {
             if (_session.Data.Fuel.Value > 0)
-                _lantern.gameObject.SetActive(!_lantern.gameObject.activeSelf);
+                _lantern?.gameObject.SetActive(!_lantern.gameObject.activeSelf);
         }
 
 

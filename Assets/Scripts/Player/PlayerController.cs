@@ -41,6 +41,7 @@ namespace Creatures.Player
 
         [Header("Tools")]
         [SerializeField] private LanternComponent _lantern;
+        public LanternComponent Lantern => _lantern;
 
         [Header("Particles")]
         [SerializeField] private ParticleSystem _hitParticles;
@@ -99,7 +100,6 @@ namespace Creatures.Player
 
             _startSlamDownDamageVelocity = _slamDownDamageVelocity;
             UpdatePlayerWeapon();
-            _lantern.InitLantern();
         }
 
 
