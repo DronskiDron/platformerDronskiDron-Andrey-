@@ -23,6 +23,8 @@ namespace UI.Hud.QuickInventory
         {
             var index = GameSession.Instance.QuickInventory.SelectedIndex;
             _trash.Retain(index.SubscribeAndInvoke(OnIndexChanged));
+            if (_icon.sprite == null)
+                this.gameObject.SetActive(false);
         }
 
 

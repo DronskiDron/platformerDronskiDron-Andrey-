@@ -1,4 +1,5 @@
 ﻿using System;
+using Creatures.Player;
 using UI.Widgets;
 using UnityEngine;
 using UnityEngine.Events;
@@ -12,6 +13,8 @@ namespace UI.Hud.Dialogs
         [SerializeField] private Text _contentText;
         [SerializeField] private Transform _optionsContainer;
         [SerializeField] private OptionItemWidget _prefab;
+        [SerializeField] private InputEnableComponent _inputEnabler;
+        [SerializeField] private bool _blockInput = false;
 
         private DataGroup<OptionData, OptionItemWidget> _dataGroup;
 
@@ -34,6 +37,8 @@ namespace UI.Hud.Dialogs
             _content.SetActive(true);
             _contentText.text = data.DialogText;
             _dataGroup.SetData(data.Options);
+            if (_blockInput)
+                _inputEnabler.SetInput(false);
         }
     }
 
