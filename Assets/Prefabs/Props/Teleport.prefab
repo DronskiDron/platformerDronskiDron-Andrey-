@@ -69,7 +69,7 @@ MonoBehaviour:
   _moveTime: 1
   _particles:
   - {fileID: 5174376194251356200}
-  _backGround: {fileID: 0}
+  _collider: {fileID: 1663410446400094382}
 --- !u!114 &1638843938
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ namespace General.Components.Interactions
         [SerializeField] private float _alphaTime = 1;
         [SerializeField] private float _moveTime = 1;
         [SerializeField] private ParticleSystem[] _particles;
+        [SerializeField] private Collider2D _collider;
 
         private GameObject _player;
         private int _particleSysInPlayerGOIndex = 0;
@@ -32,6 +33,8 @@ namespace General.Components.Interactions
 
         private IEnumerator AnimateTeleport(GameObject target)
         {
+            TeleportAntibagColliderToggle(false);
+
             var sprite = target.GetComponent<SpriteRenderer>();
 
             var input = target.GetComponent<PlayerInput>();
@@ -45,6 +48,8 @@ namespace General.Components.Interactions
             target.SetActive(true);
             yield return SetAlpha(sprite, 1);
             SetLockInput(input, false);
+
+            TeleportAntibagColliderToggle(true);
         }
 
 
@@ -88,6 +93,12 @@ namespace General.Components.Interactions
 
                 yield return null;
             }
+        }
+
+
+        private void TeleportAntibagColliderToggle(bool value)
+        {
+            _collider.enabled = value;
         }
     }
 }

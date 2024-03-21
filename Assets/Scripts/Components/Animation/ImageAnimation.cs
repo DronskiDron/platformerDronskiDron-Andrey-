@@ -1,17 +1,17 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 namespace General.Components.Animation
 {
-    [RequireComponent(typeof(SpriteRenderer))]
-    public class SpriteAnimation : MonoBehaviour, IPicturesAnimate
+    [RequireComponent(typeof(Image))]
+    public class ImageAnimation : MonoBehaviour, IPicturesAnimate
     {
         [SerializeField][Range(1, 30)] private int _frameRate = 10;
         [SerializeField] private UnityEvent<string> _onComplete;
         [SerializeField] private AnimationClip[] _clips;
 
-        private SpriteRenderer _renderer;
+        private Image _renderer;
 
         private float _secPerFrame;
         private float _nextFrameTime;
@@ -23,7 +23,7 @@ namespace General.Components.Animation
 
         private void Start()
         {
-            _renderer = GetComponent<SpriteRenderer>();
+            _renderer = GetComponent<Image>();
             _secPerFrame = 1f / _frameRate;
 
             StartAnimation();
@@ -108,21 +108,5 @@ namespace General.Components.Animation
             _nextFrameTime += _secPerFrame;
             _currentFrame++;
         }
-    }
-
-    [Serializable]
-    public class AnimationClip
-    {
-        [SerializeField] private string _name;
-        [SerializeField] private Sprite[] _sprites;
-        [SerializeField] private bool _loop;
-        [SerializeField] private bool _allowNextClip;
-        [SerializeField] private UnityEvent _onComplete;
-
-        public string Name => _name;
-        public Sprite[] Sprites => _sprites;
-        public bool Loop => _loop;
-        public bool AllowNextClip => _allowNextClip;
-        public UnityEvent OnComplete => _onComplete;
     }
 }
