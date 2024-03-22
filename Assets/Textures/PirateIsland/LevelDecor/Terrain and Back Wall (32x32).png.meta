@@ -285,7 +285,7 @@ TextureImporter:
       213: 6438955309352363234
     second: Terrain and Back Wall (32x32)_93
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -302,9 +302,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -314,8 +317,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -336,10 +339,15 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -351,6 +359,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -363,6 +372,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -375,6 +385,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -387,6 +398,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -399,6 +411,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -411,6 +424,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -423,6 +437,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -435,6 +450,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -2424,9 +2440,103 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      Terrain and Back Wall (32x32)_0: 4477086192492801621
+      Terrain and Back Wall (32x32)_1: -5938990893411276722
+      Terrain and Back Wall (32x32)_10: 6765596381666369160
+      Terrain and Back Wall (32x32)_11: 6765171035964416714
+      Terrain and Back Wall (32x32)_12: 5610378790130853670
+      Terrain and Back Wall (32x32)_13: 3042669338922827695
+      Terrain and Back Wall (32x32)_14: -3142740237376536647
+      Terrain and Back Wall (32x32)_15: 849497089450251925
+      Terrain and Back Wall (32x32)_16: -4427699483111241990
+      Terrain and Back Wall (32x32)_17: 4165897324084861168
+      Terrain and Back Wall (32x32)_18: 5214611256287391803
+      Terrain and Back Wall (32x32)_19: -589631309973711658
+      Terrain and Back Wall (32x32)_2: 1083716660666615185
+      Terrain and Back Wall (32x32)_20: 8819438893310010655
+      Terrain and Back Wall (32x32)_21: 5697696572159324438
+      Terrain and Back Wall (32x32)_22: -7422343565055380290
+      Terrain and Back Wall (32x32)_23: -7223658455709132073
+      Terrain and Back Wall (32x32)_24: 2269998803014930537
+      Terrain and Back Wall (32x32)_25: 6810636054926022723
+      Terrain and Back Wall (32x32)_26: 391009116316329892
+      Terrain and Back Wall (32x32)_27: 3787683332904109445
+      Terrain and Back Wall (32x32)_28: -4903602427614168978
+      Terrain and Back Wall (32x32)_29: 1557402765303269401
+      Terrain and Back Wall (32x32)_3: 1241317255884180220
+      Terrain and Back Wall (32x32)_30: 5180677404911150706
+      Terrain and Back Wall (32x32)_31: 8426977019437123878
+      Terrain and Back Wall (32x32)_32: -2064224727772411763
+      Terrain and Back Wall (32x32)_33: 7593552405580567700
+      Terrain and Back Wall (32x32)_34: 8648243693582683334
+      Terrain and Back Wall (32x32)_35: -2924002310582714735
+      Terrain and Back Wall (32x32)_36: 3775369921884293741
+      Terrain and Back Wall (32x32)_37: -1702617959097958929
+      Terrain and Back Wall (32x32)_38: 8693952821596815178
+      Terrain and Back Wall (32x32)_39: 9030933540218531635
+      Terrain and Back Wall (32x32)_4: 228710401271303929
+      Terrain and Back Wall (32x32)_40: -5391057456343554386
+      Terrain and Back Wall (32x32)_41: 4372548984980289806
+      Terrain and Back Wall (32x32)_42: -1740692198201918225
+      Terrain and Back Wall (32x32)_43: -8655138189685643895
+      Terrain and Back Wall (32x32)_44: -292134573477182824
+      Terrain and Back Wall (32x32)_45: 6406584687134888837
+      Terrain and Back Wall (32x32)_46: -8355760635621389202
+      Terrain and Back Wall (32x32)_47: -3879221313606972675
+      Terrain and Back Wall (32x32)_48: -7028684991731170693
+      Terrain and Back Wall (32x32)_49: 7190652406813565628
+      Terrain and Back Wall (32x32)_5: 5716679144593161921
+      Terrain and Back Wall (32x32)_50: -6495853598514927466
+      Terrain and Back Wall (32x32)_51: -3461904536420598506
+      Terrain and Back Wall (32x32)_52: 7614811172421214285
+      Terrain and Back Wall (32x32)_53: 3899249890031750702
+      Terrain and Back Wall (32x32)_54: -6503006059609026891
+      Terrain and Back Wall (32x32)_55: -6106532498145820168
+      Terrain and Back Wall (32x32)_56: 8868647518952798261
+      Terrain and Back Wall (32x32)_57: -8453819982929915267
+      Terrain and Back Wall (32x32)_58: -8064741295012349679
+      Terrain and Back Wall (32x32)_59: 2822169419149486151
+      Terrain and Back Wall (32x32)_6: -5720275856417270498
+      Terrain and Back Wall (32x32)_60: -1909237648705006554
+      Terrain and Back Wall (32x32)_61: 3730825387797650175
+      Terrain and Back Wall (32x32)_62: -6145466464184332374
+      Terrain and Back Wall (32x32)_63: 5018573018859891609
+      Terrain and Back Wall (32x32)_64: -2945005089781175797
+      Terrain and Back Wall (32x32)_65: -3214774123541138376
+      Terrain and Back Wall (32x32)_66: 840047472590421376
+      Terrain and Back Wall (32x32)_67: 4191878172326447224
+      Terrain and Back Wall (32x32)_68: 5579114877023058815
+      Terrain and Back Wall (32x32)_69: 8797225632215260321
+      Terrain and Back Wall (32x32)_7: -931545468379826458
+      Terrain and Back Wall (32x32)_70: 619189296120165005
+      Terrain and Back Wall (32x32)_71: 2076148154717738915
+      Terrain and Back Wall (32x32)_72: -6659159618237571629
+      Terrain and Back Wall (32x32)_73: 104562901200489075
+      Terrain and Back Wall (32x32)_74: 3983759376258360746
+      Terrain and Back Wall (32x32)_75: -1555187243521663305
+      Terrain and Back Wall (32x32)_76: 7256405939099405195
+      Terrain and Back Wall (32x32)_77: 6204182897029192409
+      Terrain and Back Wall (32x32)_78: 3486520538062669515
+      Terrain and Back Wall (32x32)_79: 5694492973826657332
+      Terrain and Back Wall (32x32)_8: -5983677006878999548
+      Terrain and Back Wall (32x32)_80: -8780991020909302622
+      Terrain and Back Wall (32x32)_81: 1408577960695950247
+      Terrain and Back Wall (32x32)_82: 2078439623481073720
+      Terrain and Back Wall (32x32)_83: -658534541257526098
+      Terrain and Back Wall (32x32)_84: 5669996916691427447
+      Terrain and Back Wall (32x32)_85: -4025439216109835110
+      Terrain and Back Wall (32x32)_86: 6101262321445864501
+      Terrain and Back Wall (32x32)_87: 7185786065165329080
+      Terrain and Back Wall (32x32)_88: 7184432261994063194
+      Terrain and Back Wall (32x32)_89: -2113736243654590438
+      Terrain and Back Wall (32x32)_9: -6160626275023810843
+      Terrain and Back Wall (32x32)_90: 7239607017794952630
+      Terrain and Back Wall (32x32)_91: 8375363635117060901
+      Terrain and Back Wall (32x32)_92: 2545543066465563715
+      Terrain and Back Wall (32x32)_93: 6438955309352363234
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

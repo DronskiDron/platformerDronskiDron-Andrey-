@@ -31,6 +31,7 @@ SpriteAtlas:
       m_CrunchedCompression: 0
       m_AllowsAlphaSplitting: 0
       m_Overridden: 0
+      m_IgnorePlatformSupport: 0
       m_AndroidETC2FallbackOverride: 0
       m_ForceMaximumCompressionQuality_BC6H_BC7: 0
     packingSettings:
@@ -40,10 +41,54 @@ SpriteAtlas:
       allowAlphaSplitting: 0
       enableRotation: 1
       enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 00375f60490ac29489f48e14ec9ebecf, type: 3}
     bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - 4eebc0409696ff044902831c1cd35f7f: 21300000
+    - 37d49250ef9c6194daf88e220bbc5d5c: 21300000
+    - 1cde88d0020383e4980f8c0cde160445: 21300000
+    - bf7374214cdab8f4fa9ad44137b00a5f: 21300000
+    - 2158a2a1831463d4ca15d41d192e086b: 21300000
+    - 5a713fd1f69088d49a023a25c5612ba6: 21300000
+    - a36e8d12a6c195c4ea0fb6f5ad3ec75f: 21300000
+    - d3444042689768c44828908b43fa3472: 21300000
+    - 132ea6a2e2e5a2b48b1ab3f6e8885c36: 21300000
+    - 7d99b8539607f974290e51c82bd0d3d3: 21300000
+    - d96de544ae56e20478e78d00f258f421: 21300000
+    - 72729694097b931499f38480a754cab9: 21300000
+    - 68faa6b45d776bd4982c752c0dc6ab71: 21300000
+    - d47f0cd43acee1048a3bf42f12ea5270: 21300000
+    - aa125e65d848d274abbe6d2ae0dfd02d: 21300000
+    - fde74c856ef86bf46b84856cd4124a4f: 21300000
+    - 598037e61c0dbb54d9dcb052e66db6c1: 21300000
+    - 83916df604391e04abfcc3da6824b265: 21300000
+    - c596711767eda854b8ac279188c49db4: 21300000
+    - 647c992850151234295df86b8f810ea6: 21300000
+    - a869a9884c9ebeb48a106da3fca467e8: 21300000
+    - f3b7d8d8d443fb44d864447d7f167787: 21300000
+    - 7f40f0e84447d084d9d5b1bbc1923196: 21300000
+    - d91b7729a0f155d4ea66725df4e78494: 21300000
+    - 1a40d6b99cf1cb64abac22ed16cd33af: 21300000
+    - 9a9c9e3a97588e04abdcecda927a7523: 21300000
+    - 9d4a60ba49b82494995935304d37e6d2: 21300000
+    - 37f19ceaa66bebb40b40c8ef9b29f422: 21300000
+    - f9127b3b628f310468369a34006a1434: 21300000
+    - 0e0287cb6ea0de048a27bb9991ac3198: 21300000
+    - 0bf5cfebb13ea9f48a9b72f111511299: 21300000
+    - 65af1a7d4454db44aa282f28f6e80dc4: 21300000
+    - 93b444ed7b689e940acac4354097c168: 21300000
+    - fd9f828e25f630d4d8f0dbac3de3bcdf: 21300000
+    - aa9ce78ed9552eb44ac50862146cef9c: 21300000
+    - f94799ee718622e4696120cac655f86d: 21300000
+    - 071516fe807cf1749b392e5949afefdb: 21300000
+    - 2ee5286fdfb6c6640a9a6d4ef9bc6536: 21300000
+    - 3c5b159fef3cd334e885495d9b4f680a: 21300000
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 4eebc0409696ff044902831c1cd35f7f, type: 3}
@@ -125,5 +170,6 @@ SpriteAtlas:
   - Attack 1 02
   - Attack 1 01
   - Hit Sword 01
+  m_RenderDataMap: {}
   m_Tag: CaptainArmed
   m_IsVariant: 0

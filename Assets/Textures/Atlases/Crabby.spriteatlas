@@ -31,6 +31,7 @@ SpriteAtlas:
       m_CrunchedCompression: 0
       m_AllowsAlphaSplitting: 0
       m_Overridden: 0
+      m_IgnorePlatformSupport: 0
       m_AndroidETC2FallbackOverride: 0
       m_ForceMaximumCompressionQuality_BC6H_BC7: 0
     packingSettings:
@@ -40,10 +41,58 @@ SpriteAtlas:
       allowAlphaSplitting: 0
       enableRotation: 1
       enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 60156e2449642d6478478636b34591f9, type: 3}
     bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - d1df78a0e23eba74e9cd95dfbd5c8b80: 21300000
+    - 756f29c0a2fee1c4d999af3716155ed6: 21300000
+    - c527f0516ecbd0746b7bbeff6795d751: 21300000
+    - 223e12f1f7fe1284aad2897f20c62c0d: 21300000
+    - 22ae0e82b854a6049b26f4658aea0d1c: 21300000
+    - 1495e4f38043ee2439fa4a65adb28258: 21300000
+    - 6e6275f3b930b034dbd35416f1e90968: 21300000
+    - 1005fb34eecf74145b84d181c97f3510: 21300000
+    - 65d6b744c94edd54390ef58f94a13dd9: 21300000
+    - e4ec7005ee436684db4ca5e9ac29cf68: 21300000
+    - 3079e565037456b43920fa7b088e5fd7: 21300000
+    - fc1f38b5f64ae3c4db9ad261f96cbe8b: 21300000
+    - db705fb5ec858224a9f842eda797e5ed: 21300000
+    - 677526e5550b9d3408ebe9c90b06e65f: 21300000
+    - db305326d17922c408e7de731093161b: 21300000
+    - 95617b468ebba974a802f9bccf462ae7: 21300000
+    - ed5b3c7612528ce45b57303b0172c5da: 21300000
+    - ca6ba3d6f49ae3449aba6d3d951902c9: 21300000
+    - b2f634e79bf3bbb4e82d1adcf201e082: 21300000
+    - 0d2a2ef710d01b0428be1284a0096f30: 21300000
+    - 389e5808e0d441d47a315496a374e243: 21300000
+    - c39e04c885b0e90428061c942a973022: 21300000
+    - 1a52d81a448e9aa4f824582a71940fe4: 21300000
+    - d4df413a53528ba438eb7846c960efda: 21300000
+    - b20b0f3a976d8a149a5d1bf7825b0d04: 21300000
+    - 2f13864ab0532d542ac3b74dc3c82209: 21300000
+    - 04e8484ac9b12c044b52c7d90d83d94f: 21300000
+    - eb69286ac874ed14dbdee7cff3f6b200: 21300000
+    - a22cac7a593e4bd4e98bbc942875bcce: 21300000
+    - d93643dab1ea7b64b8c192a8745092b3: 21300000
+    - 5bcb8cfabaff48442bcd791b89a6cf07: 21300000
+    - a0a63a5b5cf13174893f13cc9b6bb6eb: 21300000
+    - 1d5b648b035effe42896ad886aeac64c: 21300000
+    - 5e7f015c55fe6cf4a89b258c5b02e7f5: 21300000
+    - 5373445c50a7d674e979ef09666c2dd4: 21300000
+    - 93e3f76d9385822488c597fa72cc50a5: 21300000
+    - c55c0b7dc27e8d744bbde20050c30d10: 21300000
+    - 8c56e21ebf882c0449e8f6ed294a4a54: 21300000
+    - fcdbd03eeed5cd64da3a58d8430f0215: 21300000
+    - b74d166e456cfe54cbb6a55b0f6914d2: 21300000
+    - f458917eb33c5754abe6785e63ef51b5: 21300000
+    - 7bf3053fcb9f3b24697704e309d648b0: 21300000
+    - e613494fe91852f4f824a35f9cf3da37: 21300000
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: d1df78a0e23eba74e9cd95dfbd5c8b80, type: 3}
@@ -133,5 +182,6 @@ SpriteAtlas:
   - Ground 01
   - Idle 03
   - Jump 02
+  m_RenderDataMap: {}
   m_Tag: Crabby
   m_IsVariant: 0

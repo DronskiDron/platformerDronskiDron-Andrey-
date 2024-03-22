@@ -31,6 +31,7 @@ SpriteAtlas:
       m_CrunchedCompression: 0
       m_AllowsAlphaSplitting: 0
       m_Overridden: 0
+      m_IgnorePlatformSupport: 0
       m_AndroidETC2FallbackOverride: 0
       m_ForceMaximumCompressionQuality_BC6H_BC7: 0
     packingSettings:
@@ -40,10 +41,42 @@ SpriteAtlas:
       allowAlphaSplitting: 0
       enableRotation: 1
       enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 58c3893bd2b58284085a9fea2fd47977, type: 3}
     bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - 724f6b80996fbb74da9d31ebfcff07ec: 21300000
+    - 97a63ef0be2871a488000bb8a4d25086: 21300000
+    - a8b70962e5ffbe6409b56a6999fcbcbf: 21300000
+    - 73c340821d3df624b8abfb99af71f314: 21300000
+    - 9dc1a4b3a7fef49468c0f1f81ba437e5: 21300000
+    - e1921774c98d4d946a7ba9f0f99225d9: 21300000
+    - 70fd4916c4570ce488e4dad91da929b1: 21300000
+    - b1bd58d6371e2a04eb02fe4bd5a2be26: 21300000
+    - 2cd1441768259c041b71cbaa4f6da764: 21300000
+    - bba7ee97cb65d214d8cef7659a96fea2: 21300000
+    - 3240e5581494a034dac2df4dabe65c7e: 21300000
+    - 799a76d81a85bc84e8434964ca2d4a1d: 21300000
+    - 81c5f8f81132b4343b8a7101f39a5ce5: 21300000
+    - 187723394872a8c4c9efdebcc3f9051b: 21300000
+    - 76f05af9bbd4cec4fb9d1589e0c2d17c: 21300000
+    - cad1ad0a51621d04e8622b6dfd648aa2: 21300000
+    - 5462caba1498f41479b167ea7b3041cb: 21300000
+    - 9e92edcba6e96b14ca0df81755e64503: 21300000
+    - 92e01f8c03442074893183ef48c9eed4: 21300000
+    - 343150bc3ced7344285a554cd0df279e: 21300000
+    - d41508cc4ebe7a545bce7af371a0a82d: 21300000
+    - 5b35f1fc9eb301c41b34a3897abde9d8: 21300000
+    - fd7d6b0e749ceac4d91fa9ac76682dbe: 21300000
+    - cfdb7e0e309bb794fb6f144e45e11cd8: 21300000
+    - 54c71f8e8b60b304fa116fc6cfad8ccf: 21300000
+    - 97e6d77f78bf985418a93adabd4b7f14: 21300000
+    - 8c97daef03beec045814bb7bdfd820f1: 21300000
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 724f6b80996fbb74da9d31ebfcff07ec, type: 3}
@@ -101,5 +134,6 @@ SpriteAtlas:
   - 6
   - 5
   - 1
+  m_RenderDataMap: {}
   m_Tag: Seashell
   m_IsVariant: 0

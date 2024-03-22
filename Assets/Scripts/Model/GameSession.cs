@@ -63,7 +63,6 @@ namespace Creatures.Model.Data
         {
             if (_loader == null)
                 _loader = GetComponent<SaveLoadManager>();
-            // SaveSession();
             _loader.SaveData();
         }
 

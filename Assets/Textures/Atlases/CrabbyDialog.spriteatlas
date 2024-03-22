@@ -31,6 +31,7 @@ SpriteAtlas:
       m_CrunchedCompression: 0
       m_AllowsAlphaSplitting: 0
       m_Overridden: 0
+      m_IgnorePlatformSupport: 0
       m_AndroidETC2FallbackOverride: 0
       m_ForceMaximumCompressionQuality_BC6H_BC7: 0
     packingSettings:
@@ -40,10 +41,24 @@ SpriteAtlas:
       allowAlphaSplitting: 0
       enableRotation: 1
       enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 9fe74182910cd1a47a97d68c81d90cc1, type: 3}
     bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - efbfe64388ee87240af96c489d14ffa6: 3505128172380155607
+    - efbfe64388ee87240af96c489d14ffa6: 6781877334341790625
+    - efbfe64388ee87240af96c489d14ffa6: 1237259564474456676
+    - efbfe64388ee87240af96c489d14ffa6: -8339802707405750284
+    - efbfe64388ee87240af96c489d14ffa6: -7988024427863313899
+    - efbfe64388ee87240af96c489d14ffa6: 8388748351631217864
+    - efbfe64388ee87240af96c489d14ffa6: 6233811717460821285
+    - efbfe64388ee87240af96c489d14ffa6: 6729741187243169404
+    - efbfe64388ee87240af96c489d14ffa6: -565611628317543566
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 3505128172380155607, guid: efbfe64388ee87240af96c489d14ffa6, type: 3}
@@ -65,5 +80,6 @@ SpriteAtlas:
   - Crabby-crew_4
   - Crabby-crew_7
   - Crabby-crew_6
+  m_RenderDataMap: {}
   m_Tag: CrabbyDialog
   m_IsVariant: 0

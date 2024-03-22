@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using Creatures.Model.Data;
 using UnityEngine;
-using UnityEngine.Experimental.Rendering.Universal;
+
 
 namespace General.Components.GameplayTools
 {
     public class LanternComponent : MonoBehaviour
     {
-        [SerializeField] private Light2D _light;
+        [SerializeField] private UnityEngine.Rendering.Universal.Light2D _light;
         [SerializeField] private float _goOutPercent = 100f;
         private bool _wasStarted = false;
         private int _startFuel;

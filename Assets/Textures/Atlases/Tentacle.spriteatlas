@@ -31,6 +31,7 @@ SpriteAtlas:
       m_CrunchedCompression: 0
       m_AllowsAlphaSplitting: 0
       m_Overridden: 0
+      m_IgnorePlatformSupport: 0
       m_AndroidETC2FallbackOverride: 0
       m_ForceMaximumCompressionQuality_BC6H_BC7: 0
     packingSettings:
@@ -40,10 +41,21 @@ SpriteAtlas:
       allowAlphaSplitting: 0
       enableRotation: 1
       enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 7968d7367ecba7f4fbbce93db76d05dc, type: 3}
     bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - 6fd190a336eac474e860a6267113798a: -7668338019429465720
+    - 6fd190a336eac474e860a6267113798a: 2876971815968858226
+    - 6fd190a336eac474e860a6267113798a: 3267209078268184784
+    - 6fd190a336eac474e860a6267113798a: -6020195223038050601
+    - 6fd190a336eac474e860a6267113798a: 7974938107837316919
+    - 6fd190a336eac474e860a6267113798a: 2031517948072034325
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: -7668338019429465720, guid: 6fd190a336eac474e860a6267113798a, type: 3}
@@ -59,5 +71,6 @@ SpriteAtlas:
   - tentacle_1
   - tentacle_2
   - tentacle_3
+  m_RenderDataMap: {}
   m_Tag: Tentacle
   m_IsVariant: 0

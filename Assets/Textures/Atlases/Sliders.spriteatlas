@@ -31,6 +31,7 @@ SpriteAtlas:
       m_CrunchedCompression: 0
       m_AllowsAlphaSplitting: 0
       m_Overridden: 0
+      m_IgnorePlatformSupport: 0
       m_AndroidETC2FallbackOverride: 0
       m_ForceMaximumCompressionQuality_BC6H_BC7: 0
     packingSettings:
@@ -40,10 +41,18 @@ SpriteAtlas:
       allowAlphaSplitting: 0
       enableRotation: 1
       enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 981e7f83e458e7a4ba314133b95a8452, type: 3}
     bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - de65f4b14531ef04198ef838a0f39152: 21300000
+    - 67f949a512ccd3341aaf0a3d6516d395: 21300000
+    - 26e3179eb69242e4fa52061b679151e3: 21300000
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: de65f4b14531ef04198ef838a0f39152, type: 3}
@@ -53,5 +62,6 @@ SpriteAtlas:
   - enemy-big
   - red
   - hp-big
+  m_RenderDataMap: {}
   m_Tag: Sliders
   m_IsVariant: 0

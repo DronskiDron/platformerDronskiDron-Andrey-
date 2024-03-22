@@ -31,6 +31,7 @@ SpriteAtlas:
       m_CrunchedCompression: 0
       m_AllowsAlphaSplitting: 0
       m_Overridden: 0
+      m_IgnorePlatformSupport: 0
       m_AndroidETC2FallbackOverride: 0
       m_ForceMaximumCompressionQuality_BC6H_BC7: 0
     packingSettings:
@@ -40,6 +41,8 @@ SpriteAtlas:
       allowAlphaSplitting: 0
       enableRotation: 1
       enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 07f49214e2e4d5349b7522eac727583d, type: 3}
@@ -48,6 +51,43 @@ SpriteAtlas:
     - {fileID: 102900000, guid: 60073dbd5d463f54798b40181fcdad7c, type: 3}
     - {fileID: 102900000, guid: 67abd76f3cc667647a4336ffab50b0ff, type: 3}
     bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - 23816db013ed8e74c855e3805fa23d09: 21300000
+    - 7b26207146287e746a3bbebf50c379cb: 21300000
+    - 7e193081796924042957db6d01fe217a: 21300000
+    - 2044c71246555304e834cfaa23b42d88: 21300000
+    - afda6522c66f2eb4faba6a3cc0623cde: 21300000
+    - 11644e52f42e3774e9ad302f25d4fda1: 21300000
+    - 5aedfda27ed83904b9f4f1201fecd744: 21300000
+    - a069bf88409feb7439fc46cbcca5e708: 21300000
+    - f1393c1915c53a74b89067bdcd4f28ff: 21300000
+    - 483b18fe0eb1e5c4fbd512b089587a48: 21300000
+    - 12383373e88614247a16b1eda8410fa9: 21300000
+    - 59ffd5b39b4b32d40a775cb33de45a69: 21300000
+    - 99cc41246726c1d48a2055414316e122: 21300000
+    - 701c04446f3996843bcc21ad058df489: 21300000
+    - 96bd75b4a51fd8540aa2c07127e9d29a: 21300000
+    - f5bf0c05556edae4cb2fd86feb8e1463: 21300000
+    - dd26b9651f816444ea56776346b4eef7: 21300000
+    - bfa15346722ebab479562daa4bdb3c0c: 21300000
+    - a887fd677c389aa4da4f56574ddb3994: 21300000
+    - a0636cd7252c63048becf1518faa5762: 21300000
+    - 9dcf4c888e075c84fb331b8a95c0449e: 21300000
+    - 210b94e92e012c14a921e5637489139d: 21300000
+    - 9ad2e00ab44cbda44a972aeab11ae9d7: 21300000
+    - f77b8e5aadce0e042a646ceb64b41afd: 21300000
+    - af541baa7f2527044867f2bd0f5a73f4: 21300000
+    - 13ed0daa3672c684780fabfb7b3c5d15: 21300000
+    - a65ddeea7eee613449cfbda1fb88fd2f: 21300000
+    - 1869f91cc7bcf6242b4ff34630448f69: 21300000
+    - 29bc4e1cb464e0f4784e2e63be23064d: 21300000
+    - 834deefc1bdbfa14fa3ac9f1d1e14aad: 21300000
+    - cdd98c2d2503ba24bafaa766333a969a: 21300000
+    - ad4df7bebf2959a49ae249f7316b026c: 21300000
+    - 1aff121f171a6b34387fe06621dc37a8: 21300000
+    - 12a7a16fb27cb944395f77f46643d407: 21300000
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 23816db013ed8e74c855e3805fa23d09, type: 3}
@@ -57,6 +97,10 @@ SpriteAtlas:
   - {fileID: 21300000, guid: afda6522c66f2eb4faba6a3cc0623cde, type: 3}
   - {fileID: 21300000, guid: 11644e52f42e3774e9ad302f25d4fda1, type: 3}
   - {fileID: 21300000, guid: 5aedfda27ed83904b9f4f1201fecd744, type: 3}
+  - {fileID: 21300000, guid: a069bf88409feb7439fc46cbcca5e708, type: 3}
+  - {fileID: 21300000, guid: f1393c1915c53a74b89067bdcd4f28ff, type: 3}
+  - {fileID: 21300000, guid: 483b18fe0eb1e5c4fbd512b089587a48, type: 2}
+  - {fileID: 21300000, guid: 12383373e88614247a16b1eda8410fa9, type: 2}
   - {fileID: 21300000, guid: 59ffd5b39b4b32d40a775cb33de45a69, type: 3}
   - {fileID: 21300000, guid: 99cc41246726c1d48a2055414316e122, type: 3}
   - {fileID: 21300000, guid: 701c04446f3996843bcc21ad058df489, type: 3}
@@ -67,8 +111,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: a887fd677c389aa4da4f56574ddb3994, type: 3}
   - {fileID: 21300000, guid: a0636cd7252c63048becf1518faa5762, type: 3}
   - {fileID: 21300000, guid: 9dcf4c888e075c84fb331b8a95c0449e, type: 3}
-  - {fileID: 21300000, guid: a069bf88409feb7439fc46cbcca5e708, type: 3}
-  - {fileID: 21300000, guid: f1393c1915c53a74b89067bdcd4f28ff, type: 3}
+  - {fileID: 21300000, guid: 210b94e92e012c14a921e5637489139d, type: 2}
   - {fileID: 21300000, guid: 9ad2e00ab44cbda44a972aeab11ae9d7, type: 3}
   - {fileID: 21300000, guid: f77b8e5aadce0e042a646ceb64b41afd, type: 3}
   - {fileID: 21300000, guid: af541baa7f2527044867f2bd0f5a73f4, type: 3}
@@ -89,6 +132,10 @@ SpriteAtlas:
   - I_Clock
   - 3
   - yellow-button
+  - 5
+  - RedBar
+  - PotionSpeed
+  - PotionHealth
   - common-button
   - 1
   - green-box-large
@@ -99,8 +146,7 @@ SpriteAtlas:
   - slider-horizontal
   - papper
   - common-button-disabled
-  - 5
-  - RedBar
+  - Coin
   - common-button-selected
   - Sword
   - S_Magic08
@@ -113,5 +159,6 @@ SpriteAtlas:
   - PerlProjectile
   - slider-horizontal-handle
   - Flag_of_Spain_(Civil).svg
+  m_RenderDataMap: {}
   m_Tag: Menus
   m_IsVariant: 0

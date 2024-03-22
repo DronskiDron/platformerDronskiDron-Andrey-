@@ -31,6 +31,7 @@ SpriteAtlas:
       m_CrunchedCompression: 0
       m_AllowsAlphaSplitting: 0
       m_Overridden: 0
+      m_IgnorePlatformSupport: 0
       m_AndroidETC2FallbackOverride: 0
       m_ForceMaximumCompressionQuality_BC6H_BC7: 0
     packingSettings:
@@ -40,10 +41,43 @@ SpriteAtlas:
       allowAlphaSplitting: 0
       enableRotation: 1
       enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: b444150cb61747042920ba7b72bfd6bd, type: 3}
     bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - 7358b690710a3724f9f7ff5365a67e8f: 21300000
+    - d43ed311706753e4892b7877b37ae0bd: 21300000
+    - 40d96a51ae0cafd4f8897d3ed26569e6: 21300000
+    - 2ba83582e56987b4dab73eb793438e6c: 21300000
+    - ade11be2805c60243bc6f8b9c22e1c75: 21300000
+    - 4a1c6b832a0267a4ab3f68c53ca2219a: 21300000
+    - 156829d3c30b839459196d3cd7cb784a: 21300000
+    - 70efe764e6c96d744b52b1368a3fe316: 21300000
+    - 813d25944b7c2bf46b235a3a2a3e1ade: 21300000
+    - 1c81282587da61f4f9eb615acddc0ded: 21300000
+    - d804a8a582b51ab4cbe23ab1bd27f27e: 21300000
+    - f395b1b58fa2f074c97ccbbfc86711ad: 21300000
+    - 8759c9865a5a543458d162b22003e32f: 21300000
+    - f666169788720784e944a2568ceb06e4: 21300000
+    - ded989a7ac375be4d968a78039de6061: 21300000
+    - 0296f2f7d17b0da45a74a06f56399cb3: 21300000
+    - 91d086d855ea29a48b2b51a903bebb68: 21300000
+    - 596ef1c96723b34408b5ccf9d8c6c19b: 21300000
+    - 4d5585aae9830644ba74f8e7aa47fb33: 21300000
+    - 290f48ba456bc364f8e553629c9add82: 21300000
+    - 471cf71b111cf3045b2b0ae85c8b4fec: 21300000
+    - 8147d66b770133f47b3f85be31ca4a2d: 21300000
+    - 5af9a19b5c88fa64f944a9f1ecb155bb: 21300000
+    - 19cb911c4612db0469b43b9baecbb75c: 21300000
+    - b2c296ed708f096409229370a6d37c5c: 21300000
+    - c3e1d01fc5155d84c9b7af9194415c7b: 21300000
+    - d71b48cf50baede4baebe0a2cbb4e225: 21300000
+    - 0433e1efcd1b6624a9d9f553f5a8998b: 21300000
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 7358b690710a3724f9f7ff5365a67e8f, type: 3}
@@ -103,5 +137,6 @@ SpriteAtlas:
   - 1
   - 2
   - 3
+  m_RenderDataMap: {}
   m_Tag: TotemTower
   m_IsVariant: 0
