@@ -63,6 +63,8 @@ namespace Creatures.Model.Data
         {
             if (_loader == null)
                 _loader = GetComponent<SaveLoadManager>();
+
+            ClearCheckpointList();
             _loader.SaveData();
         }
 
@@ -105,7 +107,10 @@ namespace Creatures.Model.Data
             }
             else
             {
-                var lastCheckPoint = _checkpoints.Last();
+                var lastCheckPoint = currentSceneInfo.GetStoredCheckpoints().LastOrDefault();
+
+                if (lastCheckPoint == null)
+                    lastCheckPoint = _checkpoints.Last();
 
                 foreach (var checkPoint in checkpoints)
                 {
@@ -193,10 +198,12 @@ namespace Creatures.Model.Data
         }
 
 
-        public void StoreCheckpoints()
+        public void StoreAnyCheckpoint(string checkpointName)
         {
             var currentSceneInfo = FindSceneManagementInfo(GetCurrentSceneName());
-            currentSceneInfo.RenewStoredCheckpoints(_checkpoints);
+            currentSceneInfo.StoreCheckpoint(checkpointName);
+
+            // currentSceneInfo.RenewStoredCheckpoints(_checkpoints);
         }
 
 

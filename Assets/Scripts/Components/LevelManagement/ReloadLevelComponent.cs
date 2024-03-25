@@ -10,7 +10,6 @@ namespace General.Components.LevelManagement
         public void Reload()
         {
             var session = GameSession.Instance;
-            // session.LoadLastSessionSave();
             session.Loader.LoadData();
 
             var scene = SceneManager.GetActiveScene();

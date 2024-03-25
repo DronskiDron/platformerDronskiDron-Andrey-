@@ -45,14 +45,13 @@ SpriteAtlas:
     secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
-    - {fileID: 102900000, guid: 0661b59a47031114ca336c4d991a30a7, type: 3}
     - {fileID: 102900000, guid: 84176bc16f2930742ae3e9976c7a44bc, type: 3}
+    - {fileID: 102900000, guid: 0661b59a47031114ca336c4d991a30a7, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
     packedSpriteRenderDataKeys:
-    - d8c8f0b07b81391489eef7a9eead464d: 21300000
-    - 4016d9c15e47d484999d606359b0103d: 21300000
+    - 53f8753260dfaf5459cc1e8cc95ba94e: 21300000
     - 9e29f563fee737f489c61c6655cfe3e6: 21300000
     - 71aa7893d7f545847acb19e15a4c08f4: 21300000
     - e55ddaf306135cd4282b9b006e9821ca: 21300000
@@ -64,20 +63,15 @@ SpriteAtlas:
     - 5c773daa3b839764ea49f2d6afb1ff80: -6018279857378552221
     - 5c773daa3b839764ea49f2d6afb1ff80: -2749089684739404911
     - 5c773daa3b839764ea49f2d6afb1ff80: -7718236803453008505
-    - 56e5550bc67452544ad4b1def32df1a7: 21300000
-    - fda7835b3ab10a34e911ee600ae73820: 21300000
-    - dab63dfbcbfb70547b892b9c4e32719b: 21300000
-    - 0e11365c3d79b7647ac897e8a5a7b932: 21300000
     - 5f9d378c419560b4292b0d0f1b3163bc: -8843944345914528079
     - 5f9d378c419560b4292b0d0f1b3163bc: -1898659343009958212
     - 5f9d378c419560b4292b0d0f1b3163bc: -5088061633143109107
     - 5f9d378c419560b4292b0d0f1b3163bc: -3808486951342339979
+    - 6873305d03b0d0d4a921b7cbc1cd5de7: 21300000
     - 76fc1cee83b7f5f4d9732387c7953869: 21300000
-    - aa5e164f0a301bc41b8b07a4079271fd: 21300000
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
-  - {fileID: 21300000, guid: d8c8f0b07b81391489eef7a9eead464d, type: 3}
-  - {fileID: 21300000, guid: 4016d9c15e47d484999d606359b0103d, type: 3}
+  - {fileID: 21300000, guid: 53f8753260dfaf5459cc1e8cc95ba94e, type: 3}
   - {fileID: 21300000, guid: 9e29f563fee737f489c61c6655cfe3e6, type: 3}
   - {fileID: 21300000, guid: 71aa7893d7f545847acb19e15a4c08f4, type: 3}
   - {fileID: 21300000, guid: e55ddaf306135cd4282b9b006e9821ca, type: 3}
@@ -89,19 +83,14 @@ SpriteAtlas:
   - {fileID: -6018279857378552221, guid: 5c773daa3b839764ea49f2d6afb1ff80, type: 3}
   - {fileID: -2749089684739404911, guid: 5c773daa3b839764ea49f2d6afb1ff80, type: 3}
   - {fileID: -7718236803453008505, guid: 5c773daa3b839764ea49f2d6afb1ff80, type: 3}
-  - {fileID: 21300000, guid: 56e5550bc67452544ad4b1def32df1a7, type: 3}
-  - {fileID: 21300000, guid: fda7835b3ab10a34e911ee600ae73820, type: 3}
-  - {fileID: 21300000, guid: dab63dfbcbfb70547b892b9c4e32719b, type: 3}
-  - {fileID: 21300000, guid: 0e11365c3d79b7647ac897e8a5a7b932, type: 3}
   - {fileID: -8843944345914528079, guid: 5f9d378c419560b4292b0d0f1b3163bc, type: 3}
   - {fileID: -1898659343009958212, guid: 5f9d378c419560b4292b0d0f1b3163bc, type: 3}
   - {fileID: -5088061633143109107, guid: 5f9d378c419560b4292b0d0f1b3163bc, type: 3}
   - {fileID: -3808486951342339979, guid: 5f9d378c419560b4292b0d0f1b3163bc, type: 3}
+  - {fileID: 21300000, guid: 6873305d03b0d0d4a921b7cbc1cd5de7, type: 3}
   - {fileID: 21300000, guid: 76fc1cee83b7f5f4d9732387c7953869, type: 3}
-  - {fileID: 21300000, guid: aa5e164f0a301bc41b8b07a4079271fd, type: 3}
   m_PackedSpriteNamesToIndex:
-  - Cloud1
-  - Big Clouds
+  - Medium_clouds
   - BG Image
   - CloudBig
   - BG ImageWater
@@ -113,16 +102,12 @@ SpriteAtlas:
   - WaterReflectLarge_0
   - WaterReflectLarge_3
   - WaterReflectLarge_2
-  - Cloud2
-  - Small Cloud 1
-  - Cloud3
-  - Small Cloud 3
   - WaterReflectSmall_1
   - WaterReflectSmall_0
   - WaterReflectSmall_3
   - WaterReflectSmall_2
+  - Small_clouds
   - BG ImageSky
-  - Small Cloud 2
   m_RenderDataMap: {}
   m_Tag: Background
   m_IsVariant: 0

@@ -40,6 +40,19 @@ namespace Creatures.Model.Data.ScenesManagement
         }
 
 
+        public void StoreCheckpoint(string checkpointName)
+        {
+            if (!_storedCheckpoints.Contains(checkpointName))
+                _storedCheckpoints.Add(checkpointName);
+        }
+
+
+        public List<string> GetStoredCheckpoints()
+        {
+            return _storedCheckpoints;
+        }
+
+
         public List<string> GetLevelStoredItems()
         {
             return _storedItems;
