@@ -56822,7 +56822,7 @@ PrefabInstance:
     - target: {fileID: 1968190483569318570, guid: f9227236e5f6cf446b6f32f32f461a6a,
         type: 3}
       propertyPath: _data.Options.Array.data[0].OnSelect.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1968190483569318570, guid: f9227236e5f6cf446b6f32f32f461a6a,
         type: 3}
@@ -56843,12 +56843,12 @@ PrefabInstance:
         type: 3}
       propertyPath: _data.Options.Array.data[0].OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1763512522}
+      objectReference: {fileID: 1763512523}
     - target: {fileID: 1968190483569318570, guid: f9227236e5f6cf446b6f32f32f461a6a,
         type: 3}
       propertyPath: _data.Options.Array.data[0].OnSelect.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1763512518}
+      objectReference: {fileID: 1763512522}
     - target: {fileID: 1968190483569318570, guid: f9227236e5f6cf446b6f32f32f461a6a,
         type: 3}
       propertyPath: _data.Options.Array.data[1].OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -56867,12 +56867,12 @@ PrefabInstance:
     - target: {fileID: 1968190483569318570, guid: f9227236e5f6cf446b6f32f32f461a6a,
         type: 3}
       propertyPath: _data.Options.Array.data[0].OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Exit
+      value: SaveData
       objectReference: {fileID: 0}
     - target: {fileID: 1968190483569318570, guid: f9227236e5f6cf446b6f32f32f461a6a,
         type: 3}
       propertyPath: _data.Options.Array.data[0].OnSelect.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: 
+      value: Exit
       objectReference: {fileID: 0}
     - target: {fileID: 1968190483569318570, guid: f9227236e5f6cf446b6f32f32f461a6a,
         type: 3}
@@ -56881,8 +56881,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1968190483569318570, guid: f9227236e5f6cf446b6f32f32f461a6a,
         type: 3}
+      propertyPath: _data.Options.Array.data[0].OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: General.Components.LevelManagement.SaveLoadManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1968190483569318570, guid: f9227236e5f6cf446b6f32f32f461a6a,
+        type: 3}
       propertyPath: _data.Options.Array.data[0].OnSelect.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: 
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1968190483569318570, guid: f9227236e5f6cf446b6f32f32f461a6a,
         type: 3}
@@ -56969,7 +56974,6 @@ MonoBehaviour:
   _setUnchecked:
     m_PersistentCalls:
       m_Calls: []
-  _theLastCheckpointOfTheScene: 0
 --- !u!114 &1763512522
 MonoBehaviour:
   m_ObjectHideFlags: 0

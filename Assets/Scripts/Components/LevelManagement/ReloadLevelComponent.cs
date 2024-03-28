@@ -11,6 +11,7 @@ namespace General.Components.LevelManagement
         {
             var session = GameSession.Instance;
             session.Loader.LoadData();
+            session.StoreSceneIndex();
 
             var scene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(scene.name);
@@ -23,10 +24,13 @@ namespace General.Components.LevelManagement
         public void ReloadFromBegining()
         {
             var session = GameSession.Instance;
+            session.TheGameWasRestarted = true;
             session.ItemStateStorage.ClearRemoveItemsList(session.GetCurrentSceneName());
-            session.ClearCheckpointList();
-            session.FindSceneManagementInfo(session.GetCurrentSceneName()).ChangeSceneStatusFlag(false);
-            session.LoadLastSessionSave();
+            session.ClearLocalCheckpointList();
+            session.ClearStoredCurrentLevelCheckpoints();
+            session.GetCurrentSceneManagementInfo().ChangeSceneStatusFlag(false);
+            session.LoadLastLocalSessionSave();
+            session.StoreSceneIndex();
             session.Loader.SaveData();
 
             var scene = SceneManager.GetActiveScene();

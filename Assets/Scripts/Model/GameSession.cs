@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using Creatures.Model.Data.Models;
 using Creatures.Model.Data.ScenesManagement;
 using General.Components.LevelManagement;
@@ -28,6 +27,7 @@ namespace Creatures.Model.Data
         [HideInInspector][SerializeField] private int _storedSceneIndex;
         [HideInInspector][SerializeField] private string _currentScene;
         [HideInInspector][SerializeField] private List<string> _checkpoints = new List<string>();
+        [HideInInspector] public bool TheGameWasRestarted = false;
 
         public PlayerData Data => _data;
         public string CurrentScene => _currentScene;
@@ -40,11 +40,11 @@ namespace Creatures.Model.Data
         protected virtual void Awake()
         {
             var existsSession = GetExistsSession();
-            var currentSceneInfo = FindSceneManagementInfo(GetCurrentSceneName());
+            var currentSceneInfo = GetCurrentSceneManagementInfo();
             ItemStateStorage.InitDestroyedItemsContainers(_scenesInfo);
             if (existsSession != null)
             {
-                existsSession.StartSession(currentSceneInfo.LevelEnterCheckpoint);
+                existsSession.StartSession(currentSceneInfo.GetActualLevelCheckpoint());
                 Destroy(gameObject);
             }
             else
@@ -54,7 +54,7 @@ namespace Creatures.Model.Data
                 InitModels();
                 DontDestroyOnLoad(this);
                 Instance = this;
-                StartSession(currentSceneInfo.LevelEnterCheckpoint);
+                StartSession(currentSceneInfo.GetActualLevelCheckpoint());
             }
         }
 
@@ -64,7 +64,7 @@ namespace Creatures.Model.Data
             if (_loader == null)
                 _loader = GetComponent<SaveLoadManager>();
 
-            ClearCheckpointList();
+            ClearLocalCheckpointList();
             _loader.SaveData();
         }
 
@@ -79,44 +79,49 @@ namespace Creatures.Model.Data
 
         private void SpawnPlayer()
         {
-            var currentSceneName = GetCurrentSceneName();
-            var currentSceneInfo = FindSceneManagementInfo(currentSceneName);
+            var currentSceneInfo = GetCurrentSceneManagementInfo();
             var checkpoints = FindObjectsOfType<CheckPointComponent>();
 
-            if (currentSceneInfo.GetSceneStatusFlag() && !IsMoveToUpperIndexScene())
+            if (currentSceneInfo.GetSceneStatusFlag() && GetLevelsMoveProgress() == LevelProgressStatus.Down)
             {
                 foreach (var checkPoint in checkpoints)
                 {
                     if (checkPoint.Id == FindSceneManagementInfo(GetCurrentSceneName()).LevelExitCheckpoint)
                     {
                         checkPoint.SpawnPlayer();
+                        TheGameWasRestarted = false;
+                        LocalSaveSession();
+                        _loader?.SaveData();
                         break;
                     }
                 }
             }
-            else if (currentSceneInfo.GetSceneStatusFlag() && IsMoveToUpperIndexScene())
+            else if (currentSceneInfo.GetSceneStatusFlag() && GetLevelsMoveProgress() == LevelProgressStatus.Up || TheGameWasRestarted)
             {
                 foreach (var checkPoint in checkpoints)
                 {
                     if (checkPoint.Id == FindSceneManagementInfo(GetCurrentSceneName()).LevelEnterCheckpoint)
                     {
                         checkPoint.SpawnPlayer();
+                        TheGameWasRestarted = false;
+                        LocalSaveSession();
+                        _loader?.SaveData();
                         break;
                     }
                 }
             }
             else
             {
-                var lastCheckPoint = currentSceneInfo.GetStoredCheckpoints().LastOrDefault();
-
-                if (lastCheckPoint == null)
-                    lastCheckPoint = _checkpoints.Last();
+                var actualCheckpoint = currentSceneInfo.GetActualLevelCheckpoint();
 
                 foreach (var checkPoint in checkpoints)
                 {
-                    if (checkPoint.Id == lastCheckPoint)
+                    if (checkPoint.Id == actualCheckpoint)
                     {
                         checkPoint.SpawnPlayer();
+                        TheGameWasRestarted = false;
+                        LocalSaveSession();
+                        _loader?.SaveData();
                         break;
                     }
                 }
@@ -158,14 +163,14 @@ namespace Creatures.Model.Data
         }
 
 
-        public void SaveSession()
+        public void LocalSaveSession()
         {
             _currentScene = GetCurrentSceneName();
             _sessionSave = _data.Clone();
         }
 
 
-        public void LoadLastSessionSave()
+        public void LoadLastLocalSessionSave()
         {
             _data = _sessionSave.Clone();
 
@@ -184,7 +189,7 @@ namespace Creatures.Model.Data
         {
             if (!_checkpoints.Contains(id))
             {
-                SaveSession();
+                LocalSaveSession();
                 _checkpoints.Add(id);
             }
         }
@@ -200,10 +205,15 @@ namespace Creatures.Model.Data
 
         public void StoreAnyCheckpoint(string checkpointName)
         {
-            var currentSceneInfo = FindSceneManagementInfo(GetCurrentSceneName());
+            var currentSceneInfo = GetCurrentSceneManagementInfo();
             currentSceneInfo.StoreCheckpoint(checkpointName);
+        }
 
-            // currentSceneInfo.RenewStoredCheckpoints(_checkpoints);
+
+        public void ClearStoredCurrentLevelCheckpoints()
+        {
+            var currentSceneInfo = GetCurrentSceneManagementInfo();
+            currentSceneInfo.ClearCheckpointList();
         }
 
 
@@ -220,6 +230,14 @@ namespace Creatures.Model.Data
         }
 
 
+        public ScenesManagementInfo GetCurrentSceneManagementInfo()
+        {
+            var currentSceneName = GetCurrentSceneName();
+            var currentSceneInfo = FindSceneManagementInfo(currentSceneName);
+            return currentSceneInfo;
+        }
+
+
         public string GetCurrentSceneName()
         {
             var currentSceneName = SceneManager.GetActiveScene().name;
@@ -227,7 +245,7 @@ namespace Creatures.Model.Data
         }
 
 
-        public void ClearCheckpointList()
+        public void ClearLocalCheckpointList()
         {
             _checkpoints.Clear();
         }
@@ -251,7 +269,7 @@ namespace Creatures.Model.Data
             var checkpoints = FindObjectsOfType<CheckPointComponent>();
             foreach (var checkpoint in checkpoints)
             {
-                if (checkpoint.Id == FindSceneManagementInfo(GetCurrentSceneName()).LevelExitCheckpoint)
+                if (checkpoint.Id == GetCurrentSceneManagementInfo().LevelExitCheckpoint)
                 {
                     if (checkpoint.WasChecked == true)
                     {
@@ -265,16 +283,31 @@ namespace Creatures.Model.Data
 
         public void StoreSceneIndex()
         {
-            var currentSceneInfo = FindSceneManagementInfo(GetCurrentSceneName());
+            var currentSceneInfo = GetCurrentSceneManagementInfo();
             _storedSceneIndex = currentSceneInfo.SceneIndex;
         }
 
 
-        public bool IsMoveToUpperIndexScene()
+        private LevelProgressStatus GetLevelsMoveProgress()
         {
-            var currentSceneInfo = FindSceneManagementInfo(GetCurrentSceneName());
-            return _storedSceneIndex < currentSceneInfo.SceneIndex ? true : false;
+            var currentSceneInfo = GetCurrentSceneManagementInfo();
+
+            if (_storedSceneIndex < currentSceneInfo.SceneIndex)
+                return LevelProgressStatus.Up;
+            else if (_storedSceneIndex > currentSceneInfo.SceneIndex)
+                return LevelProgressStatus.Down;
+            else
+                return LevelProgressStatus.WithoutChanges;
+
         }
+    }
+
+
+    public enum LevelProgressStatus
+    {
+        Up,
+        Down,
+        WithoutChanges
     }
 }
 

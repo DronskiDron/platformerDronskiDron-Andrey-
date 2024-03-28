@@ -11,10 +11,11 @@ namespace Creatures.Model.Data.ScenesManagement
         [SerializeField] private int _sceneIndex;
         [SerializeField] private string _levelEnterCheckpoint;
         [SerializeField] private string _levelExitCheckpoint;
+        [SerializeField] private string _actualLevelCheckpoint;
+        [SerializeField] private List<string> _storedCheckpoints = new List<string>();
+        [SerializeField] private bool _levelWasFinished = false;
 
-        [HideInInspector][SerializeField] private List<string> _storedCheckpoints = new List<string>();
         [HideInInspector][SerializeField] private List<string> _storedItems = new List<string>();
-        [HideInInspector][SerializeField] private bool _levelWasFinished = false;
 
         public string Id => _id;
         public string LevelEnterCheckpoint => _levelEnterCheckpoint;
@@ -40,6 +41,12 @@ namespace Creatures.Model.Data.ScenesManagement
         }
 
 
+        public void ClearCheckpointList()
+        {
+            _storedCheckpoints.Clear();
+        }
+
+
         public void StoreCheckpoint(string checkpointName)
         {
             if (!_storedCheckpoints.Contains(checkpointName))
@@ -50,6 +57,21 @@ namespace Creatures.Model.Data.ScenesManagement
         public List<string> GetStoredCheckpoints()
         {
             return _storedCheckpoints;
+        }
+
+
+        public void SetActualLevelCheckpoint(string id)
+        {
+            _actualLevelCheckpoint = id;
+        }
+
+
+        public string GetActualLevelCheckpoint()
+        {
+            if (_actualLevelCheckpoint == "")
+                return _levelEnterCheckpoint;
+            else
+                return _actualLevelCheckpoint;
         }
 
 
