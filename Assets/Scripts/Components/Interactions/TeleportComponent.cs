@@ -1,7 +1,6 @@
 ﻿using Creatures.Player;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace General.Components.Interactions
 {
@@ -13,19 +12,21 @@ namespace General.Components.Interactions
         [SerializeField] private ParticleSystem[] _particles;
         [SerializeField] private Collider2D _collider;
 
-        private GameObject _player;
+        private PlayerController _player;
+        private InputEnableComponent _inputEnabler;
         private int _particleSysInPlayerGOIndex = 0;
 
 
         private void Start()
         {
-            _player = FindObjectOfType<PlayerController>().gameObject;
+            _player = FindObjectOfType<PlayerController>();
+            _inputEnabler = FindObjectOfType<InputEnableComponent>();
         }
 
 
         public void TeleportPlayer()
         {
-            StartCoroutine(AnimateTeleport(_player));
+            StartCoroutine(AnimateTeleport(_player.gameObject));
             var particle = _player.transform.GetChild(_particleSysInPlayerGOIndex);
             particle.gameObject?.SetActive(false);
         }
@@ -37,9 +38,6 @@ namespace General.Components.Interactions
 
             var sprite = target.GetComponent<SpriteRenderer>();
 
-            var input = target.GetComponent<PlayerInput>();
-            SetLockInput(input, true);
-
             yield return SetAlpha(sprite, 0);
             target.SetActive(false);
 
@@ -47,18 +45,10 @@ namespace General.Components.Interactions
 
             target.SetActive(true);
             yield return SetAlpha(sprite, 1);
-            SetLockInput(input, false);
 
             TeleportAntibagColliderToggle(true);
-        }
-
-
-        private void SetLockInput(PlayerInput input, bool isLocked)
-        {
-            if (input != null)
-            {
-                input.enabled = !isLocked;
-            }
+            _inputEnabler?.SetInputActivationStatus(true);
+            _inputEnabler?.SetInputEnabled();
         }
 
 

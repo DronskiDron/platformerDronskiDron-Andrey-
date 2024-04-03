@@ -8,10 +8,7 @@ namespace General.Components.Dialogs
         [SerializeField] private OptionDialogData _data;
 
         public OptionDialogData Data { get => _data; set => _data = value; }
-
         private OptionDialogController _dialogBox;
-
-
         public static bool _letNextPhrase = true;
 
 

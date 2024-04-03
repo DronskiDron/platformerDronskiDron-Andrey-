@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using Creatures.Model.Data.Models;
 using Creatures.Model.Data.ScenesManagement;
 using General.Components.LevelManagement;
@@ -26,7 +25,6 @@ namespace Creatures.Model.Data
         [HideInInspector][SerializeField] private PlayerData _sessionSave;
         [HideInInspector][SerializeField] private int _storedSceneIndex;
         [HideInInspector][SerializeField] private string _currentScene;
-        [HideInInspector][SerializeField] private List<string> _checkpoints = new List<string>();
         [HideInInspector] public bool TheGameWasRestarted = false;
 
         public PlayerData Data => _data;
@@ -64,14 +62,12 @@ namespace Creatures.Model.Data
             if (_loader == null)
                 _loader = GetComponent<SaveLoadManager>();
 
-            ClearLocalCheckpointList();
             _loader.SaveData();
         }
 
 
         private void StartSession(string defaultCheckPoint)
         {
-            SetChecked(defaultCheckPoint);
             LoadHud();
             SpawnPlayer();
         }
@@ -82,48 +78,35 @@ namespace Creatures.Model.Data
             var currentSceneInfo = GetCurrentSceneManagementInfo();
             var checkpoints = FindObjectsOfType<CheckPointComponent>();
 
-            if (currentSceneInfo.GetSceneStatusFlag() && GetLevelsMoveProgress() == LevelProgressStatus.Down)
+            if (currentSceneInfo.GetSceneStatusFlag() && GetLevelsMoveProgress() == LevelProgressStatus.Up || TheGameWasRestarted)
             {
-                foreach (var checkPoint in checkpoints)
-                {
-                    if (checkPoint.Id == FindSceneManagementInfo(GetCurrentSceneName()).LevelExitCheckpoint)
-                    {
-                        checkPoint.SpawnPlayer();
-                        TheGameWasRestarted = false;
-                        LocalSaveSession();
-                        _loader?.SaveData();
-                        break;
-                    }
-                }
+                var enterCheckpoint = currentSceneInfo.LevelEnterCheckpoint;
+                TrySpawnPlayerOnGivenCheckpoint(enterCheckpoint, checkpoints);
             }
-            else if (currentSceneInfo.GetSceneStatusFlag() && GetLevelsMoveProgress() == LevelProgressStatus.Up || TheGameWasRestarted)
+            else if (currentSceneInfo.GetSceneStatusFlag() && GetLevelsMoveProgress() == LevelProgressStatus.Down)
             {
-                foreach (var checkPoint in checkpoints)
-                {
-                    if (checkPoint.Id == FindSceneManagementInfo(GetCurrentSceneName()).LevelEnterCheckpoint)
-                    {
-                        checkPoint.SpawnPlayer();
-                        TheGameWasRestarted = false;
-                        LocalSaveSession();
-                        _loader?.SaveData();
-                        break;
-                    }
-                }
+                var exitCheckpoint = currentSceneInfo.LevelExitCheckpoint;
+                TrySpawnPlayerOnGivenCheckpoint(exitCheckpoint, checkpoints);
             }
             else
             {
                 var actualCheckpoint = currentSceneInfo.GetActualLevelCheckpoint();
+                TrySpawnPlayerOnGivenCheckpoint(actualCheckpoint, checkpoints);
+            }
+        }
 
-                foreach (var checkPoint in checkpoints)
+
+        private void TrySpawnPlayerOnGivenCheckpoint(string checkpointId, CheckPointComponent[] checkpoints)
+        {
+            foreach (var checkPoint in checkpoints)
+            {
+                if (checkPoint.Id == checkpointId)
                 {
-                    if (checkPoint.Id == actualCheckpoint)
-                    {
-                        checkPoint.SpawnPlayer();
-                        TheGameWasRestarted = false;
-                        LocalSaveSession();
-                        _loader?.SaveData();
-                        break;
-                    }
+                    checkPoint.SpawnPlayer();
+                    TheGameWasRestarted = false;
+                    LocalSaveSession();
+                    _loader?.SaveData();
+                    break;
                 }
             }
         }
@@ -179,22 +162,6 @@ namespace Creatures.Model.Data
         }
 
 
-        public bool IsChecked(string id)
-        {
-            return _checkpoints.Contains(id);
-        }
-
-
-        public void SetChecked(string id)
-        {
-            if (!_checkpoints.Contains(id))
-            {
-                LocalSaveSession();
-                _checkpoints.Add(id);
-            }
-        }
-
-
         protected virtual void OnDestroy()
         {
             if (Instance == this)
@@ -245,12 +212,6 @@ namespace Creatures.Model.Data
         }
 
 
-        public void ClearLocalCheckpointList()
-        {
-            _checkpoints.Clear();
-        }
-
-
         public void SetThatLevelWasFinished()
         {
             foreach (var scene in _scenesInfo)
@@ -296,8 +257,7 @@ namespace Creatures.Model.Data
                 return LevelProgressStatus.Up;
             else if (_storedSceneIndex > currentSceneInfo.SceneIndex)
                 return LevelProgressStatus.Down;
-            else
-                return LevelProgressStatus.WithoutChanges;
+            else return LevelProgressStatus.WithoutChanges;
 
         }
     }

@@ -16,7 +16,6 @@ namespace General.Components.LevelManagement
 
             if (session.GetThatSceneWasFinished())
                 session.SetThatLevelWasFinished();
-            session.ClearLocalCheckpointList();
             session.StoreSceneIndex();
             session.LocalSaveSession();
             session.Loader.SaveData();

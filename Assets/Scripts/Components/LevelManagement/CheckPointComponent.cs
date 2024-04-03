@@ -29,15 +29,16 @@ namespace General.Components.LevelManagement
         {
             _session = GameSession.Instance;
             OnActivated += Uncheck;
-            
+
             _setUnchecked?.Invoke();
         }
 
 
         public void Check()
         {
-            _session.SetChecked(_id);
-            _session.GetCurrentSceneManagementInfo().SetActualLevelCheckpoint(_id);
+            var sceneInfo = _session.GetCurrentSceneManagementInfo();
+            sceneInfo.SetActualLevelCheckpoint(_id);
+
             _session.Loader.SaveData();
             _setChecked?.Invoke();
             _lastActivatedCheckpoint = this;

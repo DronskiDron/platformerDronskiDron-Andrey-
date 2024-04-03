@@ -26,7 +26,6 @@ namespace General.Components.LevelManagement
             var session = GameSession.Instance;
             session.TheGameWasRestarted = true;
             session.ItemStateStorage.ClearRemoveItemsList(session.GetCurrentSceneName());
-            session.ClearLocalCheckpointList();
             session.ClearStoredCurrentLevelCheckpoints();
             session.GetCurrentSceneManagementInfo().ChangeSceneStatusFlag(false);
             session.LoadLastLocalSessionSave();

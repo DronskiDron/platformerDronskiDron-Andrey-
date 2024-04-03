@@ -38,7 +38,7 @@ namespace UI.Hud.Dialogs
             _contentText.text = data.DialogText;
             _dataGroup.SetData(data.Options);
             if (_blockInput)
-                _inputEnabler.SetInput(false);
+                _inputEnabler.SetInputDisabled();
         }
     }
 

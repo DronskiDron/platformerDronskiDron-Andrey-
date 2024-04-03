@@ -93,10 +93,9 @@ namespace Creatures
         {
             var yVelocity = Rigidbody.velocity.y;
             var isJumpPressing = GroundCheck.GetIsPressingJump();
+
             if (IsGroundedNow)
-            {
                 IsJumping = false;
-            }
 
             if (isJumpPressing)
             {
@@ -146,13 +145,11 @@ namespace Creatures
         {
             var multiplier = _invertScale ? -1 : 1;
             if (MoveDirection.x > 0)
-            {
                 transform.localScale = new Vector3(multiplier, 1, 1);
-            }
+
             else if (MoveDirection.x < 0)
-            {
                 transform.localScale = new Vector3(-1 * multiplier, 1, 1);
-            }
+
         }
 
 
@@ -188,9 +185,7 @@ namespace Creatures
         public void StartMobJump()
         {
             if (IsGroundedNow)
-            {
                 MobJumpLogic();
-            }
         }
 
 

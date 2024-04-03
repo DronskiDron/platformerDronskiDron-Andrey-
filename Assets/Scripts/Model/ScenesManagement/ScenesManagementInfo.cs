@@ -35,12 +35,6 @@ namespace Creatures.Model.Data.ScenesManagement
         }
 
 
-        public void RenewStoredCheckpoints(List<string> list)
-        {
-            _storedCheckpoints = new List<string>(list);
-        }
-
-
         public void ClearCheckpointList()
         {
             _storedCheckpoints.Clear();
@@ -51,12 +45,6 @@ namespace Creatures.Model.Data.ScenesManagement
         {
             if (!_storedCheckpoints.Contains(checkpointName))
                 _storedCheckpoints.Add(checkpointName);
-        }
-
-
-        public List<string> GetStoredCheckpoints()
-        {
-            return _storedCheckpoints;
         }
 
 

@@ -41,36 +41,40 @@ namespace Creatures.Player
 
         [Header("Tools")]
         [SerializeField] private LanternComponent _lantern;
-        public LanternComponent Lantern => _lantern;
 
         [Header("Particles")]
         [SerializeField] private ParticleSystem _hitParticles;
-        private static readonly int ThrowKey = Animator.StringToHash("throw");
-        private static readonly int IsOnWall = Animator.StringToHash("is-on-wall");
 
+        //##PlayerMovement##
         private bool _allowDoubleJump;
         private bool _isOnWall;
         private bool _wasDoubleJump = false;
+        private float _defaultGravityScale;
+
+        //##Animator##
+        private static readonly int ThrowKey = Animator.StringToHash("throw");
+        private static readonly int IsOnWall = Animator.StringToHash("is-on-wall");
+
+        //##Particles##
         private bool _isAllowSlamDownParticle = true;
         private float _startSlamDownDamageVelocity;
         public float StartSlamDownDamageVelocity => _startSlamDownDamageVelocity;
-        private bool _superThrow = false;
 
-        private GameSession _session;
-        private float _defaultGravityScale;
-        private HealthComponent _healthComponent;
-        private CameraShakeEffect _cameraShake;
-
-        private const string SwordId = "Sword";
+        //##Inventory##
+        private const string SWORD_ID = "Sword";
+        private int SwordCount => _session.Data.Inventory.Count(SWORD_ID);
         private int CoinCount => _session.Data.Inventory.Count("Coin");
-        private int SwordCount => _session.Data.Inventory.Count(SwordId);
         private string SelectedItemId => _session.QuickInventory.SelectedItem.Id;
 
+        //##Perks##
+        private bool _superThrow = false;
+        private float _additionalSpeed;
+        private readonly Cooldown _speedUpCooldown = new Cooldown();
         private bool CanThrow
         {
             get
             {
-                if (SelectedItemId == SwordId)
+                if (SelectedItemId == SWORD_ID)
                     return SwordCount > 1;
 
                 var def = DefsFacade.I.Items.Get(SelectedItemId);
@@ -78,8 +82,13 @@ namespace Creatures.Player
             }
         }
 
-        private readonly Cooldown _speedUpCooldown = new Cooldown();
-        private float _additionalSpeed;
+        //##Tools##
+        public LanternComponent Lantern => _lantern;
+
+        //##NeededComponents##
+        private GameSession _session;
+        private HealthComponent _healthComponent;
+        private CameraShakeEffect _cameraShake;
 
 
         protected override void Awake()
@@ -111,7 +120,7 @@ namespace Creatures.Player
 
         private void OnInventoryChanged(string id, int value)
         {
-            if (id == SwordId)
+            if (id == SWORD_ID)
                 UpdatePlayerWeapon();
         }
 
@@ -128,14 +137,10 @@ namespace Creatures.Player
             var isJumpPressing = MoveDirection.y > 0;
 
             if (IsGroundedNow || _isOnWall)
-            {
                 _allowDoubleJump = true;
-            }
 
             if (!isJumpPressing && _isOnWall)
-            {
                 return 0f;
-            }
 
             return base.CalculateVelocity();
         }
@@ -183,10 +188,9 @@ namespace Creatures.Player
         {
             base.TakeDamage();
             _cameraShake?.Shake();
+
             if (CoinCount > 0)
-            {
                 SpawnCoins();
-            }
         }
 
 
@@ -346,7 +350,7 @@ namespace Creatures.Player
             if (_superThrow && _session.PerksModel.IsSuperThrowSupported)
             {
                 var throwableCount = _session.Data.Inventory.Count(SelectedItemId);
-                var possibleCount = SelectedItemId == SwordId ? throwableCount - 1 : throwableCount;
+                var possibleCount = SelectedItemId == SWORD_ID ? throwableCount - 1 : throwableCount;
 
                 var numThrows = Mathf.Min(_superThrowParticles, possibleCount);
                 _session.PerksModel.Cooldown.Reset();
@@ -356,6 +360,7 @@ namespace Creatures.Player
             {
                 ThrowAndRemoveFromInventory();
             }
+
             _superThrow = false;
         }
 
