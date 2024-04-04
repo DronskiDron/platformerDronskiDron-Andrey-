@@ -2363,9 +2363,21 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 391578898}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: SetInput
+        m_TargetAssemblyTypeName: Creatures.Player.InputEnableComponent, Assembly-CSharp
+        m_MethodName: SetInputActivationStatus
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 391578898}
+        m_TargetAssemblyTypeName: Creatures.Player.InputEnableComponent, Assembly-CSharp
+        m_MethodName: SetInputDisabled
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -58903,9 +58915,59 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6643121077617301672, guid: f6a164ab2ea3b634988ca306a758515e,
         type: 3}
+      propertyPath: _onDie.m_PersistentCalls.m_Calls.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077617301672, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _onDie.m_PersistentCalls.m_Calls.Array.data[6].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077617301672, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
       propertyPath: _onDie.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 391578898}
+    - target: {fileID: 6643121077617301672, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _onDie.m_PersistentCalls.m_Calls.Array.data[6].m_Target
+      value: 
+      objectReference: {fileID: 391578898}
+    - target: {fileID: 6643121077617301672, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _onDie.m_PersistentCalls.m_Calls.Array.data[6].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077617301672, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _onDie.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetInputActivationStatus
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077617301672, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _onDie.m_PersistentCalls.m_Calls.Array.data[6].m_MethodName
+      value: SetInputDisabled
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077617301672, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _onDie.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: Creatures.Player.InputEnableComponent, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077617301672, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _onDie.m_PersistentCalls.m_Calls.Array.data[6].m_TargetAssemblyTypeName
+      value: Creatures.Player.InputEnableComponent, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077617301672, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _onDie.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077617301672, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _onDie.m_PersistentCalls.m_Calls.Array.data[6].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6643121077617301674, guid: f6a164ab2ea3b634988ca306a758515e,
         type: 3}
       propertyPath: _lights.Array.data[0]
@@ -59008,6 +59070,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6643121077676961676, guid: f6a164ab2ea3b634988ca306a758515e,
         type: 3}
+      propertyPath: _onComplete.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077676961676, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _onComplete.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077676961676, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
       propertyPath: _onComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 391578896}
@@ -59021,6 +59093,56 @@ PrefabInstance:
       propertyPath: _onComplete.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 391578898}
+    - target: {fileID: 6643121077676961676, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _onComplete.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 391578898}
+    - target: {fileID: 6643121077676961676, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _onComplete.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077676961676, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _onComplete.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetInputActivationStatus
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077676961676, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _onComplete.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: SetInputEnabled
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077676961676, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _onComplete.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: Creatures.Player.InputEnableComponent, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077676961676, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _onComplete.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: Creatures.Player.InputEnableComponent, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077676961676, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _onComplete.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077676961676, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _onComplete.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077736766237, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _onComplete.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077736766237, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _onComplete.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6643121077736766237, guid: f6a164ab2ea3b634988ca306a758515e,
         type: 3}
       propertyPath: _onComplete.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -59031,6 +59153,51 @@ PrefabInstance:
       propertyPath: _onComplete.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 391578898}
+    - target: {fileID: 6643121077736766237, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _onComplete.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 391578898}
+    - target: {fileID: 6643121077736766237, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _onComplete.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077736766237, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _onComplete.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetInputActivationStatus
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077736766237, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _onComplete.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: SetInputEnabled
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077736766237, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _onComplete.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: Creatures.Player.InputEnableComponent, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077736766237, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _onComplete.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: Creatures.Player.InputEnableComponent, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077736766237, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _onComplete.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077736766237, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _onComplete.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077736766237, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _onComplete.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -54,7 +54,6 @@ SpriteAtlas:
     - 53f8753260dfaf5459cc1e8cc95ba94e: 21300000
     - 9e29f563fee737f489c61c6655cfe3e6: 21300000
     - 71aa7893d7f545847acb19e15a4c08f4: 21300000
-    - e55ddaf306135cd4282b9b006e9821ca: 21300000
     - c20348f5f7490984982c0661ec93e69a: 3538689430123128980
     - c20348f5f7490984982c0661ec93e69a: 759440405009013545
     - c20348f5f7490984982c0661ec93e69a: 8506211366736525064
@@ -74,7 +73,6 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 53f8753260dfaf5459cc1e8cc95ba94e, type: 3}
   - {fileID: 21300000, guid: 9e29f563fee737f489c61c6655cfe3e6, type: 3}
   - {fileID: 21300000, guid: 71aa7893d7f545847acb19e15a4c08f4, type: 3}
-  - {fileID: 21300000, guid: e55ddaf306135cd4282b9b006e9821ca, type: 3}
   - {fileID: 3538689430123128980, guid: c20348f5f7490984982c0661ec93e69a, type: 3}
   - {fileID: 759440405009013545, guid: c20348f5f7490984982c0661ec93e69a, type: 3}
   - {fileID: 8506211366736525064, guid: c20348f5f7490984982c0661ec93e69a, type: 3}
@@ -93,7 +91,6 @@ SpriteAtlas:
   - Medium_clouds
   - BG Image
   - CloudBig
-  - BG ImageWater
   - WaterReflectMedium_3
   - WaterReflectMedium_2
   - WaterReflectMedium_1

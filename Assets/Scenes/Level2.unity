@@ -589,6 +589,11 @@ PrefabInstance:
       propertyPath: _target
       value: 
       objectReference: {fileID: 36641138}
+    - target: {fileID: 1437103612517029807, guid: d905f4d7a415f754ab24667e2fc887a9,
+        type: 3}
+      propertyPath: _controller
+      value: 
+      objectReference: {fileID: 679618578}
     - target: {fileID: 2463995463293029563, guid: d905f4d7a415f754ab24667e2fc887a9,
         type: 3}
       propertyPath: _data.Options.Array.data[0].OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -24213,6 +24218,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 679618576}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &679618578 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2625460724213754288, guid: 5154755a47a5d764fabaf8b8b8723723,
+    type: 3}
+  m_PrefabInstance: {fileID: 679618576}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea600c5a733e7dd4ea0fb994dc6bced6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &682763123
 GameObject:
   m_ObjectHideFlags: 0
@@ -26773,6 +26790,11 @@ PrefabInstance:
       propertyPath: _target
       value: 
       objectReference: {fileID: 447731534}
+    - target: {fileID: 1437103612517029807, guid: d905f4d7a415f754ab24667e2fc887a9,
+        type: 3}
+      propertyPath: _controller
+      value: 
+      objectReference: {fileID: 679618578}
     - target: {fileID: 2463995463293029563, guid: d905f4d7a415f754ab24667e2fc887a9,
         type: 3}
       propertyPath: _data.Options.Array.data[0].OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -31667,12 +31689,12 @@ Transform:
   m_Children:
   - {fileID: 65364021}
   - {fileID: 902377871}
-  - {fileID: 117339646}
-  - {fileID: 563003839}
   - {fileID: 1161458285}
   - {fileID: 36641138}
-  - {fileID: 447731534}
+  - {fileID: 563003839}
   - {fileID: 1654664461}
+  - {fileID: 117339646}
+  - {fileID: 447731534}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1114443756 stripped
@@ -35964,6 +35986,11 @@ PrefabInstance:
     - target: {fileID: 1917532564182156486, guid: 9cc37816802104044bccd5276285b386,
         type: 3}
       propertyPath: m_Name
+      value: Sword (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894102282169119527, guid: 9cc37816802104044bccd5276285b386,
+        type: 3}
+      propertyPath: _id
       value: Sword (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
