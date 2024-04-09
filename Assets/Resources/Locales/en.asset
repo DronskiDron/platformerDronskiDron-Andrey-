@@ -52,6 +52,10 @@ MonoBehaviour:
     Value: "Price:\r"
   - Key: button_upgrade
     Value: "Upgrade\r"
+  - Key: label_music
+    Value: "Music\r"
+  - Key: label_effects
+    Value: "Effects\r"
   - Key: '###_dialogs_###'
     Value: "###\r"
   - Key: krab_dial_1

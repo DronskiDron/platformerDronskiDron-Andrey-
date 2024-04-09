@@ -52,6 +52,10 @@ MonoBehaviour:
     Value: "\u0426\u0435\u043D\u0430:\r"
   - Key: button_upgrade
     Value: "\u0423\u043B\u0443\u0447\u0448\u0438\u0442\u044C\r"
+  - Key: label_music
+    Value: "\u041C\u0443\u0437\u044B\u043A\u0430\r"
+  - Key: label_effects
+    Value: "\u042D\u0444\u0444\u0435\u043A\u0442\u044B\r"
   - Key: '###_dialogs_###'
     Value: "###\r"
   - Key: krab_dial_1
