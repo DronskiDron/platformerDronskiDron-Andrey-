@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using Creatures.Model.Data.Models;
 using Creatures.Model.Data.ScenesManagement;
 using General.Components.LevelManagement;
@@ -68,7 +69,7 @@ namespace Creatures.Model.Data
 
         private void StartSession(string defaultCheckPoint)
         {
-            LoadHud();
+            LoadUI();
             SpawnPlayer();
         }
 
@@ -128,9 +129,17 @@ namespace Creatures.Model.Data
         }
 
 
-        private void LoadHud()
+        private void LoadUI()
         {
             SceneManager.LoadScene("Hud", LoadSceneMode.Additive);
+            LoadOnScreenControls();
+        }
+
+
+        [Conditional("USE_ONSCREEN_CONTROLS")]
+        private void LoadOnScreenControls()
+        {
+            SceneManager.LoadScene("Controls", LoadSceneMode.Additive);
         }
 
 
