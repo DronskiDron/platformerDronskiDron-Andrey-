@@ -1,9 +1,17 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.Rendering;
 
 namespace UI.Windows
 {
     public class AnimatedWindow : MonoBehaviour
     {
+        public UnityEvent _onStartEvent;
+        public UnityEvent _onCloseEvent;
+
+        public static Action OnWindowAppeared;
+
         private Animator _animator;
 
         private static readonly int Show = Animator.StringToHash("Show");
@@ -14,12 +22,14 @@ namespace UI.Windows
         {
             _animator = GetComponent<Animator>();
             _animator.SetTrigger(Show);
+            OnWindowAppeared?.Invoke();
         }
 
 
         public void Close()
         {
             _animator.SetTrigger(Hide);
+            _onCloseEvent?.Invoke();
         }
 
 

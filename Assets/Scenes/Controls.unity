@@ -211,6 +211,7 @@ GameObject:
   - component: {fileID: 87883206}
   - component: {fileID: 87883205}
   - component: {fileID: 87883204}
+  - component: {fileID: 87883208}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: UI
@@ -303,6 +304,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &87883208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87883203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c0f95c13fd569e4aa00587c769f035f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _controls:
+  - {fileID: 91036849}
+  - {fileID: 338069794}
 --- !u!1 &91036849
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,6 +483,7 @@ GameObject:
   - component: {fileID: 354258011}
   - component: {fileID: 354258010}
   - component: {fileID: 354258009}
+  - component: {fileID: 354258012}
   m_Layer: 5
   m_Name: y
   m_TagString: Untagged
@@ -575,6 +592,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 354258007}
   m_CullTransparentMesh: 1
+--- !u!114 &354258012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354258007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ControlPath: <Gamepad>/buttonEast
 --- !u!1 &440021635
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,6 +617,7 @@ GameObject:
   - component: {fileID: 440021639}
   - component: {fileID: 440021638}
   - component: {fileID: 440021637}
+  - component: {fileID: 440021640}
   m_Layer: 5
   m_Name: b
   m_TagString: Untagged
@@ -695,6 +726,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 440021635}
   m_CullTransparentMesh: 1
+--- !u!114 &440021640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440021635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ControlPath: <Gamepad>/buttonWest
 --- !u!1 &503352864
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,6 +751,7 @@ GameObject:
   - component: {fileID: 503352868}
   - component: {fileID: 503352867}
   - component: {fileID: 503352866}
+  - component: {fileID: 503352869}
   m_Layer: 5
   m_Name: a
   m_TagString: Untagged
@@ -815,6 +860,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 503352864}
   m_CullTransparentMesh: 1
+--- !u!114 &503352869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503352864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ControlPath: <Gamepad>/buttonSouth
 --- !u!1 &786763181
 GameObject:
   m_ObjectHideFlags: 0
@@ -827,6 +885,7 @@ GameObject:
   - component: {fileID: 786763185}
   - component: {fileID: 786763184}
   - component: {fileID: 786763183}
+  - component: {fileID: 786763186}
   m_Layer: 5
   m_Name: x
   m_TagString: Untagged
@@ -935,6 +994,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 786763181}
   m_CullTransparentMesh: 1
+--- !u!114 &786763186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786763181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ControlPath: <Gamepad>/buttonNorth
 --- !u!1 &1427838197
 GameObject:
   m_ObjectHideFlags: 0
@@ -1021,6 +1093,7 @@ GameObject:
   - component: {fileID: 2120921620}
   - component: {fileID: 2120921622}
   - component: {fileID: 2120921621}
+  - component: {fileID: 2120921623}
   m_Layer: 5
   m_Name: Stick
   m_TagString: Untagged
@@ -1085,6 +1158,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2120921619}
   m_CullTransparentMesh: 1
+--- !u!114 &2120921623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120921619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9d677f1681015749b15c436eec6d880, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MovementRange: 15
+  m_DynamicOriginRange: 100
+  m_ControlPath: <Gamepad>/leftStick
+  m_Behaviour: 0
+  m_UseIsolatedInputActions: 0
+  m_PointerDownAction:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: df5ea590-f85e-49bf-b5b2-c627c32caaf8
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  m_PointerMoveAction:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 9678f8cf-5671-4669-9f64-2faf7cb23abc
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

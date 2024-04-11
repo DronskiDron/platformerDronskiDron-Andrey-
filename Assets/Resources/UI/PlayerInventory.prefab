@@ -1098,6 +1098,7 @@ GameObject:
   - component: {fileID: 5469586607268824150}
   - component: {fileID: 7141394652988325691}
   - component: {fileID: 2430872391288748995}
+  - component: {fileID: 7960848859198661598}
   m_Layer: 5
   m_Name: PlayerInventory
   m_TagString: Untagged
@@ -1159,6 +1160,60 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4d06052502ba4f4eb4aa7032885718f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _onStartEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7960848859198661598}
+        m_TargetAssemblyTypeName: Creatures.Player.InputEnableComponent, Assembly-CSharp
+        m_MethodName: SetInputActivationStatus
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7960848859198661598}
+        m_TargetAssemblyTypeName: Creatures.Player.InputEnableComponent, Assembly-CSharp
+        m_MethodName: SetInputDisabled
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _onCloseEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7960848859198661598}
+        m_TargetAssemblyTypeName: Creatures.Player.InputEnableComponent, Assembly-CSharp
+        m_MethodName: SetInputActivationStatus
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 7960848859198661598}
+        m_TargetAssemblyTypeName: Creatures.Player.InputEnableComponent, Assembly-CSharp
+        m_MethodName: SetInputEnabled
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   _slots:
   - {fileID: 5601074557165280741}
   - {fileID: 8721197422358537699}
@@ -1190,6 +1245,18 @@ MonoBehaviour:
   InconstantItemTextValue: 
   InconstantValue: 0
   SlotIndex: 0
+--- !u!114 &7960848859198661598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368885587128279567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a80209fe59642cc418f0f57e86bf0d6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1419161432053531636
 GameObject:
   m_ObjectHideFlags: 0

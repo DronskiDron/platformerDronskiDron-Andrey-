@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using UI.Hud.SmartphoneControls;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace Creatures.Player
@@ -20,6 +21,10 @@ namespace Creatures.Player
         {
             if (IsInputActive == true)
                 _input.enabled = true;
+            // Debug.Log("AAAAA");
+            // #if USE_ONSCREEN_CONTROLS
+            SmartphoneInputHandler.Instance.EnableControls();
+            // #endif
         }
 
 
@@ -27,6 +32,10 @@ namespace Creatures.Player
         {
             if (IsInputActive == false)
                 _input.enabled = false;
+            // Debug.Log("BBBBB");
+            // #if USE_ONSCREEN_CONTROLS
+            SmartphoneInputHandler.Instance.DisableControls();
+            // #endif
         }
 
 

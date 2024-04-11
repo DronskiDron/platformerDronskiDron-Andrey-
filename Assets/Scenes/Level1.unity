@@ -1685,6 +1685,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 660789848}
     m_Modifications:
+    - target: {fileID: 1417346166192738905, guid: 25203e40bcf0eca4980b6ff5d5c3fa96,
+        type: 3}
+      propertyPath: _id
+      value: HealPotion (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 2010720066437477363, guid: 25203e40bcf0eca4980b6ff5d5c3fa96,
         type: 3}
       propertyPath: m_Name
@@ -2022,7 +2027,7 @@ PrefabInstance:
     - target: {fileID: 4745719383615900123, guid: 7a79cf71e4b4b624c9bc7936f3b8c242,
         type: 3}
       propertyPath: _id
-      value: SilverCoin (30)
+      value: SilverCoinCirc (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7410,7 +7415,7 @@ PrefabInstance:
     - target: {fileID: 4745719383615900123, guid: 7a79cf71e4b4b624c9bc7936f3b8c242,
         type: 3}
       propertyPath: _id
-      value: SilverCoin (29)
+      value: SilverCoinCirc (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9687,6 +9692,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2106666849255623587}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1097173746 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9175981737940087185, guid: 74ed30f21e3b0c6438e672421c70a214,
+    type: 3}
+  m_PrefabInstance: {fileID: 7416052737397319169}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a80209fe59642cc418f0f57e86bf0d6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1097818550 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3265628417296353479, guid: 427872dd45ef1a345a578cd873b353d1,
@@ -11731,7 +11748,7 @@ PrefabInstance:
     - target: {fileID: 4745719383615900123, guid: 7a79cf71e4b4b624c9bc7936f3b8c242,
         type: 3}
       propertyPath: _id
-      value: SilverCoin (28)
+      value: SilverCoinCirc (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28112,6 +28129,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 660789848}
     m_Modifications:
+    - target: {fileID: 1417346166192738905, guid: 25203e40bcf0eca4980b6ff5d5c3fa96,
+        type: 3}
+      propertyPath: _id
+      value: HealPotion (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 2010720066437477363, guid: 25203e40bcf0eca4980b6ff5d5c3fa96,
         type: 3}
       propertyPath: m_Name
@@ -28190,6 +28212,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 660789848}
     m_Modifications:
+    - target: {fileID: 1417346166192738905, guid: 25203e40bcf0eca4980b6ff5d5c3fa96,
+        type: 3}
+      propertyPath: _id
+      value: HealPotion (4)
+      objectReference: {fileID: 0}
     - target: {fileID: 2010720066437477363, guid: 25203e40bcf0eca4980b6ff5d5c3fa96,
         type: 3}
       propertyPath: m_Name
@@ -31616,7 +31643,7 @@ PrefabInstance:
     - target: {fileID: 4745719383615900123, guid: 7a79cf71e4b4b624c9bc7936f3b8c242,
         type: 3}
       propertyPath: _id
-      value: SilverCoin (27)
+      value: SilverCoinCirc (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -31733,6 +31760,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 660789848}
     m_Modifications:
+    - target: {fileID: 1417346166192738905, guid: 25203e40bcf0eca4980b6ff5d5c3fa96,
+        type: 3}
+      propertyPath: _id
+      value: HealPotion (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 2010720066437477363, guid: 25203e40bcf0eca4980b6ff5d5c3fa96,
         type: 3}
       propertyPath: m_Name
@@ -33154,6 +33186,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 660789848}
     m_Modifications:
+    - target: {fileID: 1417346166192738905, guid: 25203e40bcf0eca4980b6ff5d5c3fa96,
+        type: 3}
+      propertyPath: _id
+      value: HealPotion
+      objectReference: {fileID: 0}
     - target: {fileID: 2010720066437477363, guid: 25203e40bcf0eca4980b6ff5d5c3fa96,
         type: 3}
       propertyPath: m_Name
@@ -33392,13 +33429,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2532081266675386067, guid: a5b011ba8d1290843a9a9e40c268392b,
         type: 3}
+      propertyPath: m_NormalizedViewPortRect.x
+      value: 0.08974359
+      objectReference: {fileID: 0}
+    - target: {fileID: 2532081266675386067, guid: a5b011ba8d1290843a9a9e40c268392b,
+        type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.049999997
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2532081266675386067, guid: a5b011ba8d1290843a9a9e40c268392b,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.width
+      value: 0.82051283
       objectReference: {fileID: 0}
     - target: {fileID: 2532081266675386067, guid: a5b011ba8d1290843a9a9e40c268392b,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.9
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2532081266675386070, guid: a5b011ba8d1290843a9a9e40c268392b,
         type: 3}
@@ -35435,11 +35482,11 @@ PrefabInstance:
         type: 3}
       propertyPath: _action.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1097173746}
     - target: {fileID: 7416052736995849935, guid: 74ed30f21e3b0c6438e672421c70a214,
         type: 3}
       propertyPath: _action.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: SaveData
+      value: SetInputActivationStatus
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
