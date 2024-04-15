@@ -1,47 +1,64 @@
 ﻿using UI.Hud.SmartphoneControls;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace Creatures.Player
 {
     public class InputEnableComponent : MonoBehaviour
     {
-        public static bool IsInputActive = true;
-
-        private PlayerInput _input;
-
-
-        private void Start()
-        {
-            _input = FindObjectOfType<PlayerInput>();
-        }
+        [SerializeField] private float _delayValue = 0;
+        private static bool IsInputActive = true;
 
 
         public void SetInputEnabled()
         {
-            if (IsInputActive == true)
-                _input.enabled = true;
-            // Debug.Log("AAAAA");
-            // #if USE_ONSCREEN_CONTROLS
-            SmartphoneInputHandler.Instance.EnableControls();
-            // #endif
+            Invoke("SetEnabled", _delayValue);
         }
 
 
         public void SetInputDisabled()
         {
-            if (IsInputActive == false)
-                _input.enabled = false;
-            // Debug.Log("BBBBB");
-            // #if USE_ONSCREEN_CONTROLS
-            SmartphoneInputHandler.Instance.DisableControls();
-            // #endif
+            Invoke("SetDisabled", _delayValue);
         }
 
 
         public void SetInputActivationStatus(bool value)
         {
-            IsInputActive = value;
+            if (value)
+                Invoke("SetStatusTrue", _delayValue);
+            else
+                Invoke("SetStatusFalse", _delayValue);
+        }
+
+
+        private void SetStatusTrue()
+        {
+            IsInputActive = true;
+        }
+
+
+        private void SetStatusFalse()
+        {
+            IsInputActive = true;
+        }
+
+
+        private void SetEnabled()
+        {
+            if (IsInputActive == true)
+                PlayerInputReader.IsInputEnable = true;
+#if USE_ONSCREEN_CONTROLS
+            SmartphoneInputHandler.Instance.EnableControls();
+#endif
+        }
+
+
+        private void SetDisabled()
+        {
+            if (IsInputActive == false)
+                PlayerInputReader.IsInputEnable = false;
+#if USE_ONSCREEN_CONTROLS
+            SmartphoneInputHandler.Instance.DisableControls();
+#endif
         }
     }
 }

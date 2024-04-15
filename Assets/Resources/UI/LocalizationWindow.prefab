@@ -325,6 +325,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a750e467770db3742ab883ff5345e339, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _onStartEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _onCloseEvent:
+    m_PersistentCalls:
+      m_Calls: []
   _container: {fileID: 678906801380983993}
   _prefab: {fileID: 7398779253821934496}
 --- !u!1 &678906803039401638

@@ -45,6 +45,9 @@ namespace Creatures.Player
         [Header("Particles")]
         [SerializeField] private ParticleSystem _hitParticles;
 
+        [Header("Input")]
+        [SerializeField] private InputEnableComponent _inputEnabler;
+
         //##PlayerMovement##
         private bool _allowDoubleJump;
         private bool _isOnWall;
@@ -109,6 +112,8 @@ namespace Creatures.Player
 
             _startSlamDownDamageVelocity = _slamDownDamageVelocity;
             UpdatePlayerWeapon();
+            // _inputEnabler.SetInputActivationStatus(true);
+            _inputEnabler.SetInputEnabled();
         }
 
 
