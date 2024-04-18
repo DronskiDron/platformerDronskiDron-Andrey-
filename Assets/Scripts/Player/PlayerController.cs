@@ -11,6 +11,7 @@ using Creatures.Model.Definitions.Player;
 using General.Components.Perks;
 using General.Components.GameplayTools;
 using Effects.CameraRelated;
+using UI.Hud;
 
 namespace Creatures.Player
 {
@@ -109,10 +110,10 @@ namespace Creatures.Player
             _cameraShake = FindObjectOfType<CameraShakeEffect>();
             _session.Data.Hp.Value = (int)_session.StatsModel.GetValue(StatId.Hp); ;
             _session.Data.Inventory.OnChanged += OnInventoryChanged;
+            CurrentPerkWidget.PerkButtonWasPressed += UsePerk;
 
             _startSlamDownDamageVelocity = _slamDownDamageVelocity;
             UpdatePlayerWeapon();
-            // _inputEnabler.SetInputActivationStatus(true);
             _inputEnabler.SetInputEnabled();
         }
 
@@ -120,6 +121,7 @@ namespace Creatures.Player
         private void OnDestroy()
         {
             _session.Data.Inventory.OnChanged -= OnInventoryChanged;
+            CurrentPerkWidget.PerkButtonWasPressed -= UsePerk;
         }
 
 
@@ -393,12 +395,17 @@ namespace Creatures.Player
                 _shield.Use();
                 _session.PerksModel.Cooldown.Reset();
             }
-            if (_session.PerksModel.IsWaveSupported)
+            else if (_session.PerksModel.IsWaveSupported)
             {
                 Sounds.Play("Range");
                 _waveRange.Check();
                 _waveController.StartPowerWaveAnimation();
                 _session.PerksModel.Cooldown.Reset();
+            }
+            else if (_session.Data.Perks.Used.Value == "super-throw")
+            {
+                IsSuperThrowAvailable(true);
+                Throw();
             }
         }
 
