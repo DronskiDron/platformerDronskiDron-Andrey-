@@ -3,6 +3,7 @@ using System.Diagnostics;
 using Creatures.Model.Data.Models;
 using Creatures.Model.Data.ScenesManagement;
 using General.Components.LevelManagement;
+using PirateIsland.Analytics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Utils.Disposables;
@@ -64,6 +65,7 @@ namespace Creatures.Model.Data
                 _loader = GetComponent<SaveLoadManager>();
 
             _loader.SaveData();
+            PirateIslandAnalytics.TrackThatLevelWasStarted(GetCurrentSceneManagementInfo().SceneIndex);
         }
 
 

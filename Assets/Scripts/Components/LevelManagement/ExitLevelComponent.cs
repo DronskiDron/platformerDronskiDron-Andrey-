@@ -1,4 +1,5 @@
 ﻿using Creatures.Model.Data;
+using PirateIsland.Analytics;
 using UI.LevelsLoader;
 using UnityEngine;
 
@@ -13,6 +14,7 @@ namespace General.Components.LevelManagement
         {
             var session = GameSession.Instance;
             var loader = FindObjectOfType<LevelLoader>();
+            PirateIslandAnalytics.TrackThatLevelWasCompleted(session.GetCurrentSceneManagementInfo().SceneIndex);
 
             if (session.GetThatSceneWasFinished())
                 session.SetThatLevelWasFinished();
