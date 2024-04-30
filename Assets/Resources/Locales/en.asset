@@ -22,6 +22,8 @@ MonoBehaviour:
     Value: "Continue\r"
   - Key: '###_loading_###'
     Value: "Loading...\r"
+  - Key: '###_skip_###'
+    Value: "Skip\r"
   - Key: '###_UI_###'
     Value: "###\r"
   - Key: menu_title

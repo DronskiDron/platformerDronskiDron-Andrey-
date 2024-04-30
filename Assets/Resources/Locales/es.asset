@@ -22,6 +22,8 @@ MonoBehaviour:
     Value: "Continuar\r"
   - Key: '###_loading_###'
     Value: "Cargando...\r"
+  - Key: '###_skip_###'
+    Value: "Saltar\r"
   - Key: '###_UI_###'
     Value: "###\r"
   - Key: menu_title

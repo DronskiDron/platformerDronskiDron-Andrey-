@@ -95,6 +95,13 @@ namespace UI.Hud.Dialogs
         }
 
 
+        public virtual void OnSkipFullDialog()
+        {
+            HideDialogBox();
+            _onComplete?.Invoke();
+        }
+
+
         private void HideDialogBox()
         {
             _animator.SetBool(IsOpen, false);

@@ -14,8 +14,15 @@ namespace UI.Hud.Dialogs
         {
             _right.gameObject.SetActive(CurrentSentence.Side == Side.Right);
             _content.gameObject.SetActive(CurrentSentence.Side == Side.Left);
-            
+
             base.OnStartDialogAnimation();
+        }
+
+
+        public override void OnSkipFullDialog()
+        {
+            base.OnSkipFullDialog();
+            CurrentContent.gameObject.SetActive(false);
         }
 
     }

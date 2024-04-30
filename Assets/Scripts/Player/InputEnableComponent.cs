@@ -38,7 +38,7 @@ namespace Creatures.Player
 
         private void SetStatusFalse()
         {
-            IsInputActive = true;
+            IsInputActive = false;
         }
 
 
