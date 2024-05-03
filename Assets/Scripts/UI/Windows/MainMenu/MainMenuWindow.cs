@@ -27,7 +27,7 @@ namespace UI.Windows.MainMenu
                 var loader = FindObjectOfType<LevelLoader>();
                 var jsonLoader = FindObjectOfType<SaveLoadManager>();
                 jsonLoader.ResetData();
-                loader.LoadLevel("Level1");
+                loader.LoadLevel("Tutorial");
             };
             Close();
         }
@@ -44,7 +44,7 @@ namespace UI.Windows.MainMenu
                     loader.LoadLevel(lastScene);
                 else
                 {
-                    loader.LoadLevel("Level1");
+                    loader.LoadLevel("Tutorial");
                 }
             };
             Close();

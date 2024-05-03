@@ -295,9 +295,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7323237437055084547}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: General.Components.Dialogs.ShowDialogComponent,
+          Assembly-CSharp
         m_MethodName: Show
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -465,6 +466,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  _oneSentenceMod: 0
 --- !u!114 &6095599454778672861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -698,3 +700,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a80209fe59642cc418f0f57e86bf0d6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _delayValue: 0

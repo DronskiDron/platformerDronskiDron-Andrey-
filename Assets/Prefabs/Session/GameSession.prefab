@@ -25,12 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2708878258833824854}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 34.08646, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2708878258833824857
 MonoBehaviour:
@@ -84,26 +85,39 @@ MonoBehaviour:
     Fuel:
       _value: 0
   _scenesInfo:
-  - _id: Level1
+  - _id: Tutorial
     _sceneIndex: 0
+    _levelEnterCheckpoint: level0-checkpoint1
+    _levelExitCheckpoint: level0-checkpoint5
+    _actualLevelCheckpoint: 
+    _storedCheckpoints: []
+    _levelWasFinished: 0
+    _storedItems: []
+  - _id: Level1
+    _sceneIndex: 1
     _levelEnterCheckpoint: level1-checkpoint1
     _levelExitCheckpoint: level1-checkpoint5
+    _actualLevelCheckpoint: 
     _storedCheckpoints: []
     _levelWasFinished: 0
+    _storedItems: []
   - _id: Level2
-    _sceneIndex: 1
+    _sceneIndex: 2
     _levelEnterCheckpoint: level2-checkpoint1
     _levelExitCheckpoint: level2-checkpoint5
+    _actualLevelCheckpoint: 
     _storedCheckpoints: []
     _levelWasFinished: 0
+    _storedItems: []
   - _id: Level3
-    _sceneIndex: 2
+    _sceneIndex: 3
     _levelEnterCheckpoint: level3-checkpoint1
     _levelExitCheckpoint: level3-checkpoint4
+    _actualLevelCheckpoint: 
     _storedCheckpoints: []
     _levelWasFinished: 0
+    _storedItems: []
   _loader: {fileID: 2708878258833824859}
-  CurrentScene: 
   _sessionSave:
     _inventory:
       _inventory: []
@@ -144,8 +158,8 @@ MonoBehaviour:
     Fuel:
       _value: 0
   _storedSceneIndex: 0
-  _checkpoints: []
-  _removedItems: []
+  _currentScene: 
+  TheGameWasRestarted: 0
 --- !u!114 &2708878258833824859
 MonoBehaviour:
   m_ObjectHideFlags: 0
