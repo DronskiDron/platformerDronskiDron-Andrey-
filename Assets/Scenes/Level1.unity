@@ -33425,12 +33425,12 @@ PrefabInstance:
     - target: {fileID: 2532081266675386067, guid: a5b011ba8d1290843a9a9e40c268392b,
         type: 3}
       propertyPath: orthographic size
-      value: 5.625
+      value: 4.5703125
       objectReference: {fileID: 0}
     - target: {fileID: 2532081266675386067, guid: a5b011ba8d1290843a9a9e40c268392b,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.08974359
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2532081266675386067, guid: a5b011ba8d1290843a9a9e40c268392b,
         type: 3}
@@ -33440,7 +33440,7 @@ PrefabInstance:
     - target: {fileID: 2532081266675386067, guid: a5b011ba8d1290843a9a9e40c268392b,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.82051283
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2532081266675386067, guid: a5b011ba8d1290843a9a9e40c268392b,
         type: 3}
@@ -35478,6 +35478,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7416052736995849932, guid: 74ed30f21e3b0c6438e672421c70a214,
+        type: 3}
+      propertyPath: _oneSentenceMod
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7416052736995849935, guid: 74ed30f21e3b0c6438e672421c70a214,
         type: 3}
       propertyPath: _action.m_PersistentCalls.m_Calls.Array.data[2].m_Target
@@ -35487,6 +35492,11 @@ PrefabInstance:
         type: 3}
       propertyPath: _action.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
       value: SetInputActivationStatus
+      objectReference: {fileID: 0}
+    - target: {fileID: 7416052736995849935, guid: 74ed30f21e3b0c6438e672421c70a214,
+        type: 3}
+      propertyPath: _action.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

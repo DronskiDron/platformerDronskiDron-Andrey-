@@ -8,12 +8,14 @@ namespace General.Components.Dialogs.Editor
     {
         private SerializedProperty _modeProperty;
         private SerializedProperty _onCompleteProperty;
+        private SerializedProperty _oneSentenceModProperty;
 
 
         private void OnEnable()
         {
             _modeProperty = serializedObject.FindProperty("_mode");
             _onCompleteProperty = serializedObject.FindProperty("_onComplete");
+            _oneSentenceModProperty = serializedObject.FindProperty("_oneSentenceMod");
         }
 
 
@@ -35,6 +37,7 @@ namespace General.Components.Dialogs.Editor
             }
 
             EditorGUILayout.PropertyField(_onCompleteProperty);
+            EditorGUILayout.PropertyField(_oneSentenceModProperty);
             serializedObject.ApplyModifiedProperties();
         }
     }

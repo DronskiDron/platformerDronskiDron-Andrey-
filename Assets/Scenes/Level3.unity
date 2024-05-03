@@ -2420,9 +2420,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1521585828}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: General.Components.Dialogs.ShowDialogComponent,
+          Assembly-CSharp
         m_MethodName: Show
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2444,6 +2445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a80209fe59642cc418f0f57e86bf0d6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _delayValue: 0
 --- !u!1001 &396377269
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55030,17 +55032,22 @@ PrefabInstance:
     - target: {fileID: 2532081266675386067, guid: a5b011ba8d1290843a9a9e40c268392b,
         type: 3}
       propertyPath: orthographic size
-      value: 5.625
+      value: 4.5703125
       objectReference: {fileID: 0}
     - target: {fileID: 2532081266675386067, guid: a5b011ba8d1290843a9a9e40c268392b,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.049999997
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2532081266675386067, guid: a5b011ba8d1290843a9a9e40c268392b,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.width
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2532081266675386067, guid: a5b011ba8d1290843a9a9e40c268392b,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.9
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2532081266675386070, guid: a5b011ba8d1290843a9a9e40c268392b,
         type: 3}

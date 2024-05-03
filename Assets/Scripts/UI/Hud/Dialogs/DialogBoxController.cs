@@ -25,6 +25,7 @@ namespace UI.Hud.Dialogs
         private int _currentSentence;
         private AudioSource _sfxSource;
         private Coroutine _typingRoutine;
+        private bool _oneSentenceMod = false;
 
         protected Sentence CurrentSentence => _data.Sentences[_currentSentence];
 
@@ -35,11 +36,11 @@ namespace UI.Hud.Dialogs
         }
 
 
-        public void ShowDialog(DialogData data, UnityEvent onComplete)
+        public void ShowDialog(DialogData data, UnityEvent onComplete, int startSentenceValue = 0)
         {
             _onComplete = onComplete;
             _data = data;
-            _currentSentence = 0;
+            _currentSentence = CheckIsSentenceIndexValid(startSentenceValue);
             CurrentContent.Text.text = string.Empty;
 
             _container.SetActive(true);
@@ -83,7 +84,7 @@ namespace UI.Hud.Dialogs
             _currentSentence++;
 
             var isDialogCompleted = _currentSentence >= _data.Sentences.Length;
-            if (isDialogCompleted)
+            if (isDialogCompleted || _oneSentenceMod)
             {
                 HideDialogBox();
                 _onComplete?.Invoke();
@@ -126,6 +127,20 @@ namespace UI.Hud.Dialogs
         private void OnCloseAnimationComplete()
         {
 
+        }
+
+
+        public void SetOneSentenceMod(bool value)
+        {
+            _oneSentenceMod = value;
+        }
+
+
+        private int CheckIsSentenceIndexValid(int index)
+        {
+            if (index < _data.Sentences.Length)
+                return index;
+            else return 0;
         }
 
     }

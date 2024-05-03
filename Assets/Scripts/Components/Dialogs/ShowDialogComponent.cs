@@ -13,20 +13,21 @@ namespace General.Components.Dialogs
         [SerializeField] private DialogData _bound;
         [SerializeField] private DialogDef _external;
         [SerializeField] private UnityEvent _onComplete;
+        [SerializeField] private bool _oneSentenceMod = false;
 
         private DialogBoxController _dialogBox;
-
 
         public DialogData Bound => _bound;
 
 
-        public void Show()
+        public void Show(int startSentenceValue = 0)
         {
             _dialogBox = FindDialogController();
 
             if (_dialogBox == null)
                 _dialogBox = FindObjectOfType<DialogBoxController>();
-            _dialogBox.ShowDialog(Data, _onComplete);
+            _dialogBox.SetOneSentenceMod(_oneSentenceMod);
+            _dialogBox.ShowDialog(Data, _onComplete, startSentenceValue);
         }
 
 
