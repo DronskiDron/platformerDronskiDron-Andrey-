@@ -114,7 +114,7 @@ namespace Creatures.Player
 
             _startSlamDownDamageVelocity = _slamDownDamageVelocity;
             UpdatePlayerWeapon();
-            _inputEnabler.SetInputEnabled();
+            SwitchOnInput();
         }
 
 
@@ -414,6 +414,13 @@ namespace Creatures.Player
         {
             if (_session.Data.Fuel.Value > 0)
                 _lantern.gameObject.SetActive(!_lantern.gameObject.activeSelf);
+        }
+
+
+        private void SwitchOnInput()
+        {
+            _inputEnabler.SetInputActivationStatus(true);
+            _inputEnabler.SetInputEnabled();
         }
     }
 }

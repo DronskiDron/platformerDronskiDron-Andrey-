@@ -33651,7 +33651,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1353545484, guid: 9967ca0c81ef26c45a67f3fa3cb4f77d, type: 3}
       propertyPath: _onFail.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1353545484, guid: 9967ca0c81ef26c45a67f3fa3cb4f77d, type: 3}
       propertyPath: _onFail.m_PersistentCalls.m_Calls.Array.data[0].m_Target
