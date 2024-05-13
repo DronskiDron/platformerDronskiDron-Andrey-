@@ -19,7 +19,6 @@ namespace UI.Hud.SmartphoneControls
 
         public void EnableControls()
         {
-            // Debug.Log("AAAAA");
             foreach (var control in _controls)
             {
                 control?.SetActive(true);
@@ -29,7 +28,6 @@ namespace UI.Hud.SmartphoneControls
 
         public void DisableControls()
         {
-            // Debug.Log("BBBBB");
             foreach (var control in _controls)
             {
                 control?.SetActive(false);

@@ -6,10 +6,10 @@ namespace PirateIsland.Analytics
 {
     public class InitAnalyticsComponent : MonoBehaviour
     {
-        async void Start()
-        {
-            await UnityServices.InitializeAsync();
-            AnalyticsService.Instance.StartDataCollection();
-        }
+        // async void Start()
+        // {
+        //     await UnityServices.InitializeAsync();
+        //     AnalyticsService.Instance.StartDataCollection();
+        // }
     }
 }

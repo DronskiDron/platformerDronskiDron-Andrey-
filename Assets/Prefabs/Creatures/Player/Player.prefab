@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 39893648}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.514, y: 0.046, z: 0}
+  m_LocalPosition: {x: 0.571, y: 0.046, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5480,8 +5480,8 @@ GameObject:
   - component: {fileID: 4721150701775001661}
   - component: {fileID: 6669306786479704690}
   - component: {fileID: 6743787075528521499}
-  - component: {fileID: 4721150701775001662}
   - component: {fileID: 4721150701775001663}
+  - component: {fileID: 4721150701775001662}
   - component: {fileID: 4721150701775001658}
   - component: {fileID: 4721150701775001648}
   - component: {fileID: 4721150701775001649}
@@ -5690,20 +5690,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _delayAfterLastDamage: 1
---- !u!114 &4721150701775001662
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4721150701775001659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e07e53c198579d45a28ca7b5e4cf0a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _player: {fileID: 4721150701775001663}
-  _groundCheck: {fileID: 4721150702822014572}
 --- !u!114 &4721150701775001663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5745,6 +5731,20 @@ MonoBehaviour:
   _lantern: {fileID: 2432169607766799254}
   _hitParticles: {fileID: 1578835228}
   _inputEnabler: {fileID: 6735000688500828579}
+--- !u!114 &4721150701775001662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4721150701775001659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e07e53c198579d45a28ca7b5e4cf0a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _player: {fileID: 4721150701775001663}
+  _groundCheck: {fileID: 4721150702822014572}
 --- !u!114 &4721150701775001658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5759,7 +5759,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: 56ee8b613108888488e09b6b2cf8db5d,
     type: 3}
-  m_NotificationBehavior: 1
+  m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -5773,9 +5773,9 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnHorisontalMovementGetInput
+      - m_Target: {fileID: 4721150701775001662}
+        m_TargetAssemblyTypeName: Creatures.PlayerInputReader, Assembly-CSharp
+        m_MethodName: OnTotalMovement
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5785,13 +5785,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 3cedadbc-ba07-435a-a547-a5de03fff5c7
-    m_ActionName: PlayerActionMap/HorisontalMovement[/Keyboard/a,/Keyboard/d]
+    m_ActionId: 656bfa39-51ed-40ca-8479-40bd859044f6
+    m_ActionName: PlayerActionMap/TotalMovement[/Keyboard/w,/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnVerticalMovementGetInput
+      - m_Target: {fileID: 4721150701775001662}
+        m_TargetAssemblyTypeName: Creatures.PlayerInputReader, Assembly-CSharp
+        m_MethodName: OnJumping
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5801,12 +5801,136 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 0ce30839-8571-47f9-9b42-7dc099d5a1e1
-    m_ActionName: PlayerActionMap/VerticalMovement[/Keyboard/s,/Keyboard/w]
+    m_ActionId: b67c8f95-a5fd-4987-b410-ba8af1edc8ea
+    m_ActionName: PlayerActionMap/Jumping[/Keyboard/w]
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: ba0de3df-3c7d-497e-a1c5-535239a9bb4c
-    m_ActionName: PlayerActionMap/SayingSomething[/Mouse/leftButton]
+      m_Calls:
+      - m_Target: {fileID: 4721150701775001662}
+        m_TargetAssemblyTypeName: Creatures.PlayerInputReader, Assembly-CSharp
+        m_MethodName: OnInteract
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 2474d028-380b-41a4-bab6-15e5316248d6
+    m_ActionName: PlayerActionMap/Interact[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4721150701775001662}
+        m_TargetAssemblyTypeName: Creatures.PlayerInputReader, Assembly-CSharp
+        m_MethodName: OnAttack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 9944b2a1-4df4-4435-bdb2-564184c34e3d
+    m_ActionName: PlayerActionMap/Attack[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4721150701775001662}
+        m_TargetAssemblyTypeName: Creatures.PlayerInputReader, Assembly-CSharp
+        m_MethodName: OnThrow
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c15cd641-f292-4cf9-8a91-897121cb1ae5
+    m_ActionName: PlayerActionMap/Throw[/Keyboard/r]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4721150701775001662}
+        m_TargetAssemblyTypeName: Creatures.PlayerInputReader, Assembly-CSharp
+        m_MethodName: OnSuperThrow
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 25e63cd5-ea14-4d86-a5bb-70d0c8d66af8
+    m_ActionName: PlayerActionMap/SuperThrow[/Keyboard/r]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4721150701775001662}
+        m_TargetAssemblyTypeName: Creatures.PlayerInputReader, Assembly-CSharp
+        m_MethodName: OnNextItem
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 203c9556-cb0f-4c70-b654-3ae571e7797a
+    m_ActionName: PlayerActionMap/NextItem[/Keyboard/q]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4721150701775001662}
+        m_TargetAssemblyTypeName: Creatures.PlayerInputReader, Assembly-CSharp
+        m_MethodName: OnUsePerk
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 8c292d52-0a41-471a-ace5-51c52ab6d49a
+    m_ActionName: PlayerActionMap/UsePerk[/Keyboard/f]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4721150701775001662}
+        m_TargetAssemblyTypeName: Creatures.PlayerInputReader, Assembly-CSharp
+        m_MethodName: OnUseLantern
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 9b7ecb48-d522-451c-89d5-e51104ebf16b
+    m_ActionName: PlayerActionMap/UseLantern[/Keyboard/v]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4721150701775001662}
+        m_TargetAssemblyTypeName: Creatures.PlayerInputReader, Assembly-CSharp
+        m_MethodName: OnMousePress
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 5ff706db-6bd7-4d22-ba46-4fe4074c12d3
+    m_ActionName: PlayerActionMap/MousePress[/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: PlayerActionMap

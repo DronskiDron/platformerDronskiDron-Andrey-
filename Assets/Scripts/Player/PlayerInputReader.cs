@@ -13,7 +13,7 @@ namespace Creatures
         public static bool IsInputEnable = true;
 
 
-        private void OnTotalMovement(InputValue context)
+        public void OnTotalMovement(InputAction.CallbackContext context)
         {
             if (!IsInputEnable)
             {
@@ -21,68 +21,91 @@ namespace Creatures
             }
             else
             {
-                var direction = context.Get<Vector2>();
+                var direction = context.ReadValue<Vector2>();
                 _player.SetMoveDirection(direction);
             }
         }
 
 
-        private void OnJumping(InputValue context)
+        public void OnJumping(InputAction.CallbackContext context)
         {
             if (!IsInputEnable) return;
-
-            var jumpVector = context.Get<Vector2>();
+            
+            var jumpVector = context.ReadValue<Vector2>();
             _groundCheck.SetIsPressingJump(jumpVector);
+
         }
 
 
-        private void OnInteract(InputValue context)
+        public void OnInteract(InputAction.CallbackContext context)
         {
             if (!IsInputEnable) return;
-            _player.Interact();
+
+            if (context.started)
+                _player.Interact();
         }
 
 
-        private void OnAttack(InputValue context)
+        public void OnAttack(InputAction.CallbackContext context)
         {
             if (!IsInputEnable) return;
-            _player.Attack();
+
+            if (context.started)
+                _player.Attack();
         }
 
 
-        private void OnThrow(InputValue context)
+        public void OnThrow(InputAction.CallbackContext context)
         {
             if (!IsInputEnable) return;
-            _player.UseInventory();
+
+            if (context.started)
+                _player.UseInventory();
         }
 
 
-        private void OnSuperThrow(InputValue context)
+        public void OnSuperThrow(InputAction.CallbackContext context)
         {
             if (!IsInputEnable) return;
-            _player.IsSuperThrowAvailable(true);
-            _player.Throw();
+
+            if (context.started)
+            {
+                _player.IsSuperThrowAvailable(true);
+                _player.Throw();
+            }
         }
 
 
-        private void OnNextItem(InputValue context)
+        public void OnNextItem(InputAction.CallbackContext context)
         {
             if (!IsInputEnable) return;
-            _player.NextItem();
+
+            if (context.started)
+                _player.NextItem();
         }
 
 
-        private void OnUsePerk(InputValue context)
+        public void OnUsePerk(InputAction.CallbackContext context)
         {
             if (!IsInputEnable) return;
-            _player.UsePerk();
+
+            if (context.started)
+                _player.UsePerk();
         }
 
 
-        private void OnUseLantern(InputValue context)
+        public void OnUseLantern(InputAction.CallbackContext context)
         {
             if (!IsInputEnable) return;
-            _player.UseLantern();
+
+            if (context.started)
+                _player.UseLantern();
+        }
+
+
+        public void OnMousePress(InputAction.CallbackContext context)
+        {
+            Debug.Log("AAA");
         }
     }
 }
