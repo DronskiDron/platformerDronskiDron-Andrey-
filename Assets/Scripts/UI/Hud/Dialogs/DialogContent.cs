@@ -13,8 +13,13 @@ namespace UI.Hud.Dialogs
 
         public void TrySetIcon(Sprite icon)
         {
+            _icon.gameObject.SetActive(false);
+
             if (icon != null)
+            {
                 _icon.sprite = icon;
+                _icon.gameObject.SetActive(true);
+            }
         }
     }
 }

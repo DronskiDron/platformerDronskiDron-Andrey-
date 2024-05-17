@@ -16,7 +16,6 @@ namespace General.Components.Dialogs
         [SerializeField] private bool _oneSentenceMod = false;
 
         private DialogBoxController _dialogBox;
-
         public DialogData Bound => _bound;
 
 
@@ -43,6 +42,9 @@ namespace General.Components.Dialogs
                     break;
                 case DialogType.Personalized:
                     controllerGo = GameObject.FindWithTag("PersonalizedDialog");
+                    break;
+                case DialogType.Tutorial:
+                    controllerGo = GameObject.FindWithTag("TutorialUI");
                     break;
                 default:
                     throw new ArgumentException("Undefined dialog type");

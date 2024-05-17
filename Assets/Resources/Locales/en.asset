@@ -121,4 +121,21 @@ MonoBehaviour:
   - Key: range_damage_stat
     Value: "RangeDamage\r"
   - Key: critical_damage_stat
-    Value: CriticalDamage
+    Value: "CriticalDamage\r"
+  - Key: '###big_text###'
+    Value: "A graph is a mathematical abstraction of a real system of any nature,
+      the objects of which have paired connections. A graph as a mathematical object
+      is a collection of two sets \u2014 the set of objects themselves, called the
+      set of vertices, and the set of their paired connections, called the set of
+      edges. An element of a set of edges is a pair of elements of a set of vertices. 
+      Graphs are widely used in modern science and technology. They are used both
+      in the natural sciences (physics and chemistry) and in the social sciences
+      (for example, sociology), but the greatest use of graphs has been in computer
+      science and network technologies.  As the simplest example from life, we can
+      cite the flight scheme of a certain airline, which is modeled by a graph, where
+      the vertices of the graph are cities, and the edges are flights connecting
+      pairs of cities. The directory tree in a computer is also a graph: disks, folders,
+      and files are vertices, and edges show the nesting of files and folders into
+      folders and disks[1]. The structure of Wikipedia is modeled by an oriented
+      graph, in which articles are the vertices of the graph, and hyperlinks are
+      arcs (thematic map).  Graphs are the main object of studying graph theory."

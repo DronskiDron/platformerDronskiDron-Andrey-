@@ -17,15 +17,17 @@ namespace Creatures.Model.Data
     [Serializable]
     public struct Sentence
     {
-        [SerializeField] private string _valued;
+        [SerializeField] private string _title;
+        [HideInInspector][SerializeField] private string _valued;
+        [HideInInspector][SerializeField] private string _valuedMobile;
         [SerializeField] private Sprite _icon;
         [SerializeField] private Side _side;
 
-       /*  public string Valued => _valued; */
         public Sprite Icon => _icon;
         public Side Side => _side;
 
         public string Valued { get => _valued; set => _valued = value; }
+        public string ValuedMobile { get => _valuedMobile; set => _valuedMobile = value; }
     }
 
 
@@ -39,6 +41,7 @@ namespace Creatures.Model.Data
     public enum DialogType
     {
         Simple,
-        Personalized
+        Personalized,
+        Tutorial
     }
 }

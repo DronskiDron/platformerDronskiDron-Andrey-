@@ -14,7 +14,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _data:
     _sentences:
-    - And now the Miracle!
-    - I have a Gem...
-    - And you are not!
-    - Ahahaha!!!
+    - _valued: I can teach you!
+      _icon: {fileID: 0}
+      _side: 0
+    - _valued: Good!
+      _icon: {fileID: 0}
+      _side: 0
+    - _valued: Good!
+      _icon: {fileID: 0}
+      _side: 0
+    _type: 2
+  _dataMobile:
+    _sentences:
+    - _valued: Dziakyi Johnke za vse ato!
+      _icon: {fileID: 0}
+      _side: 0
+    - _valued: husband call his SASAKA!!!!
+      _icon: {fileID: 0}
+      _side: 0
+    - _valued: Let's go!
+      _icon: {fileID: 0}
+      _side: 0
+    _type: 2

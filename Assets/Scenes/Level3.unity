@@ -59140,6 +59140,56 @@ PrefabInstance:
       propertyPath: _onComplete.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6643121077676961679, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _dialogKeys.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077676961679, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _dialogKeys.Array.data[0]._key
+      value: patric_dial_3p
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077676961679, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _dialogKeys.Array.data[1]._key
+      value: patric_dial_4h
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077676961679, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _dialogKeys.Array.data[0]._mobileKey
+      value: patric_dial_3p
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077676961679, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _dialogKeys.Array.data[1]._mobileKey
+      value: patric_dial_4h
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077736766236, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _dialogKeys.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077736766236, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _dialogKeys.Array.data[0]._key
+      value: patric_dial_1p
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077736766236, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _dialogKeys.Array.data[1]._key
+      value: patric_dial_2h
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077736766236, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _dialogKeys.Array.data[0]._mobileKey
+      value: patric_dial_1p
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077736766236, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _dialogKeys.Array.data[1]._mobileKey
+      value: patric_dial_2h
+      objectReference: {fileID: 0}
     - target: {fileID: 6643121077736766237, guid: f6a164ab2ea3b634988ca306a758515e,
         type: 3}
       propertyPath: _onComplete.m_PersistentCalls.m_Calls.Array.size

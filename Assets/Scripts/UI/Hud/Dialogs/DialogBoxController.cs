@@ -103,7 +103,7 @@ namespace UI.Hud.Dialogs
         }
 
 
-        public void HideDialogBox()
+        private void HideDialogBox()
         {
             _animator.SetBool(IsOpen, false);
             _sfxSource.PlayOneShot(_close);
