@@ -22,6 +22,7 @@ namespace UI.Windows
             _animator = GetComponent<Animator>();
             _animator.SetTrigger(Show);
             OnWindowAppeared?.Invoke();
+            _onStartEvent?.Invoke();
         }
 
 

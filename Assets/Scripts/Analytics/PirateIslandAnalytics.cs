@@ -7,6 +7,8 @@ namespace PirateIsland.Analytics
     {
         public static void TrackThatLevelWasStarted(int levelIndex)
         {
+            if (!InitAnalyticsComponent.IsAnalyticsAllow) return;
+
             var myEvent = new CustomEvent("LevelWasStarted")
 {
     { "NumericalValue", levelIndex }
@@ -18,6 +20,8 @@ namespace PirateIsland.Analytics
 
         public static void TrackThatLevelWasCompleted(int levelIndex)
         {
+            if (!InitAnalyticsComponent.IsAnalyticsAllow) return;
+
             var myEvent = new CustomEvent("LevelWasCompleted")
 {
     { "NumericalValue", levelIndex }

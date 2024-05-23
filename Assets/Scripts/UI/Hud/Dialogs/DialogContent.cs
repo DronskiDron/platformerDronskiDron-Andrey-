@@ -13,7 +13,7 @@ namespace UI.Hud.Dialogs
 
         public void TrySetIcon(Sprite icon)
         {
-            _icon.gameObject.SetActive(false);
+            _icon?.gameObject.SetActive(false);
 
             if (icon != null)
             {

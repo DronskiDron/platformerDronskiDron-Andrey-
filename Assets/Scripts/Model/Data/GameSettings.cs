@@ -8,9 +8,13 @@ namespace Creatures.Model.Data
     {
         [SerializeField] private FloatPersistentProperty _music;
         [SerializeField] private FloatPersistentProperty _sfx;
+        [SerializeField] private IntPersistentProperty _analytics;
+        [SerializeField] private IntPersistentProperty _firstLaunch;
 
         public FloatPersistentProperty Music => _music;
         public FloatPersistentProperty Sfx => _sfx;
+        public IntPersistentProperty Analytics => _analytics;
+        public IntPersistentProperty FirstLaunch => _firstLaunch;
 
         private static GameSettings _instance;
         public static GameSettings I => _instance == null ? LoadGameSettings() : _instance;
@@ -26,6 +30,8 @@ namespace Creatures.Model.Data
         {
             _music = new FloatPersistentProperty(1, SoundSetting.Music.ToString());
             _sfx = new FloatPersistentProperty(1, SoundSetting.Sfx.ToString());
+            _analytics = new IntPersistentProperty(9, SettingsAmount.AnalyticsStatus.ToString());
+            _firstLaunch = new IntPersistentProperty(4, SettingsAmount.FirstLaunch.ToString());
         }
 
 
@@ -33,6 +39,8 @@ namespace Creatures.Model.Data
         {
             Music.Validate();
             Sfx.Validate();
+            Analytics.Validate();
+            FirstLaunch.Validate();
         }
     }
 
@@ -41,5 +49,12 @@ namespace Creatures.Model.Data
     {
         Music,
         Sfx
+    }
+
+
+    public enum SettingsAmount
+    {
+        AnalyticsStatus,
+        FirstLaunch
     }
 }

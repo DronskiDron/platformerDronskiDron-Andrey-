@@ -14,7 +14,7 @@ namespace General.Components.LevelManagement
         {
             var session = GameSession.Instance;
             var loader = FindObjectOfType<LevelLoader>();
-            // PirateIslandAnalytics.TrackThatLevelWasCompleted(session.GetCurrentSceneManagementInfo().SceneIndex);
+            PirateIslandAnalytics.TrackThatLevelWasCompleted(session.GetCurrentSceneManagementInfo().SceneIndex);
 
             if (session.GetThatSceneWasFinished())
                 session.SetThatLevelWasFinished();

@@ -849,6 +849,7 @@ PlayerSettings:
   scriptingDefineSymbols:
     Android: USE_ONSCREEN_CONTROLS
     Standalone: 
+    WebGL: USE_ONSCREEN_CONTROLS
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:

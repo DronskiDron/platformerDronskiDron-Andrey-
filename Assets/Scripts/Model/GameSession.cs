@@ -65,7 +65,7 @@ namespace Creatures.Model.Data
                 _loader = GetComponent<SaveLoadManager>();
 
             _loader.SaveData();
-            // PirateIslandAnalytics.TrackThatLevelWasStarted(GetCurrentSceneManagementInfo().SceneIndex);
+            PirateIslandAnalytics.TrackThatLevelWasStarted(GetCurrentSceneManagementInfo().SceneIndex);
         }
 
 

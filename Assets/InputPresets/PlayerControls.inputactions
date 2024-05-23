@@ -85,15 +85,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "MousePress",
-                    "type": "Button",
-                    "id": "5ff706db-6bd7-4d22-ba46-4fe4074c12d3",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -114,7 +105,7 @@
                     "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "TotalMovement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -125,7 +116,7 @@
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "TotalMovement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -136,7 +127,7 @@
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "TotalMovement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -147,7 +138,7 @@
                     "path": "<Gamepad>/leftStick",
                     "interactions": "",
                     "processors": "StickDeadzone",
-                    "groups": "",
+                    "groups": "Gamepad",
                     "action": "TotalMovement",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -169,7 +160,7 @@
                     "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "Jumping",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -180,7 +171,7 @@
                     "path": "<Gamepad>/leftStick",
                     "interactions": "",
                     "processors": "StickDeadzone(min=0.924)",
-                    "groups": "",
+                    "groups": "Gamepad",
                     "action": "Jumping",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -191,7 +182,7 @@
                     "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -202,7 +193,7 @@
                     "path": "<Gamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Gamepad",
                     "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -213,7 +204,7 @@
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "Attack",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -224,7 +215,7 @@
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Gamepad",
                     "action": "Attack",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -235,7 +226,7 @@
                     "path": "<Keyboard>/r",
                     "interactions": "Press(behavior=1)",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "Throw",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -246,7 +237,7 @@
                     "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Gamepad",
                     "action": "Throw",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -257,7 +248,7 @@
                     "path": "<Keyboard>/r",
                     "interactions": "Hold(duration=1)",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "SuperThrow",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -279,7 +270,7 @@
                     "path": "<Gamepad>/buttonNorth",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Gamepad",
                     "action": "NextItem",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -290,7 +281,7 @@
                     "path": "<Keyboard>/f",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "UsePerk",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -301,24 +292,36 @@
                     "path": "<Keyboard>/v",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "UseLantern",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "39ed6116-beb8-4aff-8c7b-a4461180a739",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "MousePress",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
             ]
         }
     ],
-    "controlSchemes": []
+    "controlSchemes": [
+        {
+            "name": "Gamepad",
+            "bindingGroup": "Gamepad",
+            "devices": [
+                {
+                    "devicePath": "<Gamepad>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Keyboard",
+            "bindingGroup": "Keyboard",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
 }

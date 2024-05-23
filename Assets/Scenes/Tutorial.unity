@@ -3232,39 +3232,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 460998867}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &474825133
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 474825134}
-  m_Layer: 0
-  m_Name: TriggerContainer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &474825134
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 474825133}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2021714981}
-  - {fileID: 1640089296}
-  m_Father: {fileID: 609045522}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &484933918
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4285,160 +4252,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1348698827}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &609045517
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 609045522}
-  - component: {fileID: 609045521}
-  - component: {fileID: 609045520}
-  - component: {fileID: 609045519}
-  - component: {fileID: 609045523}
-  m_Layer: 0
-  m_Name: TutorialController (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &609045519
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 609045517}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a80209fe59642cc418f0f57e86bf0d6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _delayValue: 0
---- !u!114 &609045520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 609045517}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d14ec06b43e80cd40b0d4857306e995d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _mode: 0
-  _bound:
-    _sentences:
-    - _title: "A graph is a mathematical abstraction of a real system of any nature,
-        the objects of which have paired connections. A graph as a mathematical object
-        is a collection of two sets \u2014 the set of objects themselves, called
-        the set of vertices, and the set of their paired connections, called the
-        set of edges. An element of a set of edges is a pair of elements of a set
-        of vertices.  Graphs are widely used in modern science and technology. They
-        are used both in the natural sciences (physics and chemistry) and in the
-        social sciences (for example, sociology), but the greatest use of graphs
-        has been in computer science and network technologies.  As the simplest example
-        from life, we can cite the flight scheme of a certain airline, which is modeled
-        by a graph, where the vertices of the graph are cities, and the edges are
-        flights connecting pairs of cities. The directory tree in a computer is also
-        a graph: disks, folders, and files are vertices, and edges show the nesting
-        of files and folders into folders and disks[1]. The structure of Wikipedia
-        is modeled by an oriented graph, in which articles are the vertices of the
-        graph, and hyperlinks are arcs (thematic map).  Graphs are the main object
-        of studying graph theory."
-      _valued: 
-      _valuedMobile: 
-      _icon: {fileID: 21300000, guid: 8a318793b7659d94f9dc8124aa5096e1, type: 3}
-      _side: 0
-    _type: 2
-  _external: {fileID: 11400000, guid: 547ea10591b1d22438aabf3247a78c56, type: 2}
-  _onComplete:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 609045519}
-        m_TargetAssemblyTypeName: Creatures.Player.InputEnableComponent, Assembly-CSharp
-        m_MethodName: SetInputActivationStatus
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 609045519}
-        m_TargetAssemblyTypeName: Creatures.Player.InputEnableComponent, Assembly-CSharp
-        m_MethodName: SetInputEnabled
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  _oneSentenceMod: 1
---- !u!114 &609045521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 609045517}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a4ebb7e5ef789947a1a8029086b8df7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _tag: 
-  _layer:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  _action:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!4 &609045522
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 609045517}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 474825134}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &609045523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 609045517}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a9db3d2d2952724fbb52f839f8b70c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _dialogKeys:
-  - _key: '###big_text###'
-    _mobileKey: '###big_text###'
-  - _key: '###_yes_###'
-    _mobileKey: '###_yes_###'
-  - _key: '###_yes_###'
-    _mobileKey: '###_yes_###'
-  _capitalize: 0
 --- !u!1001 &618396666
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5714,7 +5527,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &828025163
 Transform:
   m_ObjectHideFlags: 0
@@ -5746,7 +5559,7 @@ MonoBehaviour:
   _mode: 0
   _bound:
     _sentences:
-    - _title: '###_yes_###'
+    - _title: '###big_text###'
       _valued: 
       _valuedMobile: 
       _icon: {fileID: 21300000, guid: 8a318793b7659d94f9dc8124aa5096e1, type: 3}
@@ -5754,9 +5567,9 @@ MonoBehaviour:
     - _title: '###_yes_###'
       _valued: 
       _valuedMobile: 
-      _icon: {fileID: 0}
+      _icon: {fileID: 21300000, guid: 4efa236e7c5c0ce4fbb9f9691bfeafa2, type: 3}
       _side: 0
-    - _title: '###_yes_###'
+    - _title: patric_dial_3p
       _valued: 
       _valuedMobile: 
       _icon: {fileID: 0}
@@ -5790,7 +5603,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-  _oneSentenceMod: 1
+  _oneSentenceMod: 0
 --- !u!114 &828025165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5836,12 +5649,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dialogKeys:
+  - _key: '###big_text###'
+    _mobileKey: '###big_text###'
   - _key: '###_yes_###'
     _mobileKey: '###_yes_###'
-  - _key: '###_yes_###'
-    _mobileKey: '###_yes_###'
-  - _key: '###_yes_###'
-    _mobileKey: '###_yes_###'
+  - _key: patric_dial_3p
+    _mobileKey: patric_dial_3p
   _capitalize: 0
 --- !u!1001 &837008369
 PrefabInstance:
@@ -23320,152 +23133,6 @@ Transform:
   - {fileID: 1445862096}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1640089295
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1640089296}
-  - component: {fileID: 1640089298}
-  - component: {fileID: 1640089297}
-  m_Layer: 0
-  m_Name: 1 (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1640089296
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1640089295}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -41.21, y: -3.94, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 474825134}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1640089297
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1640089295}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8089f4cf29cd50145bfbe6a6d540c708, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _tag: 
-  _layer:
-    serializedVersion: 2
-    m_Bits: 8192
-  _action:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 609045519}
-        m_TargetAssemblyTypeName: Creatures.Player.InputEnableComponent, Assembly-CSharp
-        m_MethodName: SetInputActivationStatus
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 609045519}
-        m_TargetAssemblyTypeName: Creatures.Player.InputEnableComponent, Assembly-CSharp
-        m_MethodName: SetInputDisabled
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 609045520}
-        m_TargetAssemblyTypeName: General.Components.Dialogs.ShowDialogComponent,
-          Assembly-CSharp
-        m_MethodName: Show
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1640089298}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!61 &1640089298
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1640089295}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.37812805, y: 3.4412374}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.7562561, y: 9.001707}
-  m_EdgeRadius: 0
 --- !u!1001 &1655711535
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26268,152 +25935,6 @@ ParticleSystem:
     type: 3}
   m_PrefabInstance: {fileID: 2003148147}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2021714980
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2021714981}
-  - component: {fileID: 2021714983}
-  - component: {fileID: 2021714982}
-  m_Layer: 0
-  m_Name: 1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2021714981
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2021714980}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -45.4, y: -3.94, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 474825134}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2021714982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2021714980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8089f4cf29cd50145bfbe6a6d540c708, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _tag: 
-  _layer:
-    serializedVersion: 2
-    m_Bits: 8192
-  _action:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 609045519}
-        m_TargetAssemblyTypeName: Creatures.Player.InputEnableComponent, Assembly-CSharp
-        m_MethodName: SetInputActivationStatus
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 609045519}
-        m_TargetAssemblyTypeName: Creatures.Player.InputEnableComponent, Assembly-CSharp
-        m_MethodName: SetInputDisabled
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 609045520}
-        m_TargetAssemblyTypeName: General.Components.Dialogs.ShowDialogComponent,
-          Assembly-CSharp
-        m_MethodName: Show
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2021714983}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!61 &2021714983
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2021714980}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.37812805, y: 3.4412374}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.7562561, y: 9.001707}
-  m_EdgeRadius: 0
 --- !u!1 &2022374176
 GameObject:
   m_ObjectHideFlags: 0
@@ -31325,4 +30846,3 @@ SceneRoots:
   - {fileID: 1958615577}
   - {fileID: 2025878210}
   - {fileID: 828025163}
-  - {fileID: 609045522}

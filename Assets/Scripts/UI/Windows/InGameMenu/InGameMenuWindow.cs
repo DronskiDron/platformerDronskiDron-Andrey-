@@ -21,7 +21,6 @@ namespace UI.Windows.InGameMenu
         public void OnShowSettings()
         {
             WindowUtils.CreateWindow("UI/SettingsWindow");
-            Close();
         }
 
 

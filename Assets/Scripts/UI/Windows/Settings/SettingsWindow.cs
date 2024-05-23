@@ -1,5 +1,4 @@
 ﻿using Creatures.Model.Data;
-using General.Components.TimeManipulation;
 using UI.Widgets;
 using UnityEngine;
 
@@ -17,19 +16,6 @@ namespace UI.Windows.Settings
 
             _music.SetModel(GameSettings.I.Music);
             _sfx.SetModel(GameSettings.I.Sfx);
-            Invoke("StopTimeWhileSettings", 0.1f);
-        }
-
-
-        private void StopTimeWhileSettings()
-        {
-            TimeManipulator.StopTime();
-        }
-
-
-        private void OnDestroy()
-        {
-            TimeManipulator.RunTimeNormal();
         }
     }
 }
