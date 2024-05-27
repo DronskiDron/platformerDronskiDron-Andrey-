@@ -21,6 +21,7 @@ namespace UI.Hud.Dialogs
 
         private static readonly int IsOpen = Animator.StringToHash("IsOpen");
         private UnityEvent _onComplete;
+        private UnityEvent _onCompleteSentence;
         private DialogData _data;
         private int _currentSentence;
         private AudioSource _sfxSource;
@@ -53,6 +54,7 @@ namespace UI.Hud.Dialogs
         {
             CurrentContent.Text.text = string.Empty;
             var sentence = CurrentSentence;
+            _onCompleteSentence = CurrentSentence.OnCompleteSentece;
             CurrentContent.TrySetIcon(sentence.Icon);
 
             foreach (var letter in sentence.Valued)
@@ -81,6 +83,7 @@ namespace UI.Hud.Dialogs
         public void OnContinue()
         {
             StopTypeAnimation();
+            _onCompleteSentence?.Invoke();
             _currentSentence++;
 
             var isDialogCompleted = _currentSentence >= _data.Sentences.Length;
@@ -98,6 +101,7 @@ namespace UI.Hud.Dialogs
 
         public virtual void OnSkipFullDialog()
         {
+            _onCompleteSentence?.Invoke();
             HideDialogBox();
             _onComplete?.Invoke();
         }

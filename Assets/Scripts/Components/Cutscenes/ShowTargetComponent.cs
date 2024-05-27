@@ -10,6 +10,9 @@ namespace General.Components.Cutscenes
         [SerializeField] private ShowTargetController _controller;
         [SerializeField] private float _delay = 0.5f;
         [SerializeField] private InputEnableComponent _inputEnabler;
+        [SerializeField] private bool _manualCameraReturn = false;
+        [SerializeField] private bool _activateInputAfterAnimation = true;
+
         public static Action OnCameraReturn;
 
 
@@ -28,7 +31,9 @@ namespace General.Components.Cutscenes
             _inputEnabler.SetInputDisabled();
             _controller.SetPosition(_target.position);
             _controller.SetState(true);
-            Invoke(nameof(Moveback), _delay);
+
+            if (!_manualCameraReturn)
+                Invoke(nameof(Moveback), _delay);
         }
 
 
@@ -37,8 +42,17 @@ namespace General.Components.Cutscenes
             _controller.SetState(false);
             OnCameraReturn?.Invoke();
 
-            _inputEnabler.SetInputActivationStatus(true);
-            _inputEnabler.SetInputEnabled();
+            if (_activateInputAfterAnimation)
+            {
+                _inputEnabler.SetInputActivationStatus(true);
+                _inputEnabler.SetInputEnabled();
+            }
+        }
+
+
+        public void MoveCameraBack()
+        {
+            Moveback();
         }
     }
 }
