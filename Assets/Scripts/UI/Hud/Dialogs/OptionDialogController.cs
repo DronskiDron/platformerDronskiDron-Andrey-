@@ -27,6 +27,7 @@ namespace UI.Hud.Dialogs
 
         public void OnOptionsSelected(OptionData selectedOPption)
         {
+            InputEnableComponent.ToggleMenusActivationStatus(true);
             selectedOPption.OnSelect.Invoke();
             _content.SetActive(false);
         }
@@ -34,6 +35,7 @@ namespace UI.Hud.Dialogs
 
         public void Show(OptionDialogData data)
         {
+            InputEnableComponent.ToggleMenusActivationStatus(false);
             _content.SetActive(true);
             _contentText.text = data.DialogText;
             _dataGroup.SetData(data.Options);

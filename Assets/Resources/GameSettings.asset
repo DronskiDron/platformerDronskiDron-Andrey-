@@ -19,4 +19,4 @@ MonoBehaviour:
   _analytics:
     _value: 0
   _firstLaunch:
-    _value: 0
+    _value: 1

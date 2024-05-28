@@ -8,9 +8,6 @@ namespace UI.Windows.InGameMenu
 {
     public class InGameMenuWindow : AnimatedWindow
     {
-        private Action _closeAction;
-
-
         protected override void Start()
         {
             base.Start();

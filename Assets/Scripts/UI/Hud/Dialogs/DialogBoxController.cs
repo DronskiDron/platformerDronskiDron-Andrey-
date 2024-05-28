@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using Creatures.Model.Data;
+using Creatures.Player;
 using UnityEngine;
 using UnityEngine.Events;
 using Utils;
@@ -39,6 +40,7 @@ namespace UI.Hud.Dialogs
 
         public void ShowDialog(DialogData data, UnityEvent onComplete, int startSentenceValue = 0)
         {
+            InputEnableComponent.ToggleMenusActivationStatus(false);
             _onComplete = onComplete;
             _data = data;
             _currentSentence = CheckIsSentenceIndexValid(startSentenceValue);
@@ -111,6 +113,7 @@ namespace UI.Hud.Dialogs
         {
             _animator.SetBool(IsOpen, false);
             _sfxSource.PlayOneShot(_close);
+            InputEnableComponent.ToggleMenusActivationStatus(true);
         }
 
 

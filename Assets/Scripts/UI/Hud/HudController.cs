@@ -2,6 +2,7 @@
 using Creatures.Model.Data.Models;
 using Creatures.Model.Definitions;
 using Creatures.Model.Definitions.Player;
+using Creatures.Player;
 using UI.Widgets;
 using UnityEngine;
 using Utils;
@@ -52,25 +53,28 @@ namespace UI.Hud
 
         public void OnSettings()
         {
-            WindowUtils.CreateWindow("UI/InGameMenuWindow");
+            if (InputEnableComponent.IsMenusActive)
+                WindowUtils.CreateWindow("UI/InGameMenuWindow");
+        }
+
+
+        public void OnDebug()
+        {
+            if (InputEnableComponent.IsMenusActive)
+                WindowUtils.CreateWindow("UI/PlayerStatsWindow");
+        }
+
+
+        public void OnBigInventory()
+        {
+            if (InputEnableComponent.IsMenusActive)
+                WindowUtils.CreateWindow("UI/PlayerInventory");
         }
 
 
         private void OnDestroy()
         {
             _trash.Dispose();
-        }
-
-
-        public void OnDebug()
-        {
-            WindowUtils.CreateWindow("UI/PlayerStatsWindow");
-        }
-
-
-        public void OnBigInventory()
-        {
-            WindowUtils.CreateWindow("UI/PlayerInventory");
         }
     }
 }

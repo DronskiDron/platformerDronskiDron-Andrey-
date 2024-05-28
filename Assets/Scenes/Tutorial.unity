@@ -911,6 +911,184 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aba24f53890b9045b640b889630ea36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &132096036
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 132096037}
+  - component: {fileID: 132096039}
+  - component: {fileID: 132096038}
+  m_Layer: 0
+  m_Name: UserInfo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &132096037
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132096036}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 869818840}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &132096038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132096036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a9db3d2d2952724fbb52f839f8b70c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dialogKeys:
+  - _key: '###big_text###'
+    _mobileKey: '###big_text###'
+  - _key: '###_yes_###'
+    _mobileKey: '###_yes_###'
+  - _key: patric_dial_3p
+    _mobileKey: patric_dial_3p
+  _capitalize: 0
+--- !u!114 &132096039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132096036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d14ec06b43e80cd40b0d4857306e995d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mode: 0
+  _bound:
+    _sentences:
+    - _title: '###_left_stick_info_###'
+      _valued: 
+      _valuedMobile: 
+      _icon: {fileID: 21300000, guid: d2e505319afef914da3eb3a19d4e6aee, type: 3}
+      _side: 0
+      _onCompleteSentece:
+        m_PersistentCalls:
+          m_Calls: []
+    - _title: '###_attack_button_info_###'
+      _valued: 
+      _valuedMobile: 
+      _icon: {fileID: 21300000, guid: 8a318793b7659d94f9dc8124aa5096e1, type: 3}
+      _side: 0
+      _onCompleteSentece:
+        m_PersistentCalls:
+          m_Calls: []
+    - _title: '###_switch_item_info_###'
+      _valued: 
+      _valuedMobile: 
+      _icon: {fileID: 21300000, guid: e59410c289e56414cbaed6137eda74b2, type: 3}
+      _side: 0
+      _onCompleteSentece:
+        m_PersistentCalls:
+          m_Calls: []
+    - _title: '###_use_item_info_###'
+      _valued: 
+      _valuedMobile: 
+      _icon: {fileID: 21300000, guid: 4efa236e7c5c0ce4fbb9f9691bfeafa2, type: 3}
+      _side: 0
+      _onCompleteSentece:
+        m_PersistentCalls:
+          m_Calls: []
+    - _title: '###_interact_button_info_###'
+      _valued: 
+      _valuedMobile: 
+      _icon: {fileID: 21300000, guid: 166e78e16c20ab348afa6503ab3a7f9e, type: 3}
+      _side: 0
+      _onCompleteSentece:
+        m_PersistentCalls:
+          m_Calls: []
+    - _title: '###_main_menu_info_###'
+      _valued: 
+      _valuedMobile: 
+      _icon: {fileID: 21300000, guid: e0ab4d4f8bd459b4c9208dcb815f77c8, type: 3}
+      _side: 0
+      _onCompleteSentece:
+        m_PersistentCalls:
+          m_Calls: []
+    - _title: '###_player_stats_info_###'
+      _valued: 
+      _valuedMobile: 
+      _icon: {fileID: 21300000, guid: 1b401cce051eef042a43d5239ddf40b1, type: 3}
+      _side: 0
+      _onCompleteSentece:
+        m_PersistentCalls:
+          m_Calls: []
+    - _title: '###_player_inventory_info_###'
+      _valued: 
+      _valuedMobile: 
+      _icon: {fileID: 21300000, guid: d54c8902b34f76b47abb82d43d7a8fa2, type: 3}
+      _side: 0
+      _onCompleteSentece:
+        m_PersistentCalls:
+          m_Calls: []
+    - _title: '###_use_perk_info_###'
+      _valued: 
+      _valuedMobile: 
+      _icon: {fileID: 21300000, guid: d6e78965cbbc57e419cbfccf6a959f7d, type: 3}
+      _side: 0
+      _onCompleteSentece:
+        m_PersistentCalls:
+          m_Calls: []
+    - _title: '###_use_lantern_info_###'
+      _valued: 
+      _valuedMobile: 
+      _icon: {fileID: 21300000, guid: d6e78965cbbc57e419cbfccf6a959f7d, type: 3}
+      _side: 0
+      _onCompleteSentece:
+        m_PersistentCalls:
+          m_Calls: []
+    _type: 2
+  _external: {fileID: 11400000, guid: 547ea10591b1d22438aabf3247a78c56, type: 2}
+  _onComplete:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 869818837}
+        m_TargetAssemblyTypeName: Creatures.Player.InputEnableComponent, Assembly-CSharp
+        m_MethodName: SetInputActivationStatus
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 869818837}
+        m_TargetAssemblyTypeName: Creatures.Player.InputEnableComponent, Assembly-CSharp
+        m_MethodName: SetInputEnabled
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  _oneSentenceMod: 1
 --- !u!1001 &144426274
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3168,7 +3346,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &456777641
 Transform:
   m_ObjectHideFlags: 0
@@ -4985,7 +5163,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 869818838}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: General.Components.Dialogs.ShowDialogComponent,
           Assembly-CSharp
         m_MethodName: Show
@@ -5825,6 +6003,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _delayValue: 0.01
+  _delayArray: []
 --- !u!114 &828025167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6151,9 +6330,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 869818840}
-  - component: {fileID: 869818839}
-  - component: {fileID: 869818838}
-  - component: {fileID: 869818836}
   - component: {fileID: 869818837}
   - component: {fileID: 869818835}
   - component: {fileID: 869818841}
@@ -6176,26 +6352,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e30130a8bb9302498103a1215b5c93f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &869818836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 869818834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a9db3d2d2952724fbb52f839f8b70c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _dialogKeys:
-  - _key: '###big_text###'
-    _mobileKey: '###big_text###'
-  - _key: '###_yes_###'
-    _mobileKey: '###_yes_###'
-  - _key: patric_dial_3p
-    _mobileKey: patric_dial_3p
-  _capitalize: 0
 --- !u!114 &869818837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6209,94 +6365,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _delayValue: 0.01
---- !u!114 &869818838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 869818834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d14ec06b43e80cd40b0d4857306e995d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _mode: 0
-  _bound:
-    _sentences:
-    - _title: '###big_text###'
-      _valued: 
-      _valuedMobile: 
-      _icon: {fileID: 21300000, guid: 8a318793b7659d94f9dc8124aa5096e1, type: 3}
-      _side: 0
-      _onCompleteSentece:
-        m_PersistentCalls:
-          m_Calls: []
-    - _title: '###_yes_###'
-      _valued: 
-      _valuedMobile: 
-      _icon: {fileID: 21300000, guid: 4efa236e7c5c0ce4fbb9f9691bfeafa2, type: 3}
-      _side: 0
-      _onCompleteSentece:
-        m_PersistentCalls:
-          m_Calls: []
-    - _title: patric_dial_3p
-      _valued: 
-      _valuedMobile: 
-      _icon: {fileID: 0}
-      _side: 0
-      _onCompleteSentece:
-        m_PersistentCalls:
-          m_Calls: []
-    _type: 2
-  _external: {fileID: 11400000, guid: 547ea10591b1d22438aabf3247a78c56, type: 2}
-  _onComplete:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 869818837}
-        m_TargetAssemblyTypeName: Creatures.Player.InputEnableComponent, Assembly-CSharp
-        m_MethodName: SetInputActivationStatus
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 869818837}
-        m_TargetAssemblyTypeName: Creatures.Player.InputEnableComponent, Assembly-CSharp
-        m_MethodName: SetInputEnabled
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  _oneSentenceMod: 1
---- !u!114 &869818839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 869818834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a4ebb7e5ef789947a1a8029086b8df7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _tag: 
-  _layer:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  _action:
-    m_PersistentCalls:
-      m_Calls: []
+  _delayArray:
+  - 0
 --- !u!4 &869818840
 Transform:
   m_ObjectHideFlags: 0
@@ -6312,6 +6382,8 @@ Transform:
   m_Children:
   - {fileID: 456777641}
   - {fileID: 1346261852}
+  - {fileID: 1807240409}
+  - {fileID: 132096037}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &869818841
@@ -11166,9 +11238,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1346261852}
+  - component: {fileID: 1346261857}
   - component: {fileID: 1346261859}
   - component: {fileID: 1346261858}
-  - component: {fileID: 1346261857}
   - component: {fileID: 1346261854}
   m_Layer: 0
   m_Name: PlayerIntro
@@ -11303,7 +11375,65 @@ MonoBehaviour:
               m_StringArgument: 
               m_BoolArgument: 0
             m_CallState: 2
-          - m_Target: {fileID: 869818838}
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: General.Components.Dialogs.ShowDialogComponent,
+              Assembly-CSharp
+            m_MethodName: Show
+            m_Mode: 3
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 1346261857}
+            m_TargetAssemblyTypeName: General.Components.Cutscenes.ShowTargetComponent,
+              Assembly-CSharp
+            m_MethodName: MoveCameraBack
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+    - _title: Hi! Stranger!
+      _valued: 
+      _valuedMobile: 
+      _icon: {fileID: 21300000, guid: 3a60a2548828f4c78b82c10389a7fec5, type: 3}
+      _side: 0
+      _onCompleteSentece:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 869818837}
+            m_TargetAssemblyTypeName: Creatures.Player.InputEnableComponent, Assembly-CSharp
+            m_MethodName: SetInputActivationStatus
+            m_Mode: 6
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 869818837}
+            m_TargetAssemblyTypeName: Creatures.Player.InputEnableComponent, Assembly-CSharp
+            m_MethodName: SetInputDisabled
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 0}
             m_TargetAssemblyTypeName: General.Components.Dialogs.ShowDialogComponent,
               Assembly-CSharp
             m_MethodName: Show
@@ -11348,8 +11478,8 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 869818837}
         m_TargetAssemblyTypeName: Creatures.Player.InputEnableComponent, Assembly-CSharp
-        m_MethodName: SetInputEnabled
-        m_Mode: 1
+        m_MethodName: SetInputEnabledWithCustomDelay
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -25105,7 +25235,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 869818838}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: General.Components.Dialogs.ShowDialogComponent,
           Assembly-CSharp
         m_MethodName: Show
@@ -25175,6 +25305,266 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7562561, y: 9.001707}
   m_EdgeRadius: 0
+--- !u!1 &1807240408
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1807240409}
+  - component: {fileID: 1807240413}
+  - component: {fileID: 1807240412}
+  - component: {fileID: 1807240411}
+  - component: {fileID: 1807240410}
+  m_Layer: 0
+  m_Name: CrabbyIntro
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1807240409
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807240408}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 869818840}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1807240410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807240408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a4d04f4dcddc18488895325c3d9fc48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _timers:
+  - Delay: 2
+    OnTimesUp:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1807240412}
+          m_TargetAssemblyTypeName: General.Components.Dialogs.ShowDialogComponent,
+            Assembly-CSharp
+          m_MethodName: Show
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1807240411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807240408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a9db3d2d2952724fbb52f839f8b70c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dialogKeys:
+  - _key: hero_1
+    _mobileKey: hero_1
+  _capitalize: 0
+--- !u!114 &1807240412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807240408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d14ec06b43e80cd40b0d4857306e995d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mode: 0
+  _bound:
+    _sentences:
+    - _title: Hi! Stranger!
+      _valued: 
+      _valuedMobile: 
+      _icon: {fileID: 21300000, guid: 3a60a2548828f4c78b82c10389a7fec5, type: 3}
+      _side: 0
+      _onCompleteSentece:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 869818837}
+            m_TargetAssemblyTypeName: Creatures.Player.InputEnableComponent, Assembly-CSharp
+            m_MethodName: SetInputActivationStatus
+            m_Mode: 6
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 869818837}
+            m_TargetAssemblyTypeName: Creatures.Player.InputEnableComponent, Assembly-CSharp
+            m_MethodName: SetInputDisabled
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: General.Components.Dialogs.ShowDialogComponent,
+              Assembly-CSharp
+            m_MethodName: Show
+            m_Mode: 3
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 1807240413}
+            m_TargetAssemblyTypeName: General.Components.Cutscenes.ShowTargetComponent,
+              Assembly-CSharp
+            m_MethodName: MoveCameraBack
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+    - _title: Hi! Stranger!
+      _valued: 
+      _valuedMobile: 
+      _icon: {fileID: 21300000, guid: 3a60a2548828f4c78b82c10389a7fec5, type: 3}
+      _side: 0
+      _onCompleteSentece:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 869818837}
+            m_TargetAssemblyTypeName: Creatures.Player.InputEnableComponent, Assembly-CSharp
+            m_MethodName: SetInputActivationStatus
+            m_Mode: 6
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 869818837}
+            m_TargetAssemblyTypeName: Creatures.Player.InputEnableComponent, Assembly-CSharp
+            m_MethodName: SetInputDisabled
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: General.Components.Dialogs.ShowDialogComponent,
+              Assembly-CSharp
+            m_MethodName: Show
+            m_Mode: 3
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 1807240413}
+            m_TargetAssemblyTypeName: General.Components.Cutscenes.ShowTargetComponent,
+              Assembly-CSharp
+            m_MethodName: MoveCameraBack
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+    _type: 1
+  _external: {fileID: 0}
+  _onComplete:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 869818837}
+        m_TargetAssemblyTypeName: Creatures.Player.InputEnableComponent, Assembly-CSharp
+        m_MethodName: SetInputActivationStatus
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 869818837}
+        m_TargetAssemblyTypeName: Creatures.Player.InputEnableComponent, Assembly-CSharp
+        m_MethodName: SetInputEnabledWithCustomDelay
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  _oneSentenceMod: 1
+--- !u!114 &1807240413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807240408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aba24f53890b9045b640b889630ea36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _target: {fileID: 1185381136}
+  _controller: {fileID: 2625460724143953494}
+  _delay: 5
+  _inputEnabler: {fileID: 869818837}
+  _manualCameraReturn: 1
+  _activateInputAfterAnimation: 0
 --- !u!1001 &1810411048
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28109,6 +28499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _delayValue: 0
+  _delayArray: []
 --- !u!114 &2131487205
 MonoBehaviour:
   m_ObjectHideFlags: 0
