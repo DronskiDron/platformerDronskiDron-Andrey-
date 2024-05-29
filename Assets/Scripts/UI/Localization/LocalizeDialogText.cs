@@ -48,6 +48,7 @@ namespace UI.Localization
     [Serializable]
     public class DialogKeys
     {
+        [SerializeField] private int _index;
         [SerializeField] private string _key;
         [SerializeField] private string _mobileKey;
 

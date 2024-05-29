@@ -1,6 +1,7 @@
 ﻿using System;
 using Creatures.Model.Data;
 using Creatures.Model.Definitions.Repository;
+using Creatures.Player;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -45,7 +46,8 @@ namespace UI.Hud
 
         private void RunAction()
         {
-            PerkButtonWasPressed?.Invoke();
+            if (InputEnableComponent.IsMenusActive)
+                PerkButtonWasPressed?.Invoke();
         }
 
     }

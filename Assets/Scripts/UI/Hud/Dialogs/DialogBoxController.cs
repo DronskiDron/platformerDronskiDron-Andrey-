@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using Creatures.Model.Data;
 using Creatures.Player;
 using UnityEngine;
@@ -30,9 +31,10 @@ namespace UI.Hud.Dialogs
         private bool _oneSentenceMod = false;
 
         protected Sentence CurrentSentence => _data.Sentences[_currentSentence];
+        protected Action _sentenceEnded;
 
 
-        private void Start()
+        protected virtual void Start()
         {
             _sfxSource = AudioUtils.FindSfxSource();
         }
@@ -91,8 +93,10 @@ namespace UI.Hud.Dialogs
             var isDialogCompleted = _currentSentence >= _data.Sentences.Length;
             if (isDialogCompleted || _oneSentenceMod)
             {
+                _currentSentence = CheckIsSentenceIndexValid(_currentSentence);
                 HideDialogBox();
                 _onComplete?.Invoke();
+                _sentenceEnded?.Invoke();
             }
             else
             {
@@ -103,9 +107,11 @@ namespace UI.Hud.Dialogs
 
         public virtual void OnSkipFullDialog()
         {
+            StopTypeAnimation();
             _onCompleteSentence?.Invoke();
             HideDialogBox();
             _onComplete?.Invoke();
+            _sentenceEnded?.Invoke();
         }
 
 
@@ -140,6 +146,12 @@ namespace UI.Hud.Dialogs
         public void SetOneSentenceMod(bool value)
         {
             _oneSentenceMod = value;
+        }
+
+
+        public void ClearCurrentContent()
+        {
+            CurrentContent.ClearContent();
         }
 
 

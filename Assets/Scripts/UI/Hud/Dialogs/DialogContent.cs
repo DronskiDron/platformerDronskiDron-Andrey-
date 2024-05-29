@@ -18,8 +18,16 @@ namespace UI.Hud.Dialogs
             if (icon != null)
             {
                 _icon.sprite = icon;
+                _icon.color = Color.clear;
                 _icon.gameObject.SetActive(true);
             }
+        }
+
+
+        public void ClearContent()
+        {
+            _text.text = "";
+            _icon?.gameObject.SetActive(false);
         }
     }
 }

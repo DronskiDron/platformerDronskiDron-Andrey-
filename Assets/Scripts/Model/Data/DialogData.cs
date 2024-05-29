@@ -18,6 +18,7 @@ namespace Creatures.Model.Data
     [Serializable]
     public struct Sentence
     {
+        [SerializeField] private int _index;
         [SerializeField] private string _title;
         [HideInInspector][SerializeField] private string _valued;
         [HideInInspector][SerializeField] private string _valuedMobile;

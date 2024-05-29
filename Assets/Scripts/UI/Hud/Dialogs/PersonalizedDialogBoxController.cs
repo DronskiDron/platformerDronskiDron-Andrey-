@@ -10,6 +10,13 @@ namespace UI.Hud.Dialogs
         protected override DialogContent CurrentContent => CurrentSentence.Side == Side.Left ? _content : _right;
 
 
+        protected override void Start()
+        {
+            base.Start();
+            _sentenceEnded += DeactivateCurrentSide;
+        }
+
+
         protected override void OnStartDialogAnimation()
         {
             _right.gameObject.SetActive(CurrentSentence.Side == Side.Right);
@@ -19,10 +26,15 @@ namespace UI.Hud.Dialogs
         }
 
 
-        public override void OnSkipFullDialog()
+        private void DeactivateCurrentSide()
         {
-            base.OnSkipFullDialog();
             CurrentContent.gameObject.SetActive(false);
+        }
+
+
+        private void OnDestroy()
+        {
+            _sentenceEnded -= DeactivateCurrentSide;
         }
 
     }
