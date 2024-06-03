@@ -21,6 +21,12 @@ namespace Creatures.Model.Data
         public BigInventoryModel BigInventory { get; private set; }
         public PerksModel PerksModel { get; private set; }
         public StatsModel StatsModel { get; private set; }
+        // public bool TutorialStarted { get; private set; }
+        public bool TutorialStarted => _tutorialStarted;
+        [HideInInspector][SerializeField] private bool _tutorialStarted;
+
+
+
 
         [HideInInspector] public readonly ItemsStateStorage ItemStateStorage = new ItemsStateStorage();
 
@@ -270,6 +276,13 @@ namespace Creatures.Model.Data
                 return LevelProgressStatus.Down;
             else return LevelProgressStatus.WithoutChanges;
 
+        }
+
+
+        public void SetTutorialStatusFlag(bool value)
+        {
+            // TutorialStarted = value;
+            _tutorialStarted = value;
         }
     }
 

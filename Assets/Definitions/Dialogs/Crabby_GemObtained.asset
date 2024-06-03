@@ -14,25 +14,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _data:
     _sentences:
-    - _valued: I can teach you!
+    - _index: 0
+      _title: 
+      _valued: I can teach you!
+      _valuedMobile: 
       _icon: {fileID: 0}
       _side: 0
-    - _valued: Good!
+      _iconColor: {r: 1, g: 1, b: 1, a: 1}
+      _onCompleteSentece:
+        m_PersistentCalls:
+          m_Calls: []
+    - _index: 0
+      _title: 
+      _valued: Good!
+      _valuedMobile: 
       _icon: {fileID: 0}
       _side: 0
-    - _valued: Good!
+      _iconColor: {r: 1, g: 1, b: 1, a: 1}
+      _onCompleteSentece:
+        m_PersistentCalls:
+          m_Calls: []
+    - _index: 0
+      _title: 
+      _valued: Good!
+      _valuedMobile: 
       _icon: {fileID: 0}
       _side: 0
-    _type: 2
-  _dataMobile:
-    _sentences:
-    - _valued: Dziakyi Johnke za vse ato!
-      _icon: {fileID: 0}
-      _side: 0
-    - _valued: husband call his SASAKA!!!!
-      _icon: {fileID: 0}
-      _side: 0
-    - _valued: Let's go!
-      _icon: {fileID: 0}
-      _side: 0
+      _iconColor: {r: 1, g: 1, b: 1, a: 1}
+      _onCompleteSentece:
+        m_PersistentCalls:
+          m_Calls: []
     _type: 2

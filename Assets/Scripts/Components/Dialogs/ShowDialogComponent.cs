@@ -61,6 +61,19 @@ namespace General.Components.Dialogs
         }
 
 
+        public void ToggleOneSentenceMod(bool value)
+        {
+            _oneSentenceMod = value;
+            _dialogBox?.SetOneSentenceMod(value);
+        }
+
+
+        public void SetNextSentenceIndex(int index)
+        {
+            _dialogBox?.SetCurrentSentence(index);
+        }
+
+
         public DialogData Data
         {
             get

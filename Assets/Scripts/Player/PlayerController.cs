@@ -421,6 +421,7 @@ namespace Creatures.Player
         {
             _inputEnabler.SetInputActivationStatus(true);
             _inputEnabler.SetInputEnabled();
+            InputEnableComponent.ToggleMenusActivationStatus(true);
         }
     }
 }

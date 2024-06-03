@@ -28,7 +28,8 @@ namespace UI.Hud.Dialogs
 
         private void DeactivateCurrentSide()
         {
-            CurrentContent.gameObject.SetActive(false);
+            _right.gameObject.SetActive(false);
+            _content.gameObject.SetActive(false);
         }
 
 

@@ -29,7 +29,7 @@ namespace Creatures.Model.Definitions.Localisation
         [ContextMenu("Update locale")]
         public void LoadLocale()
         {
-            if (_request != null) return;
+            if (_request != null && !_request.isDone) return;
 
             _request = UnityWebRequest.Get(_url);
             _request.SendWebRequest().completed += OnDataLoaded;

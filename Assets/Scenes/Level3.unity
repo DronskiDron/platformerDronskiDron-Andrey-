@@ -2446,6 +2446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _delayValue: 0
+  _delayArray: []
 --- !u!1001 &396377269
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42631,7 +42632,7 @@ PrefabInstance:
     - target: {fileID: 1799194807192757482, guid: 4227c62fc117aaa4580c0a46c57c40f0,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1799194807192757486, guid: 4227c62fc117aaa4580c0a46c57c40f0,
         type: 3}
@@ -55032,7 +55033,7 @@ PrefabInstance:
     - target: {fileID: 2532081266675386067, guid: a5b011ba8d1290843a9a9e40c268392b,
         type: 3}
       propertyPath: orthographic size
-      value: 4.5703125
+      value: 5.625
       objectReference: {fileID: 0}
     - target: {fileID: 2532081266675386067, guid: a5b011ba8d1290843a9a9e40c268392b,
         type: 3}
@@ -59077,6 +59078,61 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6643121077676961676, guid: f6a164ab2ea3b634988ca306a758515e,
         type: 3}
+      propertyPath: _bound._sentences.Array.data[0]._title
+      value: patric_dial_3p
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077676961676, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _bound._sentences.Array.data[1]._index
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077676961676, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _bound._sentences.Array.data[1]._title
+      value: patric_dial_4h
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077676961676, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _bound._sentences.Array.data[0]._iconColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077676961676, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _bound._sentences.Array.data[0]._iconColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077676961676, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _bound._sentences.Array.data[0]._iconColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077676961676, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _bound._sentences.Array.data[0]._iconColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077676961676, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _bound._sentences.Array.data[1]._iconColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077676961676, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _bound._sentences.Array.data[1]._iconColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077676961676, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _bound._sentences.Array.data[1]._iconColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077676961676, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _bound._sentences.Array.data[1]._iconColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077676961676, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
       propertyPath: _onComplete.m_PersistentCalls.m_Calls.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -59189,6 +59245,61 @@ PrefabInstance:
         type: 3}
       propertyPath: _dialogKeys.Array.data[1]._mobileKey
       value: patric_dial_2h
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077736766237, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _bound._sentences.Array.data[0]._title
+      value: patric_dial_1p
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077736766237, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _bound._sentences.Array.data[1]._index
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077736766237, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _bound._sentences.Array.data[1]._title
+      value: patric_dial_2h
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077736766237, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _bound._sentences.Array.data[0]._iconColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077736766237, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _bound._sentences.Array.data[0]._iconColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077736766237, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _bound._sentences.Array.data[0]._iconColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077736766237, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _bound._sentences.Array.data[0]._iconColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077736766237, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _bound._sentences.Array.data[1]._iconColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077736766237, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _bound._sentences.Array.data[1]._iconColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077736766237, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _bound._sentences.Array.data[1]._iconColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643121077736766237, guid: f6a164ab2ea3b634988ca306a758515e,
+        type: 3}
+      propertyPath: _bound._sentences.Array.data[1]._iconColor.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6643121077736766237, guid: f6a164ab2ea3b634988ca306a758515e,
         type: 3}

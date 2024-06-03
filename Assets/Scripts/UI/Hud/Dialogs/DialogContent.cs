@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Creatures.Model.Data;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace UI.Hud.Dialogs
@@ -11,14 +12,14 @@ namespace UI.Hud.Dialogs
         public Text Text => _text;
 
 
-        public void TrySetIcon(Sprite icon)
+        public void TrySetIcon(Sprite icon, Color iconColor)
         {
             _icon?.gameObject.SetActive(false);
 
             if (icon != null)
             {
                 _icon.sprite = icon;
-                _icon.color = Color.clear;
+                SetIconColor(iconColor);
                 _icon.gameObject.SetActive(true);
             }
         }
@@ -28,6 +29,12 @@ namespace UI.Hud.Dialogs
         {
             _text.text = "";
             _icon?.gameObject.SetActive(false);
+        }
+
+
+        private void SetIconColor(Color iconColor)
+        {
+            _icon.color = iconColor;
         }
     }
 }

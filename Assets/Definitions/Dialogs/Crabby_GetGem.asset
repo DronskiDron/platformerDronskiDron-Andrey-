@@ -14,25 +14,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _data:
     _sentences:
-    - _valued: "aaaa\r"
+    - _index: 0
+      _title: 
+      _valued: "aaaa\r"
+      _valuedMobile: 
       _icon: {fileID: 0}
       _side: 0
-    - _valued: "bbbb\r"
+      _iconColor: {r: 1, g: 1, b: 1, a: 1}
+      _onCompleteSentece:
+        m_PersistentCalls:
+          m_Calls: []
+    - _index: 0
+      _title: 
+      _valued: "bbbb\r"
+      _valuedMobile: 
       _icon: {fileID: 0}
       _side: 0
-    - _valued: "cccc\r"
+      _iconColor: {r: 1, g: 1, b: 1, a: 1}
+      _onCompleteSentece:
+        m_PersistentCalls:
+          m_Calls: []
+    - _index: 0
+      _title: 
+      _valued: "cccc\r"
+      _valuedMobile: 
       _icon: {fileID: 0}
       _side: 0
-    _type: 1
-  _dataMobile:
-    _sentences:
-    - _valued: krab_dial_3
-      _icon: {fileID: 0}
-      _side: 0
-    - _valued: krab_dial_3
-      _icon: {fileID: 0}
-      _side: 0
-    - _valued: krab_dial_3
-      _icon: {fileID: 0}
-      _side: 0
+      _iconColor: {r: 1, g: 1, b: 1, a: 1}
+      _onCompleteSentece:
+        m_PersistentCalls:
+          m_Calls: []
     _type: 1

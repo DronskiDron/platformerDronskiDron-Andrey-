@@ -138,4 +138,6 @@ MonoBehaviour:
       and files are vertices, and edges show the nesting of files and folders into
       folders and disks[1]. The structure of Wikipedia is modeled by an oriented
       graph, in which articles are the vertices of the graph, and hyperlinks are
-      arcs (thematic map).\r \r Graphs are the main object of studying graph theory."
+      arcs (thematic map).\r \r Graphs are the main object of studying graph theory.\r"
+  - Key: '###tutor_dialogs###'
+    Value: '###'

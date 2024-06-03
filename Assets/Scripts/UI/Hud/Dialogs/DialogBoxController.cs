@@ -59,7 +59,7 @@ namespace UI.Hud.Dialogs
             CurrentContent.Text.text = string.Empty;
             var sentence = CurrentSentence;
             _onCompleteSentence = CurrentSentence.OnCompleteSentece;
-            CurrentContent.TrySetIcon(sentence.Icon);
+            CurrentContent.TrySetIcon(sentence.Icon, sentence.IconColor);
 
             foreach (var letter in sentence.Valued)
             {
@@ -87,8 +87,8 @@ namespace UI.Hud.Dialogs
         public void OnContinue()
         {
             StopTypeAnimation();
-            _onCompleteSentence?.Invoke();
             _currentSentence++;
+            _onCompleteSentence?.Invoke();
 
             var isDialogCompleted = _currentSentence >= _data.Sentences.Length;
             if (isDialogCompleted || _oneSentenceMod)
@@ -146,6 +146,12 @@ namespace UI.Hud.Dialogs
         public void SetOneSentenceMod(bool value)
         {
             _oneSentenceMod = value;
+        }
+
+
+        public void SetCurrentSentence(int index)
+        {
+            _currentSentence = CheckIsSentenceIndexValid(index);
         }
 
 
