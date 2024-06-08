@@ -30,7 +30,7 @@ namespace Creatures
         public void OnJumping(InputAction.CallbackContext context)
         {
             if (!IsInputEnable) return;
-            
+
             var jumpVector = context.ReadValue<Vector2>();
             _groundCheck.SetIsPressingJump(jumpVector);
 
@@ -55,24 +55,20 @@ namespace Creatures
         }
 
 
+        public void OnThroww(InputAction.CallbackContext context)
+        {
+            Debug.Log("Now I WORK");
+            if (!IsInputEnable) return;
+        }
+
+
         public void OnThrow(InputAction.CallbackContext context)
         {
+            Debug.Log("I WORK");
             if (!IsInputEnable) return;
 
             if (context.started)
                 _player.UseInventory();
-        }
-
-
-        public void OnSuperThrow(InputAction.CallbackContext context)
-        {
-            if (!IsInputEnable) return;
-
-            if (context.started)
-            {
-                _player.IsSuperThrowAvailable(true);
-                _player.Throw();
-            }
         }
 
 

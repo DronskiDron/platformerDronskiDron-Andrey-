@@ -264,8 +264,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: SetInput
+        m_TargetAssemblyTypeName: Creatures.Player.InputEnableComponent, Assembly-CSharp
+        m_MethodName: SetInputActivationStatus
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -303,6 +303,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2704703789403831110}
         m_TargetAssemblyTypeName: 
         m_MethodName: OnStoreState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Creatures.Player.InputEnableComponent, Assembly-CSharp
+        m_MethodName: SetInputDisabled
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -402,16 +414,28 @@ MonoBehaviour:
   _onRestore:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6643121077617301686}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
-        m_MethodName: Play
-        m_Mode: 5
+        m_MethodName: OnDeactivateBarrier
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Die
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 6643121077617301684}
@@ -424,6 +448,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6643121077617301686}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Die
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &6643121077676961674
@@ -474,12 +510,26 @@ MonoBehaviour:
   _mode: 0
   _bound:
     _sentences:
-    - _valued: No0000000!!!!!!!!!!
+    - _index: 0
+      _title: patric_dial_3p
+      _valued: No0000000!!!!!!!!!!
+      _valuedMobile: 
       _icon: {fileID: 21300000, guid: 0568e6e1ec0a440cc8ae7922825b9119, type: 3}
       _side: 1
-    - _valued: I tolld ya!
+      _iconColor: {r: 1, g: 1, b: 1, a: 1}
+      _onCompleteSentece:
+        m_PersistentCalls:
+          m_Calls: []
+    - _index: 1
+      _title: patric_dial_4h
+      _valued: I tolld ya!
+      _valuedMobile: 
       _icon: {fileID: 21300000, guid: 3a60a2548828f4c78b82c10389a7fec5, type: 3}
       _side: 0
+      _iconColor: {r: 1, g: 1, b: 1, a: 1}
+      _onCompleteSentece:
+        m_PersistentCalls:
+          m_Calls: []
     _type: 1
   _external: {fileID: 0}
   _onComplete:
@@ -510,8 +560,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: SetInput
+        m_TargetAssemblyTypeName: Creatures.Player.InputEnableComponent, Assembly-CSharp
+        m_MethodName: SetInputActivationStatus
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -521,6 +571,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Creatures.Player.InputEnableComponent, Assembly-CSharp
+        m_MethodName: SetInputEnabled
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Creatures.Boss.Tentacles.KillAllEnemiesComponent,
+          Assembly-CSharp
+        m_MethodName: KillOll
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  _oneSentenceMod: 0
 --- !u!114 &6643121077676961679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -533,9 +609,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a9db3d2d2952724fbb52f839f8b70c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _keys:
-  - patric_dial_3p
-  - patric_dial_4h
+  _dialogKeys:
+  - _index: 0
+    _key: patric_dial_3p
+    _mobileKey: patric_dial_3p
+  - _index: 0
+    _key: patric_dial_4h
+    _mobileKey: patric_dial_4h
   _capitalize: 0
 --- !u!1 &6643121077736766235
 GameObject:
@@ -585,12 +665,26 @@ MonoBehaviour:
   _mode: 0
   _bound:
     _sentences:
-    - _valued: I will kill you!
+    - _index: 0
+      _title: patric_dial_1p
+      _valued: I will kill you!
+      _valuedMobile: 
       _icon: {fileID: 21300000, guid: 0568e6e1ec0a440cc8ae7922825b9119, type: 3}
       _side: 1
-    - _valued: NO! I will kill you!
+      _iconColor: {r: 1, g: 1, b: 1, a: 1}
+      _onCompleteSentece:
+        m_PersistentCalls:
+          m_Calls: []
+    - _index: 1
+      _title: patric_dial_2h
+      _valued: NO! I will kill you!
+      _valuedMobile: 
       _icon: {fileID: 21300000, guid: 3a60a2548828f4c78b82c10389a7fec5, type: 3}
       _side: 0
+      _iconColor: {r: 1, g: 1, b: 1, a: 1}
+      _onCompleteSentece:
+        m_PersistentCalls:
+          m_Calls: []
     _type: 1
   _external: {fileID: 0}
   _onComplete:
@@ -621,8 +715,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: SetInput
+        m_TargetAssemblyTypeName: Creatures.Player.InputEnableComponent, Assembly-CSharp
+        m_MethodName: SetInputActivationStatus
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -632,6 +726,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Creatures.Player.InputEnableComponent, Assembly-CSharp
+        m_MethodName: SetInputEnabled
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  _oneSentenceMod: 0
 --- !u!114 &6643121077736766236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -644,7 +751,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a9db3d2d2952724fbb52f839f8b70c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _keys:
-  - patric_dial_1p
-  - patric_dial_2h
+  _dialogKeys:
+  - _index: 0
+    _key: patric_dial_1p
+    _mobileKey: patric_dial_1p
+  - _index: 0
+    _key: patric_dial_2h
+    _mobileKey: patric_dial_2h
   _capitalize: 0

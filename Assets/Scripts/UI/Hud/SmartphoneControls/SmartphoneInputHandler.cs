@@ -19,6 +19,8 @@ namespace UI.Hud.SmartphoneControls
 
         public void EnableControls()
         {
+            if (!Application.isMobilePlatform) return;
+
             foreach (var control in _controls)
             {
                 control?.SetActive(true);
@@ -28,6 +30,8 @@ namespace UI.Hud.SmartphoneControls
 
         public void DisableControls()
         {
+            if (!Application.isMobilePlatform) return;
+
             foreach (var control in _controls)
             {
                 control?.SetActive(false);

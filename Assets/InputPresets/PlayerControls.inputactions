@@ -51,15 +51,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "SuperThrow",
-                    "type": "Button",
-                    "id": "25e63cd5-ea14-4d86-a5bb-70d0c8d66af8",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "NextItem",
                     "type": "Button",
                     "id": "203c9556-cb0f-4c70-b654-3ae571e7797a",
@@ -224,7 +215,7 @@
                     "name": "",
                     "id": "ae2a5fdb-a153-412e-ac52-d17a083396f9",
                     "path": "<Keyboard>/r",
-                    "interactions": "Press(behavior=1)",
+                    "interactions": "Press",
                     "processors": "",
                     "groups": "Keyboard",
                     "action": "Throw",
@@ -239,17 +230,6 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "Throw",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "cddda44a-712c-4bd9-8225-0110e2fbb4b7",
-                    "path": "<Keyboard>/r",
-                    "interactions": "Hold(duration=1)",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "SuperThrow",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

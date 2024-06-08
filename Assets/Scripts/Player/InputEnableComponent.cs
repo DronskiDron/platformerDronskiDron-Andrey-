@@ -62,7 +62,8 @@ namespace Creatures.Player
             if (IsInputActive == true)
                 PlayerInputReader.IsInputEnable = true;
 #if USE_ONSCREEN_CONTROLS
-            SmartphoneInputHandler.Instance.EnableControls();
+            if (Application.isMobilePlatform)
+                SmartphoneInputHandler.Instance.EnableControls();
 #endif
         }
 
@@ -72,7 +73,8 @@ namespace Creatures.Player
             if (IsInputActive == false)
                 PlayerInputReader.IsInputEnable = false;
 #if USE_ONSCREEN_CONTROLS
-            SmartphoneInputHandler.Instance.DisableControls();
+            if (Application.isMobilePlatform)
+                SmartphoneInputHandler.Instance.DisableControls();
 #endif
         }
 

@@ -13,16 +13,13 @@ namespace UI.Localization
 
         private ShowDialogComponent _dialogComponent;
         private Sentence[] _sentences;
-        private bool _isMobileVersion = false;
 
 
         protected override void Awake()
         {
             _dialogComponent = GetComponent<ShowDialogComponent>();
             _sentences = _dialogComponent.Data.Sentences;
-#if USE_ONSCREEN_CONTROLS
-            _isMobileVersion = true;
-#endif
+
             base.Awake();
         }
 
@@ -35,7 +32,7 @@ namespace UI.Localization
                 {
                     if (k == i)
                     {
-                        var key = !_isMobileVersion ? _dialogKeys[i].Key : _dialogKeys[i].MobileKey;
+                        var key = !Application.isMobilePlatform ? _dialogKeys[i].Key : _dialogKeys[i].MobileKey;
                         var localized = LocalizationManager.I.Localize(key);
                         _sentences[k].Valued = _capitalize ? localized.ToUpper() : localized;
                     }

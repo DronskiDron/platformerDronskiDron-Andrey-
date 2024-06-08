@@ -21,12 +21,7 @@ namespace Creatures.Model.Data
         public BigInventoryModel BigInventory { get; private set; }
         public PerksModel PerksModel { get; private set; }
         public StatsModel StatsModel { get; private set; }
-        // public bool TutorialStarted { get; private set; }
         public bool TutorialStarted => _tutorialStarted;
-        [HideInInspector][SerializeField] private bool _tutorialStarted;
-
-
-
 
         [HideInInspector] public readonly ItemsStateStorage ItemStateStorage = new ItemsStateStorage();
 
@@ -34,6 +29,7 @@ namespace Creatures.Model.Data
         [HideInInspector][SerializeField] private int _storedSceneIndex;
         [HideInInspector][SerializeField] private string _currentScene;
         [HideInInspector] public bool TheGameWasRestarted = false;
+        [HideInInspector][SerializeField] private bool _tutorialStarted;
 
         public PlayerData Data => _data;
         public string CurrentScene => _currentScene;
@@ -147,7 +143,8 @@ namespace Creatures.Model.Data
         [Conditional("USE_ONSCREEN_CONTROLS")]
         private void LoadOnScreenControls()
         {
-            SceneManager.LoadScene("Controls", LoadSceneMode.Additive);
+            if (Application.isMobilePlatform)
+                SceneManager.LoadScene("Controls", LoadSceneMode.Additive);
         }
 
 
@@ -281,7 +278,6 @@ namespace Creatures.Model.Data
 
         public void SetTutorialStatusFlag(bool value)
         {
-            // TutorialStarted = value;
             _tutorialStarted = value;
         }
     }

@@ -23,12 +23,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1887332835071958839}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.016, y: -0.013, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257753438635650848}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3257753438635650851
 GameObject:
@@ -43,13 +44,13 @@ GameObject:
   - component: {fileID: 3257753438635650850}
   - component: {fileID: 3257753438635650855}
   - component: {fileID: 3257753438635650854}
-  - component: {fileID: 3257753438635650852}
   - component: {fileID: 3257753438635650853}
   - component: {fileID: 724317585}
   - component: {fileID: 1371547962}
   - component: {fileID: 8481094147110793840}
   - component: {fileID: 2677133875448732787}
   - component: {fileID: 6145420199598250180}
+  - component: {fileID: 3474030456145522361}
   m_Layer: 10
   m_Name: DestrBarrel
   m_TagString: Enemy
@@ -64,13 +65,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257753438635650851}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -33.48, y: -2.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6240615756915769025}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257753438635650849
 SpriteRenderer:
@@ -83,10 +85,12 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -135,6 +139,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _frameRate: 10
+  _onComplete:
+    m_PersistentCalls:
+      m_Calls: []
   _clips:
   - _name: idle
     _sprites:
@@ -156,6 +163,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 3257753438635650850}
+          m_TargetAssemblyTypeName: 
           m_MethodName: SetClip
           m_Mode: 5
           m_Arguments:
@@ -178,6 +186,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 724317585}
+          m_TargetAssemblyTypeName: 
           m_MethodName: Spawn
           m_Mode: 1
           m_Arguments:
@@ -189,6 +198,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1371547962}
+          m_TargetAssemblyTypeName: 
           m_MethodName: CalculateLoot
           m_Mode: 1
           m_Arguments:
@@ -200,6 +210,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 3257753438635650855}
+          m_TargetAssemblyTypeName: 
           m_MethodName: DestroyObject
           m_Mode: 1
           m_Arguments:
@@ -246,6 +257,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 3257753438635650850}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SetClip
         m_Mode: 5
         m_Arguments:
@@ -260,6 +272,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 3257753438635650850}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SetClip
         m_Mode: 5
         m_Arguments:
@@ -271,6 +284,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 8481094147110793840}
+        m_TargetAssemblyTypeName: 
         m_MethodName: Play
         m_Mode: 1
         m_Arguments:
@@ -285,32 +299,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   IsPlayer: 0
---- !u!61 &3257753438635650852
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3257753438635650851}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.015602112, y: -0.017200947}
-  m_SpriteTilingProperty:
-    border: {x: 0.03125, y: 0.0625, z: 0.0625, w: 0.09375}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.8125, y: 0.9375}
-    newSize: {x: 0.26, y: 0.3}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.69779205, y: 0.75718594}
-  m_EdgeRadius: 0
 --- !u!50 &3257753438635650853
 Rigidbody2D:
   serializedVersion: 4
@@ -328,6 +316,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: 31ac4bad8bd86bc4795077421041691b, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -501,6 +495,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 724317585}
+        m_TargetAssemblyTypeName: 
         m_MethodName: Spawn
         m_Mode: 1
         m_Arguments:
@@ -512,6 +507,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 3257753438635650855}
+        m_TargetAssemblyTypeName: 
         m_MethodName: DestroyObject
         m_Mode: 1
         m_Arguments:
@@ -522,3 +518,56 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!60 &3474030456145522361
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3257753438635650851}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0.03125, y: 0.0625, z: 0.0625, w: 0.09375}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.8125, y: 0.9375}
+    newSize: {x: 0.26, y: 0.3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.222435, y: 0.3830131}
+      - {x: -0.250103, y: 0.38301313}
+      - {x: -0.38175583, y: 0.03465509}
+      - {x: -0.38317108, y: -0.22350645}
+      - {x: -0.25376892, y: -0.4085542}
+      - {x: 0.21350479, y: -0.4085542}
+      - {x: 0.33855438, y: -0.21042204}
+      - {x: 0.33853912, y: 0.03465509}
+  m_UseDelaunayMesh: 0
