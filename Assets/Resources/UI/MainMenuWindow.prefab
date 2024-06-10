@@ -906,8 +906,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dialogKeys:
   - _index: 0
-    _key: '###big_text###'
-    _mobileKey: '###big_text###'
+    _key: analytics_permission
+    _mobileKey: analytics_permission
   _capitalize: 0
 --- !u!114 &4019750407484655996
 MonoBehaviour:
@@ -2940,7 +2940,6 @@ GameObject:
   - component: {fileID: 2914143808990520366}
   - component: {fileID: 5766397931220485631}
   - component: {fileID: 419859878384108563}
-  - component: {fileID: 4362051477781513361}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -3072,21 +3071,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &4362051477781513361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7062603844061366115}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: faeae49412632104e8946ed6525fc7f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _keys:
-  - analytics_permission
-  _capitalize: 0
 --- !u!1 &7730143048392921108
 GameObject:
   m_ObjectHideFlags: 0

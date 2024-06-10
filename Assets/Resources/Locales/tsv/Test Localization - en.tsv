@@ -1,9 +1,12 @@
 ###_yes_###	Yes
 ###_no_###	No
 ###_continue_###	Continue
+###_loading_###	Loading...
+###_skip_###	Skip
 ###_UI_###	###
 menu_title	Menu
 pause_title	Pause
+new_game	New game
 button_start	Start
 button_option	Options
 button_exit	Exit
@@ -14,12 +17,20 @@ button_restart	Restart
 button_buy	Buy
 button_use	Use
 price_label	Price:
+button_upgrade	Upgrade
+label_music	Music
+label_effects	Effects
 ###_dialogs_###	###
-krab_dial_1	I can teach you!
-krab_dial_2	Good!
-krab_dial_3	Let's go!
+krab_dial_1	I see you need help!
+krab_dial_2	Yes... Perhaps!
+krab_dial_3	Great! Get your money ready!
 wood_door_dial_1	You need a key...
 wood_door_dial_2	Find one somewhere...
+patric_dial_1p	And here you are! You won't get out of here alive!
+patric_dial_2h	I will get these treasures! And you can't stop me!
+patric_dial_3p	No0000000!!!!!!!!!!
+patric_dial_4h	I tolld ya!
+hero_dial_final	I've got the treasure! And here's the ship. Go ahead! Towards adventure!
 ###_interactions_###	###
 helm_interact	Use helm?
 teleport_interact	Use teleport?
@@ -36,3 +47,43 @@ item_PerlProjectile	Perl Projectile
 double_jump_info	This is double jump!
 super_throw_info	This is super throw!
 shield_info	This is fource shield!
+wave_info	This is power wave!
+###_stats_###	
+health_stat	Health
+speed_stat	Speed
+range_damage_stat	RangeDamage
+critical_damage_stat	CriticalDamage
+###tutor_dialogs###	###
+###_hero_tutor_1_###	Damn it! My ship has been destroyed. But I still got to this mysterious island!
+###_hero_tutor_2_###	And why should I help you?
+###_hero_tutor_3_###	All right! Let's see what we can do...
+###_hero_tutor_4_###	All right! Let's see what we can do...I would like to know from you, where are the treasures that I have heard so much about?
+###_hero_tutor_5_###	I'm not scared of traps or jungles! I want gold!
+###_hero_tutor_6_###	Thank you and goodbye, the treasures are calling me!
+###_crabby_tutor_1_###	Hey, man! Let me out!
+###_crabby_tutor_2_###	You can't get out of here without me!
+###_crabby_tutor_3_###	Thanks! You've kept your end of the bargain.
+###_crabby_tutor_4_###	What you are looking for is deep in the jungle of the island.
+###_crabby_tutor_5_###	There you will find dangerous traps and unfriendly locals who are in no hurry to part with their treasures!
+###_crabby_tutor_6_###	I see I can't change your mind!
+###_crabby_tutor_7_###	Be careful and good luck to you. I'll also tell my brothers to keep an eye on you.
+###tutor_messages###	###
+###_left_stick_info_###	Use "WASD" to control the movement of the character.
+###_left_stick_info_m_###	Use the left stick to control the movement of the character.
+###_attack_button_info_###	Use "SPACE" to deal damage to enemies and destructible items.
+###_attack_button_info_m_###	Use the attack button to deal damage to enemies and destructible items.
+###_switch_item_info_###	Use "Q" to select the next item of inventory.
+###_switch_item_info_m_###	Use the toggle button to select the next item of inventory.
+###_use_item_info_###	Press "R" to use items from the quick inventory.
+###_use_item_info_m_###	Use items from the quick inventory.
+###_interact_button_info_###	Use the "E" to interact with the surrounding objects and characters.
+###_interact_button_info_m_###	Interact with the surrounding objects and characters.
+###_main_menu_info_###	The button to open the main menu.
+###_player_stats_info_###	The button to open the character development menu.
+###_player_inventory_info_###	The button for calling the character's inventory.
+###_use_perk_info_###	In some game characters, you can get access to abilities that will help you in passing difficult game situations, or in reaching previously inaccessible areas of the game world. Use the "F" to take advantage of the selected ability, and some of the abilities are triggered automatically.
+###_use_perk_info_m_###	In some game characters, you can get access to abilities that will help you in passing difficult game situations, or in reaching previously inaccessible areas of the game world. Click on the ability icon to use it, and some of the abilities are triggered automatically.
+###_use_lantern_info_###	Use the "V" to turn on the flashlight, which will help you in passing dark locations.
+###_use_lantern_info_m_###	The button for using a flashlight, which will help you in passing dark locations.
+authors	The game was created by the BAF-games team. The project uses cassettes from the Pixel Frog's "Treasure Hunters" graphics pack, as well as music from the resource https://Zvukipro.com . Thank you for passing!
+analytics_permission	Do you allow developers to receive notifications about your progress in the game. This setting can be turned on or off at any time in the game menu.

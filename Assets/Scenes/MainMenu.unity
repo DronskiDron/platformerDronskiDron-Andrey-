@@ -877,7 +877,7 @@ GameObject:
   - component: {fileID: 1371484424}
   - component: {fileID: 1371484426}
   - component: {fileID: 1371484425}
-  - component: {fileID: 1371484428}
+  - component: {fileID: 1371484427}
   m_Layer: 5
   m_Name: Clouds
   m_TagString: Untagged
@@ -943,27 +943,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1371484423}
   m_CullTransparentMesh: 0
---- !u!95 &1371484428
-Animator:
-  serializedVersion: 5
+--- !u!114 &1371484427
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1371484423}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a771cb66786236c4392d64b4ff62d04e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 2
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3db931c1d9614db45a724581f3b4d562, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _canvasRectTransform: {fileID: 858926462}
+  _selfRectTransform: {fileID: 1371484424}
+  _childRectTransform: {fileID: 413936614}
+  _moveSpeed: 10
 --- !u!1 &1422065922
 GameObject:
   m_ObjectHideFlags: 0

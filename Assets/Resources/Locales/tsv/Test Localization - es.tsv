@@ -1,9 +1,12 @@
 ###_yes_###	Sí
 ###_no_###	No
 ###_continue_###	Continuar
+###_loading_###	Cargando...
+###_skip_###	Saltar
 ###_UI_###	###
 menu_title	Menú
 pause_title	Pausa
+new_game	Nuevo juego
 button_start	Comenzar
 button_option	Opciones
 button_exit	Salida
@@ -14,12 +17,20 @@ button_restart	Reanudar
 button_buy	Comprar
 button_use	Usar
 price_label	Precio:
+button_upgrade	Mejora
+label_music	Música
+label_effects	Efectos
 ###_dialogs_###	###
-krab_dial_1	¡Puedo enseñarte!
-krab_dial_2	Bueno!
-krab_dial_3	¡Vamos!
+krab_dial_1	¡Veo que necesitas ayuda!
+krab_dial_2	Sí... ¡Eso creo!
+krab_dial_3	¡Excelente! ¡Prepara tu dinero!
 wood_door_dial_1	Necesitas una llave...
 wood_door_dial_2	Encuentra uno en algún lugar...
+patric_dial_1p	¡Ahí estás! ¡No puedes salir de aquí con vida!
+patric_dial_2h	¡Conseguiré esos tesoros! ¡Y no puedes detenerme!
+patric_dial_3p	No0000000!!!!!!!!!!!!
+patric_dial_4h	¡Te lo dije!
+hero_dial_final	¡Tengo un tesoro! Aquí viene la nave. ¡Vamos! ¡Hacia la aventura!
 ###_interactions_###	###
 helm_interact	¿Usar timón?
 teleport_interact	¿Usar teletransporte?
@@ -36,3 +47,43 @@ item_PerlProjectile	Proyectil Perl
 double_jump_info	¡Esto es doble salto!
 super_throw_info	¡Esto es un súper lanzamiento!
 shield_info	¡Este es el escudo de Fource!
+wave_info	¡Esta es una ola de energía!
+###_stats_###	
+health_stat	Salud
+speed_stat	Velocidad
+range_damage_stat	DañoDeAlcance
+critical_damage_stat	DañoСrítico
+###tutor_dialogs###	###
+###_hero_tutor_1_###	¡Maldición! Mi nave ha sido destruida. ¡Pero aún así llegué a esta misteriosa isla!
+###_hero_tutor_2_###	¿Y por qué debería ayudarte?
+###_hero_tutor_3_###	¡Vale! Veamos qué podemos hacer...
+###_hero_tutor_4_###	¿Me gustaría saber de TI dónde están los tesoros de los que tanto he oído hablar?
+###_hero_tutor_5_###	¡No me asustan las trampas ni la jungla! ¡Quiero oro!
+###_hero_tutor_6_###	Gracias y adiós, el tesoro me llama!
+###_crabby_tutor_1_###	¡Oye, chico! ¡Déjame salir!
+###_crabby_tutor_2_###	¡No puedes salir de aquí sin mí!
+###_crabby_tutor_3_###	¡Gracias! Cumpliste tu parte del trato.
+###_crabby_tutor_4_###	Lo que estás buscando está en lo profundo de la jungla de la isla.
+###_crabby_tutor_5_###	¡Hay trampas peligrosas y locales hostiles que no tienen prisa por separarse de sus tesoros!
+###_crabby_tutor_6_###	¡Veo que no puedo convencerte!
+###_crabby_tutor_7_###	Ten cuidado y buena suerte. También les diré a mis hermanos que te cuiden.
+###tutor_messages###	###
+###_left_stick_info_###	Usa "WASD" para controlar el movimiento del personaje.
+###_left_stick_info_m_###	Utilice el palo izquierdo para controlar el movimiento del personaje.
+###_attack_button_info_###	Usa "SPACE" para infligir daño a los enemigos y objetos destructibles.
+###_attack_button_info_m_###	Usa el botón de ataque para infligir daño a los enemigos y objetos destructibles.
+###_switch_item_info_###	Utilice la " Q " para seleccionar el siguiente elemento de inventario.
+###_switch_item_info_m_###	Utilice el botón de alternar para seleccionar el siguiente elemento de inventario.
+###_use_item_info_###	Pulse " R " para utilizar los artículos del inventario rápido.
+###_use_item_info_m_###	Utilice los artículos de inventario rápido.
+###_interact_button_info_###	Usa la " E " para interactuar con los objetos y personajes que te rodean.
+###_interact_button_info_m_###	Interactúa con los objetos y personajes que te rodean.
+###_main_menu_info_###	Botón de llamada del menú principal.
+###_player_stats_info_###	Botón de menú de desarrollo de personajes.
+###_player_inventory_info_###	Botón de llamada de inventario de personajes.
+###_use_perk_info_###	En algunos personajes del juego, puedes acceder a habilidades que te ayudarán a superar situaciones difíciles del juego o a llegar a áreas previamente inaccesibles del mundo del juego. Use la " F " para aprovechar la habilidad seleccionada, también parte de la habilidad se activa automáticamente.
+###_use_perk_info_m_###	En algunos personajes del juego, puedes acceder a habilidades que te ayudarán a superar situaciones difíciles del juego o a llegar a áreas previamente inaccesibles del mundo del juego. Haga clic en el icono de habilidad para usarlo, también parte de la habilidad se activa automáticamente.
+###_use_lantern_info_###	Utilice la" V " para encender la linterna, que le ayudará en el paso de los lugares oscuros.
+###_use_lantern_info_m_###	Botón de uso de la linterna, que le ayudará en el paso de los lugares oscuros.
+authors	El juego fue creado por el colectivo "BAF-games". El proyecto utiliza assets del paquete gráfico "Treasure Hunters" de Pixel Frog, así como la música del recurso https://Zvukipro.com¡ Gracias por pasar!
+analytics_permission	¿Permite a los desarrolladores recibir notificaciones sobre su progreso en el juego? Esta configuración se puede activar o desactivar en cualquier momento en el menú del juego.
