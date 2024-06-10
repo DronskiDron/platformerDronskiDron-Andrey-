@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 39893648}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.571, y: 0.046, z: 0}
+  m_LocalPosition: {x: 0.704, y: 0.046, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5855,22 +5855,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4721150701775001662}
         m_TargetAssemblyTypeName: Creatures.PlayerInputReader, Assembly-CSharp
-        m_MethodName: OnSuperThrow
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 25e63cd5-ea14-4d86-a5bb-70d0c8d66af8
-    m_ActionName: PlayerActionMap/SuperThrow[/Keyboard/r]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4721150701775001662}
-        m_TargetAssemblyTypeName: Creatures.PlayerInputReader, Assembly-CSharp
         m_MethodName: OnNextItem
         m_Mode: 0
         m_Arguments:
@@ -5915,22 +5899,6 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 9b7ecb48-d522-451c-89d5-e51104ebf16b
     m_ActionName: PlayerActionMap/UseLantern[/Keyboard/v]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4721150701775001662}
-        m_TargetAssemblyTypeName: Creatures.PlayerInputReader, Assembly-CSharp
-        m_MethodName: OnMousePress
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 5ff706db-6bd7-4d22-ba46-4fe4074c12d3
-    m_ActionName: PlayerActionMap/MousePress[/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: PlayerActionMap
@@ -6081,6 +6049,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _delayValue: 0.2
+  _delayArray: []
 --- !u!1 &4721150702240915402
 GameObject:
   m_ObjectHideFlags: 0

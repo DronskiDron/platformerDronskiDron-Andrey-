@@ -431,12 +431,26 @@ MonoBehaviour:
   _mode: 0
   _bound:
     _sentences:
-    - _valued: You need a key...
+    - _index: 0
+      _title: wood_door_dial_1
+      _valued: You need a key...
+      _valuedMobile: 
       _icon: {fileID: 0}
       _side: 0
-    - _valued: Find one somewhere...
+      _iconColor: {r: 1, g: 1, b: 1, a: 1}
+      _onCompleteSentece:
+        m_PersistentCalls:
+          m_Calls: []
+    - _index: 1
+      _title: wood_door_dial_2
+      _valued: Find one somewhere...
+      _valuedMobile: 
       _icon: {fileID: 0}
       _side: 0
+      _iconColor: {r: 1, g: 1, b: 1, a: 1}
+      _onCompleteSentece:
+        m_PersistentCalls:
+          m_Calls: []
     _type: 0
   _external: {fileID: 0}
   _onComplete:
@@ -603,9 +617,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a9db3d2d2952724fbb52f839f8b70c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _keys:
-  - wood_door_dial_1
-  - wood_door_dial_2
+  _dialogKeys:
+  - _index: 0
+    _key: wood_door_dial_1
+    _mobileKey: wood_door_dial_1
+  - _index: 1
+    _key: wood_door_dial_2
+    _mobileKey: wood_door_dial_2
   _capitalize: 0
 --- !u!114 &1743892444015335350
 MonoBehaviour:
@@ -701,3 +719,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _delayValue: 0
+  _delayArray: []

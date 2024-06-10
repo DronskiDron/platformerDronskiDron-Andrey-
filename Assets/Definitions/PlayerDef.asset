@@ -42,15 +42,15 @@ MonoBehaviour:
       _price:
         _itemId: Coin
         _count: 10
-    - _value: 6
+    - _value: 5.1
       _price:
         _itemId: Coin
         _count: 20
-    - _value: 7
+    - _value: 5.2
       _price:
         _itemId: Coin
         _count: 30
-    - _value: 8
+    - _value: 5.3
       _price:
         _itemId: Coin
         _count: 40
@@ -90,7 +90,7 @@ MonoBehaviour:
       _price:
         _itemId: Coin
         _count: 30
-    - _value: 90
+    - _value: 50
       _price:
         _itemId: Coin
         _count: 40

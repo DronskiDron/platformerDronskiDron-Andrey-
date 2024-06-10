@@ -553,7 +553,7 @@ MonoBehaviour:
             m_Arguments:
               m_ObjectArgument: {fileID: 0}
               m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 8
+              m_IntArgument: 2
               m_FloatArgument: 0
               m_StringArgument: 
               m_BoolArgument: 0
@@ -567,7 +567,20 @@ MonoBehaviour:
       _iconColor: {r: 0.28025985, g: 0.6320754, b: 0.39947936, a: 1}
       _onCompleteSentece:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 132096039}
+            m_TargetAssemblyTypeName: General.Components.Dialogs.ShowDialogComponent,
+              Assembly-CSharp
+            m_MethodName: Show
+            m_Mode: 3
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 8
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
     - _index: 3
       _title: '###_use_item_info_###'
       _valued: 
@@ -21450,7 +21463,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c1f7f04b149cf7f4c97693b6e57cb8a3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3f6dac5055a866b40a201b75bbf4cf62, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0
   m_Pitch: 1
