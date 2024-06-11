@@ -58,6 +58,8 @@ MonoBehaviour:
     Value: "M\xFAsica\r"
   - Key: label_effects
     Value: "Efectos\r"
+  - Key: analytics
+    Value: "Analista\r"
   - Key: '###_dialogs_###'
     Value: "###\r"
   - Key: krab_dial_1

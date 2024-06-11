@@ -58,6 +58,8 @@ MonoBehaviour:
     Value: "Music\r"
   - Key: label_effects
     Value: "Effects\r"
+  - Key: analytics
+    Value: "Analytics\r"
   - Key: '###_dialogs_###'
     Value: "###\r"
   - Key: krab_dial_1

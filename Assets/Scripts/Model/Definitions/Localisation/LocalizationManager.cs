@@ -8,7 +8,7 @@ namespace Creatures.Model.Definitions.Localisation
     public class LocalizationManager
     {
         public readonly static LocalizationManager I;
-        private StringPersistentProperty _localeKey = new StringPersistentProperty("en", "localization/current");
+        private StringPersistentProperty _localeKey = new StringPersistentProperty("ru", "localization/current");
         private Dictionary<string, string> _localization;
 
         public event Action OnLocaleChanged;
