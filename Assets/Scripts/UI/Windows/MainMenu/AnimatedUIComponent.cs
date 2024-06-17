@@ -25,6 +25,9 @@ namespace UI.Windows.MainMenu
 
         private void Update()
         {
+            SetOffsetX(_childRectTransform, _canvasRectTransform);
+            _moveDistance = _canvasRectTransform.sizeDelta.x;
+
             var distanceThisFrame = _moveSpeed * Time.deltaTime;
             _currentDistanceMoved += distanceThisFrame;
 
